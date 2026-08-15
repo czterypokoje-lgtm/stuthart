@@ -19,18 +19,14 @@ import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import CitySeoText from '@/components/CitySeoText/CitySeoText';
 import styles from './page.module.css';
-import UtrechtSeo from '@/content/seo/stuttgart';
-import AmsterdamSeo from '@/content/seo/sindelfingen';
-import DenHaagSeo from '@/content/seo/den-haag';
-import RotterdamSeo from '@/content/seo/rotterdam';
+import StuttgartSeo from '@/content/seo/stuttgart';
+import SindelfingenSeo from '@/content/seo/sindelfingen';
 import { getFaqForCity } from '@/config/faq';
 import FaqSection from '@/components/FaqSection/FaqSection';
 
 const SeoComponents: Record<string, React.FC> = {
-  stuttgart: UtrechtSeo,
-  sindelfingen: AmsterdamSeo,
-  'den-haag': DenHaagSeo,
-  rotterdam: RotterdamSeo,
+  stuttgart: StuttgartSeo,
+  sindelfingen: SindelfingenSeo,
 };
 
 import { getBaseLocalBusinessSchema } from '@/utils/schema';
