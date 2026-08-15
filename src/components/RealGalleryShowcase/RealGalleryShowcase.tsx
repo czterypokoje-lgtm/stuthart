@@ -2,113 +2,135 @@
 
 import React, { useRef } from 'react';
 import Image from 'next/image';
-import styles from './RealGalleryShowcase.module.css';
 
-export interface GalleryProject {
-  id: number;
-  src: string;
-  alt: string;
-}
-
-export const REAL_GALLERY_PROJECTS: GalleryProject[] = [
-  {
-    id: 1,
-    src: '/images/gallery/autosleutel_ford_reservesleutel_bijmaken_utrecht_centrum.webp',
-    alt: 'Ford autosleutel reservesleutel bijmaken en programmeren op locatie in Utrecht Centrum'
-  },
-  {
-    id: 2,
-    src: '/images/gallery/autosleutel_hyundai_reservesleutel_programmeren_utrecht_zuid.webp',
-    alt: 'Hyundai autosleutel bijmaken en keyless smart key inleren in Utrecht Zuid'
-  },
-  {
-    id: 3,
-    src: '/images/gallery/autosleutel_specialist_mobiele_werkplaats_utrecht_leidsche_rijn.webp',
-    alt: 'Autosleutel24 mobiele servicebus met diagnoseapparatuur op locatie in Utrecht Leidsche Rijn'
-  },
-  {
-    id: 4,
-    src: '/images/gallery/autosleutel_audi_reservesleutel_inleren_utrecht_overvecht.webp',
-    alt: 'Audi smart key autosleutel inleren op locatie Utrecht Overvecht'
-  },
-  {
-    id: 5,
-    src: '/images/gallery/autosleutel_audi_smartkey_programmeren_utrecht_west.webp',
-    alt: 'Audi smartkey reservesleutel programmeren en transponder inleren Utrecht West'
-  },
-  {
-    id: 6,
-    src: '/images/gallery/autosleutel_bmw_reservesleutel_bijmaken_utrecht_oost.webp',
-    alt: 'BMW autosleutel reservesleutel bijmaken en programmeren op locatie Utrecht Oost'
-  },
-  {
-    id: 7,
-    src: '/images/gallery/autosleutel_bmw_sleutel_programmeren_amsterdam_centrum.webp',
-    alt: 'BMW sleutel programmeren op locatie mobiele service Amsterdam Centrum'
-  },
-  {
-    id: 8,
-    src: '/images/gallery/autosleutel_ford_transit_focus_sleutel_amsterdam_zuid.webp',
-    alt: 'Ford Transit bedrijfswagen reservesleutel bijmaken Amsterdam Zuid'
-  },
-  {
-    id: 9,
-    src: '/images/gallery/autosleutel_jeep_reservesleutel_amsterdam_noord.webp',
-    alt: 'Jeep autosleutel en keyless entry afstandsbediening programmeren Amsterdam Noord'
-  },
-  {
-    id: 10,
-    src: '/images/gallery/autosleutel_kia_smartkey_bijmaken_amsterdam_west.webp',
-    alt: 'Kia smart key autosleutel bijmaken en transponder inleren Amsterdam West'
-  },
-  {
-    id: 11,
-    src: '/images/gallery/autosleutel_mercedes_eis_reservesleutel_amsterdam_oost.webp',
-    alt: 'Mercedes EIS contactslot chromen autosleutel bijmaken en inleren Amsterdam Oost'
-  }
+/* ─── Photos ─────────────────────────────────────────────── */
+const PHOTOS = [
+  { src: '/images/hero-van-fc-key.webp',                                  alt: 'First Class Key Servicefahrzeug VW Caddy — mobiler Schlüsseldienst Stuttgart',          label: 'Unser Servicefahrzeug' },
+  { src: '/images/merken/autoschluessel-nachmachen-bmw-1.webp',           alt: 'BMW Autoschlüssel nachmachen und programmieren vor Ort in Stuttgart',                   label: 'BMW Schlüssel' },
+  { src: '/images/merken/autoschluessel-nachmachen-bmw-2.webp',           alt: 'BMW Smart Key CAS/FEM anlernen — mobiler Kfz-Schlüsseldienst Sindelfingen',            label: 'BMW Smart Key' },
+  { src: '/images/merken/autoschluessel-nachmachen-mercedes-benz-1.webp', alt: 'Mercedes-Benz Schlüssel nachmachen — EIS/FBS Programmierung Stuttgart',               label: 'Mercedes-Benz' },
+  { src: '/images/merken/autoschluessel-nachmachen-mercedes-benz-2.webp', alt: 'Mercedes Schlüssel codieren — Böblingen & Sindelfingen mobiler Service',              label: 'Mercedes Schlüssel' },
+  { src: '/images/merken/autoschluessel-nachmachen-audi-1.webp',          alt: 'Audi Autoschlüssel nachmachen — Transponder anlernen Stuttgart & Umkreis',             label: 'Audi Schlüssel' },
+  { src: '/images/merken/autoschluessel-nachmachen-audi-2.webp',          alt: 'Audi Smart Key programmieren — mobil in Stuttgart',                                    label: 'Audi Smart Key' },
+  { src: '/images/merken/autoschluessel-nachmachen-volkswagen-1.webp',    alt: 'VW Volkswagen Schlüssel nachmachen — MQB Transponder Stuttgart',                       label: 'VW Schlüssel' },
+  { src: '/images/merken/autoschluessel-nachmachen-volkswagen-2.webp',    alt: 'VW Golf GTI Schlüssel codieren — FC-KEY mobiler Service Böblingen',                   label: 'VW Golf' },
+  { src: '/images/merken/autoschluessel-nachmachen-ford-1.webp',          alt: 'Ford Autoschlüssel nachmachen — vor Ort Sindelfingen & Stuttgart',                     label: 'Ford Schlüssel' },
+  { src: '/images/merken/autoschluessel-nachmachen-ford-2.webp',          alt: 'Ford Focus / Transit Schlüssel programmieren — Stuttgart',                             label: 'Ford Transit' },
+  { src: '/images/merken/autoschluessel-nachmachen-renault-1.webp',       alt: 'Renault Keycard nachmachen — Schlüsselkarte programmieren Stuttgart',                  label: 'Renault Keycard' },
+  { src: '/images/merken/autoschluessel-nachmachen-skoda-1.webp',         alt: 'Škoda Autoschlüssel nachmachen — Transponder Stuttgart Umkreis',                       label: 'Škoda Schlüssel' },
+  { src: '/images/merken/autoschluessel-nachmachen-hyundai-1.webp',       alt: 'Hyundai Schlüssel nachmachen und anlernen — Stuttgart',                                label: 'Hyundai Schlüssel' },
+  { src: '/images/merken/autoschleussel-nachmachen-nissan-1.webp',        alt: 'Nissan Autoschlüssel nachmachen — Qashqai / Juke Transponder Stuttgart',              label: 'Nissan Schlüssel' },
+  { src: '/images/merken/autoschluessel-nachmachen-opel-1.webp',          alt: 'Opel Autoschlüssel nachmachen — Astra / Corsa / Insignia Transponder Stuttgart',      label: 'Opel Schlüssel' },
+  { src: '/images/merken/autoschluessel-nachmachen-fiat-1.webp',          alt: 'Fiat Autoschlüssel nachmachen — 500 / Panda Transponder codieren Stuttgart',          label: 'Fiat Schlüssel' },
+  { src: '/images/merken/autoschluessel-nachmachen-jeep-1.webp',          alt: 'Jeep Autoschlüssel nachmachen — Wrangler / Cherokee Smart Key Stuttgart',             label: 'Jeep Schlüssel' },
+  { src: '/images/merken/autoschluessel-nachmachen-mini-1.webp',          alt: 'MINI Cooper Autoschlüssel nachmachen — CAS Programmierung Stuttgart',                 label: 'MINI Schlüssel' },
+  { src: '/images/merken/autoschluessel-nachmachen-land-rover-1.webp',    alt: 'Land Rover / Range Rover Schlüssel nachmachen — Stuttgart & Böblingen',               label: 'Land Rover' },
+  { src: '/images/merken/autoschluessel-nachmachen-werkplaats-1.webp',    alt: 'FC-KEY mobiler Schlüsseldienst bei der Arbeit — Stuttgart Sindelfingen',               label: 'Mobiler Service' },
+  { src: '/images/merken/autoschluessel-nachmachen-werkplaats-2.webp',    alt: 'Kfz-Schlüssel programmieren vor Ort — FC-KEY First Class Key Stuttgart 24/7',         label: 'Vor Ort Service' },
+  { src: '/images/merken/autoschluessel-nachmachen-mercedes-benz-3.webp', alt: 'Mercedes C/E-Klasse Schlüssel nachmachen — Stuttgart & Umgebung',                     label: 'Mercedes C-Klasse' },
+  { src: '/images/merken/autoschluessel-nachmachen-volkswagen-3.webp',    alt: 'VW Passat / Tiguan Schlüssel codieren — FC-KEY vor Ort Esslingen',                    label: 'VW Passat' },
 ];
 
-export default function RealGalleryShowcase() {
-  const scrollRef = useRef<HTMLDivElement>(null);
+const CARD_W = 300; // px per card
+const GAP    = 16;  // px gap
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const scrollAmount = window.innerWidth < 640 ? 300 : 800;
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-  };
+export default function RealGalleryShowcase() {
+  const rail = useRef<HTMLDivElement>(null);
+
+  function slide(dir: 'left' | 'right') {
+    const el = rail.current;
+    if (!el) return;
+    el.scrollBy({ left: dir === 'left' ? -(CARD_W + GAP) * 2 : (CARD_W + GAP) * 2, behavior: 'smooth' });
+  }
 
   return (
-    <div className={styles.showcaseWrapper}>
-      <div className={styles.sliderViewport} ref={scrollRef}>
-        <div className={styles.sliderTrack}>
-          {REAL_GALLERY_PROJECTS.map((project, idx) => (
-            <div key={project.id} className={styles.card}>
-              <div className={styles.imageContainer}>
-                <Image
-                  src={project.src}
-                  alt={project.alt}
-                  fill
-                  unoptimized={true}
-                  sizes="(max-width: 640px) 280px, (max-width: 1024px) 320px, 340px"
-                  loading={idx < 4 ? "eager" : "lazy"}
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
+    <div style={{ width: '100%', userSelect: 'none' }}>
+
+      {/* ── Rail ── */}
+      <div
+        ref={rail}
+        style={{
+          display: 'flex',
+          gap: GAP,
+          overflowX: 'scroll',          /* native scroll — always works */
+          scrollSnapType: 'x mandatory',
+          WebkitOverflowScrolling: 'touch',
+          paddingBottom: 8,
+          paddingLeft: 4,
+          paddingRight: 4,
+          /* hide scrollbar visually */
+          scrollbarWidth: 'none',
+        }}
+      >
+        {PHOTOS.map((p, i) => (
+          <div
+            key={i}
+            style={{
+              flex: `0 0 ${CARD_W}px`,
+              width: CARD_W,
+              scrollSnapAlign: 'start',
+              borderRadius: 12,
+              overflow: 'hidden',
+              position: 'relative',
+              background: '#0f172a',
+              aspectRatio: '4/3',
+              boxShadow: '0 4px 16px rgba(0,0,0,.18)',
+            }}
+          >
+            <Image
+              src={p.src}
+              alt={p.alt}
+              fill
+              sizes="300px"
+              loading={i < 4 ? 'eager' : 'lazy'}
+              style={{ objectFit: 'cover' }}
+            />
+            {/* Label overlay */}
+            <div style={{
+              position: 'absolute', bottom: 0, left: 0, right: 0,
+              background: 'linear-gradient(to top, rgba(4,38,85,.88) 0%, transparent 100%)',
+              padding: '1.5rem 0.875rem 0.625rem',
+              color: '#fff', fontSize: '0.8rem', fontWeight: 700,
+            }}>
+              {p.label}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
 
-      <div className={styles.sliderNav}>
-        <button onClick={() => scroll('left')} className={styles.arrowBtn} aria-label="Vorige foto's">
-          &#8592;
+      {/* ── Buttons ── */}
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 16, marginTop: 16 }}>
+        <button
+          type="button"
+          onClick={() => slide('left')}
+          style={{
+            width: 48, height: 48, borderRadius: '50%',
+            border: '2px solid #cbd5e1', background: '#f8fafc',
+            fontSize: 20, cursor: 'pointer', display: 'flex',
+            alignItems: 'center', justifyContent: 'center',
+            color: '#0f172a', transition: 'all .15s',
+          }}
+          onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = '#042655'; (e.currentTarget as HTMLButtonElement).style.color = '#fff'; (e.currentTarget as HTMLButtonElement).style.borderColor = '#042655'; }}
+          onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = '#f8fafc'; (e.currentTarget as HTMLButtonElement).style.color = '#0f172a'; (e.currentTarget as HTMLButtonElement).style.borderColor = '#cbd5e1'; }}
+          aria-label="Zurück"
+        >
+          ←
         </button>
-        <button onClick={() => scroll('right')} className={styles.arrowBtn} aria-label="Volgende foto's">
-          &#8594;
+        <button
+          type="button"
+          onClick={() => slide('right')}
+          style={{
+            width: 48, height: 48, borderRadius: '50%',
+            border: '2px solid #cbd5e1', background: '#f8fafc',
+            fontSize: 20, cursor: 'pointer', display: 'flex',
+            alignItems: 'center', justifyContent: 'center',
+            color: '#0f172a', transition: 'all .15s',
+          }}
+          onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = '#042655'; (e.currentTarget as HTMLButtonElement).style.color = '#fff'; (e.currentTarget as HTMLButtonElement).style.borderColor = '#042655'; }}
+          onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = '#f8fafc'; (e.currentTarget as HTMLButtonElement).style.color = '#0f172a'; (e.currentTarget as HTMLButtonElement).style.borderColor = '#cbd5e1'; }}
+          aria-label="Weiter"
+        >
+          →
         </button>
       </div>
     </div>

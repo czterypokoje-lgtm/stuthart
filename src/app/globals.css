@@ -23,24 +23,25 @@ html {
   --font-main: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Navy palette — classic automotive */
-  --navy-900:  #071525;
-  --navy-800:  #0d2137;
-  --navy-700:  #112b49;
-  --navy-600:  #163656;
-  --navy-500:  #1d4a74;
-  --navy-400:  #2460a0;
-  --navy-300:  #3a7cbd;
-  --navy-200:  #6ba3d0;
-  --navy-100:  #cde0f0;
-  --navy-50:   #eef5fb;
+  --navy-50:   #f0f4fa;
+  --navy-100:  #dbe6f4;
+  --navy-200:  #bbcfea;
+  --navy-300:  #8bafdb;
+  --navy-400:  #5889ca;
+  --navy-500:  #3b6eb4;
+  --navy-600:  #295493;
+  --navy-700:  #224377;
+  --navy-800:  #1f3a64;
+  --navy-900:  #042655;
+  --navy-950:  #0a1831;
 
-  /* Orange accent — CTA, urgency */
-  --orange-700: #c04a06;
-  --orange-600: #d85308;
-  --orange-500: #e8520a;
-  --orange-400: #f26522;
-  --orange-300: #f58a50;
-  --orange-100: #fde8db;
+  /* Orange accent — Actually Yellow/Gold for fc-key.de */
+  --orange-700: #b58500;
+  --orange-600: #d69d00;
+  --orange-500: #fdb913;
+  --orange-400: #fdc53b;
+  --orange-300: #fdd162;
+  --orange-100: #fef0cd;
 
   /* Grays */
   --gray-900: #111827;
@@ -124,7 +125,8 @@ body {
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  /* overflow-x: hidden removed — it creates an implicit scroll container
+     that clips CSS transforms (e.g. gallery translateX). Use per-section overflow instead. */
 }
 
 h1, h2, h3, h4, h5, h6 {

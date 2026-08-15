@@ -28,7 +28,7 @@ export default function InstantServiceMap() {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="Autosleutel24 Servicegebied Utrecht en omstreken"
+        title="FC-KEY Servicegebied Utrecht en omstreken"
       />
     </div>
   );

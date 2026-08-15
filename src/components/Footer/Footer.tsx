@@ -4,34 +4,34 @@ import styles from './Footer.module.css';
 import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import { BRANDS } from '../../config/brands';
 
-const diensten = [
-  ['Autosleutel Bijmaken', '/diensten/autosleutel-bijmaken'],
-  ['Transponder Sleutel', '/diensten/transponder-programmeren'],
-  ['Smart Key / Keyless', '/diensten/smart-key-programmeren'],
-  ['Contactslot Auto Vervangen', '/diensten/contactslot-auto-vervangen'],
-  ['Reservesleutel Maken', '/diensten/reservesleutel-maken'],
-  ['Autosleutels Repareren', '/diensten/autosleutels-repareren'],
-  ['Alle diensten →', '/diensten'],
+const leistungen = [
+  ['Autoschlüssel nachmachen', '/leistungen/autoschluessel-nachmachen'],
+  ['Transponder programmieren', '/leistungen/transponder-programmieren'],
+  ['Smart Key / Keyless', '/leistungen/smart-key-programmieren'],
+  ['Zündschloss ersetzen', '/leistungen/zuendschloss-auto-wechseln'],
+  ['Ersatzschlüssel machen', '/leistungen/ersatzschluessel-machen'],
+  ['Autoschlüssel reparieren', '/leistungen/autoschluessel-reparieren'],
+  ['Alle Leistungen →', '/leistungen'],
 ];
 
 const steden = [
-  ['Utrecht', '/steden/utrecht'],
-  ['Amsterdam', '/steden/amsterdam'],
-  ['Amsterdam-Zuid', '/steden/amsterdam-zuid'],
-  ['Almere', '/steden/almere'],
-  ['Amersfoort', '/steden/amersfoort'],
-  ['Hilversum', '/steden/hilversum'],
-  ['Bussum', '/steden/bussum'],
-  ['Naarden', '/steden/naarden'],
-  ['Amstelveen', '/steden/amstelveen'],
-  ['Zeist', '/steden/zeist'],
-  ['Alle steden & regio\'s →', '/steden'],
+  ['Stuttgart', '/standorte/stuttgart'],
+  ['Sindelfingen', '/standorte/sindelfingen'],
+  ['Böblingen', '/standorte/boeblingen'],
+  ['Ludwigsburg', '/standorte/ludwigsburg'],
+  ['Esslingen', '/standorte/esslingen'],
+  ['Leonberg', '/standorte/leonberg'],
+  ['Fellbach', '/standorte/fellbach'],
+  ['Waiblingen', '/standorte/waiblingen'],
+  ['Filderstadt', '/standorte/filderstadt'],
+  ['Ditzingen', '/standorte/ditzingen'],
+  ['Alle Städte & Regionen →', '/standorte'],
 ];
 
 const spoed = [
-  ['Autosleutel Kwijt', '/autosleutel-kwijt'],
-  ['Auto Openen Zonder Sleutel', '/diensten/auto-openen-zonder-sleutel'],
-  ['24/7 Spoedhulp', '/diensten/auto-slotenmaker'],
+  ['Autoschlüssel verloren', '/autoschluessel-verloren'],
+  ['Auto öffnen ohne Schlüssel', '/leistungen/auto-ohne-schluessel-oeffnen'],
+  ['24/7 Notdienst', '/leistungen/auto-schluesseldienst'],
 ];
 
 export default function Footer() {
@@ -44,80 +44,64 @@ export default function Footer() {
           <div>
             <div className={styles.footerBrand}>
               <Image
-                src="/images/logo/autosleutel24-logo-footer-wit-utrecht.webp"
-                alt="Autosleutel24 Logo (Wit)"
-                width={160}
-                height={42}
-                style={{ height: '42px', width: 'auto', display: 'block' }}
+                src="/fc-key-logo.jpg"
+                alt="First Class Key Logo"
+                width={120}
+                height={120}
+                style={{ height: '120px', width: 'auto', display: 'block', borderRadius: '12px' }}
               />
             </div>
-            <p className={styles.footerDesc}>Professionele mobiele autosleutelprogrammering voor alle merken. Actief in <Link href="/steden/utrecht" className={styles.seoLink}>Utrecht</Link>, <Link href="/steden/den-haag" className={styles.seoLink}>Den Haag</Link>, <Link href="/steden/amsterdam" className={styles.seoLink}>Amsterdam</Link>, <Link href="/steden/amersfoort" className={styles.seoLink}>Amersfoort</Link>, <Link href="/steden/almere" className={styles.seoLink}>Almere</Link>, <Link href="/steden/arnhem" className={styles.seoLink}>Arnhem</Link>, <Link href="/steden/nijmegen" className={styles.seoLink}>Nijmegen</Link>, <Link href="/steden/apeldoorn" className={styles.seoLink}>Apeldoorn</Link>, 't Gooi (<Link href="/steden/hilversum" className={styles.seoLink}>Hilversum</Link>, <Link href="/steden/bussum" className={styles.seoLink}>Bussum</Link>, <Link href="/steden/naarden" className={styles.seoLink}>Naarden</Link>) en Midden-Nederland en de Randstad.</p>
+            <p className={styles.footerDesc}>Professionelle mobile Autoschlüssel-Programmierung für alle Marken. Aktiv in <Link href="/standorte/stuttgart" className={styles.seoLink}>Stuttgart</Link>, <Link href="/standorte/sindelfingen" className={styles.seoLink}>Sindelfingen</Link>, <Link href="/standorte/boeblingen" className={styles.seoLink}>Böblingen</Link>, <Link href="/standorte/ludwigsburg" className={styles.seoLink}>Ludwigsburg</Link>, <Link href="/standorte/esslingen" className={styles.seoLink}>Esslingen</Link>, <Link href="/standorte/leonberg" className={styles.seoLink}>Leonberg</Link>, <Link href="/standorte/fellbach" className={styles.seoLink}>Fellbach</Link>, <Link href="/standorte/waiblingen" className={styles.seoLink}>Waiblingen</Link>, <Link href="/standorte/filderstadt" className={styles.seoLink}>Filderstadt</Link>, <Link href="/standorte/ditzingen" className={styles.seoLink}>Ditzingen</Link> und der restlichen Region.</p>
             <div className={styles.footerBadges}>
-              <span>KVK: {SITE_CONFIG.kvk}</span>
-              <span>BTW: {SITE_CONFIG.btw}</span>
+              <span>Handelsregister: {SITE_CONFIG.kvk}</span>
+              <span>USt-IdNr: {SITE_CONFIG.btw}</span>
               <span>{SITE_CONFIG.rating} ★ Google</span>
-              <span>Verzekerd</span>
+              <span>Versichert</span>
             </div>
-            <div style={{ marginTop: '1.25rem', marginBottom: '1.5rem' }}>
-              <a
-                href={SITE_CONFIG.social.marktplaats}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ display: 'inline-block', textDecoration: 'none' }}
-              >
-                <Image
-                  src="/images/seo/marktplaats-autosleutel24-verifieerd.webp"
-                  alt="Autosleutel24 op Marktplaats - Geverifieerde verkoper"
-                  width={200}
-                  height={60}
-                  style={{ height: '60px', width: 'auto', display: 'block', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.12)' }}
-                />
-              </a>
-            </div>
-            <div className={styles.footerContact}>
+            <div className={styles.footerContact} style={{ marginTop: '1.5rem' }}>
               <a href={`tel:${SITE_CONFIG.phoneTel}`}>{SITE_CONFIG.phone}</a>
               <a href={`mailto:${SITE_CONFIG.email}`}>{SITE_CONFIG.email}</a>
-              <span className={styles.hours}>24/7 Bereikbaar</span>
+              <span className={styles.hours}>24/7 Erreichbar</span>
             </div>
           </div>
 
-          {/* Diensten & Spoed */}
+          {/* Leistungen & Spoed */}
           <div>
-            <h4 className={styles.colTitle}>Spoedhulp</h4>
+            <h4 className={styles.colTitle}>Notdienst</h4>
             <ul className={styles.linkList}>
               {spoed.map(([label, href]) => <li key={href}><Link href={href} style={{ color: 'var(--orange-400)' }}>{label}</Link></li>)}
             </ul>
-            <h4 className={styles.colTitle} style={{ marginTop: '1.5rem' }}>Diensten</h4>
+            <h4 className={styles.colTitle} style={{ marginTop: '1.5rem' }}>Leistungen</h4>
             <ul className={styles.linkList}>
-              {diensten.map(([label, href]) => <li key={href}><Link href={href}>{label}</Link></li>)}
+              {leistungen.map(([label, href]) => <li key={href}><Link href={href}>{label}</Link></li>)}
             </ul>
           </div>
 
           {/* Merken */}
           <div>
-            <h4 className={styles.colTitle}>Merken</h4>
+            <h4 className={styles.colTitle}>Marken</h4>
             <ul className={styles.linkList}>
               {BRANDS.filter(b => b.priority === 'P1').map(b => (
-                <li key={b.slug}><Link href={`/merken/${b.nameSlug}-autosleutel-bijmaken`}>{b.name} sleutel bijmaken</Link></li>
+                <li key={b.slug}><Link href={`/marken/${b.nameSlug}-autoschluessel-nachmachen`}>{b.name} Schlüssel nachmachen</Link></li>
               ))}
-              <li><Link href="/merken">Alle 59 merken →</Link></li>
+              <li><Link href="/marken">Alle 59 Marken →</Link></li>
             </ul>
-            <h4 className={styles.colTitle} style={{ marginTop: '1.5rem' }}>Blog &amp; Advies</h4>
+            <h4 className={styles.colTitle} style={{ marginTop: '1.5rem' }}>Blog &amp; Ratgeber</h4>
             <ul className={styles.linkList}>
-              <li><Link href="/blog/autosleutel-batterij-vervangen-stappenplan">Batterij Vervangen</Link></li>
-              <li><Link href="/blog/autosleutel-gestolen-wat-te-doen">Sleutel Gestolen?</Link></li>
-              <li><Link href="/kennisbank" style={{ color: 'var(--orange-400)', fontWeight: 600 }}>Technische Kennisbank →</Link></li>
+              <li><Link href="/blog/autoschluessel-batterie-wechseln-anleitung">Batterie wechseln</Link></li>
+              <li><Link href="/blog/autoschluessel-gestohlen-was-tun">Schlüssel gestohlen?</Link></li>
+              <li><Link href="/faq" style={{ color: 'var(--orange-400)', fontWeight: 600 }}>FAQ & Wissensdatenbank →</Link></li>
             </ul>
           </div>
 
           {/* Steden */}
           <div>
-            <h4 className={styles.colTitle}>Steden</h4>
+            <h4 className={styles.colTitle}>Städte</h4>
             <ul className={styles.linkList}>
               {steden.map(([label, href]) => (
                 <li key={href}>
                   <Link href={href}>
-                    {label.includes('Alle') ? label : `${label} autosleutel bijmaken`}
+                    {label.includes('Alle') ? label : `${label} Autoschlüssel nachmachen`}
                   </Link>
                 </li>
               ))}
@@ -126,24 +110,24 @@ export default function Footer() {
 
           {/* Over Ons & Openingstijden */}
           <div>
-            <h4 className={styles.colTitle}>Over Ons</h4>
+            <h4 className={styles.colTitle}>Über Uns</h4>
             <ul className={styles.linkList} style={{ marginBottom: '1.5rem' }}>
-              <li><Link href="/beoordelingen">Klantbeoordelingen</Link></li>
-              <li><Link href="/galerij">Onze Galerij</Link></li>
-              <li><Link href="/over-ons">Over Ons</Link></li>
+              <li><Link href="/bewertungen">Kundenbewertungen</Link></li>
+              <li><Link href="/galerie">Unsere Galerie</Link></li>
+              <li><Link href="/ueber-uns">Über Uns</Link></li>
             </ul>
 
-            <h4 className={styles.colTitle}>Openingstijden</h4>
+            <h4 className={styles.colTitle}>Öffnungszeiten</h4>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem', color: 'rgba(255,255,255,0.65)' }}>
               <tbody>
                 {[
-                  ['Maandag', '24 uur geopend'],
-                  ['Dinsdag', '24 uur geopend'],
-                  ['Woensdag', '24 uur geopend'],
-                  ['Donderdag', '24 uur geopend'],
-                  ['Vrijdag', '24 uur geopend'],
-                  ['Zaterdag', '24 uur geopend'],
-                  ['Zondag', '24 uur geopend'],
+                  ['Montag', '24 Stunden geöffnet'],
+                  ['Dienstag', '24 Stunden geöffnet'],
+                  ['Mittwoch', '24 Stunden geöffnet'],
+                  ['Donnerstag', '24 Stunden geöffnet'],
+                  ['Freitag', '24 Stunden geöffnet'],
+                  ['Samstag', '24 Stunden geöffnet'],
+                  ['Sonntag', '24 Stunden geöffnet'],
                 ].map(([dag, tijd]) => (
                   <tr key={dag} style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
                     <td style={{ padding: '0.35rem 0', fontWeight: 500 }}>{dag}</td>
@@ -159,30 +143,27 @@ export default function Footer() {
           <div className={styles.bottomInner}>
             <div className={styles.footerSeoText} style={{ marginBottom: '2rem', paddingBottom: '2rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.85rem', lineHeight: '1.6', marginBottom: '1rem' }}>
-                Autosleutel24 is uw betrouwbare, mobiele autosleutelspecialist in Nederland. Met onze geavanceerde diagnoseapparatuur en CNC-freesmachines openen wij schadevrij deuren, programmeren wij smart keys en lossen wij 'All Keys Lost' situaties op locatie op. 24/7 bereikbaar in regio <Link href="/steden/utrecht" className={styles.seoLink}>Utrecht</Link>, <Link href="/steden/amsterdam" className={styles.seoLink}>Amsterdam</Link>, <Link href="/steden/den-haag" className={styles.seoLink}>Den Haag</Link>, <Link href="/steden/almere" className={styles.seoLink}>Almere</Link>, <Link href="/steden/amersfoort" className={styles.seoLink}>Amersfoort</Link>, <Link href="/steden/arnhem" className={styles.seoLink}>Arnhem</Link>, <Link href="/steden/nijmegen" className={styles.seoLink}>Nijmegen</Link>, <Link href="/steden/apeldoorn" className={styles.seoLink}>Apeldoorn</Link> en de rest van de Randstad met standaard 12 maanden garantie.
+                First Class Key ist Ihr zuverlässiger, mobiler Autoschlüsselspezialist im Raum Stuttgart. Mit unserer fortschrittlichen Diagnoseausrüstung und CNC-Fräsmaschinen öffnen wir schadensfrei Türen, programmieren Smart Keys und lösen 'All Keys Lost' Situationen vor Ort. 24/7 erreichbar in <Link href="/standorte/stuttgart" className={styles.seoLink}>Stuttgart</Link>, <Link href="/standorte/sindelfingen" className={styles.seoLink}>Sindelfingen</Link>, <Link href="/standorte/boeblingen" className={styles.seoLink}>Böblingen</Link>, <Link href="/standorte/ludwigsburg" className={styles.seoLink}>Ludwigsburg</Link>, <Link href="/standorte/esslingen" className={styles.seoLink}>Esslingen</Link>, <Link href="/standorte/leonberg" className={styles.seoLink}>Leonberg</Link>, <Link href="/standorte/fellbach" className={styles.seoLink}>Fellbach</Link>, <Link href="/standorte/waiblingen" className={styles.seoLink}>Waiblingen</Link> und der restlichen Region mit standardmäßiger 12-monatiger Garantie.
               </p>
             </div>
-            <p>© {year} {SITE_CONFIG.fullName}. Alle rechten voorbehouden.</p>
+            <p>© {year} {SITE_CONFIG.fullName}. Alle Rechte vorbehalten.</p>
             <div className={styles.bottomLinks}>
-              {/* iubenda Privacy Policy embedded link */}
               <a
                 href="https://www.iubenda.com/privacy-policy/c53c352b-ed07-4c5b-b461-8b542ddd3aaf"
                 className="iubenda-white iubenda-noiframe iubenda-embed"
                 title="Privacy Policy"
                 rel="noopener noreferrer"
               >
-                Privacybeleid
+                Datenschutzerklärung
               </a>
-              {/* iubenda Cookie Policy embedded link */}
               <a
                 href="https://www.iubenda.com/privacy-policy/c53c352b-ed07-4c5b-b461-8b542ddd3aaf/cookie-policy"
                 className="iubenda-white iubenda-noiframe iubenda-embed"
                 title="Cookie Policy"
                 rel="noopener noreferrer"
               >
-                Cookiebeleid
+                Cookie-Richtlinie
               </a>
-              {/* Cookie preferences — lets users manage/withdraw consent (GDPR art. 7) */}
               <button
                 type="button"
                 className="iubenda-cs-preferences-link"
@@ -196,11 +177,11 @@ export default function Footer() {
                   fontFamily: 'inherit',
                 }}
               >
-                Cookie-instellingen
+                Cookie-Einstellungen
               </button>
-              <Link href="/veelgestelde-vragen">FAQ</Link>
+              <Link href="/faq">FAQ</Link>
               <Link href="/blog">Blog</Link>
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact">Kontakt</Link>
             </div>
           </div>
         </div>

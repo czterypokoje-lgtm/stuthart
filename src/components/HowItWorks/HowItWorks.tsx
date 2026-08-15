@@ -9,84 +9,84 @@ interface HowItWorksProps {
 
 export default function HowItWorks({ cityName, variant = 'default' }: HowItWorksProps = {}) {
   const cityText = cityName ? ` in ${cityName}` : '';
-  const cityTextLoc = cityName ? ` op locatie in ${cityName}` : ' op locatie';
+  const cityTextLoc = cityName ? ` vor Ort in ${cityName}` : ' vor Ort';
   
   let steps = [];
-  let sectionTitle = `Zo werkt Autosleutel24${cityText} - in 3 stappen`;
+  let sectionTitle = `So funktioniert First Class Key${cityText} - in 3 Schritten`;
 
   if (variant === 'akl') {
-    sectionTitle = `Direct hulp bij verloren sleutels${cityText} - in 3 stappen`;
+    sectionTitle = `Direkthilfe bei verlorenen Schlüsseln${cityText} - in 3 Schritten`;
     steps = [
       {
         imgSrc: '/images/steps/akl_step1_1786439600179.jpg',
-        alt: `Sleutels kwijt in ${cityName || 'Nederland'}`,
-        step: 'Stap 1',
-        title: 'Sleutels kwijt? Geen paniek',
-        desc: `Check of uw auto veilig staat en neem contact met ons op via WhatsApp of telefoon. Wij geven u direct een prijs voor hulp${cityText}.`,
+        alt: `Schlüssel verloren in ${cityName || 'Stuttgart'}`,
+        step: 'Schritt 1',
+        title: 'Schlüssel verloren? Keine Panik',
+        desc: `Prüfen Sie, ob Ihr Auto sicher steht und kontaktieren Sie uns über WhatsApp oder Telefon. Wir geben Ihnen sofort einen Preis für die Hilfe${cityText}.`,
       },
       {
         imgSrc: '/images/steps/akl_step2_1786439617601.jpg',
-        alt: `Monteur direct ter plaatse${cityTextLoc}`,
-        step: 'Stap 2',
-        title: `Monteur direct ter plaatse${cityTextLoc}`,
-        desc: `Wij komen met onze uitgeruste servicebus naar uw locatie. U bespaart hoge sleepkosten, want uw auto hoeft niet weggesleept te worden.`,
+        alt: `Monteur direkt vor Ort${cityTextLoc}`,
+        step: 'Schritt 2',
+        title: `Monteur direkt vor Ort${cityTextLoc}`,
+        desc: `Wir kommen mit unserem ausgestatteten Servicefahrzeug zu Ihrem Standort. Sie sparen hohe Abschleppkosten, da Ihr Auto nicht abgeschleppt werden muss.`,
       },
       {
         imgSrc: '/images/steps/akl_step3_1786439623637.jpg',
-        alt: 'Nieuwe sleutel geprogrammeerd',
-        step: 'Stap 3',
-        title: 'Nieuwe sleutel & Oude gewist',
-        desc: 'We openen uw auto schadevrij, maken een nieuwe sleutel en wissen de verloren sleutel direct uit het geheugen van de autocomputer voor uw veiligheid.',
+        alt: 'Neuer Schlüssel programmiert',
+        step: 'Schritt 3',
+        title: 'Neuer Schlüssel & Alter gelöscht',
+        desc: 'Wir öffnen Ihr Auto schadensfrei, fertigen einen neuen Schlüssel an und löschen den verlorenen Schlüssel zu Ihrer Sicherheit direkt aus dem Speicher des Autocomputers.',
       },
     ];
   } else if (variant === 'ignition') {
-    sectionTitle = `Contactslot defect? Zo lossen we het op${cityText}`;
+    sectionTitle = `Zündschloss defekt? So lösen wir das${cityText}`;
     steps = [
       {
         imgSrc: '/images/steps/ignition_step1_1786439640448.jpg',
-        alt: `Sleutel draait niet in contactslot`,
-        step: 'Stap 1',
-        title: 'Sleutel draait niet meer?',
-        desc: `Zit de sleutel vast of draait het contact niet meer door? Neem direct contact op en stuur de gegevens van uw auto.`,
+        alt: `Schlüssel dreht sich nicht im Zündschloss`,
+        step: 'Schritt 1',
+        title: 'Schlüssel dreht sich nicht mehr?',
+        desc: `Steckt der Schlüssel fest oder dreht das Zündschloss nicht mehr? Kontaktieren Sie uns direkt und senden Sie die Daten Ihres Autos.`,
       },
       {
         imgSrc: '/images/steps/ignition_step2_1786439648237.jpg',
-        alt: `Reparatie contactslot op locatie`,
-        step: 'Stap 2',
-        title: `Reparatie${cityTextLoc}`,
-        desc: `Onze specialist komt naar u toe en demonteert of repareert uw haperende of geblokkeerde contactslot professioneel ter plekke.`,
+        alt: `Zündschloss Reparatur vor Ort`,
+        step: 'Schritt 2',
+        title: `Reparatur${cityTextLoc}`,
+        desc: `Unser Spezialist kommt zu Ihnen und demontiert oder repariert Ihr klemmendes oder blockiertes Zündschloss professionell vor Ort.`,
       },
       {
         imgSrc: '/images/steps/ignition_step3_1786439655474.jpg',
-        alt: 'Weer veilig op weg met gerepareerd slot',
-        step: 'Stap 3',
-        title: 'Weer veilig op weg',
-        desc: 'U krijgt een perfect werkend (nieuw of gereviseerd) contactslot en indien nodig een nieuw geslepen sleutelbaard. U kunt direct weer rijden.',
+        alt: 'Wieder sicher unterwegs mit repariertem Schloss',
+        step: 'Schritt 3',
+        title: 'Wieder sicher unterwegs',
+        desc: 'Sie erhalten ein perfekt funktionierendes (neues oder überholtes) Zündschloss und bei Bedarf einen neu gefrästen Schlüsselbart. Sie können sofort weiterfahren.',
       },
     ];
   } else if (variant === 'lockout') {
-    sectionTitle = `Buitengesloten? Snel weer naar binnen${cityText}`;
+    sectionTitle = `Ausgesperrt? Schnell wieder hinein${cityText}`;
     steps = [
       {
         imgSrc: '/images/steps/lockout_step1_1786439672567.jpg',
-        alt: `Sleutel in auto laten liggen`,
-        step: 'Stap 1',
-        title: 'Sleutel in de auto?',
-        desc: `Staat u buiten en ligt de sleutel nog in de afgesloten auto of kofferbak? Bel ons direct op voor de 24/7 spoedservice${cityText}.`,
+        alt: `Schlüssel im Auto vergessen`,
+        step: 'Schritt 1',
+        title: 'Schlüssel im Auto?',
+        desc: `Stehen Sie draußen und der Schlüssel liegt noch im verschlossenen Auto oder Kofferraum? Rufen Sie uns sofort für den 24/7 Notdienst an${cityText}.`,
       },
       {
         imgSrc: '/images/steps/lockout_step2_1786439679636.jpg',
-        alt: `Auto schadevrij openen`,
-        step: 'Stap 2',
-        title: '100% Schadevrij openen',
-        desc: `Onze monteur is snel ter plaatse en gebruikt speciaal decoderingsgereedschap om het slot van uw autodeur of kofferbak volledig schadevrij te manipuleren.`,
+        alt: `Auto schadensfrei öffnen`,
+        step: 'Schritt 2',
+        title: '100% Schadensfrei öffnen',
+        desc: `Unser Monteur ist schnell vor Ort und nutzt spezielles Entschlüsselungswerkzeug, um das Schloss Ihrer Autotür oder Ihres Kofferraums völlig schadensfrei zu manipulieren.`,
       },
       {
         imgSrc: '/images/steps/lockout_step3_1786439686206.jpg',
-        alt: 'Auto geopend',
-        step: 'Stap 3',
-        title: 'Deur open & Direct rijden',
-        desc: 'Uw auto is weer open zonder enige schade aan uw lak, slot of rubbers. U kunt uw sleutels weer pakken en uw weg direct vervolgen.',
+        alt: 'Auto geöffnet',
+        step: 'Schritt 3',
+        title: 'Tür offen & Direkt weiterfahren',
+        desc: 'Ihr Auto ist wieder offen, ohne Schäden an Lack, Schloss oder Dichtungen. Sie können Ihre Schlüssel wieder nehmen und sofort weiterfahren.',
       },
     ];
   } else {
@@ -94,24 +94,24 @@ export default function HowItWorks({ cityName, variant = 'default' }: HowItWorks
     steps = [
       {
         imgSrc: '/images/steps/step_1_contact_1786407570135.jpg',
-        alt: `Neem contact op met Autosleutel24${cityText}`,
-        step: 'Stap 1',
-        title: `Voertuiggegevens doorgeven & afspraak maken`,
-        desc: `Geef uw automerk, model, bouwjaar en locatie${cityText} door via WhatsApp of telefoon. Wij vertellen u direct wat het kost en wanneer we er zijn.`,
+        alt: `Nehmen Sie Kontakt mit First Class Key auf${cityText}`,
+        step: 'Schritt 1',
+        title: `Fahrzeugdaten durchgeben & Termin vereinbaren`,
+        desc: `Geben Sie Ihre Automarke, das Modell, das Baujahr und den Standort${cityText} über WhatsApp oder Telefon durch. Wir sagen Ihnen sofort, was es kostet und wann wir da sind.`,
       },
       {
         imgSrc: '/images/steps/step_2_mechanic_1786407578137.jpg',
-        alt: `Monteur komt naar u toe${cityTextLoc}`,
-        step: 'Stap 2',
-        title: `Monteur komt direct naar u toe${cityTextLoc}`,
-        desc: `Onze mobiele monteur komt naar uw opgegeven locatie${cityText}. U hoeft uw auto niet te slepen naar een dealer of garage. Wij komen naar u.`,
+        alt: `Monteur kommt direkt zu Ihnen${cityTextLoc}`,
+        step: 'Schritt 2',
+        title: `Monteur kommt direkt zu Ihnen${cityTextLoc}`,
+        desc: `Unser mobiler Monteur kommt an Ihren angegebenen Standort${cityText}. Sie müssen Ihr Auto nicht zu einem Händler oder in eine Werkstatt abschleppen lassen. Wir kommen zu Ihnen.`,
       },
       {
         imgSrc: '/images/steps/step_3_payment_1786407585732.jpg',
-        alt: `Direct een nieuwe sleutel en veilig betalen${cityText}`,
-        step: 'Stap 3',
-        title: `Direct een nieuwe sleutel & veilig betalen`,
-        desc: `We frezen en programmeren uw nieuwe sleutel direct. U betaalt pas als alles perfect werkt, veilig${cityTextLoc} via pin of contant.`,
+        alt: `Direkt ein neuer Schlüssel und sicher bezahlen${cityText}`,
+        step: 'Schritt 3',
+        title: `Direkt ein neuer Schlüssel & sicher bezahlen`,
+        desc: `Wir fräsen und programmieren Ihren neuen Schlüssel sofort. Sie bezahlen erst, wenn alles perfekt funktioniert, sicher${cityTextLoc} über Karte oder bar.`,
       },
     ];
   }
@@ -134,10 +134,10 @@ export default function HowItWorks({ cityName, variant = 'default' }: HowItWorks
       
       <div className={styles.ctaWrapper}>
         <a href={`tel:${SITE_CONFIG.phoneTel}`} className="btn btn-primary btn-lg">
-          Direct Hulp Bellen
+          Jetzt anrufen für Soforthilfe
         </a>
         <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className={styles.waBtn}>
-          WhatsApp voor Direct Hulp
+          WhatsApp für Soforthilfe
         </a>
       </div>
     </section>

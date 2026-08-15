@@ -11,21 +11,21 @@ function getStableHash(str: string): number {
 }
 
 const introTemplates = [
-  (city: string, travel: string) => `Welkom bij ${SITE_CONFIG.name}, uw betrouwbare partner voor alles rondom autosleutels in ${city} en omstreken. Heeft u een probleem met uw sleutel, afstandsbediening of slot? Onze specialisten staan 24/7 voor u klaar en zijn vaak al binnen ${travel} ter plaatse om u weer op weg te helpen. Wij werken volledig mobiel en beschikken over de meest geavanceerde apparatuur.`,
-  (city: string, travel: string) => `Heeft u met spoed een nieuwe autosleutel nodig in ${city}? Of krijgt u uw auto niet meer open? ${SITE_CONFIG.name} biedt een unieke, volledig mobiele slotenmakerservice. Binnen gemiddeld ${travel} is onze monteur bij u in ${city} gearriveerd. Wij garanderen een schadevrije opening en kunnen vrijwel elke sleutel ter plekke voor u bijmaken en inleren.`,
-  (city: string, travel: string) => `In ${city} en de wijde regio eromheen is ${SITE_CONFIG.name} dé specialist op het gebied van autosleutels en autobeveiliging. U hoeft uw voertuig niet naar een dure dealer te slepen als u al uw sleutels kwijt bent. Wij komen naar u toe. Met een gemiddelde aanrijtijd van slechts ${travel} lossen wij uw probleem direct naast de auto op.`
+  (city: string, travel: string) => `Willkommen bei ${SITE_CONFIG.name}, Ihrem zuverlässigen Partner rund um Autoschlüssel in ${city} und Umgebung. Haben Sie ein Problem mit Ihrem Schlüssel, der Fernbedienung oder dem Schloss? Unsere Spezialisten stehen Ihnen 24/7 zur Verfügung und sind oft schon innerhalb von ${travel} vor Ort, um Ihnen weiterzuhelfen. Wir arbeiten komplett mobil und verfügen über modernste Ausrüstung.`,
+  (city: string, travel: string) => `Benötigen Sie dringend einen neuen Autoschlüssel in ${city}? Oder bekommen Sie Ihr Auto nicht mehr auf? ${SITE_CONFIG.name} bietet einen einzigartigen, komplett mobilen Schlüsseldienst. Innerhalb von durchschnittlich ${travel} ist unser Monteur bei Ihnen in ${city} eingetroffen. Wir garantieren eine schadensfreie Öffnung und können fast jeden Schlüssel direkt vor Ort für Sie nachmachen und programmieren.`,
+  (city: string, travel: string) => `In ${city} und der weiten Region darum herum ist ${SITE_CONFIG.name} der Spezialist für Autoschlüssel und Fahrzeugsicherheit. Sie müssen Ihr Fahrzeug nicht zu einem teuren Händler schleppen, wenn Sie alle Ihre Schlüssel verloren haben. Wir kommen zu Ihnen. Mit einer durchschnittlichen Anfahrtszeit von nur ${travel} lösen wir Ihr Problem direkt am Auto.`
 ];
 
 const bodyTemplates1 = [
-  (city: string) => `Onze mobiele werkplaatsen rijden dagelijks door ${city}. Ze zijn uitgerust met computergestuurde CNC-freesmachines en de modernste OBD-uitleesapparatuur. Hierdoor kunnen we niet alleen traditionele transpondersleutels, maar ook geavanceerde Smart Keys en Keyless Go-systemen moeiteloos programmeren. Of u nu op uw oprit staat, op uw werk of langs een drukke weg in ${city}, onze service gaat altijd door.`,
-  (city: string) => `Waar traditionele garages in ${city} vaak een wachttijd van weken hebben voor het bestellen van een originele autosleutel, doen wij dit direct uit voorraad. Onze monteurs in ${city} hebben toegang tot software van meer dan 59 automerken. Dit betekent dat wij de boordcomputer kunnen uitlezen, oude en verloren sleutels veilig uit het geheugen kunnen blokkeren, en ter plekke een compleet nieuwe sleutel voor u maken.`,
-  (city: string) => `Het verliezen van uw laatste autosleutel (All Keys Lost) in ${city} is een stressvolle gebeurtenis. Wij nemen deze zorg volledig uit handen. Omdat wij niet werken met wegsleepdiensten of dure tussenpersonen, bent u bij ons tot wel 50% voordeliger uit. Onze ervaren technici zijn getraind om veilig de immobiliser of ECU van uw voertuig te bereiken, zelfs als de deuren geblokkeerd zijn met zogenaamde deadlocks.`
+  (city: string) => `Unsere mobilen Werkstätten sind täglich in ${city} unterwegs. Sie sind mit computergesteuerten CNC-Fräsmaschinen und modernster OBD-Diagnosetechnik ausgestattet. Dadurch können wir nicht nur herkömmliche Transponderschlüssel, sondern auch fortschrittliche Smart Keys und Keyless-Go-Systeme problemlos programmieren. Egal, ob Sie in Ihrer Einfahrt, bei der Arbeit oder an einer stark befahrenen Straße in ${city} stehen, unser Service ist immer für Sie da.`,
+  (city: string) => `Wo herkömmliche Werkstätten in ${city} oft wochenlange Wartezeiten für die Bestellung eines Original-Autoschlüssels haben, erledigen wir dies direkt aus unserem Bestand. Unsere Monteure in ${city} haben Zugriff auf die Software von über 59 Automarken. Das bedeutet, dass wir den Bordcomputer auslesen, alte und verlorene Schlüssel sicher aus dem Speicher löschen und vor Ort einen komplett neuen Schlüssel für Sie anfertigen können.`,
+  (city: string) => `Der Verlust Ihres letzten Autoschlüssels (All Keys Lost) in ${city} ist ein stressiges Ereignis. Wir nehmen Ihnen diese Sorge komplett ab. Da wir nicht mit Abschleppdiensten oder teuren Zwischenhändlern zusammenarbeiten, sparen Sie bei uns bis zu 50%. Unsere erfahrenen Techniker sind darauf geschult, sicher auf die Wegfahrsperre oder das Motorsteuergerät Ihres Fahrzeugs zuzugreifen, selbst wenn die Türen verriegelt sind.`
 ];
 
 const bodyTemplates2 = [
-  (city: string) => `Daarnaast zijn wij gespecialiseerd in het schadevrij openen van voertuigen. Mocht u per ongeluk uw sleutels in de kofferbak of op de passagiersstoel hebben laten liggen, dan openen wij uw deuren met speciale Lishi decoders. Dit lockpick-gereedschap zorgt ervoor dat uw slot volledig intact blijft. Inwoner of bezoeker van ${city}, wij helpen u veilig uw voertuig weer in.`,
-  (city: string) => `Ook voor reparaties aan bestaande sleutels bent u in ${city} aan het juiste adres. Zijn de drukknoppen lam, de behuizing gebroken, of is de batterij gewoon aan vervanging toe? Wij voeren microsoldeerwerk uit op locatie. Hierdoor bespaart u de kosten van een geheel nieuwe sleutel en wordt de levensduur van uw huidige afstandsbediening aanzienlijk verlengd. We gebruiken hiervoor enkel hoogwaardige OEM-componenten.`,
-  (city: string) => `Transparantie en veiligheid staan bij ons voorop. Voordat we in ${city} aan uw auto beginnen, controleren wij altijd de identiteit en de eigendomspapieren om misbruik te voorkomen. U krijgt bovendien van tevoren een exacte prijsopgave, zodat u nooit voor verrassingen komt te staan. Met een officiële, verzekeringsklare factuur en 12 maanden schriftelijke garantie op ons werk, bent u verzekerd van absolute topkwaliteit.`
+  (city: string) => `Darüber hinaus sind wir auf das schadensfreie Öffnen von Fahrzeugen spezialisiert. Sollten Sie Ihre Schlüssel versehentlich im Kofferraum oder auf dem Beifahrersitz gelassen haben, öffnen wir Ihre Türen mit speziellen Lishi-Decodern. Dieses Lockpicking-Werkzeug stellt sicher, dass Ihr Schloss völlig intakt bleibt. Ob Einwohner oder Besucher von ${city}, wir helfen Ihnen sicher wieder in Ihr Fahrzeug.`,
+  (city: string) => `Auch für Reparaturen an vorhandenen Schlüsseln sind Sie in ${city} an der richtigen Adresse. Klemmen die Tasten, ist das Gehäuse kaputt oder muss einfach die Batterie ausgetauscht werden? Wir führen Mikrolötarbeiten vor Ort durch. Dadurch sparen Sie die Kosten für einen komplett neuen Schlüssel und verlängern die Lebensdauer Ihrer aktuellen Fernbedienung erheblich. Wir verwenden dafür ausschließlich hochwertige OEM-Komponenten.`,
+  (city: string) => `Transparenz und Sicherheit stehen bei uns an erster Stelle. Bevor wir in ${city} mit der Arbeit an Ihrem Auto beginnen, überprüfen wir immer Identität und Fahrzeugpapiere, um Missbrauch zu verhindern. Außerdem erhalten Sie vorab ein genaues Preisangebot, sodass Sie keine bösen Überraschungen erleben. Mit einer offiziellen Rechnung und 12 Monaten schriftlicher Garantie auf unsere Arbeit, können Sie sich auf absolute Spitzenqualität verlassen.`
 ];
 
 interface CitySeoTextProps {
@@ -42,22 +42,22 @@ export default function CitySeoText({ cityName, travelTime }: CitySeoTextProps) 
 
   return (
     <div className="seo-article-block">
-      <h2>Compleet Verzorgde Autosleutelservice in {cityName}</h2>
+      <h2>Komplettservice für Autoschlüssel in {cityName}</h2>
       <p>{intro(cityName, travelTime)}</p>
       
-      <h3>Moderne Apparatuur, Direct uit Voorraad</h3>
+      <h3>Moderne Ausrüstung, direkt verfügbar</h3>
       <p>{body1(cityName)}</p>
       
-      <h3>Schadevrij Openen en Vakkundige Reparaties</h3>
+      <h3>Schadensfreie Öffnung und fachmännische Reparaturen</h3>
       <p>{body2(cityName)}</p>
       
-      <h3>Kies voor Zekerheid in {cityName}</h3>
+      <h3>Entscheiden Sie sich für Sicherheit in {cityName}</h3>
       <p>
-        Wacht niet langer als uw sleutel kuren vertoont of als u een extra exemplaar nodig heeft. 
-        Onze lokale dekking in <strong>{cityName}</strong> garandeert snelle responstijden en 
-        professioneel vakmanschap. Bel direct <strong>{SITE_CONFIG.phone}</strong> voor een 
-        vrijblijvende prijsopgave of om meteen een spoedmonteur in te schakelen. 
-        Uw mobiliteit is onze prioriteit.
+        Warten Sie nicht länger, wenn Ihr Schlüssel Probleme macht oder Sie ein Ersatzexemplar benötigen. 
+        Unsere lokale Abdeckung in <strong>{cityName}</strong> garantiert schnelle Reaktionszeiten und 
+        professionelle Handwerkskunst. Rufen Sie direkt <strong>{SITE_CONFIG.phone}</strong> an für ein 
+        unverbindliches Angebot oder um sofort einen Notdienstmonteur anzufordern. 
+        Ihre Mobilität ist unsere Priorität.
       </p>
     </div>
   );

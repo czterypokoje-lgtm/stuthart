@@ -2,7 +2,7 @@ import { GoogleReview } from '@/components/GoogleReviewCard/GoogleReviewCard';
 
 const FIRST_NAMES = ['Thomas', 'Sara', 'Mohammed', 'Lisa', 'Jan', 'Kees', 'Fatima', 'Peter', 'Sanne', 'Mark', 'Bram', 'Emma', 'Ali', 'Julia', 'Milan', 'Sophie', 'Kevin', 'Chantal', 'Anouk', 'Daan', 'Lars', 'Fleur', 'Eva'];
 const LAST_NAMES = ['de Vries', 'Jansen', 'van den Berg', 'Bakker', 'Visser', 'Smit', 'Meijer', 'Boer', 'Peters', 'Yilmaz', 'Kaya', 'van Dijk', 'Kok', 'Veenstra', 'Dekker', 'Kuipers', 'Vos', 'Willems', 'Hendriks'];
-const DATES = ['1 dag geleden', '2 dagen geleden', '3 dagen geleden', '5 dagen geleden', '1 week geleden', '2 weken geleden', '4 dagen geleden', '6 dagen geleden', '3 weken geleden'];
+const DATES = ['Vor 1 Tag', 'Vor 2 Tagen', 'Vor 3 Tagen', 'Vor 5 Tagen', 'Vor 1 Woche', 'Vor 2 Wochen', 'Vor 4 Tagen', 'Vor 6 Tagen', 'Vor 3 Wochen'];
 
 function seededRandom(seed: number) {
   const x = Math.sin(seed++) * 10000;
@@ -10,72 +10,72 @@ function seededRandom(seed: number) {
 }
 
 const INTRO = [
-  "Top service!",
-  "Geweldig geholpen.",
-  "Wat een redders in nood.",
-  "Snel en vakkundig.",
-  "Echte professionals.",
-  "Zeer tevreden.",
-  "Uitstekende ervaring.",
-  "Absolute aanrader!",
-  "Heel erg blij met de hulp.",
-  "Super geregeld!",
-  "Fantastisch bedrijf.",
-  "Echt perfect."
+  "Top Service!",
+  "Klasse geholfen.",
+  "Wahre Retter in der Not.",
+  "Schnell und professionell.",
+  "Echte Profis.",
+  "Sehr zufrieden.",
+  "Hervorragende Erfahrung.",
+  "Absolute Empfehlung!",
+  "Sehr glücklich über die Hilfe.",
+  "Super geregelt!",
+  "Fantastisches Unternehmen.",
+  "Wirklich perfekt."
 ];
 
 const PROBLEM_CITY = [
-  "Ik stond met een defecte sleutel in {context}.",
-  "Gestrande auto in {context}, kon geen kant op.",
-  "Buitengesloten uit mijn auto nabij {context}.",
-  "Mijn sleutel lag nog in de auto in de regio {context}.",
-  "Had met spoed een autosleutel nodig in het centrum van {context}.",
-  "Sleutel afgebroken terwijl ik in {context} was."
+  "Ich stand mit einem defekten Schlüssel in {context}.",
+  "Gestrandetes Auto in {context}, konnte nirgendwo hin.",
+  "Aus meinem Auto in der Nähe von {context} ausgesperrt.",
+  "Mein Schlüssel lag noch im Auto in der Region {context}.",
+  "Brauchte dringend einen Autoschlüssel im Zentrum von {context}.",
+  "Schlüssel abgebrochen, während ich in {context} war."
 ];
 
 const PROBLEM_BRAND = [
-  "Mijn {context} sleutel was afgebroken.",
-  "De transponder van mijn {context} werkte niet meer.",
-  "Ik was de reserve sleutel van de {context} kwijt.",
-  "Buitengesloten uit mijn {context}, erg vervelend.",
-  "Contactslot van mijn {context} was defect.",
-  "Ik had een nieuwe smart key voor mijn {context} nodig."
+  "Mein {context} Schlüssel war abgebrochen.",
+  "Der Transponder meines {context} funktionierte nicht mehr.",
+  "Ich hatte den Ersatzschlüssel für den {context} verloren.",
+  "Aus meinem {context} ausgesperrt, sehr ärgerlich.",
+  "Das Zündschloss meines {context} war defekt.",
+  "Ich brauchte einen neuen Smart Key für meinen {context}."
 ];
 
 const PROBLEM_SERVICE = [
-  "Had snel hulp nodig voor {context}.",
-  "Mijn afspraak voor {context} kon direct ingepland worden.",
-  "Ik zocht een specialist in {context}.",
-  "Niemand kon me direct helpen met {context}, behalve zij.",
-  "Voor {context} ben je hier aan het juiste adres.",
-  "Ik belde voor {context} en werd erg goed te woord gestaan."
+  "Brauchte schnelle Hilfe für {context}.",
+  "Mein Termin für {context} konnte sofort eingeplant werden.",
+  "Ich suchte einen Spezialisten für {context}.",
+  "Niemand konnte mir sofort bei {context} helfen, außer ihnen.",
+  "Für {context} sind Sie hier genau richtig.",
+  "Ich rief wegen {context} an und wurde sehr gut beraten."
 ];
 
 const PROBLEM_GENERAL = [
-  "Sleutel in het contact laten zitten en de deur viel in het slot.",
-  "Mijn autosleutel was spoorloos verdwenen.",
-  "De afstandsbediening van de auto reageerde nergens meer op.",
-  "Sleutel afgebroken in het deurslot van mijn auto.",
-  "Reserve sleutel nodig vlak voor mijn vakantie.",
-  "Ik was mijn autosleutels kwijtgeraakt tijdens het winkelen."
+  "Schlüssel im Zündschloss stecken gelassen und die Tür fiel ins Schloss.",
+  "Mein Autoschlüssel war spurlos verschwunden.",
+  "Die Fernbedienung des Autos reagierte auf nichts mehr.",
+  "Schlüssel im Türschloss meines Autos abgebrochen.",
+  "Ersatzschlüssel kurz vor meinem Urlaub benötigt.",
+  "Ich hatte meine Autoschlüssel beim Einkaufen verloren."
 ];
 
 const ACTION = [
-  "Binnen een half uur was de monteur ter plaatse.",
-  "Gelukkig waren ze er heel erg snel.",
-  "Ze kwamen direct nadat ik gebeld had.",
-  "De monteur had de juiste apparatuur bij zich.",
-  "Ze wisten precies wat er moest gebeuren.",
-  "Ondanks het late tijdstip waren ze snel aanwezig."
+  "Innerhalb einer halben Stunde war der Mechaniker vor Ort.",
+  "Zum Glück waren sie sehr schnell da.",
+  "Sie kamen sofort, nachdem ich angerufen hatte.",
+  "Der Mechaniker hatte die richtige Ausrüstung dabei.",
+  "Sie wussten genau, was zu tun war.",
+  "Trotz der späten Stunde waren sie schnell zur Stelle."
 ];
 
 const RESOLUTION = [
-  "De deur werd 100% schadevrij geopend.",
-  "Ze hebben ter plekke een nieuwe sleutel ingeleerd.",
-  "Het probleem was binnen no-time opgelost.",
-  "Alles werkt weer perfect, zonder gedoe.",
-  "Voor een eerlijke prijs was ik direct weer op weg.",
-  "De monteur was super vriendelijk en loste het direct op."
+  "Die Tür wurde zu 100% schadenfrei geöffnet.",
+  "Sie haben vor Ort einen neuen Schlüssel angelernt.",
+  "Das Problem war in kürzester Zeit gelöst.",
+  "Alles funktioniert wieder perfekt, ohne Probleme.",
+  "Für einen fairen Preis war ich sofort wieder auf dem Weg.",
+  "Der Mechaniker war super freundlich und hat es sofort gelöst."
 ];
 
 export function generateContextualReviews(contextName: string, type: 'city' | 'brand' | 'service' | 'general' = 'general'): GoogleReview[] {

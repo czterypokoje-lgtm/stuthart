@@ -7,9 +7,9 @@ export async function GET() {
   const urls = sitemapData.map(item => item.url);
   
   const payload = {
-    host: "www.autosleutel24.nl",
+    host: "www.fc-key.nl",
     key: "3afd2ed80ce14931a7e74761f40741d6",
-    keyLocation: "https://www.autosleutel24.nl/3afd2ed80ce14931a7e74761f40741d6.txt",
+    keyLocation: "https://www.fc-key.nl/3afd2ed80ce14931a7e74761f40741d6.txt",
     urlList: urls
   };
   

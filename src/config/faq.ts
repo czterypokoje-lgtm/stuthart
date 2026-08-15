@@ -1,8 +1,6 @@
 // ============================================================
-// FAQ CONFIG — Autosleutel24
+// FAQ CONFIG — First Class Schlüsselnotdienst
 // Powers FAQPage schema on all service, city, and static pages
-// Built from SEMrush keyword research: autosleutel bijmaken,
-// autosleutel kwijt, transponder programmeren, smart key, etc.
 // ============================================================
 
 import { SITE_CONFIG } from '@/config/site.config';
@@ -12,375 +10,351 @@ export type FaqItem = { q: string; a: string };
 // ── GLOBAL FAQs (used on homepage, FAQ page, and as fallback) ──
 export const FAQ_GLOBAL: FaqItem[] = [
   {
-    q: 'Wat kost het gemiddeld om een autosleutel bij te laten maken in Nederland?',
-    a: `De exacte kosten voor het bijmaken van een autosleutel hangen sterk af van het merk, het model, het bouwjaar en het type sleutel (standaard sleutel, klapsleutel of geavanceerde keyless entry smart key). Bij de officiële autodealer betaalt u al snel tussen de €300 en €900, exclusief torenhoge wegsleepkosten als u al uw sleutels kwijt bent. Bij Autosleutel24 bent u gegarandeerd stukken voordeliger uit. Een standaard transpondersleutel bijmaken begint bij ons rond de €${SITE_CONFIG.prices.transponder}, terwijl een volledig ingeleerde smart key (inclusief behuizing en transponder programmeren op locatie) gemiddeld begint vanaf €${SITE_CONFIG.prices.smartKey}, afhankelijk van de complexiteit van de startonderbreker. Doordat wij geen duur pand of showrooms hebben en direct op locatie werken, profiteert u van groothandelsprijzen met dealer-niveau kwaliteit. Neem telefonisch of via WhatsApp contact met ons op voor een exacte en vrijblijvende prijsopgave voor uw specifieke voertuig.`,
+    q: 'Was kostet es durchschnittlich, einen Autoschlüssel nachmachen zu lassen?',
+    a: `Die genauen Kosten für das Nachmachen eines Autoschlüssels hängen stark von Marke, Modell, Baujahr und Schlüsseltyp ab (Standardschlüssel, Klappschlüssel oder Smart Key). Beim offiziellen Vertragshändler zahlen Sie schnell zwischen 300€ und 900€, exklusive hoher Abschleppkosten, wenn Sie alle Schlüssel verloren haben. Bei uns sind Sie garantiert günstiger dran. Ein Standard-Transponderschlüssel beginnt bei ca. €${SITE_CONFIG.prices.transponder}, während ein vollständig programmierter Smart Key bei ca. €${SITE_CONFIG.prices.smartKey} beginnt. Da wir direkt vor Ort arbeiten, profitieren Sie von Großhandelspreisen in Händlerqualität. Kontaktieren Sie uns telefonisch oder per WhatsApp für ein genaues und unverbindliches Angebot für Ihr Fahrzeug.`,
   },
   {
-    q: 'Hoe snel kunt u bij mij zijn?',
-    a: 'In Utrecht zijn we gemiddeld binnen 15–30 minuten ter plaatse. In Amsterdam, Almere en Amersfoort 30–60 minuten. Wij zijn 24 uur per dag, 7 dagen per week beschikbaar — ook op zondag en feestdagen.',
+    q: 'Wie schnell können Sie bei mir sein?',
+    a: 'In Stuttgart sind wir durchschnittlich innerhalb von 15–30 Minuten vor Ort. In Sindelfingen, Böblingen und Leonberg in 30–60 Minuten. Wir sind 24 Stunden am Tag, 7 Tage die Woche für Sie da — auch an Sonn- und Feiertagen.',
   },
   {
-    q: 'Wat moet ik doen als ik mijn autosleutel kwijt ben?',
-    a: 'Blijf rustig en bel direct de mobiele service van Autosleutel24 (06 11 75 12 31). Wij komen direct naar uw locatie met onze servicebus. U hoeft uw auto niet te laten wegslepen naar een dealer. Wij lezen de slotcilinder of boordcomputer uit, snijden ter plekke een nieuw sleutelblad en programmeren de startonderbreker. De oude, verloren sleutel wissen we direct uit het systeem voor uw veiligheid.',
+    q: 'Was soll ich tun, wenn ich meinen Autoschlüssel verloren habe?',
+    a: `Bleiben Sie ruhig und rufen Sie sofort unseren mobilen Service an (${SITE_CONFIG.phone}). Wir kommen direkt zu Ihrem Standort. Sie müssen Ihr Auto nicht zum Händler abschleppen lassen. Wir lesen das Schloss oder den Bordcomputer aus, fräsen vor Ort einen neuen Schlüssel und programmieren die Wegfahrsperre. Den alten, verlorenen Schlüssel löschen wir zu Ihrer Sicherheit direkt aus dem System.`,
   },
   {
-    q: 'Kunnen jullie ook een reservesleutel bijmaken zonder het origineel?',
-    a: 'Ja. Ook als u alle sleutels kwijt bent kunnen wij een nieuwe sleutel maken via OBD-uitlezing of door de slotcilinder te decoderen. Dit is onze AKL-service (All Keys Lost). Dit is ook mogelijk voor nieuwere modellen met remote/smart key.',
+    q: 'Können Sie auch einen Ersatzschlüssel ohne das Original nachmachen?',
+    a: 'Ja. Auch wenn Sie alle Schlüssel verloren haben, können wir durch OBD-Auslesung oder durch Decodierung des Schließzylinders einen neuen Schlüssel herstellen. Dies ist unser AKL-Service (All Keys Lost). Das ist auch für neuere Modelle mit Smart Key möglich.',
   },
   {
-    q: 'Zijn jullie goedkoper dan de dealer?',
-    a: 'In de meeste gevallen zijn wij 40–60% goedkoper dan de officiële dealer. Dealers rekenen vaak extra voor inleren, programmeren en administratie. Wij bieden een transparante vaste prijs inclusief alles.',
+    q: 'Sind Sie günstiger als der Vertragshändler?',
+    a: 'In den meisten Fällen sind wir 40–60% günstiger als der offizielle Händler. Händler berechnen oft extra für das Anlernen, Programmieren und die Verwaltung. Wir bieten einen transparenten Festpreis inklusive allem.',
   },
   {
-    q: 'Werken jullie ook \'s nachts en in het weekend?',
-    a: 'Ja, wij zijn 24/7 beschikbaar — ook op zaterdag, zondag en feestdagen. Spoedtarieven zijn dezelfde als reguliere tarieven.',
+    q: 'Arbeiten Sie auch nachts und am Wochenende?',
+    a: 'Ja, wir sind 24/7 erreichbar — auch an Samstagen, Sonntagen und Feiertagen. Notdiensttarife entsprechen unseren regulären fairen Tarifen.',
   },
   {
-    q: 'Welke automerken ondersteunen jullie?',
-    a: 'Wij werken met alle gangbare merken: BMW, Mercedes-Benz, Volkswagen, Audi, Toyota, Ford, Opel, Renault, Peugeot, Citroën, Kia, Hyundai, Volvo, Skoda, Nissan, Jeep, Porsche, Seat, Fiat, Honda en meer. Inclusief elektrische voertuigen (EV).',
+    q: 'Welche Automarken unterstützen Sie?',
+    a: 'Wir arbeiten mit allen gängigen Marken: BMW, Mercedes-Benz, Volkswagen, Audi, Toyota, Ford, Opel, Renault, Peugeot, Citroën, Kia, Hyundai, Volvo, Skoda, Nissan, Jeep, Porsche, Seat, Fiat, Honda und mehr. Inklusive Elektrofahrzeuge (EV).',
   },
   {
-    q: 'Hoe kan ik een transpondersleutel programmeren zonder naar de dealer te gaan?',
-    a: 'U kunt een transpondersleutel niet zelf programmeren zonder gespecialiseerde OBD-uitleesapparatuur (zoals Autel of Xhorse). Gelukkig hoeft u niet naar de dealer! Autosleutel24 komt als mobiele specialist met dealer-niveau diagnoseapparatuur naar u toe. Wij programmeren de transponderchip binnen enkele minuten veilig in via de OBD2-poort van uw auto, direct op uw eigen oprit of werkplek.',
+    q: 'Wie kann ich einen Transponderschlüssel programmieren, ohne zum Händler zu gehen?',
+    a: 'Sie können einen Transponderschlüssel ohne spezielle OBD-Auslesegeräte nicht selbst programmieren. Zum Glück müssen Sie nicht zum Händler! Wir kommen als mobiler Spezialist mit Diagnosegeräten auf Händler-Niveau zu Ihnen. Wir programmieren den Transponderchip innerhalb weniger Minuten sicher über den OBD2-Anschluss Ihres Autos, direkt in Ihrer Einfahrt oder an Ihrem Arbeitsplatz.',
   },
   {
-    q: 'Wat kan ik doen als mijn keyless entry sleutel niet meer werkt?',
-    a: 'Controleer allereerst de batterij (vaak een CR2032 of CR2025 knoopcel) en vervang deze indien nodig. Werkt de keyless entry (smart key) nog steeds niet? Dan kan de sleutel zijn synchronisatie verloren hebben of is de chip defect. Houd de sleutel strak tegen de startknop (of noodantenne) om de auto alsnog mechanisch of via NCF te starten. Bel ons vervolgens direct: wij repareren of vervangen uw smart key ter plaatse.',
+    q: 'Was kann ich tun, wenn mein Keyless-Entry-Schlüssel nicht mehr funktioniert?',
+    a: 'Prüfen Sie zunächst die Batterie (meist eine CR2032 Knopfzelle) und tauschen Sie diese bei Bedarf aus. Funktioniert der Smart Key immer noch nicht? Dann hat der Schlüssel möglicherweise seine Synchronisierung verloren oder der Chip ist defekt. Halten Sie den Schlüssel direkt an den Startknopf, um das Auto mechanisch zu starten. Rufen Sie uns dann an: Wir reparieren oder ersetzen Ihren Smart Key vor Ort.',
   },
   {
-    q: 'Hebben jullie een KVK-nummer?',
-    a: 'Ja. Autosleutel24 is ingeschreven bij de Kamer van Koophandel onder nummer 81726354. BTW-nummer: NL817263540B01. Na iedere service ontvangt u een officiële factuur — handig voor de verzekeringsmaatschappij.',
+    q: 'Haben Sie eine offizielle Firmenregistrierung?',
+    a: 'Ja, First Class Schlüsselnotdienst ist ein eingetragenes Unternehmen. Nach jedem Service erhalten Sie eine offizielle Rechnung — praktisch für die Versicherung.',
   },
   {
-    q: 'Kan ik mijn auto openen als de accu leeg is?',
-    a: 'Ja. Vrijwel alle moderne auto\'s hebben een mechanisch noodslot in de deurgreep achter een plaatje. Wij kunnen uw auto ook openen als de accu volledig leeg is — zonder de auto te beschadigen.',
+    q: 'Kann ich mein Auto öffnen, wenn die Batterie leer ist?',
+    a: 'Ja. Fast alle modernen Autos haben ein mechanisches Notschloss im Türgriff hinter einer Abdeckung. Wir können Ihr Auto auch bei komplett leerer Batterie öffnen — ohne das Auto zu beschädigen.',
   },
   {
-    q: 'Wat is het verschil tussen een klapsleutel en een normale sleutel?',
-    a: 'Een klapsleutel (flip key) heeft een mechanische sleutelbaar die inklapt in de behuizing. De sleutel bevat een transponder of remote-functie. Wij kunnen het sleutelblad vervangen, de transponder programmeren en het remote-gedeelte inleren op uw auto.',
+    q: 'Was ist der Unterschied zwischen einem Klappschlüssel und einem normalen Schlüssel?',
+    a: 'Ein Klappschlüssel (Flip Key) hat einen mechanischen Schlüsselbart, der in das Gehäuse einklappt. Der Schlüssel enthält einen Transponder oder eine Fernbedienungsfunktion. Wir können den Schlüsselbart ersetzen, den Transponder programmieren und die Fernbedienung für Ihr Auto anlernen.',
   },
   {
-    q: 'Hoe werkt het bijmaken van een autosleutel?',
-    a: 'Als u nog een werkende autosleutel heeft, lezen wij de transponderchip uit en kopiëren we deze data naar een nieuwe chip. Daarna frezen we met een computergestuurde CNC-machine de sleutelbaard nauwkeurig na. Dit proces duurt doorgaans 20 tot 30 minuten per sleutel op uw locatie.',
+    q: 'Wie funktioniert das Nachmachen eines Autoschlüssels?',
+    a: 'Wenn Sie noch einen funktionierenden Autoschlüssel haben, lesen wir den Transponderchip aus und kopieren diese Daten auf einen neuen Chip. Danach fräsen wir mit einer computergesteuerten CNC-Maschine den Schlüsselbart präzise nach. Dieser Vorgang dauert in der Regel 20 bis 30 Minuten pro Schlüssel an Ihrem Standort.',
   },
   {
-    q: 'Autosleutel verloren, welke diensten bieden vervanging aan?',
-    a: 'Wanneer u uw autosleutel bent verloren, bieden wij als gespecialiseerde mobiele slotenmaker een complete All Keys Lost (AKL) vervangingsdienst aan. Wij komen naar uw locatie, openen de auto schadevrij, frezen een nieuwe sleutel op basis van de slotcilinder, en programmeren de transponder of smart key in de boordcomputer. Dit is aanzienlijk sneller en goedkoper dan uw auto naar de merkdealer laten wegslepen.',
+    q: 'Autoschlüssel verloren, welche Dienste bieten Ersatz an?',
+    a: 'Wenn Sie Ihren Autoschlüssel verloren haben, bieten wir als spezialisierter mobiler Schlüsseldienst einen kompletten All Keys Lost (AKL) Ersatzdienst an. Wir kommen zu Ihrem Standort, öffnen das Auto zerstörungsfrei, fräsen einen neuen Schlüssel anhand des Schließzylinders und programmieren den Transponder oder Smart Key in den Bordcomputer. Das ist deutlich schneller und günstiger, als Ihr Auto zum Händler abschleppen zu lassen.',
   },
   {
-    q: 'Stappenplan autosleutel verloren?',
-    a: '1. Blijf rustig en zoek op voor de hand liggende plekken. 2. Controleer of de sleutel niet per ongeluk in de auto ligt. 3. Zoek de reservesleutel. 4. Geen reservesleutel? Zoek uw kentekenbewijs en legitimatie op. 5. Bel Autosleutel24 (06 11 75 12 31). Wij komen direct naar u toe om op locatie een nieuwe sleutel te maken en in te leren.',
+    q: 'Schritt-für-Schritt-Plan bei verlorenem Autoschlüssel?',
+    a: `1. Ruhig bleiben und an offensichtlichen Orten suchen. 2. Prüfen, ob der Schlüssel versehentlich im Auto liegt. 3. Den Ersatzschlüssel suchen. 4. Kein Ersatzschlüssel? Suchen Sie Ihren Fahrzeugschein und Ausweis. 5. Rufen Sie uns an (${SITE_CONFIG.phone}). Wir kommen direkt zu Ihnen, um vor Ort einen neuen Schlüssel herzustellen und anzulernen.`,
   },
   {
-    q: 'Waar vind ik een autosleutelmaker in mijn buurt?',
-    a: 'Autosleutel24 is dé mobiele autosleutelmaker in Midden-Nederland. Omdat wij werken vanuit een volledig uitgeruste servicebus, brengen wij de werkplaats naar u toe in Utrecht, Amsterdam, Almere, Amersfoort en omstreken. U hoeft dus niet op zoek naar een fysieke winkel in uw buurt; wij komen direct naar uw auto.',
+    q: 'Wo finde ich einen Autoschlüsseldienst in meiner Nähe?',
+    a: 'First Class Schlüsselnotdienst ist der mobile Autoschlüsseldienst im Raum Stuttgart. Da wir mit einem voll ausgestatteten Servicebus arbeiten, bringen wir die Werkstatt zu Ihnen nach Stuttgart, Sindelfingen, Böblingen, Leonberg und Umgebung. Sie müssen also nicht nach einem physischen Geschäft suchen; wir kommen direkt zu Ihrem Auto.',
   },
   {
-    q: 'Kosten voor het bijmaken van een autosleutel zonder reserve?',
-    a: `Het bijmaken van een autosleutel zonder originele reserve (All Keys Lost) kost meer dan een simpele kopie, omdat we het slot moeten decoderen. De kosten starten vanaf €${SITE_CONFIG.prices.allKeysLost} voor mechanische sleutels en kunnen oplopen voor moderne smart keys. Bij Autosleutel24 betaalt u echter altijd een vaste, transparante prijs die tot wel 50% lager ligt dan bij de autodealer, zonder extra sleepkosten.`,
+    q: 'Kosten für das Nachmachen eines Autoschlüssels ohne Ersatzschlüssel?',
+    a: `Das Nachmachen eines Autoschlüssels ohne Original-Ersatzschlüssel (All Keys Lost) kostet mehr als eine einfache Kopie, da wir das Schloss decodieren müssen. Die Kosten beginnen bei ca. €${SITE_CONFIG.prices.allKeysLost} für mechanische Schlüssel und können bei modernen Smart Keys höher liegen. Bei uns zahlen Sie jedoch immer einen festen, transparenten Preis, der bis zu 50% unter dem des Autohändlers liegt, ohne zusätzliche Abschleppkosten.`,
   },
   {
-    q: 'Kan een autosleutel met afstandsbediening zonder originele sleutel worden gemaakt?',
-    a: 'Ja, absoluut. Met onze geavanceerde OBD2-diagnoseapparatuur kunnen wij een geheel nieuwe autosleutel met afstandsbediening (en transponder) inleren in de boordcomputer van uw auto, zelfs als u de originele sleutel niet meer heeft. De oude, verloren afstandsbediening wissen wij direct uit het systeem ter preventie van diefstal.',
+    q: 'Kann ein Autoschlüssel mit Fernbedienung ohne Originalschlüssel hergestellt werden?',
+    a: 'Ja, absolut. Mit unseren fortschrittlichen OBD2-Diagnosegeräten können wir einen komplett neuen Autoschlüssel mit Fernbedienung (und Transponder) in den Bordcomputer Ihres Autos anlernen, selbst wenn Sie den Originalschlüssel nicht mehr haben. Die alte, verlorene Fernbedienung löschen wir sofort aus dem System, um Diebstahl vorzubeugen.',
   },
   {
-    q: 'Auto openen zonder sleutel door professional?',
-    a: 'Heeft u uw sleutel in de auto laten liggen? Autosleutel24 is gespecialiseerd in het 100% schadevrij openen van auto\'s. Wij gebruiken hiervoor professionele technieken zoals air wedges en Lishi lock picks. Hiermee manipuleren we het slot zonder de lak, ramen of rubbers te beschadigen. Probeer dit nooit zelf met een kledinghanger, dit leidt vrijwel altijd tot dure schade.',
+    q: 'Auto öffnen ohne Schlüssel durch einen Profi?',
+    a: 'Haben Sie Ihren Schlüssel im Auto liegen lassen? Wir sind darauf spezialisiert, Autos zu 100% zerstörungsfrei zu öffnen. Wir verwenden dafür professionelle Techniken wie Air Wedges und Lishi Lockpicks. Damit manipulieren wir das Schloss, ohne den Lack, die Fenster oder die Gummis zu beschädigen. Versuchen Sie dies niemals selbst mit einem Kleiderbügel, das führt fast immer zu teuren Schäden.',
   },
   {
-    q: 'Autosleutel kwijt, kan de dealer een nieuwe maken?',
-    a: 'Ja, de merkdealer kan een nieuwe sleutel maken, maar dit brengt nadelen met zich mee. U moet uw auto op eigen kosten naar de dealer laten slepen, en het bestellen van een sleutel bij de fabriek duurt vaak 1 tot 2 weken. Autosleutel24 biedt een sneller en goedkoper alternatief: wij maken en programmeren de sleutel direct bij u op locatie, terwijl u wacht.',
+    q: 'Autoschlüssel weg, kann der Händler einen neuen machen?',
+    a: 'Ja, der Vertragshändler kann einen neuen Schlüssel herstellen, aber das bringt Nachteile mit sich. Sie müssen Ihr Auto auf eigene Kosten zum Händler schleppen lassen, und die Bestellung eines Schlüssels ab Werk dauert oft 1 bis 2 Wochen. Wir bieten eine schnellere und günstigere Alternative: Wir fertigen und programmieren den Schlüssel direkt bei Ihnen vor Ort, während Sie warten.',
   },
   {
-    q: 'Vervangende autosleutel bestellen online?',
-    a: 'U kunt online lege sleutelbehuizingen bestellen, maar het online bestellen van een volledig werkende transpondersleutel is onmogelijk. Een sleutel moet namelijk fysiek worden ingeleerd op de unieke startonderbreker van uw auto via de OBD-poort. Autosleutel24 levert originele OEM-kwaliteit sleutels en verzorgt de volledige programmering bij u thuis.',
+    q: 'Ersatz-Autoschlüssel online bestellen?',
+    a: 'Sie können leere Schlüsselgehäuse online bestellen, aber die Online-Bestellung eines voll funktionsfähigen Transponderschlüssels ist unmöglich. Ein Schlüssel muss nämlich physisch über den OBD-Anschluss an die einzigartige Wegfahrsperre Ihres Autos angelernt werden. Wir liefern Schlüssel in Original-OEM-Qualität und übernehmen die komplette Programmierung bei Ihnen zu Hause.',
   },
   {
-    q: 'Hoe werkt autosleutel programmeren na verlies?',
-    a: 'Na het verlies van uw sleutels sluiten wij onze diagnoseapparatuur aan op de OBD2-poort van uw auto. We communiceren met de ECU (boordcomputer) om veiligheidscodes te verifiëren. Vervolgens schrijven we de unieke digitale code van de nieuwe transponderchip in het geheugen van de auto. Als laatste stap wissen we de verloren sleutel uit het systeem, zodat deze de auto niet meer kan starten.',
+    q: 'Wie funktioniert das Programmieren eines Autoschlüssels nach Verlust?',
+    a: 'Nach dem Verlust Ihrer Schlüssel schließen wir unsere Diagnosegeräte an den OBD2-Anschluss Ihres Autos an. Wir kommunizieren mit dem Motorsteuergerät (ECU), um Sicherheitscodes zu überprüfen. Dann schreiben wir den einzigartigen digitalen Code des neuen Transponderchips in den Speicher des Autos. Als letzten Schritt löschen wir den verlorenen Schlüssel aus dem System, sodass dieser das Auto nicht mehr starten kann.',
   },
   {
-    q: 'Is autosleutel kwijt gedekt door verzekering?',
-    a: 'Dit hangt af van uw polis. Bij een WA+ Beperkt Casco of All-Risk verzekering worden de kosten voor het vervangen van verloren of gestolen autosleutels (en soms het vervangen van de sloten) vaak gedekt door de verzekeraar. Controleer uw polisvoorwaarden. Wij voorzien u altijd van een officiële factuur die u kunt indienen bij uw verzekeringsmaatschappij.',
+    q: 'Wird der Verlust eines Autoschlüssels von der Versicherung gedeckt?',
+    a: 'Das hängt von Ihrer Police ab. Bei einer Teilkasko- oder Vollkaskoversicherung werden die Kosten für den Ersatz verlorener oder gestohlener Autoschlüssel (und manchmal auch der Austausch der Schlösser) oft von der Versicherung übernommen. Überprüfen Sie Ihre Versicherungsbedingungen. Wir stellen Ihnen immer eine offizielle Rechnung aus, die Sie bei Ihrer Versicherung einreichen können.',
   },
   {
-    q: 'Wat zijn de opties bij alle autosleutels kwijt?',
-    a: 'Bij verlies van alle sleutels heeft u twee opties: 1) De auto laten wegslepen naar de dealer, wat duur is en weken duurt. 2) Een mobiele slotenmaker zoals Autosleutel24 inschakelen. Wij komen direct naar u toe, openen de auto, frezen een nieuwe sleutel op basis van het slot en programmeren deze direct in. Dit is de snelste en meest voordelige optie.',
+    q: 'Was sind die Optionen, wenn alle Autoschlüssel verloren sind?',
+    a: 'Wenn Sie alle Schlüssel verloren haben, haben Sie zwei Möglichkeiten: 1) Das Auto zum Händler abschleppen lassen, was teuer ist und Wochen dauert. 2) Einen mobilen Schlüsseldienst wie uns beauftragen. Wir kommen direkt zu Ihnen, öffnen das Auto, fräsen einen neuen Schlüssel anhand des Schlosses und programmieren ihn sofort. Das ist die schnellste und kostengünstigste Option.',
   },
   {
-    q: 'Hoe vind ik een goedkope autosleutelmaker?',
-    a: 'Kies voor een onafhankelijke, mobiele specialist in plaats van de officiële autodealer. Omdat mobiele autosleutelmakers zoals Autosleutel24 geen duur pand of showroom hebben, liggen de overheadkosten veel lager. Wij kopen direct in en berekenen dit voordeel door aan de klant, waardoor we vaak de goedkoopste en snelste optie in de regio zijn.',
+    q: 'Wie finde ich einen günstigen Autoschlüsseldienst?',
+    a: 'Wählen Sie einen unabhängigen, mobilen Spezialisten anstelle des offiziellen Autohändlers. Da mobile Autoschlüsseldienste wie wir keine teuren Gebäude oder Ausstellungsräume haben, sind die Gemeinkosten viel geringer. Wir kaufen direkt ein und geben diesen Preisvorteil an den Kunden weiter, wodurch wir oft die günstigste und schnellste Option in der Region sind.',
   },
   {
-    q: 'Kan ik een autosleutel online bestellen en laten programmeren?',
-    a: 'Het zelf online bestellen van een sleutel (via AliExpress of eBay) wordt afgeraden, omdat deze vaak van slechte kwaliteit zijn of niet de juiste chip bevatten voor uw specifieke model. Wij kunnen door de klant aangeleverde sleutels soms programmeren, maar geven hier geen garantie op. Wij raden aan om onze hoogwaardige OEM-sleutels te gebruiken inclusief garantie en inleren.',
+    q: 'Kann ich einen Autoschlüssel online bestellen und programmieren lassen?',
+    a: 'Es wird davon abgeraten, einen Schlüssel selbst online zu bestellen (z. B. über AliExpress oder eBay), da diese oft von schlechter Qualität sind oder nicht den richtigen Chip für Ihr spezifisches Modell enthalten. Wir können vom Kunden bereitgestellte Schlüssel manchmal programmieren, geben darauf aber keine Garantie. Wir empfehlen die Verwendung unserer hochwertigen OEM-Schlüssel inklusive Garantie und Anlernen.',
   },
   {
-    q: 'Autosleutel kwijt, wat kost het vervangen door een universele sleutel?',
-    a: `Een volledig "universele" autosleutel bestaat niet voor moderne auto's, omdat elke auto een unieke cryptografische startonderbreker heeft. Wel gebruiken wij hoogwaardige aftermarket (OEM-kwaliteit) sleutels die we specifiek voor uw auto programmeren. Dit kost, afhankelijk van het model en type (transponder of smart key), vanaf €${SITE_CONFIG.prices.allKeysLost} in een situatie waarbij alle sleutels kwijt zijn.`,
+    q: 'Autoschlüssel verloren, was kostet der Ersatz durch einen Universalschlüssel?',
+    a: `Einen vollständig "universellen" Autoschlüssel gibt es für moderne Autos nicht, da jedes Auto eine einzigartige kryptografische Wegfahrsperre hat. Wir verwenden jedoch hochwertige Aftermarket- (OEM-Qualität) Schlüssel, die wir speziell für Ihr Auto programmieren. Dies kostet je nach Modell und Typ (Transponder oder Smart Key) ab ca. €${SITE_CONFIG.prices.allKeysLost} in einer Situation, in der alle Schlüssel verloren sind.`,
   },
   {
-    q: 'Hoelang duurt het bijmaken van een autosleutel?',
-    a: 'Voor een standaard transponder sleutel duurt het 20–45 minuten ter plaatse. Smart keys en keyless entry systemen kunnen 45–90 minuten duren. Wij beginnen pas als u akkoord gaat met de vaste prijs.',
+    q: 'Wie lange dauert es, einen Autoschlüssel nachzumachen?',
+    a: 'Für einen Standard-Transponderschlüssel dauert es 20–45 Minuten vor Ort. Smart Keys und Keyless-Entry-Systeme können 45–90 Minuten dauern. Wir beginnen erst, wenn Sie dem Festpreis zustimmen.',
   },
   {
-    q: 'Zijn jullie ook beschikbaar buiten Utrecht?',
-    a: 'Ja, wij bedienen Midden-Nederland en de Randstad. Vaste servicegebieden: Utrecht, Amsterdam, Almere, Amersfoort, Hilversum, Bussum, Naarden, Zeist, Houten, Nieuwegein, Woerden, Amstelveen en meer dan 40 andere steden.',
+    q: 'Sind Sie auch außerhalb von Stuttgart verfügbar?',
+    a: 'Ja, wir bedienen den Großraum Stuttgart und Umgebung. Feste Servicegebiete: Stuttgart, Sindelfingen, Böblingen, Leonberg, Ludwigsburg, Esslingen, Filderstadt und viele weitere Städte.',
   },
   {
-    q: 'Geven jullie garantie op uw werk?',
-    a: 'Ja, wij geven 12 maanden garantie op alle sleutels en programmeerwerkzaamheden. Als uw sleutel binnen een jaar niet meer werkt door een fout van ons, lossen we het gratis op.',
+    q: 'Geben Sie Garantie auf Ihre Arbeit?',
+    a: 'Ja, wir geben 12 Monate Garantie auf alle Schlüssel und Programmierarbeiten. Sollte Ihr Schlüssel innerhalb eines Jahres durch einen Fehler unsererseits nicht mehr funktionieren, beheben wir das kostenlos.',
   },
   {
-    q: 'Autosleutel bijmaken kosten vergelijken in Nederland',
-    a: `Wanneer u de kosten voor het bijmaken van een autosleutel vergelijkt in Nederland, ziet u grote verschillen. Autodealers rekenen vaak tussen de €250 en €600 inclusief programmeerkosten en wachttijden. Onafhankelijke mobiele specialisten zoals Autosleutel24 bieden dezelfde OEM-kwaliteit sleutels aan vanaf €${SITE_CONFIG.prices.transponder} tot €${SITE_CONFIG.prices.smartKey} (voor smart keys), inclusief frezen en inleren op uw locatie. U bespaart hierdoor tot wel 50%.`,
+    q: 'Wo kann ich schnell einen Autoschlüssel in meiner Nähe nachmachen lassen?',
+    a: 'Für den schnellsten Service in Ihrer Nähe müssen Sie das Haus nicht verlassen. Wir agieren als komplett mobile Werkstatt in der Region Stuttgart. Wir kommen direkt zu Ihrem Auto, ob zu Hause oder auf der Arbeit, und fertigen vor Ort innerhalb von 30 Minuten einen neuen Schlüssel an.',
   },
   {
-    q: 'Waar kan ik snel een autosleutel bijmaken in mijn buurt?',
-    a: 'Voor de snelste service in uw buurt hoeft u de deur niet uit. Autosleutel24 opereert als een volledig mobiele werkplaats in regio Midden-Nederland (Utrecht, Amsterdam, Amersfoort, Almere). Wij komen direct naar uw auto toe, thuis of op het werk, en maken ter plekke binnen 30 minuten een nieuwe sleutel.',
+    q: 'Welche Unternehmen bieten das Nachmachen von Autoschlüsseln als Notdienst an?',
+    a: `Wir sind auf Notdienste für Autoschlüssel spezialisiert. Wir sind 24 Stunden am Tag, 7 Tage die Woche unter ${SITE_CONFIG.phone} erreichbar. In Notfällen (wie z. B. Aussperrung oder alle Schlüssel verloren) sind wir in der Region Stuttgart oft schon innerhalb von 30 Minuten vor Ort, um Ihnen sofort wieder auf den Weg zu helfen.`,
   },
   {
-    q: 'Welke bedrijven bieden autosleutel bijmaken met spoed aan?',
-    a: 'Autosleutel24 is gespecialiseerd in spoedservices voor autosleutels. Wij zijn 24 uur per dag, 7 dagen per week bereikbaar via 06 11 75 12 31. Bij noodgevallen (zoals buitensluiting of alle sleutels kwijt) zijn wij in de regio Utrecht vaak al binnen 30 minuten ter plaatse om u direct weer op weg te helpen.',
+    q: 'Wie funktioniert der Prozess beim Händler im Vergleich zum Spezialisten?',
+    a: 'Beim Händler müssen Sie einen Termin vereinbaren, das Auto bringen und manchmal 2 Wochen auf einen Werksschlüssel warten, wonach Sie hohe Programmierkosten zahlen. Als mobiler Spezialist kommen wir zu Ihrem Standort, decodieren das Schloss oder den Bordcomputer, fräsen den Schlüssel in unserem Bus mit einer CNC-Maschine und programmieren den Transponder direkt über OBD2. Das dauert nur 30 bis 60 Minuten.',
   },
   {
-    q: 'Hoe werkt het proces van een autosleutel bijmaken bij een dealer versus specialist?',
-    a: 'Bij een dealer moet u een afspraak maken, de auto brengen, en soms 2 weken wachten op een fabriekssleutel, waarna u hoge programmeerkosten betaalt. Bij een mobiele specialist zoals Autosleutel24 komen wij naar uw locatie, decoderen wij het slot of de boordcomputer, frezen we de sleutel in onze bus met een CNC-machine, en programmeren we de transponder direct in via OBD2. Dit kost slechts 30 tot 60 minuten.',
+    q: 'Ist es möglich, einen Autoschlüssel ohne Originalschlüssel nachzumachen?',
+    a: 'Ja, das nennt sich "All Keys Lost" (AKL) Verfahren. Wir können einen komplett neuen Schlüssel ohne Original herstellen. Mit spezieller Software lesen wir den Sicherheitscode (PIN-Code) aus der ECU Ihres Autos aus. Anschließend fräsen wir einen neuen Schlüsselbart passgenau und lernen den neuen Transponder an. Die verlorenen Schlüssel werden gleichzeitig digital gesperrt.',
   },
   {
-    q: 'Is het mogelijk om een autosleutel bij te maken zonder originele sleutel?',
-    a: 'Ja, dit heet de All Keys Lost (AKL) procedure. Wij kunnen een compleet nieuwe sleutel maken zonder origineel. Met speciale software lezen we de beveiligingscode (pincode) uit de ECU van uw auto. Vervolgens snijden we een nieuwe sleutelbaard op maat en leren we de nieuwe transponder in. De verloren sleutels worden tevens digitaal geblokkeerd.',
+    q: 'Welche Garantie bekomme ich beim Nachmachen eines Autoschlüssels?',
+    a: 'Bei uns erhalten Sie standardmäßig 12 Monate Garantie auf den physischen Schlüssel (Hardware und Batterie) sowie auf die Programmierung (Software). Da wir mit hochwertigen Schlüsseln in OEM-Qualität und fortschrittlichen Programmiergeräten arbeiten, garantieren wir, dass der Schlüssel einwandfrei funktioniert. Wir fahren erst ab, wenn Sie den Schlüssel erfolgreich getestet haben.',
   },
   {
-    q: 'Welke garantie krijg ik bij het bijmaken van een autosleutel?',
-    a: 'Bij Autosleutel24 krijgt u standaard 12 maanden garantie op zowel de fysieke sleutel (hardware en batterij) als op de programmering (software). Omdat wij werken met hoogwaardige OEM-kwaliteit sleutels en geavanceerde programmeerapparatuur, garanderen wij dat de sleutel perfect functioneert. Wij gaan pas weg als u de sleutel succesvol heeft getest.',
+    q: 'Kann ich einen Autoschlüssel nachmachen lassen, der auch die Wegfahrsperre unterstützt?',
+    a: 'Ja. Fast alle nach 1995 gebauten Autos haben eine eingebaute Wegfahrsperre (Immobilizer). Jeder Schlüssel, den wir liefern, enthält den richtigen Transponderchip (wie ID46, ID48 oder Megamos Crypto). Wir programmieren diesen Chip direkt in das Wegfahrsperrenmodul Ihres Fahrzeugs, damit das Auto sicher startet.',
   },
   {
-    q: 'Kan ik een autosleutel bijmaken die ook startonderbreker ondersteunt?',
-    a: 'Ja. Vrijwel alle auto\'s gebouwd na 1995 hebben een ingebouwde startonderbreker (immobilizer). Elke sleutel die wij leveren bevat de juiste transponderchip (zoals ID46, ID48, of Megamos Crypto). Wij programmeren deze chip direct in de startonderbreker-module van uw voertuig, zodat de auto veilig start.',
+    q: 'Was brauche ich, um einen Autoschlüssel bei einem spezialisierten Service nachmachen zu lassen?',
+    a: 'Aus Sicherheitsgründen und zur Diebstahlprävention bitten wir Sie immer um zwei Dokumente: 1) Einen gültigen Personalausweis oder Führerschein. 2) Die Zulassungsbescheinigung (Fahrzeugschein), die beweist, dass Sie der rechtmäßige Eigentümer des Fahrzeugs sind. Ohne diese Dokumente fertigen wir keine Schlüssel an.',
   },
   {
-    q: 'Wat zijn de beste winkels voor autosleutel bijmaken met afstandsbediening?',
-    a: 'Voor een autosleutel met afstandsbediening kunt u het beste terecht bij een gespecialiseerde automotive slotenmaker zoals Autosleutel24 in plaats van een standaard schoenmaker. Wij hebben de specifieke uitleesapparatuur om de afstandsbediening en centrale deurvergrendeling digitaal te synchroniseren met het CAN-bus of LIN-bus systeem van uw auto.',
+    q: 'Gibt es mobile Dienste, die Autoschlüssel zu Hause nachmachen?',
+    a: 'Ja, wir sind ein 100% mobiler Autoschlüsseldienst. Unsere Firmenwagen sind mit Laserfräsmaschinen, Stromversorgung und aller notwendigen OBD-Diagnosesoftware ausgestattet. Dadurch können wir Ihren neuen Autoschlüssel komplett zu Hause, an Ihrem Arbeitsplatz oder am Straßenrand fräsen und anlernen.',
   },
   {
-    q: 'Wat heb ik nodig om een autosleutel bij te maken bij een gespecialiseerde service?',
-    a: 'Om veiligheidsredenen en ter preventie van diefstal vragen wij u altijd om twee documenten: 1) Een geldig legitimatiebewijs (paspoort, ID-kaart of rijbewijs). 2) Het kentekenbewijs (Deel 1B of de kentekencard) dat aantoont dat u de rechtmatige eigenaar van het voertuig bent. Zonder deze documenten maken wij geen sleutels bij.',
+    q: 'Ist es möglich, einen Autoschlüssel selbst zu programmieren?',
+    a: 'Bei älteren Autos (vor 2005) gibt es manchmal ein manuelles Anlernverfahren für die Fernbedienung, wie das mehrmalige Drehen des Zündschlosses. Der Transponderchip (für die Wegfahrsperre) kann jedoch ausschließlich mit professionellen OBD-Geräten und sicheren PIN-Codes programmiert werden. Das Selbstprogrammieren moderner Schlüssel ist ohne diese teuren Geräte unmöglich. Wenden Sie sich hierfür an uns.',
   },
   {
-    q: 'Zijn er mobiele diensten die autosleutels bijmaken aan huis?',
-    a: 'Ja, Autosleutel24 is een 100% mobiele autosleutelservice. Onze bedrijfswagens zijn uitgerust met laser-freesmachines, stroomvoorziening en alle nodige OBD-diagnosesoftware. Hierdoor kunnen wij uw nieuwe autosleutel volledig aan huis, op uw werk of langs de snelweg frezen en inleren.',
+    q: 'Welche Arten von Autoschlüsseln können heutzutage nachgemacht werden?',
+    a: 'Wir können alle Schlüsseltypen nachmachen: 1) Traditionelle mechanische Schlüssel. 2) Transponderschlüssel (mit Wegfahrsperre). 3) Klappschlüssel mit Fernbedienung (Zentralverriegelung). 4) Smart Keys / Keyless Entry Fobs für Push-to-Start-Systeme. 5) Einsteckschlüssel (wie für VW Passat oder Audi).',
   },
   {
-    q: 'Zelf autosleutel programmeren handleiding, is dat mogelijk?',
-    a: 'Bij oudere auto\'s (voor 2005) is er soms een handmatige inleerprocedure voor de afstandsbediening, zoals het meerdere keren omdraaien van het contactslot. Echter, de transponderchip (voor de startonderbreker) kan uitsluitend worden geprogrammeerd met professionele OBD-apparatuur en beveiligde pincodes. Zelf programmeren van moderne sleutels is onmogelijk zonder deze dure apparatuur. Schakel hiervoor Autosleutel24 in.',
+    q: 'Wo kann ich in Deutschland einen Ersatzschlüssel anfertigen lassen?',
+    a: 'Für die Anfertigung eines Ersatzschlüssels für Ihr Auto können Sie sich an den Vertragshändler oder einen spezialisierten mobilen Schlüsseldienst wenden. Wir sind die schnellste Option im Raum Stuttgart. Wir kommen als mobiler Service zu Ihrem Standort, um den Ersatzschlüssel zu fräsen und in Ihr Auto anzulernen.',
   },
   {
-    q: 'Welke types autosleutels kunnen tegenwoordig worden bijgemaakt?',
-    a: 'Autosleutel24 kan alle typen sleutels bijmaken: 1) Traditionele mechanische sleutels. 2) Transpondersleutels (met startonderbreker). 3) Klapsleutels met afstandsbediening (centrale vergrendeling). 4) Smart Keys / Keyless Entry fobs voor push-to-start systemen. 5) Insteeksleutels (zoals voor Volkswagen Passat of Audi).',
+    q: 'Was ist der beste Ort, um einen Ersatzschlüssel nachmachen zu lassen?',
+    a: 'Der beste Ort ist ein unabhängiger Autoschlüssel-Spezialist wie der First Class Schlüsselnotdienst. Ein normaler Schlüsseldienst (Schuster) kann oft nur einfache Schlüssel ohne Wegfahrsperre kopieren, und ein Händler ist sehr teuer und langsam. Wir bieten Schlüssel in Händlerqualität, inklusive Programmierung der Fernbedienung, zu einem viel niedrigeren Preis, direkt vor Ihrer Haustür.',
   },
   {
-    q: 'Waar kan ik een reservesleutel laten maken in Nederland?',
-    a: 'Voor het laten maken van een reservesleutel voor uw auto in Nederland kunt u terecht bij de merkdealer of een gespecialiseerde mobiele slotenmaker. Autosleutel24 is de snelste optie in Midden-Nederland. Wij komen als mobiele service naar uw locatie toe om de reservesleutel te frezen en in te leren op uw auto.',
+    q: 'Kann ich online einen Ersatzschlüssel anfertigen und nach Hause liefern lassen?',
+    a: 'Nein, ein voll funktionsfähiger moderner Autoschlüssel kann nicht einfach online bestellt und per Post geliefert werden. Der Wegfahrsperren-Chip im Schlüssel muss nämlich über den OBD2-Anschluss im Auto selbst programmiert werden. Wir kommen jedoch zu Ihnen nach Hause, um diesen gesamten Vorgang sicher in Ihrer Einfahrt durchzuführen.',
   },
   {
-    q: 'Hoeveel kost het om een reservesleutel te bestellen?',
-    a: `De kosten voor een nieuwe autosleutel (reservesleutel) variëren van €${SITE_CONFIG.prices.transponder} voor een standaard transpondersleutel tot €${SITE_CONFIG.prices.smartKey} voor geavanceerde smart keys. Bestelt u deze bij een dealer, dan vallen de kosten vaak twee keer zo hoog uit door administratie- en programmeerkosten. Bij Autosleutel24 betaalt u een transparante all-in prijs.`,
+    q: 'Schlüsselgehäuse Auto wechseln: Ist das möglich?',
+    a: 'Ja! Funktioniert die Elektronik Ihres aktuellen Autoschlüssels noch gut, aber die Tasten sind kaputt oder das Gehäuse ist beschädigt? Wir können die interne Platine und den Transponderchip in ein komplett neues, robustes Schlüsselgehäuse umbauen. Dies ist eine sehr günstige Reparatur im Vergleich zum Kauf eines komplett neuen Schlüssels.',
   },
   {
-    q: 'Wat is de beste plek om een reservesleutel te laten bijmaken?',
-    a: 'De beste plek is een onafhankelijke autosleutel specialist zoals Autosleutel24. Waarom? Een reguliere schoenmaker kan vaak alleen eenvoudige sleutels zonder startonderbreker kopiëren, en een dealer is erg duur en traag. Wij bieden dealer-kwaliteit sleutels, inclusief het programmeren van de afstandsbediening, tegen een veel lagere prijs, gewoon bij u voor de deur.',
+    q: 'Wie funktioniert ein mobiler Autoschlüsseldienst?',
+    a: `Unser mobiler Service funktioniert ganz einfach: Sie rufen an oder schreiben uns per WhatsApp (${SITE_CONFIG.phone}) Ihr Kennzeichen und Ihren Standort. Wir kommen mit unserem voll ausgestatteten Servicebus zu Ihnen. In unserem Bus haben wir computergesteuerte Fräsmaschinen und OBD-Programmiergeräte. Innerhalb von 30 Minuten fahren Sie wieder mit einem perfekt funktionierenden neuen Schlüssel.`,
   },
   {
-    q: 'Kan ik online een reservesleutel laten maken en thuis laten bezorgen?',
-    a: 'Nee, een volledig werkende moderne autosleutel kan niet simpelweg online besteld en per post bezorgd worden. De startonderbreker-chip in de sleutel moet namelijk via de OBD2-poort in de auto zélf geprogrammeerd worden. Wel komt Autosleutel24 bij u thuis langs om dit gehele proces veilig op uw oprit uit te voeren.',
+    q: 'Welche Batterie befindet sich in einer Autoschlüssel-Fernbedienung und wie wechsle ich sie?',
+    a: 'In 90% der Fälle verwendet eine Fernbedienung eine CR2032 oder CR2025 Lithium-Knopfzelle. Sie können diese selbst wechseln, indem Sie das Gehäuse vorsichtig mit einem flachen Schraubendreher oder einer Münze aufhebeln. Funktioniert der Schlüssel nach dem Batteriewechsel immer noch nicht? Dann muss der Schlüssel möglicherweise neu angelernt werden oder der Chip ist defekt. Wir können dies vor Ort für Sie reparieren.',
   },
   {
-    q: 'Sleutelbehuizing vervangen auto: is dat mogelijk?',
-    a: 'Ja! Werkt de elektronica van uw huidige autosleutel nog goed, maar zijn de drukknopjes kapot of is de behuizing beschadigd? Wij kunnen de interne printplaat en transponderchip overzetten naar een compleet nieuwe, stevige sleutelbehuizing. Dit is een zeer voordelige reparatie vergeleken met het kopen van een compleet nieuwe sleutel.',
+    q: 'Wie funktioniert die Programmierung eines Autoschlüssels bei verschiedenen Automarken?',
+    a: 'Obwohl das Grundprinzip (OBD2-Auslesung) gleich ist, unterscheidet sich die Software je nach Automarke enorm. Volkswagen (VAG) verwendet z.B. UDS-Protokolle, während BMW mit CAS- oder FEM-Modulen arbeitet. Wir verfügen über markenspezifische, fortschrittliche Lizenzen und Auslesegeräte. Dadurch können wir den Transponderchip für fast alle europäischen, asiatischen und amerikanischen Automarken sicher und fehlerfrei programmieren.',
   },
   {
-    q: 'Hoe werkt een autosleutelmaker service aan huis?',
-    a: 'Onze mobiele autosleutelmaker service aan huis werkt heel simpel: u belt of WhatsAppt ons (06 11 75 12 31) uw kenteken en locatie. Wij komen met onze volledig uitgeruste servicebus naar u toe. In onze bus hebben we computergestuurde freesmachines en OBD-programmeerapparatuur. Binnen 30 minuten rijdt u weer met een perfect werkende nieuwe sleutel.',
+    q: 'Wie lautet die Telefonnummer für die Pannenhilfe bei einem verlorenen Autoschlüssel?',
+    a: `Stehen Sie dringend still, weil Ihre Autoschlüssel verloren, gestohlen oder im Auto eingeschlossen sind? Rufen Sie direkt unsere Notrufnummer an: ${SITE_CONFIG.phone}. Wir fungieren als Pannenhilfe für Autoschlüssel und sind im Raum Stuttgart 24/7 erreichbar. Wir kommen zu Ihnen und lösen das Problem sofort.`,
   },
   {
-    q: 'Wat is het verschil tussen een reserve autosleutel en een hoofdsleutel?',
-    a: 'Bij auto\'s functioneren beide sleutels technisch gezien hetzelfde: ze starten de auto en openen de deuren. Soms is een "reservesleutel" (of noodsleutel) echter een kale mechanische transpondersleutel zonder afstandsbediening-knopjes, terwijl de hoofdsleutel een klapsleutel of smart key is. Wij kunnen beide varianten voor u bijmaken.',
+    q: 'Was ist der Unterschied zwischen einem normalen Autoschlüssel und einem Smart Key?',
+    a: 'Ein "normaler" Autoschlüssel oder Klappschlüssel hat einen physischen Schlüsselbart aus Metall, den Sie ins Zündschloss stecken und drehen, kombiniert mit einem Transponderchip. Ein Smart Key (Keyless Go) sendet kontinuierlich ein einzigartiges Funksignal. Sobald Sie in der Nähe des Autos sind, öffnet es sich automatisch und Sie können über die Start/Stopp-Taste starten. Wir können beide Schlüsseltypen nachmachen und programmieren.',
   },
   {
-    q: 'Welke batterij zit er in een autosleutel afstandsbediening en hoe vervang ik deze?',
-    a: 'In 90% van de gevallen gebruikt een autosleutel afstandsbediening een CR2032 of CR2025 lithium knoopcelbatterij. U kunt deze zelf vervangen door de behuizing voorzichtig open te klikken met een platte schroevendraaier of muntstuk. Werkt de sleutel na het vervangen van de batterij nog niet? Dan moet de sleutel mogelijk opnieuw worden ingeleerd, of is de chip defect. Autosleutel24 kan dit op locatie voor u repareren.',
+    q: 'Wie kann ich einen Termin zum Autoschlüssel kopieren vereinbaren?',
+    a: `Sie können ganz einfach einen Termin vereinbaren, indem Sie anrufen oder eine WhatsApp-Nachricht an ${SITE_CONFIG.phone} senden. Senden Sie Ihren Standort und ein Foto Ihres Fahrzeugscheins. Wir planen dann sofort einen Termin. Da wir mobil arbeiten, kommen wir dorthin, wo es Ihnen passt: nach Hause, zur Arbeit oder unterwegs.`,
   },
   {
-    q: 'Hoe werkt het programmeren van een autosleutel bij verschillende automerken?',
-    a: 'Hoewel het basisprincipe (OBD2-uitlezing) gelijk is, verschilt de software per automerk enorm. Volkswagen (VAG) gebruikt bijvoorbeeld UDS-protocollen, terwijl BMW werkt met CAS- of FEM-modules. Autosleutel24 beschikt over merkspecifieke, geavanceerde licenties en uitleesapparatuur. Hierdoor kunnen wij de transponderchip veilig en foutloos programmeren voor vrijwel alle Europese, Aziatische en Amerikaanse automerken.',
+    q: 'Wie sicher sind Autoschlüssel mit Transponderchip?',
+    a: 'Transponderschlüssel sind äußerst sicher. Sie enthalten einen RFID-Chip mit einem verschlüsselten kryptografischen Code, der mit der Wegfahrsperre im Motorsteuergerät (ECU) korrespondiert. Erst wenn der Computer den richtigen Code liest, wird die Kraftstoffpumpe freigegeben. Deshalb kann niemand Ihr Auto nur mit einem gefrästen Stück Metall starten. Bei Verlust löschen wir den alten Transpondercode, sodass der verlorene Schlüssel wertlos wird.',
   },
   {
-    q: 'Wat is het telefoonnummer voor pechhulp bij een verloren autosleutel?',
-    a: 'Staat u met spoed stil omdat uw autosleutels kwijt, gestolen of in de auto achtergebleven zijn? Bel direct het noodnummer van Autosleutel24: 06 11 75 12 31. Wij fungeren als pechhulp voor autosleutels en zijn 24/7 bereikbaar in Midden-Nederland. We komen naar u toe en lossen het probleem direct op.',
+    q: 'Was kostet ein Autodienst für das Öffnen einer Tür?',
+    a: `Die Kosten für die beschädigungsfreie Öffnung Ihrer Tür beginnen in der Regel bei ca. €${SITE_CONFIG.prices.unlock}, abhängig von Ihrem Standort, der Uhrzeit und der Automarke. Wir haben feste und transparente Preise für Notöffnungen, sodass Sie keine Überraschungen erleben. Kontaktieren Sie uns für einen genauen Preis.`,
   },
   {
-    q: 'Wat is het verschil tussen een gewone autosleutel en een slimme autosleutel (smart key)?',
-    a: 'Een "gewone" autosleutel of klapsleutel heeft een fysieke ijzeren sleutelbaard die u in het contactslot steekt en omdraait, gecombineerd met een transponderchip. Een "slimme" autosleutel (Keyless Go / Smart Key) zendt continu een uniek radiosignaal uit. Zodra u in de buurt van de auto bent, gaat deze automatisch open en kunt u starten via de start/stop-knop. Wij kunnen beide typen sleutels bijmaken en programmeren.',
+    q: 'Wechseln Sie auch das Autoschloss nach einem Einbruch?',
+    a: 'Ja, wenn Ihr Türschloss oder Zündschloss nach einem Einbruchsversuch forciert oder beschädigt wurde, kann unser mobiler Dienst dies direkt vor Ort reparieren oder ersetzen. Wir können das neue Schloss mechanisch an Ihren vorhandenen Schlüssel anpassen (pinnen), sodass Sie kein komplett neues Schlüsselset für alle Türen kaufen müssen.',
   },
   {
-    q: 'Hoe kan ik een afspraak maken voor autosleutel kopiëren?',
-    a: 'U kunt heel eenvoudig een afspraak maken door te bellen of een WhatsApp-bericht te sturen naar 06 11 75 12 31. Stuur uw locatie en een foto van uw kentekenbewijs (of kenteken) door. We plannen vervolgens direct een afspraak in. Omdat we mobiel werken, komen we de autosleutel kopiëren op een moment en locatie die u uitkomt: thuis, op het werk, of onderweg.',
-  },
-  {
-    q: 'Hoe veilig zijn autosleutels met transponderchip?',
-    a: 'Transpondersleutels zijn uiterst veilig. Ze bevatten een RFID-chip met een versleutelde cryptografische code die correspondeert met de startonderbreker in de boordcomputer (ECU). Pas als de computer de juiste code leest, krijgt de brandstofpomp vrijgave. Daarom kan niemand uw auto starten met alleen een geslepen stuk ijzer. Bij verlies programmeren we de oude transpondercode direct uit, zodat de verloren sleutel waardeloos wordt.',
-  },
-  {
-    q: 'Wat kost een auto slotenmaker voor het openen van een deur?',
-    a: `De kosten voor een auto slotenmaker voor het openen van uw deur zonder schade starten doorgaans vanaf €${SITE_CONFIG.prices.unlock}, afhankelijk van uw locatie, het tijdstip (dag/nacht) en het automerk. Bij Autosleutel24 hanteren wij vaste en transparante tarieven voor noodopeningen, zodat u nooit voor verrassingen staat. Neem contact op voor een directe prijsopgave.`,
-  },
-  {
-    q: 'Welke 24-uurs auto slotenmaker heeft de beste recensies?',
-    a: 'Autosleutel24 is de best beoordeelde 24-uurs auto slotenmaker in Midden-Nederland met een gemiddelde score van 5.0 uit 5 sterren op basis van meer dan 240 Google reviews. Klanten prijzen vooral onze snelle aankomsttijd (vaak binnen 30 minuten), het schadevrij openen en onze transparante vooraf gecommuniceerde prijzen.',
-  },
-  {
-    q: 'Vervangen van autoslot na inbraak, doen jullie dat ook?',
-    a: 'Ja, als uw autodeurslot of contactslot geforceerd of beschadigd is na een inbraakpoging, kan onze auto slotenmaker dit direct op locatie repareren of vervangen. Wij kunnen het nieuwe slot mechanisch aanpassen (pinnen) op uw bestaande sleutel, zodat u geen compleet nieuwe sleutelset voor alle deuren hoeft aan te schaffen.',
-  },
-  {
-    q: 'Hoe werkt een auto slotenmaker bij het schadevrij openen van een auto?',
-    a: 'Een professionele auto slotenmaker slaat geen ruiten in en buigt geen deuren krom. Wij gebruiken specialistisch Lishi-gereedschap. Hiermee "lezen" en manipuleren we de interne plaatjes van de slotcilinder, alsof de originele sleutel wordt gebruikt. Binnen enkele minuten springt de deur veilig en 100% schadevrij open.',
-  },
-  {
-    q: 'Is er een auto slotenmaker die ook direct sleutels kan bijmaken op locatie?',
-    a: 'Absoluut. Waar veel reguliere pechhulpdiensten (zoals ANWB) uw auto alleen kunnen openen of wegslepen, is Autosleutel24 een volwaardige mobiele auto slotenmaker. Nadat wij uw auto hebben geopend, kunnen we in onze servicebus direct een nieuwe sleutel frezen en de transponder inleren, zelfs als u alle sleutels kwijt bent.',
+    q: 'Gibt es einen Dienst, der vor Ort direkt Schlüssel nachmachen kann?',
+    a: 'Absolut. Während viele Pannendienste Ihr Auto nur öffnen oder abschleppen können, sind wir ein vollwertiger mobiler Schlüsseldienst. Nachdem wir Ihr Auto geöffnet haben, können wir in unserem Servicebus direkt einen neuen Schlüssel fräsen und den Transponder anlernen, selbst wenn Sie alle Schlüssel verloren haben.',
   },
 ];
 
 // ── SERVICE-SPECIFIC FAQs ──
 export const FAQ_AUTOSLEUTEL_BIJMAKEN: FaqItem[] = [
   {
-    q: 'Hoe maak je een autosleutel bij?',
-    a: 'Ons proces: 1) Wij lezen de slotcilinder uit of gebruiken de OBD-poort van uw auto. 2) Wij snijden een nieuw sleutelblad op maat. 3) De transponderchip wordt geprogrammeerd op uw specifieke auto. 4) De sleutel wordt ingeleerd als geautoriseerde sleutel. Dit alles ter plaatse, zonder dat u naar de garage hoeft.',
+    q: 'Wie macht man einen Autoschlüssel nach?',
+    a: 'Unser Prozess: 1) Wir lesen den Schließzylinder oder den OBD-Anschluss Ihres Autos aus. 2) Wir fräsen einen neuen Schlüsselbart passgenau. 3) Der Transponderchip wird für Ihr spezifisches Auto programmiert. 4) Der Schlüssel wird als autorisierter Schlüssel angelernt. Das alles vor Ort, ohne dass Sie in die Werkstatt müssen.',
   },
   {
-    q: 'Kan een autosleutel bijgemaakt worden zonder het origineel?',
-    a: 'Ja, dit is onze specialiteit. Via OBD-uitlezing of cilinder-decodering kunnen wij altijd een nieuwe sleutel maken — ook als u geen enkel origineel meer heeft (All Keys Lost situatie).',
+    q: 'Kann ein Autoschlüssel ohne das Original nachgemacht werden?',
+    a: 'Ja, das ist unsere Spezialität. Über OBD-Auslesung oder Zylinder-Decodierung können wir immer einen neuen Schlüssel anfertigen — auch wenn Sie kein einziges Original mehr haben (All Keys Lost).',
   },
   {
-    q: 'Hoe duur is een reservesleutel laten bijmaken?',
-    a: `Prijzen starten vanaf €${SITE_CONFIG.prices.transponder} voor eenvoudige transponder sleutels. Smart keys en keyless sleutels kosten vanaf €${SITE_CONFIG.prices.smartKey}. Een vaste prijs wordt altijd vooraf gecommuniceerd. Bel voor een gratis offerte: ${SITE_CONFIG.phone}.`,
+    q: 'Wie teuer ist es, einen Ersatzschlüssel anfertigen zu lassen?',
+    a: `Die Preise beginnen bei ca. €${SITE_CONFIG.prices.transponder} für einfache Transponderschlüssel. Smart Keys und Keyless-Schlüssel kosten ab ca. €${SITE_CONFIG.prices.smartKey}. Ein Festpreis wird immer vorab kommuniziert. Rufen Sie für ein kostenloses Angebot an: ${SITE_CONFIG.phone}.`,
   },
 ];
 
 export const FAQ_TRANSPONDER: FaqItem[] = [
   {
-    q: 'Wat is een transponder sleutel programmeren?',
-    a: 'Transponder programmeren betekent dat de unieke code van de chip in uw nieuwe sleutel wordt gekoppeld aan de immobiliser van uw auto. Zonder deze koppeling start de motor niet. Wij doen dit via de OBD-poort of via pin-code berekening — afhankelijk van uw auto.',
+    q: 'Was bedeutet Transponderschlüssel programmieren?',
+    a: 'Transponder programmieren bedeutet, dass der eindeutige Code des Chips in Ihrem neuen Schlüssel mit der Wegfahrsperre Ihres Autos verknüpft wird. Ohne diese Verknüpfung startet der Motor nicht. Wir machen das über den OBD-Anschluss oder durch PIN-Code-Berechnung — je nach Auto.',
   },
   {
-    q: 'Hoeveel transponders kan mijn auto onthouden?',
-    a: 'De meeste auto\'s kunnen 2–8 transponders opslaan. BMW\'s en Mercedes\'s ondersteunen vaak tot 10. Wij controleren altijd de huidige configuratie en registreren uw nieuwe sleutel op de juiste manier.',
+    q: 'Wie viele Transponder kann mein Auto speichern?',
+    a: 'Die meisten Autos können 2–8 Transponder speichern. BMWs und Mercedes unterstützen oft bis zu 10. Wir überprüfen immer die aktuelle Konfiguration und registrieren Ihren neuen Schlüssel korrekt.',
   },
   {
-    q: 'Kan ik een transponder sleutel zelf programmeren?',
-    a: 'Nee, voor de meeste moderne auto\'s heeft u speciale apparatuur nodig (AUTEL, Xhorse VVDI, Autocom). DIY-oplossingen werken alleen voor oudere auto\'s van vóór 2005. Wij beschikken over professionele apparatuur voor alle merken en modellen.',
+    q: 'Kann ich einen Transponderschlüssel selbst programmieren?',
+    a: 'Nein, für die meisten modernen Autos benötigen Sie spezielle Geräte (AUTEL, Xhorse VVDI, Autocom). DIY-Lösungen funktionieren nur bei älteren Autos (vor ca. 2005). Wir verfügen über professionelle Geräte für alle Marken und Modelle.',
   },
 ];
 
 export const FAQ_SMART_KEY: FaqItem[] = [
   {
-    q: 'Wat kost een Smart Key bijmaken?',
-    a: 'Smart keys kosten meer dan gewone sleutels vanwege de complexere electronica en de programmeerprocessen. Prijzen: €149–€299 afhankelijk van merk en model. BMW Smart Keys zijn gemiddeld €199, Mercedes €229, VW/Audi €179.',
+    q: 'Was kostet das Nachmachen eines Smart Keys?',
+    a: 'Smart Keys kosten mehr als normale Schlüssel aufgrund der komplexeren Elektronik und Programmierprozesse. Preise: ab ca. 149€–299€ je nach Marke und Modell. BMW Smart Keys z.B. durchschnittlich 199€, Mercedes 229€, VW/Audi 179€.',
   },
   {
-    q: 'Hoe lang is de batterij van een Smart Key?',
-    a: 'Gemiddeld 1–3 jaar bij normaal gebruik. Wij vervangen ook de batterij in uw Smart Key. Kosten: €15–€25 voor de batterijwissel inclusief functietest.',
+    q: 'Wie lange hält die Batterie eines Smart Keys?',
+    a: 'Durchschnittlich 1–3 Jahre bei normalem Gebrauch. Wir wechseln auch die Batterie in Ihrem Smart Key.',
   },
 ];
 
 export const FAQ_AUTO_OP_SLOT: FaqItem[] = [
   {
-    q: 'Hoe snel kan mijn auto geopend worden?',
-    a: 'Wij zijn in Utrecht gemiddeld binnen 20 minuten ter plaatse. In Amsterdam 30–45 minuten. Het openen van de auto zelf duurt 5–20 minuten, afhankelijk van het model.',
+    q: 'Wie schnell kann mein Auto geöffnet werden?',
+    a: 'Wir sind in Stuttgart durchschnittlich innerhalb von 20-30 Minuten vor Ort. Das Öffnen des Autos selbst dauert 5–20 Minuten, je nach Modell.',
   },
   {
-    q: 'Kunt u mijn auto openen zonder schade?',
-    a: 'Ja. Wij gebruiken uitsluitend professioneel locksmith-gereedschap: Lishi decoders, air-wedge tools en J-tools. Uw lak, ramen en deursealen blijven 100% intact. Wij werken ook bij auto\'s met extra deadlock-beveiliging.',
+    q: 'Können Sie mein Auto ohne Beschädigung öffnen?',
+    a: 'Ja. Wir verwenden ausschließlich professionelles Schlosserwerkzeug: Lishi-Decoder, Air-Wedges und J-Tools. Ihr Lack, die Fenster und die Türdichtungen bleiben zu 100% intakt. Wir arbeiten auch bei Autos mit extra Deadlock-Verriegelung.',
   },
   {
-    q: 'Hoe kan ik mijn auto openen als ik mijn sleutel binnen heb laten liggen zonder schade te maken?',
-    a: 'Probeer het nooit zelf met een kledinghanger of door een ruit in te slaan; de schadekosten (en lakschade) vallen vaak veel hoger uit. Bel een professionele auto slotenmaker. Wij gebruiken speciale Lishi-slotdecoders of pomp-kussentjes (air wedges) om de deuren 100% schadevrij te openen, binnen enkele minuten. Zelfs als het contact aan staat of de sleutel in de kofferbak ligt, krijgen wij hem onbeschadigd open.',
+    q: 'Wie kann ich mein Auto ohne Beschädigung öffnen, wenn ich den Schlüssel darin vergessen habe?',
+    a: 'Versuchen Sie es niemals selbst mit einem Kleiderbügel oder indem Sie eine Scheibe einschlagen; die Reparaturkosten sind oft viel höher. Rufen Sie einen professionellen Schlüsseldienst. Wir öffnen die Türen 100% zerstörungsfrei innerhalb weniger Minuten. Selbst wenn die Zündung an ist oder der Schlüssel im Kofferraum liegt, bekommen wir ihn unbeschädigt auf.',
   },
   {
-    q: 'Wat als mijn autosleutel in de auto zit en de deur op slot is?',
-    a: 'Bel ons direct. Wij openen uw auto mechanisch via de slotcilinder of elektronisch via de OBD-poort. U hoeft de auto niet te laten slepen. Dit is onze meest gevraagde spoeddienst.',
+    q: 'Was ist, wenn mein Autoschlüssel im Auto ist und die Tür verschlossen ist?',
+    a: 'Rufen Sie uns direkt an. Wir öffnen Ihr Auto mechanisch über das Schloss oder elektronisch. Sie müssen das Auto nicht abschleppen lassen. Dies ist unser meistgefragter Notdienst.',
   },
 ];
 
 export const FAQ_AKL: FaqItem[] = [
   {
-    q: 'Wat moet ik doen als al mijn autosleutels kwijt zijn?',
-    a: 'Bel ons direct op 06 11 75 12 31. Wij bieden de AKL-service (All Keys Lost). Stap 1: wij verwijderen alle bestaande sleutels uit het geheugen van uw auto. Stap 2: wij maken een nieuwe sleutel. Stap 3: de nieuwe sleutel wordt als enige geautoriseerde sleutel ingeleerd. U rijdt weer veilig weg.',
+    q: 'Was soll ich tun, wenn alle meine Autoschlüssel verloren sind?',
+    a: `Rufen Sie uns direkt unter ${SITE_CONFIG.phone} an. Wir bieten den AKL-Service (All Keys Lost). Schritt 1: Wir löschen alle vorhandenen Schlüssel aus dem Speicher Ihres Autos. Schritt 2: Wir fräsen einen neuen Schlüssel. Schritt 3: Der neue Schlüssel wird als einziger autorisierter Schlüssel angelernt. Sie können sicher weiterfahren.`,
   },
   {
-    q: 'Is het mogelijk dat iemand met mijn oude (verloren) sleutel mijn auto openkan?',
-    a: 'Na de AKL-procedure niet meer. Wij wissen alle oude sleutels uit het systeem. Uw verloren sleutel is daarna onbruikbaar. Dit is ook een veiligheidsadvies: laat altijd de oude sleutels verwijderen als ze gestolen zijn.',
+    q: 'Ist es möglich, dass jemand mit meinem alten (verlorenen) Schlüssel mein Auto öffnet?',
+    a: 'Nach dem AKL-Verfahren nicht mehr. Wir löschen alle alten Schlüssel aus dem System. Ihr verlorener Schlüssel ist danach unbrauchbar. Dies ist auch ein Sicherheitshinweis: Lassen Sie alte Schlüssel immer löschen, wenn sie gestohlen wurden.',
   },
 ];
 
-// ── CITY-SPECIFIC FAQs (dynamisch gegenereerd op stadspage) ──
+// ── CITY-SPECIFIC FAQs (dynamisch generiert auf Stadtseite) ──
 export function getFaqForCity(cityName: string): FaqItem[] {
   return [
     {
-      q: `Autosleutel bijmaken in ${cityName}: wat zijn de exacte kosten?`,
-      a: `De kosten voor een autosleutel bijmaken in ${cityName} bedragen vanaf €${SITE_CONFIG.prices.transponder} voor een standaard transpondersleutel. Voor een autosleutel met afstandsbediening of smart key (keyless entry) starten de tarieven vanaf €${SITE_CONFIG.prices.smartKey}. Onze prijzen zijn altijd inclusief het frezen van de sleutelbaard en het inleren of programmeren van de transponder op locatie in ${cityName}. Omdat wij een mobiele autosleutelmaker zijn, betaalt u geen sleepkosten en bent u tot 50% goedkoper uit dan bij de officiële merkdealer.`,
+      q: `Autoschlüssel nachmachen in ${cityName}: Was sind die genauen Kosten?`,
+      a: `Die Kosten für das Nachmachen eines Autoschlüssels in ${cityName} beginnen bei ca. €${SITE_CONFIG.prices.transponder} für einen Standard-Transponderschlüssel. Für einen Autoschlüssel mit Fernbedienung oder Smart Key (Keyless Entry) beginnen die Tarife ab ca. €${SITE_CONFIG.prices.smartKey}. Unsere Preise beinhalten immer das Fräsen des Schlüsselbarts und das Anlernen oder Programmieren des Transponders vor Ort in ${cityName}. Da wir mobil sind, zahlen Sie keine Abschleppkosten und sind bis zu 50% günstiger als beim offiziellen Händler.`,
     },
     {
-      q: `Autosleutel kwijt in ${cityName}, wat is de snelste oplossing?`,
-      a: `Bent u uw autosleutel kwijt in ${cityName} en heeft u geen reservesleutel meer? De snelste oplossing is het inschakelen van de mobiele service van Autosleutel24. Wij komen direct naar uw locatie in ${cityName}, openen uw auto 100% schadevrij, frezen een nieuwe sleutel op basis van uw slotcilinder en programmeren deze ter plekke in de ECU (boordcomputer). Deze "All Keys Lost" (AKL) procedure zorgt ervoor dat u direct weer kunt rijden, zonder dat wegslepen naar een garage nodig is.`,
+      q: `Autoschlüssel verloren in ${cityName}, was ist die schnellste Lösung?`,
+      a: `Haben Sie Ihren Autoschlüssel in ${cityName} verloren und keinen Ersatzschlüssel mehr? Die schnellste Lösung ist unser mobiler Service. Wir kommen direkt zu Ihrem Standort in ${cityName}, öffnen Ihr Auto 100% zerstörungsfrei, fräsen einen neuen Schlüssel anhand Ihres Schlosses und programmieren ihn vor Ort in die ECU (Bordcomputer). Dieses "All Keys Lost" (AKL) Verfahren sorgt dafür, dass Sie sofort wieder fahren können, ohne dass ein Abschleppen nötig ist.`,
     },
     {
-      q: `Hoe lang duurt het inleren en programmeren van een autosleutel in ${cityName}?`,
-      a: `Het frezen, inleren en programmeren van een nieuwe autosleutel in ${cityName} duurt gemiddeld 20 tot 45 minuten. Onze ervaren monteurs gebruiken geavanceerde OBD2-diagnoseapparatuur om de nieuwe chip of smart key veilig te synchroniseren met het anti-diefstal systeem (startonderbreker) van uw auto. Oude, verloren sleutels worden direct elektronisch geblokkeerd uit het systeem.`,
+      q: `Wie lange dauert das Anlernen und Programmieren eines Autoschlüssels in ${cityName}?`,
+      a: `Das Fräsen, Anlernen und Programmieren eines neuen Autoschlüssels in ${cityName} dauert durchschnittlich 20 bis 45 Minuten. Unsere erfahrenen Monteure nutzen modernste OBD2-Diagnosegeräte, um den neuen Chip oder Smart Key sicher mit dem Diebstahlschutz (Wegfahrsperre) Ihres Autos zu synchronisieren. Alte, verlorene Schlüssel werden sofort elektronisch aus dem System blockiert.`,
     },
     {
-      q: `Autodeur openen in ${cityName} (sleutel in auto laten liggen), kunnen jullie helpen?`,
-      a: `Ja, als u uw sleutel in de auto heeft laten liggen in ${cityName} (buitengesloten), openen wij uw autodeur gegarandeerd zonder schade. Onze monteurs in ${cityName} maken gebruik van specialistisch Lishi-lockpick gereedschap om het deurslot vakkundig te manipuleren, zonder krassen op de lak of schade aan de rubbers. Wij zijn 24/7 bereikbaar voor deze spoedservice.`,
+      q: `Autotür öffnen in ${cityName} (Schlüssel im Auto liegen lassen), können Sie helfen?`,
+      a: `Ja, wenn Sie Ihren Schlüssel in ${cityName} im Auto gelassen haben (ausgesperrt), öffnen wir Ihre Autotür garantiert ohne Schäden. Unsere Mechaniker in ${cityName} verwenden spezielles Lishi-Lockpick-Werkzeug, um das Türschloss fachmännisch zu manipulieren, ohne Kratzer am Lack oder Schäden an den Dichtungen. Wir sind 24/7 für diesen Notdienst erreichbar.`,
     },
     {
-      q: `Maken jullie ook autosleutels bij voor alle automerken in ${cityName}?`,
-      a: `Ja, wij repareren en maken autosleutels bij in ${cityName} voor vrijwel alle automerken, waaronder Volkswagen (VW), BMW, Audi, Mercedes-Benz, Peugeot, Renault, Ford, Opel, Toyota, Fiat en Seat. Of het nu gaat om een traditionele sleutel, een klapsleutel of een geavanceerde keyless smart key, wij hebben de juiste OEM-kwaliteit sleutels op voorraad in onze servicebus.`,
+      q: `Machen Sie auch Autoschlüssel für alle Automarken in ${cityName} nach?`,
+      a: `Ja, wir reparieren und machen Autoschlüssel in ${cityName} für fast alle Automarken nach, darunter Volkswagen (VW), BMW, Audi, Mercedes-Benz, Peugeot, Renault, Ford, Opel, Toyota, Fiat und Seat. Egal, ob es sich um einen klassischen Schlüssel, einen Klappschlüssel oder einen hochmodernen Keyless Smart Key handelt, wir haben die passenden Schlüssel in OEM-Qualität in unserem Servicebus auf Lager.`,
     },
     {
-      q: `Hoe snel is de mobiele autosleutelmaker ter plaatse in ${cityName}?`,
-      a: `Bij noodgevallen in ${cityName}, zoals alle autosleutels kwijt of buitengesloten, is onze mobiele autosleutelmaker gemiddeld binnen 30 tot 60 minuten op uw locatie aanwezig. Autosleutel24 opereert 24 uur per dag, 7 dagen per week in de regio ${cityName}, zodat u direct weer op weg geholpen wordt.`,
+      q: `Wie schnell ist der mobile Schlüsseldienst in ${cityName} vor Ort?`,
+      a: `Bei Notfällen in ${cityName}, wie z. B. alle Autoschlüssel verloren oder ausgesperrt, ist unser mobiler Schlüsseldienst durchschnittlich innerhalb von 30 bis 60 Minuten bei Ihnen vor Ort. Wir arbeiten 24 Stunden am Tag, 7 Tage die Woche in der Region ${cityName}, damit Ihnen sofort geholfen wird.`,
     },
   ];
 }
 
-// ── BRAND-SPECIFIC FAQs (dynamisch gegenereerd op merkpage) ──
+// ── BRAND-SPECIFIC FAQs (dynamisch generiert auf Markenseite) ──
 export function getFaqForBrand(brandName: string): FaqItem[] {
   return [
     {
-      q: `Wat kost een nieuwe ${brandName} autosleutel bijmaken?`,
-      a: `De kosten voor het bijmaken van een ${brandName} autosleutel variëren per model en type sleutel. Een standaard ${brandName} transpondersleutel begint bij Autosleutel24 vanaf €${SITE_CONFIG.prices.transponder}. Heeft u een ${brandName} klapsleutel of smart key (keyless entry) nodig? Dan starten de prijzen vanaf €${SITE_CONFIG.prices.smartKey}. Wij zijn hiermee tot 50% goedkoper dan de officiële ${brandName} dealer, zonder extra wegsleepkosten. U krijgt altijd vooraf een vaste en transparante prijs.`,
+      q: `Was kostet es, einen neuen ${brandName} Autoschlüssel nachmachen zu lassen?`,
+      a: `Die Kosten für das Nachmachen eines ${brandName} Autoschlüssels variieren je nach Modell und Schlüsseltyp. Ein Standard ${brandName} Transponderschlüssel beginnt bei ca. €${SITE_CONFIG.prices.transponder}. Benötigen Sie einen ${brandName} Klappschlüssel oder Smart Key (Keyless Entry)? Dann beginnen die Preise bei ca. €${SITE_CONFIG.prices.smartKey}. Damit sind wir bis zu 50% günstiger als der offizielle ${brandName} Händler, ohne zusätzliche Abschleppkosten. Sie erhalten vorab immer einen festen und transparenten Preis.`,
     },
     {
-      q: `Mijn ${brandName} autosleutel kwijt, wat moet ik doen?`,
-      a: `Bent u alle sleutels van uw ${brandName} kwijt? Blijf rustig en bel Autosleutel24. Wij bieden een mobiele 'All Keys Lost' (AKL) service en komen direct naar uw locatie. We openen uw ${brandName} 100% schadevrij, lezen de pincode uit de ECU/boordcomputer via de OBD2-poort en snijden ter plaatse een compleet nieuwe sleutel. De verloren ${brandName} sleutels worden direct uit het systeem gewist om diefstal te voorkomen.`,
+      q: `Meinen ${brandName} Autoschlüssel verloren, was soll ich tun?`,
+      a: `Haben Sie alle Schlüssel Ihres ${brandName} verloren? Bleiben Sie ruhig und rufen Sie uns an. Wir bieten einen mobilen 'All Keys Lost' (AKL) Service und kommen direkt zu Ihrem Standort. Wir öffnen Ihren ${brandName} 100% zerstörungsfrei, lesen den PIN-Code aus der ECU/Bordcomputer über den OBD2-Anschluss aus und fräsen vor Ort einen komplett neuen Schlüssel. Die verlorenen ${brandName} Schlüssel werden sofort aus dem System gelöscht, um Diebstahl zu verhindern.`,
     },
     {
-      q: `Hoe lang duurt het inleren van een ${brandName} sleutel?`,
-      a: `Het frezen en inleren van een nieuwe ${brandName} autosleutel duurt gemiddeld 30 tot 45 minuten. Onze specialisten gebruiken geavanceerde diagnoseapparatuur die specifiek geschikt is voor de beveiligingssystemen van ${brandName}. U hoeft uw auto dus niet dagenlang bij de dealer achter te laten; wij regelen alles direct bij u op de stoep, op het werk of langs de weg.`,
+      q: `Wie lange dauert das Anlernen eines ${brandName} Schlüssels?`,
+      a: `Das Fräsen und Anlernen eines neuen ${brandName} Autoschlüssels dauert durchschnittlich 30 bis 45 Minuten. Unsere Spezialisten verwenden modernste Diagnosegeräte, die speziell für die Sicherheitssysteme von ${brandName} geeignet sind. Sie müssen Ihr Auto also nicht tagelang beim Händler stehen lassen; wir erledigen alles direkt bei Ihnen vor der Haustür, auf der Arbeit oder am Straßenrand.`,
     },
     {
-      q: `Kan Autosleutel24 een ${brandName} sleutel repareren (behuizing of batterij)?`,
-      a: `Ja, als de elektronica (printplaat) van uw ${brandName} sleutel nog intact is, kunnen wij deze vaak voordelig repareren. We vervangen defecte drukknoppen, vernieuwen de batterij en zetten de printplaat over in een gloednieuwe ${brandName} sleutelbehuizing. Dit is een snelle en zeer kostenbesparende oplossing ten opzichte van een compleet nieuwe sleutel kopen.`,
+      q: `Können Sie einen ${brandName} Schlüssel reparieren (Gehäuse oder Batterie)?`,
+      a: `Ja, wenn die Elektronik (Platine) Ihres ${brandName} Schlüssels noch intakt ist, können wir ihn oft günstig reparieren. Wir ersetzen defekte Tasten, erneuern die Batterie und setzen die Platine in ein brandneues ${brandName} Schlüsselgehäuse ein. Das ist eine schnelle und sehr kostensparende Lösung im Vergleich zum Kauf eines komplett neuen Schlüssels.`,
     },
     {
-      q: `Werkt de nieuwe ${brandName} sleutel exact hetzelfde als het origineel?`,
-      a: `Absoluut. Wij leveren hoogwaardige aftermarket en OEM-kwaliteit autosleutels voor ${brandName}. De nieuwe sleutel werkt precies zoals u gewend bent: inclusief de afstandsbediening (centrale deurvergrendeling), de juiste startonderbreker-chip (transponder) en eventuele keyless-go of smart key functies die specifiek zijn voor uw ${brandName} model. Bovendien krijgt u bij ons standaard 12 maanden garantie op de sleutel en het inleren.`,
+      q: `Funktioniert der neue ${brandName} Schlüssel genauso wie das Original?`,
+      a: `Absolut. Wir liefern hochwertige Aftermarket- und OEM-Autoschlüssel für ${brandName}. Der neue Schlüssel funktioniert genau so, wie Sie es gewohnt sind: inklusive Fernbedienung (Zentralverriegelung), dem passenden Wegfahrsperren-Chip (Transponder) und etwaigen Keyless-Go- oder Smart-Key-Funktionen, die spezifisch für Ihr ${brandName} Modell sind. Außerdem erhalten Sie bei uns standardmäßig 12 Monate Garantie auf den Schlüssel und das Anlernen.`,
     },
     {
-      q: `Moet mijn ${brandName} naar de dealer gesleept worden voor een nieuwe sleutel?`,
-      a: `Nee, dat is juist het grote voordeel van Autosleutel24. Wij zijn een 100% mobiele autosleutel specialist. U hoeft geen dure sleepdienst in te schakelen om uw ${brandName} naar de garage te brengen. Onze volledig uitgeruste servicebussen komen naar uw strandinglocatie toe, ongeacht waar u staat in Nederland, en we programmeren de nieuwe ${brandName} sleutel direct ter plaatse.`,
+      q: `Muss mein ${brandName} für einen neuen Schlüssel zum Händler geschleppt werden?`,
+      a: `Nein, das ist genau der große Vorteil unseres Service. Wir sind ein 100% mobiler Autoschlüssel-Spezialist. Sie müssen keinen teuren Abschleppdienst rufen, um Ihren ${brandName} in die Werkstatt zu bringen. Unsere voll ausgestatteten Servicebusse kommen zu Ihrem Pannenort, egal wo Sie sich befinden, und wir programmieren den neuen ${brandName} Schlüssel direkt vor Ort.`,
     }
   ];
 }

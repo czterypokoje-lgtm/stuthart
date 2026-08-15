@@ -7,10 +7,10 @@ export default function UrgencyBanner() {
       <div className={styles.inner}>
         <div className={styles.dot} aria-hidden="true" />
         <span className={styles.text}>
-          <strong>24/7 Spoed Service</strong> — Gemiddelde reactietijd {SITE_CONFIG.responseTime} — Mobiel door heel Nederland
+          <strong>24/7 Notdienst</strong> — Durchschnittliche Reaktionszeit {SITE_CONFIG.responseTime} — Mobiler Einsatz vor Ort
         </span>
         <a href={`tel:${SITE_CONFIG.phoneTel}`} className={styles.cta} id="banner-phone-cta">
-          Bel Direct: {SITE_CONFIG.phone}
+          Jetzt Anrufen: {SITE_CONFIG.phone}
         </a>
       </div>
     </div>

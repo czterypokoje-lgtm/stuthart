@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import { SITE_CONFIG } from '@/config/site.config';
-import { DIENSTEN } from '@/config/diensten';
+import { LEISTUNGEN } from '@/config/leistungen';
 import { CITIES } from '@/config/cities';
 import { BRANDS } from '@/config/brands';
 import { BLOG_POSTS } from '@/config/services';
@@ -13,10 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 1. Core Pages
   const corePages = [
-    '', '/diensten', '/steden', '/merken', '/prijzen', '/blog', '/kennisbank',
-    '/over-ons', '/galerij', '/beoordelingen', '/veelgestelde-vragen',
+    '', '/leistungen', '/standorte', '/marken', '/preise', '/blog', '/wissensdatenbank',
+    '/ueber-uns', '/galerie', '/bewertungen', '/faq',
     '/contact', '/privacybeleid',
-    '/autosleutel-kwijt', '/autosleutel-bestellen-op-kenteken'
+    '/autoschluessel-verloren', '/autoschluessel-bestellen'
   ].map(p => ({
     url: `${base}${p}`,
     lastModified: now,
@@ -26,8 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // 2. Service Pages
-  const servicePages = DIENSTEN.map(s => ({
-    url: `${base}/diensten/${s.slug}`,
+  const servicePages = LEISTUNGEN.map(s => ({
+    url: `${base}/leistungen/${s.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.9,
@@ -36,11 +36,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 3. City Pages
   const cityPages = CITIES.map(c => {
     const images = [];
-    if (fs.existsSync(path.join(process.cwd(), 'public', 'images', `autosleutel-bijmaken-${c.slug}.webp`))) {
-      images.push(`${base}/images/autosleutel-bijmaken-${c.slug}.webp`);
+    if (fs.existsSync(path.join(process.cwd(), 'public', 'images', `autoschluessel-nachmachen-${c.slug}.webp`))) {
+      images.push(`${base}/images/autoschluessel-nachmachen-${c.slug}.webp`);
     }
     return {
-      url: `${base}/steden/${c.slug}`,
+      url: `${base}/standorte/${c.slug}`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.85,
@@ -50,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 4. Brand Pages
   const brandPages = BRANDS.map(b => ({
-    url: `${base}/merken/${b.nameSlug}-autosleutel-bijmaken`,
+    url: `${base}/marken/${b.nameSlug}-autoschluessel-nachmachen`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.85,

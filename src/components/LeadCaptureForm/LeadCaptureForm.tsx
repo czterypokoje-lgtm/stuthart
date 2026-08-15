@@ -28,15 +28,15 @@ export default function LeadCaptureForm({ city = "", phone, theme = 'dark' }: Pr
 
   function buildWhatsAppUrl() {
     const parts = [
-      "Hallo Autosleutel24!",
+      "Hallo First Class Key!",
       "",
-      brand ? `Merk: ${brand}` : null,
-      model ? `Model: ${model}` : null,
-      year ? `Bouwjaar: ${year}` : null,
-      service ? `Service: ${service}` : null,
-      `Locatie: ${location || "Niet ingevuld"}`,
+      brand ? `Marke: ${brand}` : null,
+      model ? `Modell: ${model}` : null,
+      year ? `Baujahr: ${year}` : null,
+      service ? `Leistung: ${service}` : null,
+      `Ort: ${location || "Nicht ausgefüllt"}`,
       "",
-      "Kunt u mij zo snel mogelijk helpen? Graag hoor ik de prijs en aankomsttijd.",
+      "Können Sie mir so schnell wie möglich helfen? Ich wüsste gerne den Preis und die Ankunftszeit.",
     ].filter(p => p !== null).join("\n");
     return `https://wa.me/${SITE_CONFIG.phoneTel.replace(/\D/g,"")}?text=${encodeURIComponent(parts)}`;
   }
@@ -60,9 +60,9 @@ export default function LeadCaptureForm({ city = "", phone, theme = 'dark' }: Pr
             className={styles.select}
             value={brand}
             onChange={e => setBrand(e.target.value)}
-            aria-label="Automerk"
+            aria-label="Automarke"
           >
-            <option value="">Merk</option>
+            <option value="">Marke</option>
             {BRANDS_LIST.map(b => (
               <option key={b} value={b}>{b}</option>
             ))}
@@ -76,10 +76,10 @@ export default function LeadCaptureForm({ city = "", phone, theme = 'dark' }: Pr
             className={styles.select}
             value={model}
             onChange={e => setModel(e.target.value)}
-            aria-label="Model"
+            aria-label="Modell"
             disabled={!brand}
           >
-            <option value="">Model</option>
+            <option value="">Modell</option>
             {models.map(m => (
               <option key={m} value={m}>{m}</option>
             ))}
@@ -93,9 +93,9 @@ export default function LeadCaptureForm({ city = "", phone, theme = 'dark' }: Pr
             className={styles.select}
             value={year}
             onChange={e => setYear(e.target.value)}
-            aria-label="Bouwjaar"
+            aria-label="Baujahr"
           >
-            <option value="">Jaar</option>
+            <option value="">Jahr</option>
             {YEARS_LIST.map(y => (
               <option key={y} value={y}>{y}</option>
             ))}
@@ -109,9 +109,9 @@ export default function LeadCaptureForm({ city = "", phone, theme = 'dark' }: Pr
             className={styles.select}
             value={service}
             onChange={e => setService(e.target.value)}
-            aria-label="Dienst"
+            aria-label="Leistung"
           >
-            <option value="">Service</option>
+            <option value="">Leistung</option>
             {SERVICES_LIST.map(s => (
               <option key={s} value={s}>{s}</option>
             ))}
@@ -127,8 +127,8 @@ export default function LeadCaptureForm({ city = "", phone, theme = 'dark' }: Pr
             value={location}
             onChange={e => setLocation(e.target.value)}
             readOnly={!!city}
-            placeholder="Uw woonplaats"
-            aria-label="Locatie"
+            placeholder="Ihr Wohnort"
+            aria-label="Ort"
           />
         </div>
 
@@ -139,13 +139,13 @@ export default function LeadCaptureForm({ city = "", phone, theme = 'dark' }: Pr
           id="city-lead-submit"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-          {submitted ? "Openen..." : "Direct Hulp"}
+          {submitted ? "Wird geöffnet..." : "Soforthilfe"}
         </button>
       </form>
 
       <p className={styles.urgency}>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-        Noodgeval of spoed? Contacteer ons direct:
+        Notfall oder dringend? Kontaktieren Sie uns direkt:
       </p>
 
       <div className={styles.directBtns}>
@@ -155,7 +155,7 @@ export default function LeadCaptureForm({ city = "", phone, theme = 'dark' }: Pr
           id="city-lead-call"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-          Bel Nu: {phone}
+          Jetzt Anrufen: {phone}
         </a>
         <a
           href={buildWhatsAppUrl()}

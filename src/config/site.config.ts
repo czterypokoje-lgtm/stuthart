@@ -1,33 +1,34 @@
 // ============================================================
-// SITE CONFIG — Autosleutel Expert
+// SITE CONFIG — FC-KEY
 // Update with real business data before launch
 // ============================================================
 
 export const SITE_CONFIG = {
-  name: 'Autosleutel24',
-  fullName: 'Autosleutel24',
-  tagline: 'Mobiele Sleutelprogrammering — Alle Merken',
-  domain: 'https://www.autosleutel24.nl', // primary
+  name: 'FIRST CLASS KEY',
+  fullName: 'First Class Schlüsselnotdienst',
+  tagline: 'Ihr Autoschlüssel Spezialist vor Ort',
+  domain: 'https://fc-key.de', // primary
 
-  phone: '06 11 75 12 31',
-  phoneTel: '+31611751231',
-  whatsapp: '31611751231',
-  email: 'info@autosleutel24.nl',
+  phone: '07031-4917380',
+  phoneTel: '+4970314917380',
+  whatsapp: '491733695866',
+  whatsappDisplay: '0173 3695866',
+  email: 'info@fc-key.de',
 
   address: {
-    street: '', // Mobile service - no physical location displayed
-    city: 'Utrecht',
-    region: 'Utrecht',
-    postal: '',
-    country: 'NL',
+    street: 'Mercedesstraße 12',
+    city: 'Sindelfingen',
+    region: 'Baden-Württemberg',
+    postal: '71063',
+    country: 'DE',
   },
-  geo: { lat: '52.2740', lng: '5.1611' },
+  geo: { lat: '48.7075', lng: '9.0031' }, // Sindelfingen approx
   serviceArea: {
-    lat: '52.2740',
-    lng: '5.1611',
-    radiusMeters: '75000', // 75km serving area around Bussum HQ
+    lat: '48.7075',
+    lng: '9.0031',
+    radiusMeters: '50000', // 75km serving area
   },
-  serviceAreaString: 'Utrecht, Amsterdam en Midden-Nederland',
+  serviceAreaString: 'Stuttgart, Sindelfingen und 50km Umkreis',
 
   prices: {
     unlock: '149',
@@ -37,23 +38,23 @@ export const SITE_CONFIG = {
     allKeysLost: '249',
     casing: '35',
     ignition: '299',
-    exVatDisclaimer: 'excl. btw',
+    exVatDisclaimer: 'zzgl. MwSt.',
   },
 
-  hours: 'Maandag t/m Zondag 00:00–24:00',
-  hoursShort: '24/7 Beschikbaar',
-  responseTime: '30–60 minuten',
+  hours: 'Montag bis Sonntag 00:00–24:00',
+  hoursShort: '24/7 Erreichbar',
+  responseTime: '30–60 Minuten',
 
-  kvk: '42123555',
-  btw: 'NL42123555B01',
+  kvk: '', // HRB number if available
+  btw: '', // USt-IdNr if available
   rating: '5.0',
   reviewCount: '11',
 
   social: {
-    facebook: 'https://www.facebook.com/autosleutel24utrecht',
-    instagram: 'https://www.instagram.com/autosleutel24',
-    google: 'https://share.google/mpottPPXn3SbSYThD', // Linked to official GBP
-    marktplaats: 'https://www.marktplaats.nl/u/autosleutel24/60076348/',
+    facebook: '',
+    instagram: '',
+    google: '', 
+    marktplaats: '',
   },
 } as const;
 

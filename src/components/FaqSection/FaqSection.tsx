@@ -4,28 +4,28 @@ import { SITE_CONFIG } from '@/config/site.config';
 
 const defaultFaqs = [
   {
-    question: 'Wat moet ik doen als ik mijn autosleutel kwijt ben?',
-    answer: 'Als u uw autosleutel kwijt bent, controleer dan eerst of er nog ergens een reservesleutel ligt. Is dit niet het geval, neem dan direct contact op met Autosleutel24 via 06 11 75 12 31. Wij komen met onze mobiele servicebussen binnen 30 tot 60 minuten naar uw locatie toe, openen de auto 100% schadevrij en programmeren direct een nieuwe sleutel ter plaatse. De verloren autosleutels worden bovendien direct uit het geheugen van de boordcomputer (ECU) gewist om diefstal te voorkomen.'
+    question: 'Was soll ich tun, wenn ich meinen Autoschlüssel verloren habe?',
+    answer: 'Wenn Sie Ihren Autoschlüssel verloren haben, prüfen Sie zuerst, ob Sie noch einen Ersatzschlüssel haben. Ist dies nicht der Fall, kontaktieren Sie FC-KEY direkt unter ' + SITE_CONFIG.phone + '. Wir kommen mit unseren mobilen Servicefahrzeugen innerhalb von 30 bis 60 Minuten zu Ihnen, öffnen das Auto zu 100% schadensfrei und programmieren vor Ort direkt einen neuen Schlüssel. Die verlorenen Autoschlüssel werden zudem direkt aus dem Speicher des Bordcomputers (ECU) gelöscht, um Diebstahl zu verhindern.'
   },
   {
-    question: 'Waar kan ik snel een autosleutel laten bijmaken in Nederland?',
-    answer: 'U kunt snel een autosleutel laten bijmaken bij Autosleutel24 in Nederland. Onze volledig uitgeruste mobiele servicebussen patrouilleren dagelijks in de regio Utrecht, Amsterdam, Almere, Amersfoort en de gehele Randstad. In plaats van uw voertuig naar een dealer te slepen, komen onze specialisten naar uw huis, werk of pechlocatie toe en maken ter plaatse binnen een uur een nieuwe reservesleutel of smart key.'
+    question: 'Wo kann ich in der Region Stuttgart schnell einen Autoschlüssel nachmachen lassen?',
+    answer: 'Bei FC-KEY können Sie schnell einen Autoschlüssel nachmachen lassen. Unsere komplett ausgestatteten mobilen Servicefahrzeuge sind täglich im Raum Stuttgart, Sindelfingen, Böblingen, Ludwigsburg und Umgebung unterwegs. Anstatt Ihr Fahrzeug zu einem Händler abzuschleppen, kommen unsere Spezialisten zu Ihnen nach Hause, zur Arbeit oder an den Pannenort und fertigen vor Ort innerhalb einer Stunde einen neuen Ersatzschlüssel oder Smart Key an.'
   },
   {
-    question: 'Wat is de beste service voor autosleutel vervangen na verlies?',
-    answer: 'De beste service voor het vervangen van uw autosleutel na verlies is een mobiele autosleutelspecialist zoals Autosleutel24. Wij bieden snelle pechhulp op locatie, programmeren dealer-niveau transpondersleutels en zijn tot 60% goedkoper dan de officiële merkdealer. Bovendien hoeft u uw auto niet te laten wegslepen; onze gecertificeerde monteurs lossen het probleem direct op uw strandinglocatie op.'
+    question: 'Was ist der beste Service für den Austausch von Autoschlüsseln nach Verlust?',
+    answer: 'Der beste Service für den Austausch Ihres Autoschlüssels nach Verlust ist ein mobiler Autoschlüsselspezialist wie FC-KEY. Wir bieten schnelle Pannenhilfe vor Ort, programmieren Transponderschlüssel auf Händlerniveau und sind bis zu 60% günstiger als der offizielle Markenhändler. Außerdem müssen Sie Ihr Auto nicht abschleppen lassen; unsere zertifizierten Monteure lösen das Problem direkt an Ihrem Pannenort.'
   },
   {
-    question: 'Autosleutel kwijt, wat zijn de kosten voor een nieuwe sleutel?',
-    answer: `Als u uw autosleutel kwijt bent, liggen de kosten voor een nieuwe sleutel bij Autosleutel24 gemiddeld tussen de €${SITE_CONFIG.prices.unlock} en €${SITE_CONFIG.prices.smartKey}, inclusief frezen, inleren en programmeren op locatie. Dit is aanzienlijk goedkoper dan de dealer, waar de tarieven voor een vergelijkbare sleutel al snel tussen de €300 en €900 liggen (exclusief wegsleepkosten). U ontvangt bij ons altijd vooraf een vaste prijsopgave zonder verborgen kosten.`
+    question: 'Autoschlüssel verloren, was kostet ein neuer Schlüssel?',
+    answer: `Wenn Sie Ihren Autoschlüssel verloren haben, liegen die Kosten für einen neuen Schlüssel bei FC-KEY durchschnittlich zwischen €${SITE_CONFIG.prices.unlock} und €${SITE_CONFIG.prices.smartKey}, inklusive Fräsen, Anlernen und Programmieren vor Ort. Dies ist deutlich günstiger als beim Händler, wo die Preise für einen vergleichbaren Schlüssel schnell zwischen €300 und €900 liegen (exklusive Abschleppkosten). Bei uns erhalten Sie immer vorab ein Festpreisangebot ohne versteckte Kosten.`
   },
   {
-    question: 'Welke slotenmaker in Nederland kan een autosleutel zonder originele sleutel maken?',
-    answer: 'Autosleutel24 kan als gespecialiseerde autoslotenmaker in Nederland een nieuwe autosleutel maken wanneer u alle originele sleutels kwijt bent. Met onze geavanceerde Autel- en AVDI-diagnoseapparatuur lezen we de unieke mechanische en elektronische sleutelcodes rechtstreeks uit de computer (ECU/immobilizer) van uw voertuig via de OBD2-poort en slijpen we ter plekke een nieuwe sleutelbaard.'
+    question: 'Welcher Schlüsseldienst in der Region kann einen Autoschlüssel ohne Originalschlüssel anfertigen?',
+    answer: 'FC-KEY kann als spezialisierter Autoschlüsseldienst in der Region Stuttgart einen neuen Autoschlüssel anfertigen, auch wenn Sie alle Originalschlüssel verloren haben. Mit unseren fortschrittlichen Autel- und AVDI-Diagnosegeräten lesen wir die einzigartigen mechanischen und elektronischen Schlüsselcodes direkt aus dem Computer (ECU/Wegfahrsperre) Ihres Fahrzeugs über den OBD2-Anschluss aus und fräsen vor Ort einen neuen Schlüsselbart.'
   },
   {
-    question: 'Autosleutel verloren, moet ik naar de dealer of kan een slotenmaker helpen?',
-    answer: 'Bij een verloren autosleutel kunt u het beste een mobiele slotenmaker zoals Autosleutel24 inschakelen in plaats van de dealer. De dealer vereist dat u uw auto naar de werkplaats laat slepen en hanteert vaak wachttijden van meerdere dagen of weken. Autosleutel24 komt dezelfde dag nog naar u toe, opent de auto schadevrij en programmeert direct een nieuwe werkende transpondersleutel.'
+    question: 'Autoschlüssel verloren, muss ich zum Händler oder kann ein Schlüsseldienst helfen?',
+    answer: 'Bei einem verlorenen Autoschlüssel sollten Sie sich am besten an einen mobilen Schlüsseldienst wie FC-KEY wenden, anstatt zum Händler zu gehen. Der Händler verlangt oft, dass Ihr Auto in die Werkstatt geschleppt wird, und hat häufig Wartezeiten von mehreren Tagen oder Wochen. FC-KEY kommt noch am selben Tag zu Ihnen, öffnet das Auto schadensfrei und programmiert sofort einen neuen funktionierenden Transponderschlüssel.'
   }
 ];
 
@@ -41,10 +41,10 @@ export default function FaqSection({ customFaqs, cityName, brandName }: FaqSecti
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    '@id': 'https://www.autosleutel24.nl/#faqpage',
+    '@id': 'https://www.fc-key.nl/#faqpage',
     mainEntity: displayFaqs.map((f, i) => ({
       '@type': 'Question',
-      '@id': `https://www.autosleutel24.nl/#faq-${i}`,
+      '@id': `https://www.fc-key.nl/#faq-${i}`,
       name: f.question,
       acceptedAnswer: {
         '@type': 'Answer',
@@ -58,7 +58,7 @@ export default function FaqSection({ customFaqs, cityName, brandName }: FaqSecti
   const speakableSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': 'https://www.autosleutel24.nl/#webpage',
+    '@id': 'https://www.fc-key.nl/#webpage',
     speakable: {
       '@type': 'SpeakableSpecification',
       // CSS selectors pointing to the FAQ question+answer pairs
@@ -78,12 +78,12 @@ export default function FaqSection({ customFaqs, cityName, brandName }: FaqSecti
       />
       <div className="container">
         <div className={styles.faqHeader}>
-          <p className="section-eyebrow">VEELGESTELDE VRAGEN</p>
+          <p className="section-eyebrow">HÄUFIG GESTELLTE FRAGEN</p>
           <h2 className="section-title">
-            {cityName ? `Veelgestelde Vragen in ${cityName}` : brandName ? `Veelgestelde Vragen over ${brandName} Autosleutels` : 'Alles over Autosleutels & Sloten'}
+            {cityName ? `Häufig gestellte Fragen in ${cityName}` : brandName ? `Häufig gestellte Fragen über ${brandName} Autoschlüssel` : 'Alles über Autoschlüssel & Schlösser'}
           </h2>
           <p className="section-lead">
-            {cityName ? `Lees hier de meest gestelde vragen over onze service in ${cityName}.` : brandName ? `Heeft u vragen over het bijmaken of inleren van een ${brandName} sleutel? Lees hier de meest gestelde vragen.` : 'Heeft u vragen over kosten, levertijden of reparaties? Bekijk onze meest gestelde vragen.'}
+            {cityName ? `Lesen Sie hier die am häufigsten gestellten Fragen zu unserem Service in ${cityName}.` : brandName ? `Haben Sie Fragen zum Nachmachen oder Anlernen eines ${brandName} Schlüssels? Lesen Sie hier die am häufigsten gestellten Fragen.` : 'Haben Sie Fragen zu Kosten, Lieferzeiten oder Reparaturen? Sehen Sie sich unsere häufigsten Fragen an.'}
           </p>
         </div>
 

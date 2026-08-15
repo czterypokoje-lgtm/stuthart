@@ -1,44 +1,50 @@
+/* RealGalleryShowcase — transform-based carousel */
+
 .showcaseWrapper {
   width: 100%;
   margin: 1.5rem 0;
   position: relative;
 }
 
+/* Clips the sliding track — NO scroll here */
 .sliderViewport {
   width: 100%;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding-bottom: 0.75rem;
+  overflow: hidden;
+  padding: 0.25rem 0 0.5rem;
 }
 
-.sliderViewport::-webkit-scrollbar {
-  display: none;
-}
-
+/* Flex row that slides via JS transform */
 .sliderTrack {
   display: flex;
   gap: 1.25rem;
-  width: max-content;
   padding: 0 1rem;
+  /* transform set inline via React state */
+  will-change: transform;
 }
 
 .card {
-  scroll-snap-align: start;
-  width: 320px;
   flex-shrink: 0;
+  width: 320px;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   background: #0f172a;
   border: 1px solid #1e293b;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.22);
 }
 
 @media (max-width: 640px) {
   .card {
-    width: 280px;
+    width: 260px;
+  }
+  .sliderTrack {
+    gap: 0.875rem;
   }
 }
 
@@ -48,12 +54,13 @@
   aspect-ratio: 4 / 3;
 }
 
+/* Nav row */
 .sliderNav {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
 .arrowBtn {
@@ -68,8 +75,17 @@
   justify-content: center;
   color: #0f172a;
   font-size: 1.25rem;
+  transition: background 0.15s ease, transform 0.15s ease;
+  flex-shrink: 0;
 }
 
-.arrowBtn:hover {
-  background: #e2e8f0;
+.arrowBtn:hover:not(:disabled) {
+  background: #042655;
+  color: #fff;
+  border-color: #042655;
+  transform: scale(1.08);
+}
+
+.arrowBtn:disabled {
+  pointer-events: none;
 }
