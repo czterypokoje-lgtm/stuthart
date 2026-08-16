@@ -228,16 +228,16 @@ export default function PrijzenPage() {
             <div className={styles.trustItem}>
               <div className={styles.trustImgWrap}>
                 <Image
-                  src="/images/seo/professionele_diagnose_apparatuur_stuttgart_sindelfingen.webp"
-                  alt="Professionelle Diagnoseausrüstung (Autel IM608 Pro) für die Programmierung von Autoschlüsseln"
+                  src="/images/preise-expertise.jpg"
+                  alt="Komplexe Fahrzeugelektronik und tiefgreifende Diagnose bei anspruchsvollen Modellen"
                   fill
                   sizes="(max-width: 640px) 100vw, 500px"
                   className={styles.trustImg}
                 />
               </div>
               <div className={styles.trustContent}>
-                <h3 className={styles.trustTitle}>Ausrüstung auf Händlerniveau</h3>
-                <p className={styles.trustDesc}>Fortschrittliche Diagnosegeräte für sicheren Zugriff auf ECU, CAS, FEM, MQB und EIS Systeme.</p>
+                <h3 className={styles.trustTitle}>Meisterhafte Expertise & 12 Jahre Erfahrung</h3>
+                <p className={styles.trustDesc}>Mit über 9.000 erfolgreich programmierten Fahrzeugen beherrschen wir auch komplexeste Elektronikprobleme. Wir bieten tiefgreifendes Know-how für nahezu jedes europäische und amerikanische Modell – dort, wo Standard-Werkstätten aufgeben.</p>
               </div>
             </div>
           </div>
