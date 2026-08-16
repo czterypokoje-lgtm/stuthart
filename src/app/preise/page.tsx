@@ -180,7 +180,7 @@ export default function PrijzenPage() {
             <div className={styles.trustItem}>
               <div className={styles.trustImgWrap}>
                 <Image
-                  src="/images/seo/autosleutel_reparatie_stuttgart_sindelfingen_mobiel.webp"
+                  src="/images/preise-schluessel-reparatur.jpg"
                   alt="Mechaniker repariert das Gehäuse eines Autoschlüssels vor Ort"
                   fill
                   sizes="(max-width: 640px) 100vw, 500px"
