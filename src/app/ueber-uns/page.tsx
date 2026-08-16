@@ -149,7 +149,7 @@ export default function OverOnsPage() {
           </div>
           <div>
             <img 
-              src="/images/seo/schluesseldienst_stuttgart_arbeiten_24stunden.webp" 
+              src="/images/ueber-uns-servicebusse.jpg" 
               alt="Arbeiten vor Ort durch Monteur" 
               style={{ width: '100%', maxWidth: '340px', height: '210px', objectFit: 'cover', objectPosition: 'top', borderRadius: '4px', border: '1px solid #cbd5e1', display: 'block' }} 
             />
