@@ -82,7 +82,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
     const bSlug = brand.slug.toLowerCase();
     
     // Filter specific files for this brand
-    recentWorkImages = files.filter(f => {
+    let matchedFiles = files.filter(f => {
       const lower = f.toLowerCase();
       
       // Match if filename contains the brand slug or name slug
@@ -95,6 +95,18 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
       
       return false;
     });
+
+    // Deduplicate: Avoid showing the same photo twice.
+    // If we have translated German files (autoschluessel-nachmachen-), ignore the old Dutch files for this brand.
+    const hasGermanSEO = matchedFiles.some(f => f.toLowerCase().includes('autoschluessel-nachmachen-'));
+    if (hasGermanSEO) {
+      matchedFiles = matchedFiles.filter(f => {
+        const lower = f.toLowerCase();
+        return !lower.includes('-utrecht-') && !lower.includes('autosleutel-bijmaken-');
+      });
+    }
+
+    recentWorkImages = matchedFiles;
 
     // Do NOT mix in generic werkplaats/workplace photos anymore.
     // The user requested that we ONLY show photos of the specific brand.
