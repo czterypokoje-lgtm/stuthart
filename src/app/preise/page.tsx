@@ -200,7 +200,7 @@ export default function PrijzenPage() {
                   alt="Programmieren und Anlernen eines neuen Autoschlüssels im mobilen Servicebus"
                   fill
                   sizes="(max-width: 640px) 100vw, 500px"
-                  className={styles.trustImgTop}
+                  className={styles.trustImg}
                 />
               </div>
               <div className={styles.trustContent}>
