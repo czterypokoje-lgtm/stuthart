@@ -19,7 +19,7 @@ const PHOTOS = [
   { src: '/images/merken/autoschluessel-nachmachen-renault-1.webp',       alt: 'Renault Keycard nachmachen — Schlüsselkarte programmieren Stuttgart',                  label: 'Renault Keycard' },
   { src: '/images/merken/autoschluessel-nachmachen-skoda-1.webp',         alt: 'Škoda Autoschlüssel nachmachen — Transponder Stuttgart Umkreis',                       label: 'Škoda Schlüssel' },
   { src: '/images/merken/autoschluessel-nachmachen-hyundai-1.webp',       alt: 'Hyundai Schlüssel nachmachen und anlernen — Stuttgart',                                label: 'Hyundai Schlüssel' },
-  { src: '/images/merken/autoschleussel-nachmachen-nissan-1.webp',        alt: 'Nissan Autoschlüssel nachmachen — Qashqai / Juke Transponder Stuttgart',              label: 'Nissan Schlüssel' },
+  { src: '/images/merken/autoschluessel-nachmachen-nissan-1.webp',        alt: 'Nissan Autoschlüssel nachmachen — Qashqai / Juke Transponder Stuttgart',              label: 'Nissan Schlüssel' },
   { src: '/images/merken/autoschluessel-nachmachen-opel-1.webp',          alt: 'Opel Autoschlüssel nachmachen — Astra / Corsa / Insignia Transponder Stuttgart',      label: 'Opel Schlüssel' },
   { src: '/images/merken/autoschluessel-nachmachen-fiat-1.webp',          alt: 'Fiat Autoschlüssel nachmachen — 500 / Panda Transponder codieren Stuttgart',          label: 'Fiat Schlüssel' },
   { src: '/images/merken/autoschluessel-nachmachen-jeep-1.webp',          alt: 'Jeep Autoschlüssel nachmachen — Wrangler / Cherokee Smart Key Stuttgart',             label: 'Jeep Schlüssel' },
