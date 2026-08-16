@@ -84,35 +84,20 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
     // Filter specific files for this brand
     recentWorkImages = files.filter(f => {
       const lower = f.toLowerCase();
-      // Starts with slug/nameSlug (e.g. audi-autosleutel...)
-      if (lower.startsWith(nSlug + '-')) return true;
-      if (lower.startsWith(bSlug + '-')) return true;
       
-      // Contains the nameSlug or slug preceded by autoschluessel-nachmachen-
-      if (lower.includes('autoschluessel-nachmachen-' + nSlug)) return true;
-      if (lower.includes('autoschluessel-nachmachen-' + bSlug)) return true;
-      if (lower.includes('autosleutel-bijmaken-' + nSlug)) return true;
-      if (lower.includes('autosleutel-bijmaken-' + bSlug)) return true;
+      // Match if filename contains the brand slug or name slug
+      if (lower.includes(nSlug) || lower.includes(bSlug)) return true;
 
-      // Special cases
-      if (bSlug === 'volkswagen' && (lower.includes('vw-') || lower.includes('volkswagen-') || lower.includes('vw2222') || lower.includes('vw33'))) return true;
-      if (bSlug === 'mercedes' && (lower.includes('mercedes-') || lower.includes('mb-') || lower.includes('benz') || lower.includes('mb3'))) return true;
-      if (bSlug === 'land-rover' && (lower.includes('range-rover') || lower.includes('land-rover'))) return true;
+      // Special cases for common abbreviations or alternative names
+      if (bSlug === 'volkswagen' && (lower.includes('vw-') || lower.includes('-vw'))) return true;
+      if (bSlug === 'mercedes' && (lower.includes('benz') || lower.includes('mb-'))) return true;
+      if (bSlug === 'land-rover' && (lower.includes('range'))) return true;
       
       return false;
     });
 
-    // If we have fewer than 3 images, mix in generic werkplaats/workplace photos to have a rich gallery
-    if (recentWorkImages.length < 3) {
-      const genericFiles = files.filter(f => f.toLowerCase().includes('werkplaats') || f.toLowerCase().includes('workplace'));
-      // Sort them to be deterministic
-      genericFiles.sort();
-      for (const gen of genericFiles) {
-        if (!recentWorkImages.includes(gen) && recentWorkImages.length < 4) {
-          recentWorkImages.push(gen);
-        }
-      }
-    }
+    // Do NOT mix in generic werkplaats/workplace photos anymore.
+    // The user requested that we ONLY show photos of the specific brand.
   } catch (e) {
     // ignore
   }
