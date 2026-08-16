@@ -163,8 +163,8 @@ export default function OverOnsPage() {
           </div>
           <div>
             <img 
-              src="/images/seo/envanter.jpeg" 
-              alt="Lager an originalen Autoschlüsseln und Transpondern" 
+              src="/images/ueber-uns-maschine.jpg" 
+              alt="Professionelle FUTURA PRO CNC Fräsmaschine" 
               style={{ width: '100%', maxWidth: '340px', height: '210px', objectFit: 'cover', borderRadius: '4px', border: '1px solid #cbd5e1', display: 'block' }} 
             />
           </div>
