@@ -196,7 +196,7 @@ export default function PrijzenPage() {
             <div className={styles.trustItem}>
               <div className={styles.trustImgWrap}>
                 <Image
-                  src="/images/seo/autosleutel_programmeren_op_locatie_stuttgart_sindelfingen.webp"
+                  src="/images/preise-programmierung.jpg"
                   alt="Programmieren und Anlernen eines neuen Autoschlüssels im mobilen Servicebus"
                   fill
                   sizes="(max-width: 640px) 100vw, 500px"
