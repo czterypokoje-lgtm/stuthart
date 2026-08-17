@@ -413,7 +413,7 @@ export default function HomePage() {
             </div>
             <div>
               <img
-                src="/images/ueber-uns-servicebusse.jpg"
+                src="/images/team/first-class-key-servicebus.png"
                 alt="Autoschlüsselspezialist im Einsatz"
                 style={{
                   width: '100%',
