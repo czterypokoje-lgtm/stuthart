@@ -290,8 +290,8 @@ export default function SleutelBijmakenPage() {
                     margin: '1.5rem 0'
                   }}>
                     <img 
-                      src="/images/seo/autoschluessel-nachmachen-porsche.webp" 
-                      alt="Professionelle Ersatzschlüssel-Programmierung vor Ort" 
+                      src="/images/seo/autoschluessel-nachmachen-skoda.jpg" 
+                      alt="Professionelle Ersatzschlüssel-Programmierung vor Ort für Škoda Enyaq" 
                       style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
                     />
                     <img 
