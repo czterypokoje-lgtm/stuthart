@@ -413,7 +413,7 @@ export default function HomePage() {
             </div>
             <div>
               <img
-                src="/images/team/berkan-acarol-autosleutelspecialist-stuttgart.webp"
+                src="/images/ueber-uns-servicebusse.jpg"
                 alt="Autoschlüsselspezialist im Einsatz"
                 style={{
                   width: '100%',
