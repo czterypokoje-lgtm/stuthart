@@ -17,7 +17,7 @@ export default function InstantServiceMap() {
     >
       <iframe
         data-cmp-ab="1"
-        src="https://www.google.com/maps/d/embed?mid=1M3Pmk5vzguoPL4qS81XLU_gz5OiXDF4&ehbc=2E312F"
+        src="https://www.google.com/maps/d/embed?mid=11YfgF3UnpXY64S533SE58sm0uPYzxlY&ehbc=2E312F"
         style={{
           border: 'none',
           width: '100%',
@@ -28,7 +28,7 @@ export default function InstantServiceMap() {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="FC-KEY Servicegebied Utrecht en omstreken"
+        title="First Class Key Einsatzgebiet Stuttgart und Umgebung"
       />
     </div>
   );
