@@ -348,6 +348,12 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
                         style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
                       />
                     </div>
+                  ) : slug === 'alle-schluessel-verloren-auto' ? (
+                    <img 
+                      src="/images/seo/alle-schluessel-verloren-auto-hero.jpg" 
+                      alt="Professionelle Programmierung eines Autoschlüssels vor Ort" 
+                      style={{ width: '100%', height: 'auto', borderRadius: '12px', margin: '1.25rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}
+                    />
                   ) : slug === 'zuendschloss-auto-wechseln' ? (
                     <div style={{
                       display: 'grid',
