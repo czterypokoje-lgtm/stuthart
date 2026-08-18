@@ -85,7 +85,7 @@ const simplifiedServices = [
   {
     title: 'Auto Schlüsseldienst',
     href: '/leistungen/auto-schluesseldienst',
-    src: '/images/seo/auto_deur_openen_slotenmaker_stuttgart_schadevrij.webp',
+    src: '/images/seo/auto_schluesseldienst_home.jpg',
     alt: 'Auto Schlüsseldienst & Öffnung'
   }
 ];
