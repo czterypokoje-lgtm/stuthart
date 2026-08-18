@@ -9,6 +9,7 @@ import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsLogoGrid from '@/components/BrandsLogoGrid/BrandsLogoGrid';
+import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
 import { generateContextualReviews } from '@/utils/reviews';
 import { CITIES } from '@/config/cities';
@@ -405,26 +406,6 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
 
 
 
-                {/* Section 5: Wo sind wir im Einsatz? */}
-                <div>
-                  <h2>In welchen Regionen bieten wir {service.title} an?</h2>
-                  <p>
-                    Mit unserer zentralen Lage und mehreren mobilen Serviceeinheiten bedienen wir täglich ein großes Einsatzgebiet in Baden-Württemberg. Wir sind blitzschnell vor Ort in unter anderem:
-                  </p>
-                  <ul className={styles.bulletList}>
-                    {CITIES.map((c) => (
-                      <li key={c.slug}>
-                        <Link href={`/standorte/${c.slug}`}>
-                          {c.city}
-                        </Link>
-                        {` — Direkter mobiler Notdienst vor Ort innerhalb von ${c.travelTime}`}
-                      </li>
-                    ))}
-                  </ul>
-                  <p>
-                    <Link href="/standorte" style={{ fontWeight: 700, color: '#f97316' }}>Sehen Sie sich unser komplettes Einsatzgebiet nach Bundesland und Stadt an →</Link>
-                  </p>
-                </div>
 
                 {/* Section 5.5: Comprehensive Dutch SEO Guide */}
                 <div className="seo-article-block" style={{ marginTop: '3rem', marginBottom: '3rem' }}>
@@ -496,6 +477,8 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
           title={`Für welche Marken bieten wir ${service.title} an?`}
           subtitle="Unsere Programmiergeräte und Lishi-Öffnungswerkzeuge unterstützen über 95% aller Automarken auf deutschen Straßen. Wir sind Spezialisten unter anderem für:"
         />
+
+        <ServiceCoverageMap />
 
         <section className={styles.section} style={{ paddingTop: '4rem' }}>
           <div className={styles.container}>

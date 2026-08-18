@@ -10,6 +10,7 @@ import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
+import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
 import { generateContextualReviews } from '@/utils/reviews';
 import { getBaseLocalBusinessSchema } from '@/utils/schema';
 import styles from './page.module.css';
@@ -317,31 +318,6 @@ export default function SleutelBijmakenPage() {
 
 
 
-                {/* Section 4 */}
-                <div style={{ margin: '3rem 0' }}>
-                  <BrandsLogoGrid
-                    title="Welche Marken bedienen wir?"
-                    subtitle="Wir fertigen und programmieren Schlüssel für alle gängigen Marken. Unsere Ausrüstung unterstützt:"
-                  />
-                </div>
-
-                {/* Section 5 */}
-                <div>
-                  <h2>Wo bieten wir unseren Service an?</h2>
-                  <p>
-                    Wir sind mobil in der Region Stuttgart, Sindelfingen und im 50km Umkreis aktiv. Entdecken Sie unseren Service in den folgenden Städten:
-                  </p>
-                  <ul className={styles.bulletList} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.5rem' }}>
-                    {CITIES.map(city => (
-                      <li key={city.slug}>
-                        <Link href={`/standorte/${city.slug}`}>{city.city}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                  <p>
-                    <Link href="/standorte" style={{ fontWeight: 700, color: '#f97316' }}>Sehen Sie sich unser komplettes Einsatzgebiet an →</Link>
-                  </p>
-                </div>
 
                 {/* Section 6 - FAQ */}
                 <div>
@@ -450,7 +426,19 @@ export default function SleutelBijmakenPage() {
                   <span className={styles.ratingCount}>{SITE_CONFIG.reviewCount} Google-Bewertungen · {SITE_CONFIG.rating}/5</span>
                 </div>
               </aside>
-            </div>
+            </div> {/* closes contentGrid */}
+          </div>
+        </section>
+
+        <BrandsLogoGrid
+          title="Welche Marken bedienen wir?"
+          subtitle="Wir fertigen und programmieren Schlüssel für alle gängigen Marken. Unsere Ausrüstung unterstützt:"
+        />
+
+        <ServiceCoverageMap />
+
+        <section className={styles.section} style={{ paddingTop: '4rem' }}>
+          <div className={styles.container}>
 
             {/* Bottom CTA block */}
             <div className={styles.ctaBlock}>
