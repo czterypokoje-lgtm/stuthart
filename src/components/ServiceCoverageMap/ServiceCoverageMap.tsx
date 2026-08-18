@@ -97,6 +97,70 @@ export default function ServiceCoverageMap() {
               Ditzingen <span className={styles.pinTime}>~25m</span>
             </div>
           </div>
+
+          {/* Mannheim Pin */}
+          <div className={`${styles.pin} ${styles.pinMannheim}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Mannheim <span className={styles.pinTime}>~60m</span>
+            </div>
+          </div>
+
+          {/* Karlsruhe Pin */}
+          <div className={`${styles.pin} ${styles.pinKarlsruhe}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Karlsruhe <span className={styles.pinTime}>~45m</span>
+            </div>
+          </div>
+
+          {/* Freiburg Pin */}
+          <div className={`${styles.pin} ${styles.pinFreiburg}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Freiburg <span className={styles.pinTime}>~90m</span>
+            </div>
+          </div>
+
+          {/* Heidelberg Pin */}
+          <div className={`${styles.pin} ${styles.pinHeidelberg}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Heidelberg <span className={styles.pinTime}>~50m</span>
+            </div>
+          </div>
+
+          {/* Heilbronn Pin */}
+          <div className={`${styles.pin} ${styles.pinHeilbronn}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Heilbronn <span className={styles.pinTime}>~40m</span>
+            </div>
+          </div>
+
+          {/* Ulm Pin */}
+          <div className={`${styles.pin} ${styles.pinUlm}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Ulm <span className={styles.pinTime}>~55m</span>
+            </div>
+          </div>
+
+          {/* Pforzheim Pin */}
+          <div className={`${styles.pin} ${styles.pinPforzheim}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Pforzheim <span className={styles.pinTime}>~35m</span>
+            </div>
+          </div>
+
+          {/* Reutlingen Pin */}
+          <div className={`${styles.pin} ${styles.pinReutlingen}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Reutlingen <span className={styles.pinTime}>~35m</span>
+            </div>
+          </div>
         </div>
 
         {/* RIGHT: INTERACTIVE CITIES GRID */}

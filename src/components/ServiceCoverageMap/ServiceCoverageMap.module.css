@@ -39,7 +39,8 @@
 /* ── LEFT: VISUAL SPACER ── */
 .radarContainer {
   position: relative;
-  width: 100%;
+  width: 120%;
+  left: -10%;
   aspect-ratio: 1;
   display: flex;
   align-items: center;
@@ -111,8 +112,8 @@
 }
 
 .pinDot {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   background: #0ea5e9;
   border-radius: 50%;
   box-shadow: 0 0 10px #0ea5e9;
@@ -139,9 +140,9 @@
   background: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  padding: 0.25rem 0.75rem;
+  padding: 0.15rem 0.5rem;
   border-radius: 999px;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -163,6 +164,14 @@
 .pinWaiblingen { top: 25%; left: 80%; }
 .pinFilderstadt { top: 70%; left: 60%; }
 .pinDitzingen { top: 15%; left: 35%; }
+.pinMannheim { top: 5%; left: 15%; }
+.pinKarlsruhe { top: 75%; left: 10%; }
+.pinFreiburg { top: 95%; left: 25%; }
+.pinHeidelberg { top: 15%; left: 20%; }
+.pinHeilbronn { top: 5%; left: 50%; }
+.pinUlm { top: 90%; left: 75%; }
+.pinPforzheim { top: 45%; left: 10%; }
+.pinReutlingen { top: 85%; left: 50%; }
 
 /* ── RIGHT: CITIES GRID ── */
 .content {
