@@ -1,5 +1,9 @@
 .section {
-  background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+  background-color: #020617;
+  background-image: linear-gradient(90deg, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.8) 50%, #020617 100%), url('/images/service-map-bg.jpg');
+  background-size: cover;
+  background-position: center left;
+  background-repeat: no-repeat;
   padding: 5rem 0;
   position: relative;
   overflow: hidden;
@@ -26,123 +30,25 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+  .section {
+    background-image: linear-gradient(180deg, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.9) 30%, #020617 100%), url('/images/service-map-bg.jpg');
+    background-position: top center;
+  }
 }
 
-/* ── LEFT: RADAR VISUAL ── */
+/* ── LEFT: VISUAL SPACER ── */
 .radarContainer {
   position: relative;
   width: 100%;
   aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* Empty to let the background image shine through */
 }
 
-.radarRings {
-  position: absolute;
-  width: 80%;
-  height: 80%;
-  border-radius: 50%;
-  border: 1px solid rgba(249, 115, 22, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 992px) {
+  .radarContainer {
+    aspect-ratio: 16/9;
+  }
 }
-
-.radarRings::before,
-.radarRings::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(14, 165, 233, 0.3);
-  animation: pulse 4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-}
-
-.radarRings::before {
-  width: 50%;
-  height: 50%;
-  animation-delay: 0s;
-}
-
-.radarRings::after {
-  width: 80%;
-  height: 80%;
-  animation-delay: 2s;
-}
-
-@keyframes pulse {
-  0% { transform: scale(0.5); opacity: 1; }
-  100% { transform: scale(1.5); opacity: 0; }
-}
-
-.radarCenter {
-  width: 20px;
-  height: 20px;
-  background: var(--color-primary);
-  border-radius: 50%;
-  box-shadow: 0 0 20px var(--color-primary), 0 0 40px var(--color-primary);
-  position: relative;
-  z-index: 2;
-}
-
-/* City Pins on Radar */
-.pin {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-}
-
-.pinDot {
-  width: 12px;
-  height: 12px;
-  background: #0ea5e9;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #0ea5e9;
-  position: relative;
-}
-.pinDot::after {
-  content: '';
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  border-radius: 50%;
-  border: 2px solid #0ea5e9;
-  animation: pulseDot 2s infinite;
-}
-
-@keyframes pulseDot {
-  0% { transform: scale(1); opacity: 0.8; }
-  100% { transform: scale(2); opacity: 0; }
-}
-
-.pinLabel {
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  white-space: nowrap;
-}
-.pinTime {
-  color: var(--color-primary);
-  margin-left: 0.25rem;
-}
-
-/* Positions for visual map */
-.pinStuttgart { top: 40%; left: 55%; }
-.pinSindelfingen { top: 55%; left: 35%; }
-.pinLudwigsburg { top: 20%; left: 45%; }
-.pinEsslingen { top: 45%; left: 75%; }
 
 /* ── RIGHT: CITIES GRID ── */
 .content {
@@ -182,8 +88,8 @@
 }
 
 .cityCard {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 1rem 1.25rem;
@@ -213,9 +119,9 @@
 
 .cityCard:hover {
   transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(249, 115, 22, 0.3);
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3), 0 0 15px rgba(249, 115, 22, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(249, 115, 22, 0.4);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3), 0 0 15px rgba(249, 115, 22, 0.2);
 }
 
 .cityCard:hover::before {
@@ -269,7 +175,7 @@
 }
 
 .blob1 {
-  background: rgba(249, 115, 22, 0.15); /* orange */
+  background: rgba(249, 115, 22, 0.1); /* orange */
   width: 400px;
   height: 400px;
   top: -100px;
@@ -277,7 +183,7 @@
 }
 
 .blob2 {
-  background: rgba(14, 165, 233, 0.15); /* cyan */
+  background: rgba(14, 165, 233, 0.1); /* cyan */
   width: 300px;
   height: 300px;
   bottom: -50px;
