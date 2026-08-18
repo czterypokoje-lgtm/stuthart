@@ -14,6 +14,18 @@ export const TOP_BRANDS = [
   { name: 'Audi', slug: 'audi-autoschluessel-nachmachen', svg: 'https://cdn.simpleicons.org/audi/001E50' },
   { name: 'Mercedes-Benz', slug: 'mercedes-autoschluessel-nachmachen', svg: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg' },
   { name: 'Skoda', slug: 'skoda-autoschluessel-nachmachen', svg: '/brands/skoda_sleutel_bijmaken.webp' },
+  { name: 'BMW', slug: 'bmw-autoschluessel-nachmachen', svg: 'https://cdn.simpleicons.org/bmw/001E50' },
+  { name: 'Ford', slug: 'ford-autoschluessel-nachmachen', svg: 'https://cdn.simpleicons.org/ford/001E50' },
+  { name: 'Opel', slug: 'opel-autoschluessel-nachmachen', svg: '/brands/opel_sleutel_bijmaken.webp' },
+  { name: 'Renault', slug: 'renault-autoschluessel-nachmachen', svg: 'https://cdn.simpleicons.org/renault/001E50' },
+  { name: 'Peugeot', slug: 'peugeot-autoschluessel-nachmachen', svg: 'https://cdn.simpleicons.org/peugeot/001E50' },
+  { name: 'Toyota', slug: 'toyota-autoschluessel-nachmachen', svg: 'https://cdn.simpleicons.org/toyota/001E50' },
+  { name: 'Seat', slug: 'seat-autoschluessel-nachmachen', svg: '/brands/seat_sleutel_bijmaken.webp' },
+  { name: 'Hyundai', slug: 'hyundai-autoschluessel-nachmachen', svg: 'https://cdn.simpleicons.org/hyundai/001E50' },
+  { name: 'Kia', slug: 'kia-autoschluessel-nachmachen', svg: '/brands/kia_sleutel_bijmaken.svg' },
+  { name: 'Fiat', slug: 'fiat-autoschluessel-nachmachen', svg: '/brands/fiat_sleutel_bijmaken.webp' },
+  { name: 'Nissan', slug: 'nissan-autoschluessel-nachmachen', svg: 'https://cdn.simpleicons.org/nissan/001E50' },
+  { name: 'Citroën', slug: 'citroen-autoschluessel-nachmachen', svg: '/brands/citroen_sleutel_bijmaken.webp' },
 ];
 
 export default function BrandsLogoGrid({ title, subtitle, hideSeoHeader = false }: BrandsLogoGridProps) {
@@ -51,8 +63,8 @@ export default function BrandsLogoGrid({ title, subtitle, hideSeoHeader = false 
                   src={brand.svg}
                   alt={`${brand.name} logo`}
                   className={styles.brandLogoImg}
-                  width={50}
-                  height={50}
+                  width={40}
+                  height={40}
                   unoptimized={true}
                 />
               </Link>
@@ -60,11 +72,11 @@ export default function BrandsLogoGrid({ title, subtitle, hideSeoHeader = false 
           </div>
 
           <div className={styles.actions}>
-            <Link href="/standorte" className={styles.primaryButton}>
-              Autoschlüsseldienst finden &rarr;
+            <Link href="/kontakt" className={styles.primaryButton}>
+              Kontakt aufnehmen &rarr;
             </Link>
             <Link href="/partner" className={styles.secondaryButton}>
-              + Partner werden
+              B2B Partner
             </Link>
           </div>
         </div>

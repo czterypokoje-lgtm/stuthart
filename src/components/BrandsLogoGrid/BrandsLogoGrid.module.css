@@ -54,14 +54,15 @@
 
 .brandLogosRow {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   margin-bottom: 2.5rem;
   flex-wrap: wrap;
+  max-width: 500px; /* Constrain width so it wraps nicely to 4 rows of 4 if needed */
 }
 
 .brandLogoCard {
-  width: 90px;
-  height: 90px;
+  width: 75px;
+  height: 75px;
   background: #ffffff;
   border-radius: 12px;
   display: flex;
@@ -69,7 +70,7 @@
   justify-content: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.04);
   transition: transform 0.2s, box-shadow 0.2s;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 .brandLogoCard:hover {
@@ -129,13 +130,13 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  min-height: 500px;
+  min-height: 600px;
 }
 
 .circle1 {
   position: absolute;
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
   background: var(--navy-100);
   border-radius: 50%;
   top: 50%;
@@ -147,8 +148,8 @@
 
 .circle2 {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   background: var(--orange-100);
   border-radius: 50%;
   top: 50%;
@@ -162,9 +163,11 @@
   position: relative;
   z-index: 1;
   object-fit: contain;
-  max-height: 550px;
+  max-height: 750px;
   width: auto;
   mix-blend-mode: multiply;
+  transform: scale(1.15) translateY(-20px);
+  transform-origin: bottom center;
 }
 
 @media (max-width: 992px) {
@@ -185,5 +188,10 @@
   .imageContent {
     min-height: 400px;
     width: 100%;
+    margin-top: 2rem;
+  }
+  .personImage {
+    transform: scale(1);
+    max-height: 500px;
   }
 }
