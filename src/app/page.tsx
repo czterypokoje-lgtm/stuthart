@@ -73,7 +73,7 @@ const simplifiedServices = [
   {
     title: 'Autoschlüssel Verloren?',
     href: '/autoschluessel-verloren',
-    src: '/images/seo/auto_deur_openen_slotenmaker_stuttgart_schadevrij.webp',
+    src: '/images/seo/lost_car_key_concept.jpg',
     alt: 'Autoschlüssel Verloren?'
   },
   {
