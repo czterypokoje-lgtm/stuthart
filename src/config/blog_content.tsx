@@ -932,7 +932,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
         </p>
       </details>
 
-      <div style={{ background: '#fff8f1', borderLeft: '4px solid #f97316', padding: '1rem', margin: '1.5rem 0', borderRadius: '4px' }}>
+      <div style={{ background: '#fff8f1', borderLeft: '4px solid #002752', padding: '1rem', margin: '1.5rem 0', borderRadius: '4px' }}>
         <strong>Benötigen Sie sofortige Hilfe von einem professionellen Kfz-Schlüsseldienst?</strong> Unser mobiler Notdienst ist 24/7 erreichbar. Rufen Sie uns direkt an unter <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ color: '#ea580c', fontWeight: 'bold', textDecoration: 'underline' }}>{SITE_CONFIG.phone}</a> oder senden Sie eine WhatsApp-Nachricht für einen festen Kostenvoranschlag im Voraus.
       </div>
     </>
@@ -998,7 +998,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
         </p>
       </details>
 
-      <div style={{ background: '#fff8f1', borderLeft: '4px solid #f97316', padding: '1rem', margin: '1.5rem 0', borderRadius: '4px' }}>
+      <div style={{ background: '#fff8f1', borderLeft: '4px solid #002752', padding: '1rem', margin: '1.5rem 0', borderRadius: '4px' }}>
         <strong>Benötigen Sie sofortige Hilfe von einem professionellen Kfz-Schlüsseldienst?</strong> Unser mobiler Notdienst ist 24/7 erreichbar. Rufen Sie uns direkt an unter <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ color: '#ea580c', fontWeight: 'bold', textDecoration: 'underline' }}>{SITE_CONFIG.phone}</a> oder senden Sie eine WhatsApp-Nachricht für einen festen Kostenvoranschlag im Voraus.
       </div>
     </>
@@ -1020,7 +1020,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
         Ein kaputter Autoschlüssel kann eine Quelle großer Frustration sein, besonders wenn man es eilig hat oder weit weg von zu Hause ist. Autoschlüssel sind heute viel mehr als einfache Metallschlüssel; sie enthalten fortschrittliche Technologien wie Transponder und elektronische Chips, die mit der Wegfahrsperre Ihres Autos kommunizieren. Wenn diese Schlüssel nicht mehr funktionieren, denken viele Menschen direkt an hohe Kosten beim Vertragshändler. Glücklicherweise gibt es viele Möglichkeiten, einfache Reparaturen selbst durchzuführen oder sich klug für einen Spezialisten zu entscheiden, um viel Geld zu sparen.
       </p>
       <p>
-        Die <Link href="/diensten/autoschluessel-reparieren" style={{ color: '#f97316', textDecoration: 'underline' }}>Reparatur eines Autoschlüssels</Link> kann vom einfachen <Link href="/diensten/batterie-wechseln" style={{ color: '#f97316', textDecoration: 'underline' }}>Austausch einer Knopfzellenbatterie</Link> bis hin zur Erneuerung des Gehäuses oder der professionellen Reparatur von Mikroschaltern auf der Platine reichen. Viele dieser kleinen Aufgaben erfordern kein tiefes technisches Wissen, sondern ein wenig Geduld und Präzision.
+        Die <Link href="/diensten/autoschluessel-reparieren" style={{ color: '#002752', textDecoration: 'underline' }}>Reparatur eines Autoschlüssels</Link> kann vom einfachen <Link href="/diensten/batterie-wechseln" style={{ color: '#002752', textDecoration: 'underline' }}>Austausch einer Knopfzellenbatterie</Link> bis hin zur Erneuerung des Gehäuses oder der professionellen Reparatur von Mikroschaltern auf der Platine reichen. Viele dieser kleinen Aufgaben erfordern kein tiefes technisches Wissen, sondern ein wenig Geduld und Präzision.
       </p>
 
       <h2>Häufige Probleme mit Autoschlüsseln</h2>
@@ -1032,7 +1032,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
           <strong>Leere oder schwache Batterie:</strong> Die Fernbedienung reagiert nur auf kurze Distanz oder die Kontrollleuchte am Schlüssel leuchtet nicht oder nur schwach. Dies ist das am einfachsten selbst zu lösende Problem.
         </li>
         <li>
-          <strong>Physische Schäden an Gehäuse oder Schlüsselblatt:</strong> Durch Herunterfallen oder Verschleiß kann das <Link href="/diensten/gehaeuse-wechseln" style={{ color: '#f97316', textDecoration: 'underline' }}>Kunststoffgehäuse reißen</Link> oder die Gummitasten verschleißen. Auch ein metallisches Schlüsselblatt kann sich verbiegen oder abbrechen.
+          <strong>Physische Schäden an Gehäuse oder Schlüsselblatt:</strong> Durch Herunterfallen oder Verschleiß kann das <Link href="/diensten/gehaeuse-wechseln" style={{ color: '#002752', textDecoration: 'underline' }}>Kunststoffgehäuse reißen</Link> oder die Gummitasten verschleißen. Auch ein metallisches Schlüsselblatt kann sich verbiegen oder abbrechen.
         </li>
         <li>
           <strong>Elektronische Störungen (Platine oder Transponder):</strong> Funktioniert die Zentralverriegelung, aber das Auto startet nicht und es erscheint eine Meldung wie <em>&quot;Schlüssel nicht erkannt&quot;</em>? Dann liegt oft eine Störung im internen Transponderchip vor.
@@ -1067,7 +1067,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
       </p>
       <ul>
         <li><strong>Beschädigte Platine oder gelöste SMD-Tasten:</strong> Das Löten an mikroskopisch kleinen Schlüsselplatinen erfordert feine Präzisionsgeräte.</li>
-        <li><strong>Schlüssel verloren oder vom Auto nicht mehr erkannt:</strong> Das Anlernen und <Link href="/diensten/autoschluessel-nachmachen" style={{ color: '#f97316', textDecoration: 'underline' }}>Programmieren eines neuen Autoschlüssels</Link> erfordert spezielle OBD2- und Transpondergeräte.</li>
+        <li><strong>Schlüssel verloren oder vom Auto nicht mehr erkannt:</strong> Das Anlernen und <Link href="/diensten/autoschluessel-nachmachen" style={{ color: '#002752', textDecoration: 'underline' }}>Programmieren eines neuen Autoschlüssels</Link> erfordert spezielle OBD2- und Transpondergeräte.</li>
         <li><strong>Abgebrochenes Schlüsselblatt im Zündschloss:</strong> Versuchen Sie niemals, abgebrochenes Metall selbst mit Gewalt aus dem Schloss zu fummeln, um weitere Zylinder- oder Zündschlossschäden zu vermeiden.</li>
       </ul>
 
@@ -1120,7 +1120,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
       </p>
       <ol>
         <li><strong>Verwenden Sie eine Silikon- oder Lederschutzhülle:</strong> Dies fängt Stöße bei einem Fall ab und schützt vor Regen oder Feuchtigkeit.</li>
-        <li><strong>Sorgen Sie immer für einen gut funktionierenden Ersatzschlüssel:</strong> Haben Sie derzeit nur einen Schlüssel? Lassen Sie dann rechtzeitig einen <Link href="/diensten/autoschluessel-nachmachen" style={{ color: '#f97316', textDecoration: 'underline' }}>Ersatzschlüssel nachmachen</Link>, bevor Sie alles verlieren.</li>
+        <li><strong>Sorgen Sie immer für einen gut funktionierenden Ersatzschlüssel:</strong> Haben Sie derzeit nur einen Schlüssel? Lassen Sie dann rechtzeitig einen <Link href="/diensten/autoschluessel-nachmachen" style={{ color: '#002752', textDecoration: 'underline' }}>Ersatzschlüssel nachmachen</Link>, bevor Sie alles verlieren.</li>
         <li><strong>Wechseln Sie die Batterie bei den ersten Symptomen:</strong> Warten Sie nicht, bis der Schlüssel vollständig aufhört zu funktionieren.</li>
       </ol>
 
@@ -1144,13 +1144,13 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
         </p>
       </details>
 
-      <div style={{ background: '#fff7ed', border: '1px solid #fed7aa', borderLeft: '4px solid #f97316', padding: '1.25rem', borderRadius: '6px', marginTop: '2rem' }}>
+      <div style={{ background: '#fff7ed', border: '1px solid #fed7aa', borderLeft: '4px solid #002752', padding: '1.25rem', borderRadius: '6px', marginTop: '2rem' }}>
         <h3 style={{ margin: '0 0 0.5rem 0', color: '#9a3412' }}>Direkte Hilfe oder Beratung von unserem mobilen Schlüsselspezialisten?</h3>
         <p style={{ margin: '0 0 1rem 0', color: '#7c2d12', fontSize: '0.95rem' }}>
           Ist Ihr Autoschlüssel defekt, der Transponder kaputt oder haben Sie alle Ihre Schlüssel verloren? Wir kommen 24/7 zu Ihrem Standort in Stuttgart, Sindelfingen, Böblingen und 50km Umkreis und reparieren oder programmieren direkt vor Ort.
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
-          <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ background: '#f97316', color: '#fff', padding: '0.65rem 1.2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600 }}>
+          <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ background: '#002752', color: '#fff', padding: '0.65rem 1.2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600 }}>
             📞 Direkt anrufen: {SITE_CONFIG.phone}
           </a>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{ background: '#22c55e', color: '#fff', padding: '0.65rem 1.2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600 }}>
@@ -1297,7 +1297,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
           <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ background: '#fff', color: 'var(--color-primary)', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none' }}>
             📞 {SITE_CONFIG.phone}
           </a>
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{ background: '#25d366', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none' }}>
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{ background: '#002752', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none' }}>
             💬 WhatsApp Direkt
           </a>
         </div>

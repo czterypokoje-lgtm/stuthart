@@ -159,7 +159,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
 
               <h1 style={{ color: '#fff', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, lineHeight: 1.2, marginBottom: '1.2rem' }}>
                 {brand.customH1 || <>{brand.name} Autoschlüssel Nachmachen &amp; Programmieren</>} <br />
-                <span style={{ color: 'var(--orange-400)' }}>Alle Modelle &amp; Baujahre • Mobiler Vor-Ort-Service</span>
+                <span style={{ color: 'var(--navy-700)' }}>Alle Modelle &amp; Baujahre • Mobiler Vor-Ort-Service</span>
               </h1>
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.08rem', lineHeight: 1.7, marginBottom: '2.2rem' }}>
                 Haben Sie Ihren {brand.name} Autoschlüssel verloren, ist der Schlüssel abgebrochen oder reagiert die Smart-Key-Fernbedienung nicht mehr?
@@ -199,7 +199,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
                   Extra oder Ersatzschlüssel für {brand.name} benötigt? Wir fräsen und programmieren einen neuen Schlüssel direkt bei Ihnen vor Ort — oft halb so teuer wie beim {brand.name}-Händler.
                 </p>
                 <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--orange-500)', fontWeight: 700, fontSize: '1rem' }}>Ab €149,- zzgl. MwSt.</span>
+                  <span style={{ color: 'var(--navy-800)', fontWeight: 700, fontSize: '1rem' }}>Ab €149,- zzgl. MwSt.</span>
                   <span style={{ color: 'var(--navy-700)', fontWeight: 600, fontSize: '0.9rem' }}>Mehr erfahren &rarr;</span>
                 </div>
               </Link>
@@ -216,7 +216,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
                   Alle {brand.name} Schlüssel verloren? Wir kommen direkt zu Ihnen, öffnen das Auto schadensfrei, fräsen einen neuen Schlüssel und lernen ihn im {brand.name} Bordcomputer an.
                 </p>
                 <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--orange-500)', fontWeight: 700, fontSize: '1rem' }}>Ab €249,- zzgl. MwSt.</span>
+                  <span style={{ color: 'var(--navy-800)', fontWeight: 700, fontSize: '1rem' }}>Ab €249,- zzgl. MwSt.</span>
                   <span style={{ color: 'var(--navy-700)', fontWeight: 600, fontSize: '0.9rem' }}>Mehr erfahren &rarr;</span>
                 </div>
               </Link>
@@ -233,7 +233,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
                   Schlüssel im {brand.name} eingeschlossen? Wir öffnen Ihr Auto 100% schadensfrei mit professionellem Werkzeug, ohne Kratzer oder Beschädigungen.
                 </p>
                 <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--orange-500)', fontWeight: 700, fontSize: '1rem' }}>Ab €149,- zzgl. MwSt.</span>
+                  <span style={{ color: 'var(--navy-800)', fontWeight: 700, fontSize: '1rem' }}>Ab €149,- zzgl. MwSt.</span>
                   <span style={{ color: 'var(--navy-700)', fontWeight: 600, fontSize: '0.9rem' }}>Mehr erfahren &rarr;</span>
                 </div>
               </Link>
@@ -250,7 +250,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
                   {brand.name} Zündschloss defekt oder beschädigt? Wir ersetzen das Zündschloss und programmieren den neuen Schlüssel direkt vor Ort, ohne Ihr Auto zur Werkstatt zu schleppen.
                 </p>
                 <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ color: 'var(--orange-500)', fontWeight: 700, fontSize: '1rem' }}>Ab €299,- zzgl. MwSt.</span>
+                  <span style={{ color: 'var(--navy-800)', fontWeight: 700, fontSize: '1rem' }}>Ab €299,- zzgl. MwSt.</span>
                   <span style={{ color: 'var(--navy-700)', fontWeight: 600, fontSize: '0.9rem' }}>Mehr erfahren &rarr;</span>
                 </div>
               </Link>
@@ -264,7 +264,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
           <section style={{ padding: '4.5rem 0', background: '#ffffff' }}>
             <div className="container">
               <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-                <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--orange-500)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Aktuelle Projekte</span>
+                <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--navy-800)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Aktuelle Projekte</span>
                 <h2 style={{ fontSize: '1.9rem', fontWeight: 800, color: '#0f172a', marginTop: '0.35rem' }}>
                   Aktuelle Arbeiten: {brand.name} Autoschlüssel
                 </h2>
@@ -612,7 +612,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
               <a href={`tel:${SITE_CONFIG.phoneTel}`} className="btn btn-primary btn-lg" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem', fontWeight: 700 }}>
                 📞 Jetzt anrufen: {SITE_CONFIG.phone}
               </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="wa-btn" style={{ background:'#25d366', color:'#fff', padding:'1rem 2.5rem', borderRadius:'8px', fontWeight:700, textDecoration:'none', fontSize: '1.1rem' }}>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="wa-btn" style={{ background:'#002752', color:'#fff', padding:'1rem 2.5rem', borderRadius:'8px', fontWeight:700, textDecoration:'none', fontSize: '1.1rem' }}>
                 💬 Direkt per WhatsApp
               </a>
             </div>

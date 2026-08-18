@@ -69,18 +69,18 @@ export default function KennisbankPage() {
               <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '14px', padding: '2rem', marginBottom: '3.5rem' }}>
                 <h2 style={{ fontSize: '1.35rem', color: '#0f172a', marginTop: 0, marginBottom: '1rem' }}>Inhaltsverzeichnis</h2>
                 <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '0.6rem', listStyle: 'none', padding: 0, margin: 0 }}>
-                  <li><a href="#hoofdstuk-1" style={{ color: 'var(--orange-600)', textDecoration: 'none', fontWeight: 600 }}>1. Mobiler Schlüsseldienst in Stuttgart &amp; Umgebung</a></li>
-                  <li><a href="#hoofdstuk-2" style={{ color: 'var(--orange-600)', textDecoration: 'none', fontWeight: 600 }}>2. Transponderchips &amp; Wegfahrsperre</a></li>
-                  <li><a href="#hoofdstuk-3" style={{ color: 'var(--orange-600)', textDecoration: 'none', fontWeight: 600 }}>3. Händler vs. FC-KEY Schlüsseldienst</a></li>
-                  <li><a href="#hoofdstuk-4" style={{ color: 'var(--orange-600)', textDecoration: 'none', fontWeight: 600 }}>4. Verfahren bei komplettem Schlüsselverlust</a></li>
-                  <li><a href="#hoofdstuk-5" style={{ color: 'var(--orange-600)', textDecoration: 'none', fontWeight: 600 }}>5. Autoschlüssel-Reparatur &amp; Batteriewechsel</a></li>
-                  <li><a href="#hoofdstuk-6" style={{ color: 'var(--orange-600)', textDecoration: 'none', fontWeight: 600 }}>6. Schadensersatz &amp; Autoversicherung</a></li>
-                  <li><a href="#hoofdstuk-7" style={{ color: 'var(--orange-600)', textDecoration: 'none', fontWeight: 600 }}>7. OBD2-Diagnose &amp; Eeprom Flashing</a></li>
-                  <li><a href="#hoofdstuk-8" style={{ color: 'var(--orange-600)', textDecoration: 'none', fontWeight: 600 }}>8. CNC-Fräsen von Notschlüsseln</a></li>
-                  <li><a href="#hoofdstuk-9" style={{ color: 'var(--orange-600)', textDecoration: 'none', fontWeight: 600 }}>9. Fehlercodes der Wegfahrsperre (DTCs)</a></li>
-                  <li><a href="#hoofdstuk-10" style={{ color: 'var(--orange-600)', textDecoration: 'none', fontWeight: 600 }}>10. Keyless Entry &amp; Relay-Attacken verhindern</a></li>
-                  <li><a href="#hoofdstuk-11" style={{ color: 'var(--orange-600)', textDecoration: 'none', fontWeight: 600 }}>11. Nutzfahrzeuge &amp; Flottenservice</a></li>
-                  <li><a href="#hoofdstuk-12" style={{ color: 'var(--orange-600)', textDecoration: 'none', fontWeight: 600 }}>12. Qualitätsgarantie &amp; Recycling</a></li>
+                  <li><a href="#hoofdstuk-1" style={{ color: 'var(--navy-900)', textDecoration: 'none', fontWeight: 600 }}>1. Mobiler Schlüsseldienst in Stuttgart &amp; Umgebung</a></li>
+                  <li><a href="#hoofdstuk-2" style={{ color: 'var(--navy-900)', textDecoration: 'none', fontWeight: 600 }}>2. Transponderchips &amp; Wegfahrsperre</a></li>
+                  <li><a href="#hoofdstuk-3" style={{ color: 'var(--navy-900)', textDecoration: 'none', fontWeight: 600 }}>3. Händler vs. FC-KEY Schlüsseldienst</a></li>
+                  <li><a href="#hoofdstuk-4" style={{ color: 'var(--navy-900)', textDecoration: 'none', fontWeight: 600 }}>4. Verfahren bei komplettem Schlüsselverlust</a></li>
+                  <li><a href="#hoofdstuk-5" style={{ color: 'var(--navy-900)', textDecoration: 'none', fontWeight: 600 }}>5. Autoschlüssel-Reparatur &amp; Batteriewechsel</a></li>
+                  <li><a href="#hoofdstuk-6" style={{ color: 'var(--navy-900)', textDecoration: 'none', fontWeight: 600 }}>6. Schadensersatz &amp; Autoversicherung</a></li>
+                  <li><a href="#hoofdstuk-7" style={{ color: 'var(--navy-900)', textDecoration: 'none', fontWeight: 600 }}>7. OBD2-Diagnose &amp; Eeprom Flashing</a></li>
+                  <li><a href="#hoofdstuk-8" style={{ color: 'var(--navy-900)', textDecoration: 'none', fontWeight: 600 }}>8. CNC-Fräsen von Notschlüsseln</a></li>
+                  <li><a href="#hoofdstuk-9" style={{ color: 'var(--navy-900)', textDecoration: 'none', fontWeight: 600 }}>9. Fehlercodes der Wegfahrsperre (DTCs)</a></li>
+                  <li><a href="#hoofdstuk-10" style={{ color: 'var(--navy-900)', textDecoration: 'none', fontWeight: 600 }}>10. Keyless Entry &amp; Relay-Attacken verhindern</a></li>
+                  <li><a href="#hoofdstuk-11" style={{ color: 'var(--navy-900)', textDecoration: 'none', fontWeight: 600 }}>11. Nutzfahrzeuge &amp; Flottenservice</a></li>
+                  <li><a href="#hoofdstuk-12" style={{ color: 'var(--navy-900)', textDecoration: 'none', fontWeight: 600 }}>12. Qualitätsgarantie &amp; Recycling</a></li>
                 </ul>
               </div>
 
@@ -238,7 +238,7 @@ export default function KennisbankPage() {
                   <a href={`tel:${SITE_CONFIG.phoneTel}`} className="btn btn-primary btn-lg">
                     📞 Jetzt anrufen: {SITE_CONFIG.phone}
                   </a>
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="wa-btn" style={{ background: '#25d366', color: '#fff', padding: '0.85rem 2rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none' }}>
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="wa-btn" style={{ background: '#002752', color: '#fff', padding: '0.85rem 2rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none' }}>
                     💬 WhatsApp Direkt
                   </a>
                 </div>

@@ -52,7 +52,7 @@
   width: 145%;
   height: 145%;
   border-radius: 50%;
-  border: 1px solid rgba(249, 115, 22, 0.2);
+  border: 1px solid rgba(0, 39, 82, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -243,8 +243,8 @@
 .cityCard:hover {
   transform: translateY(-3px);
   background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(249, 115, 22, 0.4);
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3), 0 0 15px rgba(249, 115, 22, 0.2);
+  border-color: rgba(0, 39, 82, 0.4);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 39, 82, 0.2);
 }
 
 .cityCard:hover::before {
@@ -298,7 +298,7 @@
 }
 
 .blob1 {
-  background: rgba(249, 115, 22, 0.1); /* orange */
+  background: rgba(0, 39, 82, 0.1); /* orange */
   width: 400px;
   height: 400px;
   top: -100px;

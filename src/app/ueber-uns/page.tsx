@@ -121,7 +121,7 @@ export default function OverOnsPage() {
               }}
             />
             <h3 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.2rem' }}>Gungor Demir</h3>
-            <p style={{ color: 'var(--orange-500)', fontWeight: 600, fontSize: '0.85rem', margin: 0 }}>Cheftechniker</p>
+            <p style={{ color: 'var(--navy-800)', fontWeight: 600, fontSize: '0.85rem', margin: 0 }}>Cheftechniker</p>
           </div>
         </div>
 

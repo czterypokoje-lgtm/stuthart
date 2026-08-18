@@ -33,7 +33,7 @@
 }
 
 .badgeIcon {
-  color: var(--orange-500);
+  color: var(--navy-800);
 }
 
 .heading {
@@ -111,7 +111,7 @@
 }
 
 .secondaryButton {
-  background: var(--orange-500);
+  background: var(--navy-800);
   color: white;
   padding: 0.875rem 1.5rem;
   border-radius: 8px;
@@ -121,7 +121,7 @@
 }
 
 .secondaryButton:hover {
-  background: var(--orange-600);
+  background: var(--navy-900);
 }
 
 .imageContent {

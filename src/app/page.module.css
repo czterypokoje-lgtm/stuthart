@@ -44,7 +44,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--orange-400);
+  color: var(--navy-700);
   margin-bottom: 0.75rem;
 }
 .heroTitle {
@@ -54,7 +54,7 @@
   color: #fff;
   margin-bottom: 1rem;
 }
-.heroOrange { color: var(--orange-400); }
+.heroOrange { color: var(--navy-700); }
 .heroLead {
   font-size: 1.1rem;
   color: rgba(255,255,255,0.85);
@@ -67,12 +67,12 @@
 
 .heroPhoneBtn {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  background: var(--orange-500); color: #fff;
+  background: var(--navy-800); color: #fff;
   padding: 0.75rem 1.5rem; border-radius: var(--radius-md);
   font-weight: 700; font-size: 1rem; text-decoration: none;
   transition: background 0.15s; min-height: 48px;
 }
-.heroPhoneBtn:hover { background: var(--orange-600); color: #fff; text-decoration: none; }
+.heroPhoneBtn:hover { background: var(--navy-900); color: #fff; text-decoration: none; }
 
 .heroWaBtn {
   display: inline-flex; align-items: center; gap: 0.5rem;
@@ -108,7 +108,7 @@
 /* ---- EMERGENCY STRIP ---- */
 .emergencyStrip {
   background: var(--navy-800);
-  border-top: 3px solid var(--orange-500);
+  border-top: 3px solid var(--navy-800);
   padding: 0.75rem 2rem;
 }
 .emergencyInner {
@@ -124,17 +124,17 @@
   display: flex; align-items: center; gap: 0.6rem;
   color: rgba(255,255,255,0.8); font-size: 0.875rem;
 }
-.emergencyItem svg { color: var(--orange-400); flex-shrink: 0; }
+.emergencyItem svg { color: var(--navy-700); flex-shrink: 0; }
 .emergencyItem a { color: #fff; text-decoration: none; }
-.emergencyItem a:hover { color: var(--orange-400); }
+.emergencyItem a:hover { color: var(--navy-700); }
 .emergencyItem strong { color: #fff; }
 .emergencyPhone {
-  font-size: 1.05rem; font-weight: 700; color: var(--orange-400);
-  text-decoration: none; border: 2px solid var(--orange-500);
+  font-size: 1.05rem; font-weight: 700; color: var(--navy-700);
+  text-decoration: none; border: 2px solid var(--navy-800);
   padding: 0.4rem 1rem; border-radius: var(--radius-md); white-space: nowrap;
   transition: all 0.15s;
 }
-.emergencyPhone:hover { background: var(--orange-500); color: #fff; text-decoration: none; }
+.emergencyPhone:hover { background: var(--navy-800); color: #fff; text-decoration: none; }
 
 /* ---- SERVICES ---- */
 .services { padding: 4rem 0; background: #fff; }
@@ -205,7 +205,7 @@
   transition: color 0.15s ease;
 }
 .serviceTitleLink:hover {
-  color: var(--orange-500);
+  color: var(--navy-800);
 }
 .serviceDesc { font-size: 0.88rem; color: var(--gray-600); margin: 0 0 1.25rem 0; line-height: 1.6; flex: 1; }
 .serviceFooter {
@@ -224,11 +224,11 @@
   transition: color 0.15s ease;
 }
 .serviceCardBtn:hover {
-  color: var(--orange-500);
+  color: var(--navy-800);
 }
 .serviceArrow { font-size: 1.1rem; color: var(--gray-400); transition: transform 0.2s, color 0.15s; }
 .serviceCard:hover .serviceArrow,
-.serviceCardBtn:hover .serviceArrow { color: var(--orange-500); transform: translateX(4px); }
+.serviceCardBtn:hover .serviceArrow { color: var(--navy-800); transform: translateX(4px); }
 .servicesCta { text-align: center; margin-top: 2.5rem; }
 
 
@@ -283,8 +283,8 @@
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .cityPill:hover {
-  background: var(--orange-500);
-  border-color: var(--orange-500);
+  background: var(--navy-800);
+  border-color: var(--navy-800);
   color: #fff;
   text-decoration: none;
 }

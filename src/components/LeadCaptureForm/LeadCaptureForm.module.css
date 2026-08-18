@@ -90,13 +90,13 @@
   cursor: pointer;
   white-space: nowrap;
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 4px 14px rgba(230,81,0,0.4);
+  box-shadow: 0 4px 14px rgba(0, 39, 82,0.4);
 }
 
 .submitBtn:hover {
-  background: #c84c00;
+  background: #001f42;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(230,81,0,0.5);
+  box-shadow: 0 6px 20px rgba(0, 39, 82,0.5);
 }
 
 .submitBtn:active {
@@ -138,24 +138,24 @@
 }
 
 .callBtn {
-  background: rgba(230,81,0,0.15);
-  color: var(--color-accent);
-  border: 1.5px solid rgba(230,81,0,0.4);
+  background: var(--color-accent);
+  color: #fff;
+  border: 1.5px solid var(--color-accent);
 }
 
 .callBtn:hover {
-  background: rgba(230,81,0,0.25);
+  background: var(--color-accent-hover);
   transform: translateY(-1px);
 }
 
 .waBtn {
-  background: rgba(37,211,102,0.12);
-  color: #25d366;
-  border: 1.5px solid rgba(37,211,102,0.35);
+  background: var(--color-accent);
+  color: #fff;
+  border: 1.5px solid var(--color-accent);
 }
 
 .waBtn:hover {
-  background: rgba(37,211,102,0.22);
+  background: var(--color-accent-hover);
   transform: translateY(-1px);
 }
 
@@ -219,20 +219,20 @@
 }
 
 .light .callBtn {
-  background: rgba(230,81,0,0.15);
-  border-color: rgba(230,81,0,0.5);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 .light .callBtn:hover {
-  background: rgba(230,81,0,0.25);
+  background: var(--color-accent-hover);
 }
 
 .light .waBtn {
-  background: rgba(37,211,102,0.15);
-  border-color: rgba(37,211,102,0.5);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 .light .waBtn:hover {
-  background: rgba(37,211,102,0.25);
+  background: var(--color-accent-hover);
 }
 

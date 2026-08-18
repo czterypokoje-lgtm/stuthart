@@ -461,7 +461,7 @@ export default function SleutelBijmakenPage() {
           return (
             <section className={styles.relatedBlogsSection}>
               <div className={styles.relatedBlogsContainer}>
-                <p style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#f97316', marginBottom: '0.5rem' }}>
+                <p style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#002752', marginBottom: '0.5rem' }}>
                   VERWANDTES WISSEN &amp; RATGEBER
                 </p>
                 <h2 className={styles.relatedBlogsTitle}>
@@ -495,7 +495,7 @@ export default function SleutelBijmakenPage() {
         {/* ── REVIEWS SECTION ────────────────────────────────────── */}
         <section className={styles.reviews}>
           <div className={styles.container}>
-            <p style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#f97316', marginBottom: '0.5rem' }}>
+            <p style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#002752', marginBottom: '0.5rem' }}>
               KUNDENBEWERTUNGEN
             </p>
             <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', margin: '0 0 1rem 0', borderBottom: '2px solid #f1f5f9', paddingBottom: '0.75rem' }}>

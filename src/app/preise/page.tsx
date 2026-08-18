@@ -56,9 +56,9 @@ const priceRows: PriceItem[] = [
 
 const surcharges = [
   { time: 'Mo bis Fr  08:00 – 16:00', label: 'Standardtarif', color: 'var(--color-success)' },
-  { time: 'Mo bis Fr  16:00 – 22:00', label: '+15% Abendzuschlag', color: 'var(--orange-500)' },
+  { time: 'Mo bis Fr  16:00 – 22:00', label: '+15% Abendzuschlag', color: 'var(--navy-800)' },
   { time: 'Mo bis Fr  22:00 – 08:00', label: '+25% Nachtzuschlag', color: 'var(--color-danger)' },
-  { time: 'Samstag  08:00 – 22:00',  label: '+15% Wochenendzuschlag', color: 'var(--orange-500)' },
+  { time: 'Samstag  08:00 – 22:00',  label: '+15% Wochenendzuschlag', color: 'var(--navy-800)' },
   { time: 'Sonn- & Feiertage',       label: '+25% Zuschlag',       color: 'var(--color-danger)' },
 ];
 

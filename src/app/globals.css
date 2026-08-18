@@ -60,8 +60,8 @@ html {
   --color-primary-dark:  var(--navy-900);
   --color-primary-light: var(--navy-500);
   --color-primary-bg:    var(--navy-50);
-  --color-accent:        var(--orange-500);
-  --color-accent-hover:  var(--orange-600);
+  --color-accent:        var(--navy-800);
+  --color-accent-hover:  var(--navy-900);
   --color-danger:        #c0392b;
   --color-success:       #1e7e34;
 

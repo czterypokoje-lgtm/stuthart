@@ -89,7 +89,7 @@ export default async function ContactPage(props: Props) {
 
             {/* ── CTAs Side by Side ── */}
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2rem' }}>
-              <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: 'var(--color-primary)', color: '#fff', padding: '1.25rem 2rem', borderRadius: '8px', fontSize: '1.1rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 15px rgba(249, 115, 22, 0.3)' }}>
+              <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: 'var(--color-primary)', color: '#fff', padding: '1.25rem 2rem', borderRadius: '8px', fontSize: '1.1rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 15px rgba(0, 39, 82, 0.3)' }}>
                 <span>📞 Direkt anrufen: {SITE_CONFIG.phone}</span>
               </a>
               <a href="#form-section" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: '#fff', color: 'var(--navy-900)', padding: '1.25rem 2rem', borderRadius: '8px', fontSize: '1.1rem', fontWeight: 700, textDecoration: 'none', border: '2px solid transparent' }}>
@@ -234,7 +234,7 @@ export default async function ContactPage(props: Props) {
               24/7 erreichbar — auch jetzt. Kontaktieren Sie uns direkt für einen Festpreis und ETA.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: 'var(--color-primary)', color: '#fff', padding: '1.25rem 2.5rem', borderRadius: '8px', fontSize: '1.1rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 15px rgba(249, 115, 22, 0.3)' }}>
+              <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: 'var(--color-primary)', color: '#fff', padding: '1.25rem 2.5rem', borderRadius: '8px', fontSize: '1.1rem', fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 15px rgba(0, 39, 82, 0.3)' }}>
                 <span>📞 Anrufen: {SITE_CONFIG.phone}</span>
               </a>
               <a href="#form-section" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: 'transparent', border: '2px solid rgba(255,255,255,0.2)', color: '#fff', padding: '1.25rem 2.5rem', borderRadius: '8px', fontSize: '1.1rem', fontWeight: 700, textDecoration: 'none' }}>

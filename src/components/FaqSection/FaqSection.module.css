@@ -27,8 +27,8 @@
 }
 
 .faqItem[open] {
-  border-color: var(--orange-500);
-  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.1);
+  border-color: var(--navy-800);
+  box-shadow: 0 4px 15px rgba(0, 39, 82, 0.1);
 }
 
 .faqQuestion {
@@ -84,7 +84,7 @@
 }
 
 .faqItem[open] .faqIcon::before {
-  background-color: var(--orange-500);
+  background-color: var(--navy-800);
 }
 
 .faqAnswer {

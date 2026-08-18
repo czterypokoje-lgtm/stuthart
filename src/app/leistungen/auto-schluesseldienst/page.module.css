@@ -55,7 +55,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: #f97316;
+  background: #002752;
   color: #fff;
   padding: 0.85rem 1.75rem;
   border-radius: 6px;
@@ -63,7 +63,7 @@
   font-size: 1rem;
   text-decoration: none;
   transition: all 0.15s ease;
-  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 39, 82, 0.3);
 }
 
 .btnPhone:hover {
@@ -138,7 +138,7 @@
 }
 
 .trustIcon {
-  color: #f97316;
+  color: #002752;
   font-size: 1rem;
   font-weight: bold;
   flex-shrink: 0;
@@ -216,7 +216,7 @@
   position: absolute;
   left: 0;
   top: 0.1rem;
-  color: #f97316;
+  color: #002752;
   font-weight: 900;
   font-size: 1.05rem;
 }
@@ -234,8 +234,8 @@
 }
 
 .bulletList a:hover {
-  color: #f97316;
-  text-decoration-color: #f97316;
+  color: #002752;
+  text-decoration-color: #002752;
 }
 
 /* Steps List */
@@ -326,13 +326,13 @@
 }
 
 .pricingTable td strong {
-  color: #f97316;
+  color: #002752;
   font-weight: 700;
 }
 
 .callout {
   background: #fff8f1;
-  border-left: 4px solid #f97316;
+  border-left: 4px solid #002752;
   padding: 1.25rem 1.5rem;
   border-radius: 0 8px 8px 0;
   font-size: 0.95rem;
@@ -381,7 +381,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: #f97316;
+  background: #002752;
   color: #fff;
   padding: 0.85rem;
   border-radius: 6px;
@@ -495,7 +495,7 @@
 }
 
 .faqChevron {
-  color: #f97316;
+  color: #002752;
   font-weight: 900;
   font-size: 1.2rem;
   transition: transform 0.2s ease;
@@ -547,7 +547,7 @@
 }
 
 .btnPrimary {
-  background: #f97316;
+  background: #002752;
   color: #fff;
   padding: 0.95rem 2.25rem;
   border-radius: 6px;
@@ -555,7 +555,7 @@
   font-size: 1.05rem;
   text-decoration: none;
   transition: background 0.15s ease;
-  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 39, 82, 0.3);
 }
 
 .btnPrimary:hover {
@@ -744,7 +744,7 @@
   text-decoration: none;
 }
 .blogPostCard:hover {
-  border-color: #f97316;
+  border-color: #002752;
 }
 .blogPostMeta {
   display: flex;
@@ -780,7 +780,7 @@
 }
 .blogPostLink {
   font-size: 0.85rem;
-  color: #f97316;
+  color: #002752;
   font-weight: 700;
   margin-top: auto;
 }

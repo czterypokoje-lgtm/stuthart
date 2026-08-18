@@ -41,7 +41,7 @@ export default function Steden() {
         padding: '6rem 2rem 5rem', 
         textAlign: 'center' 
       }}>
-        <p style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--orange-400)', marginBottom: '0.75rem' }}>SERVICEBEREICH</p>
+        <p style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--navy-700)', marginBottom: '0.75rem' }}>SERVICEBEREICH</p>
         <h1 style={{ color: '#fff', marginBottom: '1rem', fontSize: '2.5rem' }}>Alle Städte — {CITIES.length} Standorte</h1>
         <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', maxWidth: 650, margin: '0 auto', lineHeight: 1.6 }}>
           Mobiler Autoschlüssel-Service in Stuttgart, Sindelfingen und in ganz Baden-Württemberg. Klicken Sie auf Ihre Stadt für Reaktionszeiten und spezifische Infos.
@@ -60,7 +60,7 @@ export default function Steden() {
                 {cities.map(c => (
                   <li key={c.slug}>
                     <Link href={`/standorte/${c.slug}`} id={`stad-${c.slug}`}>
-                      <strong style={{ color: 'var(--orange-500)' }}>{c.city}</strong>
+                      <strong style={{ color: 'var(--navy-800)' }}>{c.city}</strong>
                     </Link>
                   </li>
                 ))}

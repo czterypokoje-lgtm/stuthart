@@ -27,7 +27,7 @@
 .logoIcon { width: 38px; height: 38px; flex-shrink: 0; }
 .logoText { display: flex; flex-direction: column; line-height: 1.1; }
 .logoMain { font-size: 0.95rem; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
-.logoSub  { font-size: 0.65rem; font-weight: 500; color: var(--orange-400); text-transform: uppercase; letter-spacing: 0.08em; }
+.logoSub  { font-size: 0.65rem; font-weight: 500; color: var(--navy-700); text-transform: uppercase; letter-spacing: 0.08em; }
 
 /* Nav */
 .nav { display: flex; align-items: center; gap: 0.25rem; flex: 1; justify-content: center; }
@@ -50,8 +50,8 @@
 }
 .navLink:hover, .navBtn:hover { color: #fff; background: rgba(255,255,255,0.1); text-decoration: none; }
 
-.navBtnUrgent { color: var(--orange-400) !important; }
-.navBtnUrgent:hover { background: rgba(255,255,255,0.1) !important; color: var(--orange-400) !important; }
+.navBtnUrgent { color: var(--navy-700) !important; }
+.navBtnUrgent:hover { background: rgba(255,255,255,0.1) !important; color: var(--navy-700) !important; }
 
 .chevron { width: 14px; height: 14px; stroke-width: 2.5; }
 
@@ -111,7 +111,7 @@
   border-radius: var(--radius-sm);
   transition: color 0.12s ease;
 }
-.dropAll:hover { color: var(--orange-500); text-decoration: none; }
+.dropAll:hover { color: var(--navy-800); text-decoration: none; }
 
 /* Large Dropdown (Hierarchical Grid) */
 .dropMenuLarge {
@@ -160,7 +160,7 @@
   display: block;
 }
 .pillarTitle:hover {
-  color: var(--orange-500);
+  color: var(--navy-800);
   text-decoration: none;
 }
 
@@ -218,7 +218,7 @@
   transition: all 0.12s ease;
 }
 .mobileSubLink:hover {
-  color: var(--orange-500);
+  color: var(--navy-800);
 }
 
 /* Actions */
@@ -242,7 +242,7 @@
 .phoneIcon { width: 16px; height: 16px; flex-shrink: 0; }
 
 .ctaBtn {
-  background: var(--orange-500);
+  background: var(--navy-800);
   color: #fff;
   font-size: 0.875rem;
   font-weight: 600;
@@ -255,7 +255,7 @@
   display: flex;
   align-items: center;
 }
-.ctaBtn:hover { background: var(--orange-600); color: #fff; text-decoration: none; }
+.ctaBtn:hover { background: var(--navy-900); color: #fff; text-decoration: none; }
 
 /* Hamburger */
 .hamburger {

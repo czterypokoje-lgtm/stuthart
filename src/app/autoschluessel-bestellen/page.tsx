@@ -107,7 +107,7 @@ export default function KentekenBestellenPage() {
                       alignItems: 'center',
                       justifyContent: 'center',
                       gap: '0.75rem',
-                      backgroundColor: '#25D366',
+                      backgroundColor: '#002752',
                       color: '#fff',
                       padding: '1.25rem 2rem',
                       borderRadius: '8px',
@@ -244,7 +244,7 @@ export default function KentekenBestellenPage() {
         {/* ── REVIEWS SECTION ────────────────────────────────────── */}
         <section className={styles.reviews}>
           <div className={styles.container}>
-            <p style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#f97316', marginBottom: '0.5rem' }}>
+            <p style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#002752', marginBottom: '0.5rem' }}>
               KLANTBEOORDELINGEN
             </p>
             <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', margin: '0 0 1rem 0', borderBottom: '2px solid #f1f5f9', paddingBottom: '0.75rem' }}>

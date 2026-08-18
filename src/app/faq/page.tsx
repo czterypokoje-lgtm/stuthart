@@ -95,12 +95,12 @@ export default function FAQPage() {
       <Script id="schema-faq-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
         <section style={{ background: 'linear-gradient(135deg, #070e1a 0%, #0a1628 100%)', padding: '5rem 2rem', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--orange-400)', marginBottom: '0.75rem' }}>HÄUFIG GESTELLTE FRAGEN</p>
+          <p style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--navy-700)', marginBottom: '0.75rem' }}>HÄUFIG GESTELLTE FRAGEN</p>
           <h1 style={{ color: '#fff', marginBottom: '1rem' }}>Alles über Autoschlüssel nachmachen & programmieren</h1>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem', maxWidth: 640, margin: '0 auto 1.5rem' }}>
             Antworten auf die am häufigsten gestellten Fragen zu unserem Service. Haben Sie nicht gefunden, was Sie gesucht haben?
           </p>
-          <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ display: 'inline-block', background: 'var(--orange-500)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem' }}>
+          <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ display: 'inline-block', background: 'var(--navy-800)', color: '#fff', padding: '0.875rem 2rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem' }}>
             📞 Rufen Sie uns an: {SITE_CONFIG.phone}
           </a>
         </section>
@@ -119,7 +119,7 @@ export default function FAQPage() {
                 >
                   <summary style={{ fontSize: '1.02rem', fontWeight: 600, cursor: 'pointer', color: 'var(--color-text-primary)', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
                     {faq.q}
-                    <span style={{ color: 'var(--orange-500)', flexShrink: 0, fontSize: '1.3rem', lineHeight: 1 }}>+</span>
+                    <span style={{ color: 'var(--navy-800)', flexShrink: 0, fontSize: '1.3rem', lineHeight: 1 }}>+</span>
                   </summary>
                   <p style={{ marginTop: '0.875rem', color: 'var(--color-text-secondary)', lineHeight: 1.8, fontSize: '0.95rem', paddingLeft: '0' }}>{faq.a}</p>
                 </details>
@@ -143,14 +143,14 @@ export default function FAQPage() {
             </p>
           </div>
 
-          <div style={{ background: 'linear-gradient(135deg, var(--orange-500), var(--orange-600))', borderRadius: '16px', padding: '2.5rem', textAlign: 'center', marginTop: '2rem' }}>
+          <div style={{ background: 'linear-gradient(135deg, var(--navy-800), var(--navy-900))', borderRadius: '16px', padding: '2.5rem', textAlign: 'center', marginTop: '2rem' }}>
             <h2 style={{ color: '#fff', marginBottom: '0.5rem', fontSize: '1.4rem' }}>Ist Ihre Frage nicht dabei?</h2>
             <p style={{ color: 'rgba(255,255,255,0.85)', marginBottom: '1.5rem' }}>Rufen Sie an oder schreiben Sie uns per WhatsApp — wir antworten innerhalb von 2 Minuten.</p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ background: '#fff', color: 'var(--orange-600)', padding: '0.875rem 1.75rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem' }}>
+              <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ background: '#fff', color: 'var(--navy-900)', padding: '0.875rem 1.75rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem' }}>
                 📞 {SITE_CONFIG.phone}
               </a>
-              <a href={WHATSAPP_URL} style={{ background: '#25D366', color: '#fff', padding: '0.875rem 1.75rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem' }}>
+              <a href={WHATSAPP_URL} style={{ background: '#002752', color: '#fff', padding: '0.875rem 1.75rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none', fontSize: '1rem' }}>
                 💬 WhatsApp
               </a>
             </div>

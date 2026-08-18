@@ -508,7 +508,7 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
               return (
                 <section className={styles.relatedBlogsSection} style={{ borderBottom: 'none', paddingBottom: 0 }}>
                   <div className={styles.relatedBlogsContainer} style={{ padding: 0 }}>
-                    <p style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#f97316', marginBottom: '0.5rem' }}>
+                    <p style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#002752', marginBottom: '0.5rem' }}>
                       VERWANDTES WISSEN &amp; RATGEBER
                     </p>
                     <h2 className={styles.relatedBlogsTitle}>
@@ -541,7 +541,7 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
 
             {/* ── REVIEWS SECTION ────────────────────────────────────── */}
             <section className={styles.reviews}>
-              <p style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#f97316', marginBottom: '0.5rem', textAlign: 'center' }}>
+              <p style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#002752', marginBottom: '0.5rem', textAlign: 'center' }}>
                 KUNDENBEWERTUNGEN
               </p>
               <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', margin: '0 0 2rem 0', textAlign: 'center' }}>

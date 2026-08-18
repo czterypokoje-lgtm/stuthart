@@ -1,6 +1,6 @@
 .hero { background: linear-gradient(160deg, var(--navy-900), var(--navy-800)); padding: 4rem 2rem 3rem; }
 .heroInner { max-width: 800px; margin: 0 auto; }
-.label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--orange-400); margin-bottom: 0.75rem; }
+.label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--navy-700); margin-bottom: 0.75rem; }
 .hero h1 { color: #fff; font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 1rem; }
 .heroSub { color: rgba(255,255,255,0.72); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem; }
 
@@ -16,7 +16,7 @@
 
 .serviceCell { font-weight: 600; }
 .serviceLink { color: var(--navy-800); text-decoration: none; }
-.serviceLink:hover { color: var(--orange-500); text-decoration: underline; }
+.serviceLink:hover { color: var(--navy-800); text-decoration: underline; }
 
 .descCell { font-size: 0.82rem; color: var(--gray-500); line-height: 1.5; width: 45%; }
 .timeCell { font-size: 0.8rem; color: var(--gray-400); white-space: nowrap; }
@@ -29,7 +29,7 @@
 .cta h2 { color: #fff; margin-bottom: 0.5rem; font-size: 1.3rem; }
 .cta p { color: rgba(255,255,255,0.65); margin-bottom: 1.75rem; font-size: 0.9rem; }
 .ctaBtns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
-.btnPhone { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--orange-500); color: #fff; padding: 0.75rem 1.5rem; border-radius: var(--radius-md); font-weight: 700; font-size: 1rem; text-decoration: none; min-height: 48px; }
+.btnPhone { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--navy-800); color: #fff; padding: 0.75rem 1.5rem; border-radius: var(--radius-md); font-weight: 700; font-size: 1rem; text-decoration: none; min-height: 48px; }
 .btnWa { display: inline-flex; align-items: center; background: #128c7e; color: #fff; padding: 0.75rem 1.5rem; border-radius: var(--radius-md); font-weight: 600; font-size: 1rem; text-decoration: none; min-height: 48px; }
 
 @media (max-width: 640px) {

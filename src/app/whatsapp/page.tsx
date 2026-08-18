@@ -20,7 +20,7 @@ export default function WhatsAppRedirectPage() {
       </head>
       <main style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0f172a', color: '#fff', padding: '2rem', textAlign: 'center' }}>
         <div style={{ maxWidth: '420px', background: '#1e293b', padding: '2.5rem', borderRadius: '16px', border: '1px solid #334155', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
-          <div style={{ width: '64px', height: '64px', background: '#25d366', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', fontSize: '2rem' }}>
+          <div style={{ width: '64px', height: '64px', background: '#002752', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem', fontSize: '2rem' }}>
             💬
           </div>
           <h1 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '0.75rem', color: '#fff' }}>
@@ -33,7 +33,7 @@ export default function WhatsAppRedirectPage() {
             href={TARGET_WA_URL}
             style={{
               display: 'inline-block',
-              background: '#25d366',
+              background: '#002752',
               color: '#fff',
               padding: '1rem 2rem',
               borderRadius: '8px',

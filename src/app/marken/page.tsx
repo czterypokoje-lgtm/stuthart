@@ -61,7 +61,7 @@ export default function MarkenPage() {
         }} />
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <p style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--orange-400)', marginBottom: '0.75rem' }}>MARKEN</p>
+          <p style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--navy-700)', marginBottom: '0.75rem' }}>MARKEN</p>
           <h1 style={{ color: '#fff', marginBottom: '1rem' }}>59 Automarken — Alle Schlüsselsysteme</h1>
           <p style={{ color: 'rgba(255,255,255,0.85)', maxWidth: 650, margin: '0 auto 2.5rem', fontSize: '1.05rem', lineHeight: '1.6' }}>
             Von BMW CAS4+ über VW MQB SFD bis Toyota G-Chip. Händler-Level-Tools für jede Marke. Mobiler Service vor Ort.
@@ -157,7 +157,7 @@ export default function MarkenPage() {
                   <Link 
                     href={`/marken/${b.nameSlug}-autoschluessel-nachmachen`} 
                     id={`merk-${b.slug}`}
-                    style={{ color: 'var(--orange-500)', textDecoration: 'underline', fontWeight: 700, fontSize: '0.95rem' }}
+                    style={{ color: 'var(--navy-800)', textDecoration: 'underline', fontWeight: 700, fontSize: '0.95rem' }}
                   >
                     {b.name}
                   </Link>
@@ -188,7 +188,7 @@ export default function MarkenPage() {
                   <Link 
                     href={`/marken/${b.nameSlug}-autoschluessel-nachmachen`} 
                     id={`merk-${b.slug}`}
-                    style={{ color: 'var(--orange-500)', textDecoration: 'underline', fontWeight: 700, fontSize: '0.95rem' }}
+                    style={{ color: 'var(--navy-800)', textDecoration: 'underline', fontWeight: 700, fontSize: '0.95rem' }}
                   >
                     {b.name}
                   </Link>
@@ -219,7 +219,7 @@ export default function MarkenPage() {
                   <Link 
                     href={`/marken/${b.nameSlug}-autoschluessel-nachmachen`} 
                     id={`merk-${b.slug}`}
-                    style={{ color: 'var(--orange-500)', textDecoration: 'underline', fontWeight: 700, fontSize: '0.95rem' }}
+                    style={{ color: 'var(--navy-800)', textDecoration: 'underline', fontWeight: 700, fontSize: '0.95rem' }}
                   >
                     {b.name}
                   </Link>

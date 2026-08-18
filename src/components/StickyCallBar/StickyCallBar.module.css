@@ -33,7 +33,7 @@
 }
 
 .phoneBtn {
-  background: var(--orange-500, #f97316);
+  background: var(--orange-500, #002752);
   color: #fff;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
 }

@@ -126,7 +126,7 @@ export default function AutosleutelKwijt() {
             </p>
             <div style={{ display:'flex', gap:'0.75rem', flexWrap:'wrap' }}>
               <a href={`tel:${SITE_CONFIG.phoneTel}`} className="btn btn-primary btn-lg" id="akl-hero-phone">{SITE_CONFIG.phone}</a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{ display:'inline-flex', alignItems:'center', background:'#25d366', color:'#fff', padding:'0.85rem 1.5rem', borderRadius:'4px', fontWeight:700, textDecoration:'none', fontSize:'1rem' }} id="akl-hero-wa">WhatsApp</a>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{ display:'inline-flex', alignItems:'center', background:'#002752', color:'#fff', padding:'0.85rem 1.5rem', borderRadius:'4px', fontWeight:700, textDecoration:'none', fontSize:'1rem' }} id="akl-hero-wa">WhatsApp</a>
             </div>
           </div>
         </section>
@@ -211,7 +211,7 @@ export default function AutosleutelKwijt() {
             <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ background:'#fff', color:'var(--color-danger)', padding:'1rem 2.5rem', borderRadius:'4px', fontWeight:700, fontSize:'1.1rem', textDecoration:'none', display:'inline-flex', alignItems:'center' }} id="akl-bottom-phone">
               {SITE_CONFIG.phone}
             </a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{ background:'#25d366', color:'#fff', padding:'1rem 2rem', borderRadius:'4px', fontWeight:700, fontSize:'1rem', textDecoration:'none', display:'inline-flex', alignItems:'center' }} id="akl-bottom-wa">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{ background:'#002752', color:'#fff', padding:'1rem 2rem', borderRadius:'4px', fontWeight:700, fontSize:'1rem', textDecoration:'none', display:'inline-flex', alignItems:'center' }} id="akl-bottom-wa">
               WhatsApp
             </a>
           </div>
