@@ -6,6 +6,7 @@ import styles from './page.module.css';
 import dynamic from 'next/dynamic';
 import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import { BRANDS } from '../config/brands';
+import { CITIES } from '@/config/cities';
 import FaqSection from '@/components/FaqSection/FaqSection';
 import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import { generateContextualReviews } from '@/utils/reviews';
@@ -346,10 +347,10 @@ export default function HomePage() {
                 Dank unserer modernen, GPS-gestützten Routenplanung sind unsere Techniker meist innerhalb von <strong>20 bis 60 Minuten</strong> vor Ort. Keine Abschleppkosten zum Händler und immer 100% zerstörungsfrei geöffnet und programmiert. Klicken Sie auf Ihre Region für lokale Preise und Ankunftszeiten:
               </p>
               <ul style={{ listStyleType: 'disc', paddingLeft: '1.25rem', marginTop: '1.5rem', marginBottom: '1.5rem', lineHeight: '1.8', color: 'var(--gray-700)' }}>
-                {serviceAreaCities.map((city) => (
+                {CITIES.map((city) => (
                   <li key={city.slug} style={{ marginBottom: '0.25rem' }}>
                     <Link href={`/standorte/${city.slug}`} style={{ color: 'var(--orange-700)', textDecoration: 'underline', fontWeight: 600 }}>
-                      Autoschlüssel nachmachen {city.name}
+                      Autoschlüssel nachmachen {city.city}
                     </Link>
                   </li>
                 ))}
