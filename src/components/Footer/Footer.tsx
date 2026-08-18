@@ -32,7 +32,7 @@ export default function Footer() {
           <div>
             <div className={styles.footerBrand}>
               <Image
-                src="/logo-golden-crest.jpg"
+                src="/logo-golden-crest.png"
                 alt="First Class Key Logo"
                 width={120}
                 height={120}
