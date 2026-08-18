@@ -137,24 +137,19 @@
 .emergencyPhone:hover { background: var(--navy-800); color: #fff; text-decoration: none; }
 
 /* ---- SERVICES ---- */
-.services { padding: 4rem 0; background: #fff; }
-.sectionHead { margin-bottom: 2.5rem; text-align: center; }
+.services { padding: 6rem 0; background: #fff; }
+.sectionHead { margin-bottom: 3.5rem; text-align: center; }
 .servicesGrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.5rem;
-}
-@media (max-width: 1200px) {
-  .servicesGrid { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 800px) {
-  .servicesGrid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 500px) {
-  .servicesGrid { grid-template-columns: 1fr; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .serviceCard {
+  width: calc(33.333% - 1.35rem); /* 3 cards max per row */
+  min-width: 320px;
+  max-width: 420px;
   display: flex; flex-direction: column;
   background: #fff;
   border: 1px solid var(--gray-200);
@@ -164,6 +159,17 @@
   box-shadow: 0 4px 6px rgba(0,0,0,0.02);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   text-align: center;
+}
+@media (max-width: 1050px) {
+  .serviceCard {
+    width: calc(50% - 1rem);
+  }
+}
+@media (max-width: 700px) {
+  .serviceCard {
+    width: 100%;
+    max-width: 450px;
+  }
 }
 .serviceCard:hover {
   transform: translateY(-4px);
@@ -187,7 +193,7 @@
   transform: scale(1.05);
 }
 .serviceBody {
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -195,14 +201,14 @@
   flex: 1;
 }
 .serviceTitle {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--navy-900);
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.25rem 0;
   line-height: 1.4;
 }
 .serviceLinkText {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--gray-500);
   display: flex;
