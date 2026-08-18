@@ -64,10 +64,10 @@ const simplifiedServices = [
     highlight: false
   },
   {
-    title: 'Autoschlüssel Codieren Lassen',
-    href: '/leistungen/transponder-programmieren',
-    src: '/images/seo/smart-key-keyless-programmeren-fc-key-stuttgart.webp',
-    alt: 'Autoschlüssel Codieren Lassen',
+    title: 'Zündschloss Reparatur & Austausch',
+    href: '/leistungen/zuendschloss-auto-wechseln',
+    src: '/images/seo/contactslot_reparatie_vervangen_stuttgart_slotenmaker.webp',
+    alt: 'Zündschloss Reparatur & Austausch',
     highlight: true
   },
   {
