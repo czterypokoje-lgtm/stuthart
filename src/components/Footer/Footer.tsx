@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './Footer.module.css';
 import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import { BRANDS } from '../../config/brands';
+import { CITIES } from '../../config/cities';
 
 const leistungen = [
   ['Autoschlüssel nachmachen', '/leistungen/autoschluessel-nachmachen'],
@@ -14,19 +15,6 @@ const leistungen = [
   ['Alle Leistungen →', '/leistungen'],
 ];
 
-const steden = [
-  ['Stuttgart', '/standorte/stuttgart'],
-  ['Sindelfingen', '/standorte/sindelfingen'],
-  ['Böblingen', '/standorte/boeblingen'],
-  ['Ludwigsburg', '/standorte/ludwigsburg'],
-  ['Esslingen', '/standorte/esslingen'],
-  ['Leonberg', '/standorte/leonberg'],
-  ['Fellbach', '/standorte/fellbach'],
-  ['Waiblingen', '/standorte/waiblingen'],
-  ['Filderstadt', '/standorte/filderstadt'],
-  ['Ditzingen', '/standorte/ditzingen'],
-  ['Alle Städte & Regionen →', '/standorte'],
-];
 
 const spoed = [
   ['Autoschlüssel verloren', '/autoschluessel-verloren'],
@@ -98,13 +86,18 @@ export default function Footer() {
           <div>
             <h4 className={styles.colTitle}>Städte</h4>
             <ul className={styles.linkList}>
-              {steden.map(([label, href]) => (
-                <li key={href}>
-                  <Link href={href}>
-                    {label.includes('Alle') ? label : `${label} Autoschlüssel nachmachen`}
+              {CITIES.map(c => (
+                <li key={c.slug}>
+                  <Link href={`/standorte/${c.slug}`}>
+                    {c.city}
                   </Link>
                 </li>
               ))}
+              <li style={{ marginTop: '0.5rem' }}>
+                <Link href="/standorte" style={{ color: 'var(--orange-400)', fontWeight: 600 }}>
+                  Alle Städte & Regionen →
+                </Link>
+              </li>
             </ul>
           </div>
 
