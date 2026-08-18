@@ -13,8 +13,11 @@ export default function ServiceCoverageMap() {
       <div className={styles.blob2} />
       
       <div className={styles.container}>
-        {/* LEFT: VISUAL SPACER FOR BACKGROUND IMAGE WITH LIVE PINS */}
         <div className={styles.radarContainer}>
+          <div className={styles.radarRings}>
+            <div className={styles.radarCenter} />
+          </div>
+
           {/* Stuttgart Pin */}
           <div className={`${styles.pin} ${styles.pinStuttgart}`}>
             <div className={styles.pinDot} />
@@ -44,6 +47,54 @@ export default function ServiceCoverageMap() {
             <div className={styles.pinDot} />
             <div className={styles.pinLabel}>
               Esslingen <span className={styles.pinTime}>~25m</span>
+            </div>
+          </div>
+
+          {/* Böblingen Pin */}
+          <div className={`${styles.pin} ${styles.pinBoeblingen}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Böblingen <span className={styles.pinTime}>~20m</span>
+            </div>
+          </div>
+
+          {/* Leonberg Pin */}
+          <div className={`${styles.pin} ${styles.pinLeonberg}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Leonberg <span className={styles.pinTime}>~25m</span>
+            </div>
+          </div>
+
+          {/* Fellbach Pin */}
+          <div className={`${styles.pin} ${styles.pinFellbach}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Fellbach <span className={styles.pinTime}>~20m</span>
+            </div>
+          </div>
+
+          {/* Waiblingen Pin */}
+          <div className={`${styles.pin} ${styles.pinWaiblingen}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Waiblingen <span className={styles.pinTime}>~25m</span>
+            </div>
+          </div>
+
+          {/* Filderstadt Pin */}
+          <div className={`${styles.pin} ${styles.pinFilderstadt}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Filderstadt <span className={styles.pinTime}>~20m</span>
+            </div>
+          </div>
+
+          {/* Ditzingen Pin */}
+          <div className={`${styles.pin} ${styles.pinDitzingen}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Ditzingen <span className={styles.pinTime}>~25m</span>
             </div>
           </div>
         </div>

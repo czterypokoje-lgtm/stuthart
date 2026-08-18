@@ -41,7 +41,56 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1;
-  /* Empty to let the background image shine through */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radarRings {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radarRings::before,
+.radarRings::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  animation: pulse 4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.radarRings::before {
+  width: 60%;
+  height: 60%;
+  animation-delay: 0s;
+}
+
+.radarRings::after {
+  width: 100%;
+  height: 100%;
+  animation-delay: 2s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.radarCenter {
+  width: 20px;
+  height: 20px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--color-primary), 0 0 40px var(--color-primary);
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 992px) {
@@ -108,6 +157,12 @@
 .pinSindelfingen { top: 55%; left: 35%; }
 .pinLudwigsburg { top: 20%; left: 45%; }
 .pinEsslingen { top: 45%; left: 75%; }
+.pinBoeblingen { top: 65%; left: 40%; }
+.pinLeonberg { top: 30%; left: 30%; }
+.pinFellbach { top: 30%; left: 65%; }
+.pinWaiblingen { top: 25%; left: 80%; }
+.pinFilderstadt { top: 70%; left: 60%; }
+.pinDitzingen { top: 15%; left: 35%; }
 
 /* ── RIGHT: CITIES GRID ── */
 .content {
