@@ -69,7 +69,7 @@ export default function Footer() {
           <div>
             <h4 className={styles.colTitle}>Notdienst</h4>
             <ul className={styles.linkList}>
-              {spoed.map(([label, href]) => <li key={href}><Link href={href} style={{ color: 'var(--navy-700)' }}>{label}</Link></li>)}
+              {spoed.map(([label, href]) => <li key={href}><Link href={href} style={{ color: 'var(--orange-400)' }}>{label}</Link></li>)}
             </ul>
             <h4 className={styles.colTitle} style={{ marginTop: '1.5rem' }}>Leistungen</h4>
             <ul className={styles.linkList}>
@@ -90,7 +90,7 @@ export default function Footer() {
             <ul className={styles.linkList}>
               <li><Link href="/blog/autoschluessel-batterie-wechseln-anleitung">Batterie wechseln</Link></li>
               <li><Link href="/blog/autoschluessel-gestohlen-was-tun">Schlüssel gestohlen?</Link></li>
-              <li><Link href="/faq" style={{ color: 'var(--navy-700)', fontWeight: 600 }}>FAQ & Wissensdatenbank →</Link></li>
+              <li><Link href="/faq" style={{ color: 'var(--orange-400)', fontWeight: 600 }}>FAQ & Wissensdatenbank →</Link></li>
             </ul>
           </div>
 
@@ -131,7 +131,7 @@ export default function Footer() {
                 ].map(([dag, tijd]) => (
                   <tr key={dag} style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
                     <td style={{ padding: '0.35rem 0', fontWeight: 500 }}>{dag}</td>
-                    <td style={{ padding: '0.35rem 0', textAlign: 'right', color: 'var(--navy-700)', fontWeight: 600 }}>{tijd}</td>
+                    <td style={{ padding: '0.35rem 0', textAlign: 'right', color: 'var(--orange-400)', fontWeight: 600 }}>{tijd}</td>
                   </tr>
                 ))}
               </tbody>

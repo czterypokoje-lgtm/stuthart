@@ -14,16 +14,16 @@
 .footerBrand { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
 .footerLogo { width: 40px; height: 40px; flex-shrink: 0; }
 .footerBrandName { font-size: 0.95rem; font-weight: 700; color: #fff; }
-.footerBrandSub { font-size: 0.65rem; color: var(--navy-700); text-transform: uppercase; letter-spacing: 0.08em; }
-.seoLink { color: var(--navy-700); text-decoration: none; transition: color 0.15s ease; }
-.seoLink:hover { text-decoration: underline; color: var(--navy-800); }
+.footerBrandSub { font-size: 0.65rem; color: var(--orange-400); text-transform: uppercase; letter-spacing: 0.08em; }
+.seoLink { color: var(--gray-400); text-decoration: none; transition: color 0.15s ease; }
+.seoLink:hover { text-decoration: underline; color: var(--orange-400); }
 .footerDesc { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 0.75rem; }
 .footerBadges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
 .footerBadges span { font-size: 0.68rem; background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.08); padding: 0.2rem 0.5rem; border-radius: 2px; }
 .footerContact { display: flex; flex-direction: column; gap: 0.25rem; }
 .footerContact a { font-size: 0.82rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.12s; }
-.footerContact a:hover { color: var(--navy-700); }
-.hours { font-size: 0.78rem; color: var(--navy-700); font-weight: 600; }
+.footerContact a:hover { color: var(--orange-400); }
+.hours { font-size: 0.78rem; color: var(--gray-400); font-weight: 600; }
 
 .colTitle { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.5); margin-bottom: 0.75rem; }
 .linkList { list-style: none; padding: 0; margin: 0; }
