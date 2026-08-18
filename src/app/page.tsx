@@ -314,12 +314,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== BRANDS (VISUAL LOGO GRID) ===== */}
-      <section className={styles.brandsSection}>
-        <div className="container">
-        {/* ---- BRANDS SEO SECTION ---- */}
-        <BrandsLogoGrid />
-        </div>
-      </section>
+      <BrandsLogoGrid />
 
       {/* ===== GALLERY ===== */}
       <section className="gallery-section">

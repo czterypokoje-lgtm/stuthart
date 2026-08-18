@@ -405,14 +405,6 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
 
 
 
-                {/* Section 4: Welche Marken bedienen wir? */}
-                <div style={{ margin: '3rem 0' }}>
-                  <BrandsLogoGrid
-                    title={`Für welche Marken bieten wir ${service.title} an?`}
-                    subtitle="Unsere Programmiergeräte und Lishi-Öffnungswerkzeuge unterstützen über 95% aller Automarken auf deutschen Straßen. Wir sind Spezialisten unter anderem für:"
-                  />
-                </div>
-
                 {/* Section 5: Wo sind wir im Einsatz? */}
                 <div>
                   <h2>In welchen Regionen bieten wir {service.title} an?</h2>
@@ -496,7 +488,17 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
                 </div>
               </aside>
 
-            </div>
+            </div> {/* closes contentGrid */}
+          </div>
+        </section>
+
+        <BrandsLogoGrid
+          title={`Für welche Marken bieten wir ${service.title} an?`}
+          subtitle="Unsere Programmiergeräte und Lishi-Öffnungswerkzeuge unterstützen über 95% aller Automarken auf deutschen Straßen. Wir sind Spezialisten unter anderem für:"
+        />
+
+        <section className={styles.section} style={{ paddingTop: '4rem' }}>
+          <div className={styles.container}>
 
             {/* Bottom CTA block */}
             <div className={styles.ctaBlock}>
