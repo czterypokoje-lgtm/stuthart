@@ -310,21 +310,21 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                     
                     {/* Node 1: Jobs Completed */}
                     <div style={{ flex: '1 1 200px', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'var(--gray-50)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--gray-200)', position: 'relative', zIndex: 2 }}>
-                      <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'var(--color-primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', marginBottom: '1rem', boxShadow: '0 4px 10px rgba(0,39,82,0.2)' }}>🏆</div>
+                      <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'var(--color-primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', boxShadow: '0 4px 10px rgba(0,39,82,0.2)' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
                       <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--navy-900)', lineHeight: 1 }}>{jobsCount}</div>
                       <div style={{ fontSize: '0.85rem', color: 'var(--gray-600)', marginTop: '0.5rem', fontWeight: 500, textTransform: 'uppercase' }}>Erfolgreiche Aufträge</div>
                     </div>
 
                     {/* Node 2: Area 1 Response Time */}
                     <div style={{ flex: '1 1 200px', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'var(--gray-50)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--gray-200)', position: 'relative', zIndex: 2 }}>
-                      <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'var(--orange-400)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', marginBottom: '1rem', boxShadow: '0 4px 10px rgba(253,197,59,0.3)' }}>⏱</div>
+                      <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'var(--orange-400)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', boxShadow: '0 4px 10px rgba(253,197,59,0.3)' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/><path d="M6.38 18.7 4 21"/><path d="M17.64 18.67 20 21"/></svg></div>
                       <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--navy-900)', lineHeight: 1 }}>{time1} Min</div>
                       <div style={{ fontSize: '0.85rem', color: 'var(--gray-600)', marginTop: '0.5rem', fontWeight: 500, textTransform: 'uppercase' }}>Reaktionszeit ({area1})</div>
                     </div>
 
                     {/* Node 3: Area 2 Response Time */}
                     <div style={{ flex: '1 1 200px', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'var(--gray-50)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--gray-200)', position: 'relative', zIndex: 2 }}>
-                      <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'var(--orange-500)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', marginBottom: '1rem', boxShadow: '0 4px 10px rgba(253,185,19,0.3)' }}>🚀</div>
+                      <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'var(--orange-500)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', boxShadow: '0 4px 10px rgba(253,185,19,0.3)' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
                       <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--navy-900)', lineHeight: 1 }}>{time2} Min</div>
                       <div style={{ fontSize: '0.85rem', color: 'var(--gray-600)', marginTop: '0.5rem', fontWeight: 500, textTransform: 'uppercase' }}>Anfahrtszeit ({area2})</div>
                     </div>
@@ -342,7 +342,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                   }}>
                     {city.localFact && (
                       <div style={{ background: 'var(--navy-50)', border: '1px solid rgba(0,39,82,0.08)', borderRadius: '16px', padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
-                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', marginBottom: '1rem', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}>📍</div>
+                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy-800)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
                         <h3 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--navy-900)' }}>Lokale Erfahrung</h3>
                         <p style={{ fontSize: '0.9rem', color: 'var(--navy-700)', lineHeight: 1.6, margin: 0 }}>{city.localFact}</p>
                       </div>
@@ -350,7 +350,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
 
                     {city.popularBrands && (
                       <div style={{ background: 'var(--navy-50)', border: '1px solid rgba(0,39,82,0.08)', borderRadius: '16px', padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
-                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', marginBottom: '1rem', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}>🚗</div>
+                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy-800)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></div>
                         <h3 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: '0.75rem', color: 'var(--navy-900)' }}>Gefragteste Marken</h3>
                         <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
                           {city.popularBrands.map(brand => (
@@ -362,7 +362,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
 
                     {city.commonJob && (
                       <div style={{ background: 'var(--navy-50)', border: '1px solid rgba(0,39,82,0.08)', borderRadius: '16px', padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
-                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', marginBottom: '1rem', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}>🔑</div>
+                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy-800)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg></div>
                         <h3 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--navy-900)' }}>Häufigster Auftrag</h3>
                         <p style={{ fontSize: '0.9rem', color: 'var(--navy-700)', lineHeight: 1.6, margin: 0 }}>{city.commonJob}</p>
                         {city.avgJobDuration && (
