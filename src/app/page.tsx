@@ -323,18 +323,16 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img
-                src="/images/team/first-class-key-servicebus.png"
-                alt="Autoschlüsselspezialist im Einsatz"
+                src="/images/seo/skoda-enyaq-key.jpg"
+                alt="Autoschlüssel programmieren Skoda Enyaq iV"
                 style={{
                   width: '100%',
-                  maxWidth: '340px',
-                  height: '220px',
-                  objectFit: 'cover',
-                  objectPosition: 'top',
-                  borderRadius: '4px',
-                  border: '1px solid #cbd5e1',
+                  maxWidth: '480px',
+                  height: 'auto',
+                  borderRadius: '12px',
+                  boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
                   display: 'block'
                 }}
               />
