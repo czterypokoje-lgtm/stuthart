@@ -59,7 +59,7 @@ const simplifiedServices = [
   {
     title: 'Autoschlüssel nachmachen lassen - schnell & professionell',
     href: '/leistungen/autoschluessel-nachmachen',
-    src: '/images/seo/autosleutel_bijmaken_stuttgart_car_keys.webp',
+    src: '/images/seo/autoschluessel_nachmachen_home.jpg',
     alt: 'Autoschlüssel nachmachen lassen',
     highlight: false
   },
