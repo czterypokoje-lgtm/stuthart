@@ -26,6 +26,10 @@ export const TOP_BRANDS = [
   { name: 'Fiat', slug: 'fiat-autoschluessel-nachmachen', svg: '/brands/fiat_sleutel_bijmaken.webp' },
   { name: 'Nissan', slug: 'nissan-autoschluessel-nachmachen', svg: 'https://cdn.simpleicons.org/nissan/001E50' },
   { name: 'Citroën', slug: 'citroen-autoschluessel-nachmachen', svg: '/brands/citroen_sleutel_bijmaken.webp' },
+  { name: 'Volvo', slug: 'volvo-autoschluessel-nachmachen', svg: '/brands/volvo_sleutel_bijmaken.webp' },
+  { name: 'Honda', slug: 'honda-autoschluessel-nachmachen', svg: '/brands/honda_sleutel_bijmaken.webp' },
+  { name: 'Land Rover', slug: 'land-rover-autoschluessel-nachmachen', svg: '/brands/land_rover_sleutel_bijmaken.webp' },
+  { name: 'Porsche', slug: 'porsche-autoschluessel-nachmachen', svg: '/brands/porsche_sleutel_bijmaken.webp' },
 ];
 
 export default function BrandsLogoGrid({ title, subtitle, hideSeoHeader = false }: BrandsLogoGridProps) {
