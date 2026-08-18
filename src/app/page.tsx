@@ -77,10 +77,16 @@ const simplifiedServices = [
     alt: 'Autoschlüssel Verloren?'
   },
   {
-    title: 'Autoschlüssel Defekt?',
+    title: 'Autoschlüssel Reparatur',
     href: '/leistungen/autoschluessel-reparieren',
     src: '/images/seo/autosleutel_reparatie_stuttgart_sindelfingen_mobiel.webp',
-    alt: 'Autoschlüssel Defekt?'
+    alt: 'Autoschlüssel Reparatur'
+  },
+  {
+    title: 'Auto Schlüsseldienst',
+    href: '/leistungen/auto-schluesseldienst',
+    src: '/images/seo/auto_deur_openen_slotenmaker_stuttgart_schadevrij.webp',
+    alt: 'Auto Schlüsseldienst & Öffnung'
   }
 ];
 
