@@ -255,55 +255,22 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
         {/* ── HOW IT WORKS ──────────────────────────────────────────── */}
         <HowItWorks cityName={city.city} />
 
-        {/* ── LOKALE ERFAHRUNG — Unique content per city ─────────────── */}
+        {/* ── LOKALE ERFAHRUNG & SAYAC DASHBOARD ─────────────── */}
         {(city.localFact || city.popularBrands || city.commonJob) && (
-          <section className={styles.sectionAlt} style={{ padding: '2.5rem 0' }}>
+          <section className={styles.sectionAlt} style={{ padding: '4rem 0' }}>
             <div className="container">
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1.5rem', alignItems: 'start' }}>
-
-                {city.localFact && (
-                  <div style={{ background: '#fff', border: '1px solid var(--color-border)', borderRadius: '12px', padding: '1.5rem' }}>
-                    <div style={{ fontSize: '1.3rem', marginBottom: '0.5rem' }}>📍</div>
-                    <h3 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '0.5rem', color: 'var(--gray-800)' }}>Lokale Erfahrung in {city.city}</h3>
-                    <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', lineHeight: 1.6, margin: 0 }}>{city.localFact}</p>
-                  </div>
-                )}
-
-                {city.popularBrands && (
-                  <div style={{ background: '#fff', border: '1px solid var(--color-border)', borderRadius: '12px', padding: '1.5rem' }}>
-                    <div style={{ fontSize: '1.3rem', marginBottom: '0.5rem' }}>🚗</div>
-                    <h3 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '0.75rem', color: 'var(--gray-800)' }}>Gefragteste Marken in {city.city}</h3>
-                    <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                      {city.popularBrands.map(brand => (
-                        <span key={brand} style={{ background: 'var(--color-primary)', color: '#fff', borderRadius: '999px', padding: '0.25rem 0.75rem', fontSize: '0.82rem', fontWeight: 600 }}>{brand}</span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {city.commonJob && (
-                  <div style={{ background: '#fff', border: '1px solid var(--color-border)', borderRadius: '12px', padding: '1.5rem' }}>
-                    <div style={{ fontSize: '1.3rem', marginBottom: '0.5rem' }}>🔑</div>
-                    <h3 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '0.5rem', color: 'var(--gray-800)' }}>Häufigster Auftrag</h3>
-                    <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', lineHeight: 1.6, margin: 0 }}>{city.commonJob}</p>
-                    {city.avgJobDuration && (
-                      <p style={{ fontSize: '0.8rem', marginTop: '0.5rem', color: 'var(--color-primary)', fontWeight: 600, margin: '0.5rem 0 0' }}>⏱ Durchschnittliche Arbeitszeit: {city.avgJobDuration}</p>
-                    )}
-                  </div>
-                )}
-
                 {/* E-E-A-T Local Stats Card (Sayac Visual Timeline) */}
                 <div style={{ 
                   background: '#fff', 
                   border: '1px solid #e2e8f0', 
-                  borderRadius: '16px', 
-                  padding: '3rem 2rem', 
-                  gridColumn: '1 / -1', 
-                  marginTop: '1.5rem',
+                  borderRadius: '20px', 
+                  padding: '3.5rem 2rem', 
+                  margin: '0 auto',
+                  maxWidth: '1000px',
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
-                  boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05)',
+                  boxShadow: '0 15px 35px -5px rgba(0, 0, 0, 0.05)',
                   textAlign: 'center',
                   overflow: 'hidden'
                 }}>
@@ -363,6 +330,50 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                     </div>
                   </div>
 
+                  {/* LOKALE INSIGHTS CARDS (Integrated into Dashboard) */}
+                  <div style={{ 
+                    display: 'grid', 
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', 
+                    gap: '1.5rem', 
+                    width: '100%', 
+                    maxWidth: '900px', 
+                    margin: '0 auto 3rem auto',
+                    textAlign: 'left'
+                  }}>
+                    {city.localFact && (
+                      <div style={{ background: 'var(--navy-50)', border: '1px solid rgba(0,39,82,0.08)', borderRadius: '16px', padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', marginBottom: '1rem', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}>📍</div>
+                        <h3 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--navy-900)' }}>Lokale Erfahrung</h3>
+                        <p style={{ fontSize: '0.9rem', color: 'var(--navy-700)', lineHeight: 1.6, margin: 0 }}>{city.localFact}</p>
+                      </div>
+                    )}
+
+                    {city.popularBrands && (
+                      <div style={{ background: 'var(--navy-50)', border: '1px solid rgba(0,39,82,0.08)', borderRadius: '16px', padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', marginBottom: '1rem', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}>🚗</div>
+                        <h3 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: '0.75rem', color: 'var(--navy-900)' }}>Gefragteste Marken</h3>
+                        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                          {city.popularBrands.map(brand => (
+                            <span key={brand} style={{ background: '#fff', color: 'var(--navy-900)', border: '1px solid rgba(0,39,82,0.15)', borderRadius: '8px', padding: '0.3rem 0.6rem', fontSize: '0.8rem', fontWeight: 700 }}>{brand}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {city.commonJob && (
+                      <div style={{ background: 'var(--navy-50)', border: '1px solid rgba(0,39,82,0.08)', borderRadius: '16px', padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', marginBottom: '1rem', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}>🔑</div>
+                        <h3 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--navy-900)' }}>Häufigster Auftrag</h3>
+                        <p style={{ fontSize: '0.9rem', color: 'var(--navy-700)', lineHeight: 1.6, margin: 0 }}>{city.commonJob}</p>
+                        {city.avgJobDuration && (
+                          <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>
+                            <span style={{ display: 'inline-block', background: 'var(--orange-100)', color: 'var(--orange-700)', padding: '0.3rem 0.6rem', borderRadius: '8px', fontSize: '0.75rem', fontWeight: 700 }}>⏱ Ø Arbeitszeit: {city.avgJobDuration}</span>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+
                   {/* SEO & Trust Text Algorithm Section */}
                   <div style={{ background: 'var(--navy-50)', padding: '2rem', borderRadius: '12px', width: '100%', maxWidth: '900px', borderLeft: '4px solid var(--color-primary)', textAlign: 'left' }}>
                     <p style={{ fontSize: '0.95rem', color: 'var(--navy-800)', lineHeight: 1.7, margin: 0 }}>
@@ -370,8 +381,6 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                     </p>
                   </div>
                 </div>
-
-              </div>
             </div>
           </section>
         )}
