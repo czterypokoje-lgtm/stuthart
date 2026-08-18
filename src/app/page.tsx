@@ -66,7 +66,7 @@ const simplifiedServices = [
   {
     title: 'Zündschloss Reparatur & Austausch',
     href: '/leistungen/zuendschloss-auto-wechseln',
-    src: '/images/seo/contactslot_reparatie_vervangen_stuttgart_slotenmaker.webp',
+    src: '/images/seo/zuendschloss_reparatur_home.jpg',
     alt: 'Zündschloss Reparatur & Austausch',
     highlight: true
   },
