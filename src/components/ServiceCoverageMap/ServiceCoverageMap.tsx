@@ -13,9 +13,39 @@ export default function ServiceCoverageMap() {
       <div className={styles.blob2} />
       
       <div className={styles.container}>
-        {/* LEFT: VISUAL SPACER FOR BACKGROUND IMAGE */}
+        {/* LEFT: VISUAL SPACER FOR BACKGROUND IMAGE WITH LIVE PINS */}
         <div className={styles.radarContainer}>
-          {/* Empty container to let the left side of the background image be fully visible */}
+          {/* Stuttgart Pin */}
+          <div className={`${styles.pin} ${styles.pinStuttgart}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Stuttgart <span className={styles.pinTime}>~15m</span>
+            </div>
+          </div>
+
+          {/* Sindelfingen Pin */}
+          <div className={`${styles.pin} ${styles.pinSindelfingen}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Sindelfingen <span className={styles.pinTime}>~20m</span>
+            </div>
+          </div>
+
+          {/* Ludwigsburg Pin */}
+          <div className={`${styles.pin} ${styles.pinLudwigsburg}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Ludwigsburg <span className={styles.pinTime}>~25m</span>
+            </div>
+          </div>
+
+          {/* Esslingen Pin */}
+          <div className={`${styles.pin} ${styles.pinEsslingen}`}>
+            <div className={styles.pinDot} />
+            <div className={styles.pinLabel}>
+              Esslingen <span className={styles.pinTime}>~25m</span>
+            </div>
+          </div>
         </div>
 
         {/* RIGHT: INTERACTIVE CITIES GRID */}

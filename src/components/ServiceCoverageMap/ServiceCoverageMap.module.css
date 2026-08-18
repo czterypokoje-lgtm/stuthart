@@ -50,6 +50,65 @@
   }
 }
 
+/* City Pins on Radar */
+.pin {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.pinDot {
+  width: 12px;
+  height: 12px;
+  background: #0ea5e9;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #0ea5e9;
+  position: relative;
+}
+.pinDot::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 2px solid #0ea5e9;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.pinLabel {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+.pinTime {
+  color: var(--color-primary);
+  margin-left: 0.25rem;
+}
+
+/* Positions for visual map */
+.pinStuttgart { top: 40%; left: 55%; }
+.pinSindelfingen { top: 55%; left: 35%; }
+.pinLudwigsburg { top: 20%; left: 45%; }
+.pinEsslingen { top: 45%; left: 75%; }
+
 /* ── RIGHT: CITIES GRID ── */
 .content {
   display: flex;
