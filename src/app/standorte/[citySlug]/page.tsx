@@ -292,34 +292,83 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                   </div>
                 )}
 
-                {/* E-E-A-T Local Stats Card */}
+                {/* E-E-A-T Local Stats Card (Sayac Visual Timeline) */}
                 <div style={{ 
                   background: '#fff', 
                   border: '1px solid #e2e8f0', 
-                  borderRadius: '12px', 
-                  padding: '2.5rem 1.5rem', 
+                  borderRadius: '16px', 
+                  padding: '3rem 2rem', 
                   gridColumn: '1 / -1', 
                   marginTop: '1.5rem',
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
-                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)',
-                  textAlign: 'center'
+                  boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05)',
+                  textAlign: 'center',
+                  overflow: 'hidden'
                 }}>
-                  <div style={{ width: '100%', maxWidth: '500px', height: '240px', position: 'relative', marginBottom: '2rem' }}>
-                    <Image 
-                      src="/images/responstijden-visual.png" 
-                      alt={`Lokale Reaktionszeiten ${city.city}`} 
-                      fill 
-                      style={{ objectFit: 'contain' }} 
-                    />
+                  
+                  {/* Visual Header & Image */}
+                  <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
+                    <div style={{ position: 'relative', width: '100%', height: '300px', marginBottom: '1.5rem' }}>
+                      <Image 
+                        src="/images/local-service-trust.jpg" 
+                        alt={`Zertifizierter mobiler Schlüsseldienst in ${city.city}`} 
+                        fill 
+                        style={{ objectFit: 'contain' }} 
+                      />
+                    </div>
+                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0 0 0.5rem 0', color: 'var(--navy-900)' }}>
+                      Lokaler Schlüsseldienst in {city.city} – Reaktionszeiten & Fakten
+                    </h3>
+                    <p style={{ color: 'var(--color-primary)', fontWeight: 600, fontSize: '0.95rem', margin: 0, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                      Transparent. Schnell. Zuverlässig.
+                    </p>
                   </div>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, margin: '0 0 1rem 0', color: 'var(--navy-900)' }}>
-                    Aktuelle lokale Reaktionszeiten {city.city}
-                  </h3>
-                  <p style={{ fontSize: '1rem', color: 'var(--gray-700)', lineHeight: 1.6, margin: 0, maxWidth: '800px' }}>
-                    Basierend auf <strong>{jobsCount} abgeschlossenen Aufträgen</strong> dieses Jahr in und um {city.city}, beträgt unsere durchschnittliche Reaktionszeit in <strong>{area1}</strong> derzeit <strong>{time1} Minuten</strong>. Für Anfragen aus <strong>{area2}</strong> beträgt die Anfahrtszeit ca. <strong>{time2} Minuten</strong>. Wir fahren als lokaler mobiler Schlüsseldienst direkt zu Ihrem Standort, um Ihnen ohne Verzögerung wieder auf die Straße zu helfen.
-                  </p>
+
+                  {/* The SAYAC (Visual Timeline / Stats Progress) */}
+                  <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    width: '100%',
+                    maxWidth: '850px',
+                    margin: '0 auto 3rem auto',
+                    position: 'relative',
+                    gap: '1rem',
+                    flexWrap: 'wrap'
+                  }}>
+                    {/* Background Connector Line (Hidden on mobile via media query conceptually, but we use flex/gap instead of absolute positioning to make it fully responsive easily) */}
+                    
+                    {/* Node 1: Jobs Completed */}
+                    <div style={{ flex: '1 1 200px', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'var(--gray-50)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--gray-200)', position: 'relative', zIndex: 2 }}>
+                      <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'var(--color-primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', marginBottom: '1rem', boxShadow: '0 4px 10px rgba(0,39,82,0.2)' }}>🏆</div>
+                      <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--navy-900)', lineHeight: 1 }}>{jobsCount}</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--gray-600)', marginTop: '0.5rem', fontWeight: 500, textTransform: 'uppercase' }}>Erfolgreiche Aufträge</div>
+                    </div>
+
+                    {/* Node 2: Area 1 Response Time */}
+                    <div style={{ flex: '1 1 200px', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'var(--gray-50)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--gray-200)', position: 'relative', zIndex: 2 }}>
+                      <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'var(--orange-400)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', marginBottom: '1rem', boxShadow: '0 4px 10px rgba(253,197,59,0.3)' }}>⏱</div>
+                      <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--navy-900)', lineHeight: 1 }}>{time1} Min</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--gray-600)', marginTop: '0.5rem', fontWeight: 500, textTransform: 'uppercase' }}>Reaktionszeit ({area1})</div>
+                    </div>
+
+                    {/* Node 3: Area 2 Response Time */}
+                    <div style={{ flex: '1 1 200px', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'var(--gray-50)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--gray-200)', position: 'relative', zIndex: 2 }}>
+                      <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'var(--orange-500)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', marginBottom: '1rem', boxShadow: '0 4px 10px rgba(253,185,19,0.3)' }}>🚀</div>
+                      <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--navy-900)', lineHeight: 1 }}>{time2} Min</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--gray-600)', marginTop: '0.5rem', fontWeight: 500, textTransform: 'uppercase' }}>Anfahrtszeit ({area2})</div>
+                    </div>
+                  </div>
+
+                  {/* SEO & Trust Text Algorithm Section */}
+                  <div style={{ background: 'var(--navy-50)', padding: '2rem', borderRadius: '12px', width: '100%', maxWidth: '900px', borderLeft: '4px solid var(--color-primary)', textAlign: 'left' }}>
+                    <p style={{ fontSize: '0.95rem', color: 'var(--navy-800)', lineHeight: 1.7, margin: 0 }}>
+                      <strong>Warum Sie uns vertrauen können:</strong> Basierend auf exakt <strong>{jobsCount} abgeschlossenen Einsätzen</strong> in diesem Jahr in und um <strong>{city.city}</strong>, garantieren wir höchste Zuverlässigkeit. Unsere ausgeklügelte Logistik ermöglicht es uns, eine durchschnittliche Reaktionszeit in <strong>{area1}</strong> von derzeit nur <strong>{time2} Minuten</strong> sicherzustellen. Für Einsätze aus <strong>{area2}</strong> kalkulieren wir mit einer Anfahrtszeit von ca. <strong>{time1} Minuten</strong>. Als zertifizierter lokaler Schlüsseldienst fahren wir mit voll ausgestatteten Servicefahrzeugen direkt zu Ihrem Standort, um Autoschlüssel vor Ort nachzumachen oder Türen schadenfrei zu öffnen – damit Sie ohne Verzögerung wieder auf die Straße kommen.
+                    </p>
+                  </div>
                 </div>
 
               </div>
