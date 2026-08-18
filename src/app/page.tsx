@@ -55,103 +55,33 @@ const breadcrumbSchema = {
   ],
 };
 
-const services = [
-  { 
-    title: 'Autoschlüssel Nachmachen & Ersatzschlüssel', 
-    desc: (
-      <>
-        Möchten Sie einen professionellen Ersatzschlüssel nachmachen und programmieren lassen, ohne lange Wartezeiten oder hohe Händlerpreise? Unsere mobilen Schlüsseldienste kommen 24/7 zu Ihnen, mit Preisen, die bis zu 50% günstiger sind. Wir fräsen mechanische Schlüsselbärte und lernen Smart Keys direkt über den OBD2-Anschluss an.<br/><br/>
-        <span style={{display: 'block', paddingLeft: '0.5rem', color: 'var(--navy-900)'}}>
-          • Fertig in 30 bis 60 Minuten vor Ort<br/>
-          • Keine teuren Abschleppkosten zum Autohaus<br/>
-          • Geprüfter Ersatzschlüssel mit 12 Monaten Garantie
-        </span>
-      </>
-    ), 
+const simplifiedServices = [
+  {
+    title: 'Autoschlüssel nachmachen lassen - schnell & professionell',
     href: '/leistungen/autoschluessel-nachmachen',
     src: '/images/seo/autosleutel_bijmaken_stuttgart_car_keys.webp',
-    alt: 'Autoschlüssel nachmachen und programmieren in Stuttgart - fertig während Sie warten vor Ort'
+    alt: 'Autoschlüssel nachmachen lassen',
+    highlight: false
   },
-  { 
-    title: 'Transponder Programmieren & Wegfahrsperre', 
-    desc: (
-      <>
-        Startet Ihr Motor nicht mehr, weil der Transponder-Chip defekt ist oder nicht erkannt wird? Wir lösen Störungen in der ECU und Wegfahrsperre direkt vor Ort. Mit unserer Händler-Level Ausrüstung können wir Ihren Transponderschlüssel programmieren, Fehlercodes auslesen und die Wegfahrsperre zurücksetzen.<br/><br/>
-        <span style={{display: 'block', paddingLeft: '0.5rem', color: 'var(--navy-900)'}}>
-          • Sichere Synchronisation neuer Krypto-Transponder<br/>
-          • Vollständiger Erhalt der Werkssicherheit<br/>
-          • Sofortige Hilfe bei elektronischen Startproblemen
-        </span>
-      </>
-    ), 
+  {
+    title: 'Autoschlüssel Codieren Lassen',
     href: '/leistungen/transponder-programmieren',
-    src: '/images/seo/reserve_autosleutel_transponder_programmeren_stuttgart.webp',
-    alt: 'Transponder Schlüssel programmieren und Chip anlernen für alle Automarken vor Ort in Stuttgart'
+    src: '/images/seo/smart-key-keyless-programmeren-fc-key-stuttgart.webp',
+    alt: 'Autoschlüssel Codieren Lassen',
+    highlight: true
   },
-  { 
-    title: 'Autoschlüssel Reparieren & Gehäuse Ersetzen', 
-    desc: (
-      <>
-        Ist das Gehäuse Ihres Autoschlüssels gerissen, klemmen die Tasten oder funktioniert die Fernbedienung nicht mehr? In 90% der Fälle müssen Sie keinen teuren neuen Autoschlüssel kaufen. Unsere Spezialisten können Ihren Autoschlüssel reparieren, während Sie warten.<br/><br/>
-        <span style={{display: 'block', paddingLeft: '0.5rem', color: 'var(--navy-900)'}}>
-          • Austausch verschlissener Schlüsselgehäuse<br/>
-          • Präzisionslöten von Mikroschaltern auf der Platine<br/>
-          • Inklusive neuer Varta oder Panasonic Batterie
-        </span>
-      </>
-    ),
+  {
+    title: 'Autoschlüssel Verloren?',
+    href: '/autoschluessel-verloren',
+    src: '/images/seo/auto_deur_openen_slotenmaker_stuttgart_schadevrij.webp',
+    alt: 'Autoschlüssel Verloren?'
+  },
+  {
+    title: 'Autoschlüssel Defekt?',
     href: '/leistungen/autoschluessel-reparieren',
     src: '/images/seo/autosleutel_reparatie_stuttgart_sindelfingen_mobiel.webp',
-    alt: 'Autoschlüssel Reparatur, Gehäuse, Drucktasten und Transponder wiederherstellen in Stuttgart mobiler Service'
-  },
-  { 
-    title: 'Zündschloss Ersetzen & Reparatur', 
-    desc: (
-      <>
-        Dreht sich Ihr Schlüssel nicht mehr reibungslos im Zündschloss oder ist Ihr Lenkradschloss komplett blockiert? Mechanischer Verschleiß oder elektronische Störungen in Systemen wie Mercedes EIS und ELV blockieren Ihr Auto vollständig. Wir überholen und ersetzen defekte Zündschlösser vor Ort.<br/><br/>
-        <span style={{display: 'block', paddingLeft: '0.5rem', color: 'var(--navy-900)'}}>
-          • Angepasst an Ihren bestehenden Schlüsselcode<br/>
-          • Einen Schlüssel für alle Türen und die Zündung behalten<br/>
-          • Fachgerechte Überholung bei Zündungsproblemen
-        </span>
-      </>
-    ), 
-    href: '/leistungen/zuendschloss-auto-wechseln',
-    src: '/images/seo/contactslot_reparatie_vervangen_stuttgart_slotenmaker.webp',
-    alt: 'Zündschloss Reparatur und Ersetzen für alle Automarken vor Ort in Stuttgart ohne Abschleppkosten'
-  },
-  { 
-    title: 'Auto Schlüsseldienst & Zerstörungsfrei Öffnen', 
-    desc: (
-      <>
-        Haben Sie sich ausgesperrt, den Schlüssel im Kofferraum vergessen oder hat sich Ihr Auto selbst verriegelt? Unser 24-Stunden Auto-Schlüsseldienst löst das Problem sofort. Wir können jede Autotür mit modernen Lishi-Lockpick-Werkzeugen zu 100% zerstörungsfrei öffnen.<br/><br/>
-        <span style={{display: 'block', paddingLeft: '0.5rem', color: 'var(--navy-900)'}}>
-          • 24/7 Notdienst bei Aussperrung oder Schlüsselverlust<br/>
-          • Keine Schäden an Lack oder Türdichtungen<br/>
-          • Direkt vor Ort einen neuen Chip oder Smart Key anlernen
-        </span>
-      </>
-    ),
-    href: '/leistungen/auto-schluesseldienst',
-    src: '/images/seo/auto_deur_openen_slotenmaker_stuttgart_schadevrij.webp',
-    alt: 'Auto zerstörungsfrei öffnen bei vergessenem Schlüssel im Auto oder verschlossener Tür in Stuttgart und Umgebung'
-  },
-  { 
-    title: 'Smart Key / Keyless Go System', 
-    desc: (
-      <>
-        Haben Sie Probleme mit Ihrem Keyless-Entry-Schlüssel oder wird Ihr Smart Key nicht mehr erkannt? Moderne drahtlose Systeme erfordern spezielle Verschlüsselung und Programmierung, um Kommunikationsprobleme mit dem Bordnetz zu beheben.<br/><br/>
-        <span style={{display: 'block', paddingLeft: '0.5rem', color: 'var(--navy-900)'}}>
-          • Anlernen von Original- und Aftermarket-Smart-Keys<br/>
-          • Unterstützung für u.a. BMW, Mercedes, Audi, VW und Ford<br/>
-          • Optimaler Schutz vor Relay-Angriffen und Diebstahl
-        </span>
-      </>
-    ), 
-    href: '/leistungen/smart-key-programmieren',
-    src: '/images/seo/smart-key-keyless-programmeren-fc-key-stuttgart.webp',
-    alt: 'Smart Key und Keyless-Go Start-Stop Knopf programmieren und anlernen durch mobilen Spezialisten Stuttgart'
-  },
+    alt: 'Autoschlüssel Defekt?'
+  }
 ];
 
 const serviceAreaCities = [
@@ -262,52 +192,32 @@ export default function HomePage() {
       <section className={styles.services}>
         <div className="container">
           <div className={styles.sectionHead}>
-            <p className="section-eyebrow">UNSERE LEISTUNGEN</p>
-            <h2 className="section-title">Alles für Ihren Autoschlüssel — Schnell & Zuverlässig</h2>
-            <p className="section-lead">Direkt vor Ort in unserer mobilen Werkstatt programmiert. Keine versteckten Kosten und immer ein Festpreis im Voraus.</p>
+            <h2 className="section-title" style={{ color: 'var(--navy-900)' }}>Der passende Service für Ihr Autoschlüssel-Problem</h2>
+            <p className="section-lead" style={{ color: 'var(--gray-600)', maxWidth: '700px', margin: '0 auto' }}>Wählen Sie den passenden Service und erfahren Sie, wie First Class Key Ihnen helfen kann.</p>
           </div>
           <div className={styles.servicesGrid}>
-            {services.map((s, i) => (
-              <article key={i} className={styles.serviceCard} id={`svc-${i}`}>
-                <Link href={s.href} className={styles.serviceImgLink} aria-label={s.title}>
-                  <div className={styles.serviceImgBox}>
-                    <Image
-                      src={s.src}
-                      alt={s.alt}
-                      width={400}
-                      height={225}
-                      className={styles.serviceImg}
-                    />
-                  </div>
-                </Link>
-                <div className={styles.serviceBody}>
-                  <div className={styles.serviceTitleRow}>
-                    <div className={styles.serviceIconBox}>
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="22" height="22">
-                        {i === 0 && <><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></>}
-                        {i === 1 && <><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></>}
-                        {i === 2 && <><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></>}
-                        {i === 3 && <><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></>}
-                        {i === 4 && <><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></>}
-                        {i === 5 && <><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></>}
-                      </svg>
-                    </div>
-                    <h3 className={styles.serviceTitle}>
-                      <Link href={s.href} className={styles.serviceTitleLink}>{s.title}</Link>
-                    </h3>
-                  </div>
-                  <p className={styles.serviceDesc}>{s.desc}</p>
-                  <div className={styles.serviceFooter}>
-                    <Link href={s.href} className={styles.serviceCardBtn}>
-                      <span>Leistung &amp; Preise ansehen</span>
-                      <span className={styles.serviceArrow}>→</span>
-                    </Link>
-                  </div>
+            {simplifiedServices.map((s, i) => (
+              <Link key={i} href={s.href} className={styles.serviceCard}>
+                <div className={styles.serviceImgBox}>
+                  <Image
+                    src={s.src}
+                    alt={s.alt}
+                    fill
+                    className={styles.serviceImg}
+                  />
                 </div>
-              </article>
+                <div className={styles.serviceBody}>
+                  <h3 className={styles.serviceTitle} style={s.highlight ? { color: 'var(--orange-500)', textDecoration: 'underline', textDecorationColor: 'rgba(251, 146, 60, 0.4)', textUnderlineOffset: '4px' } : {}}>
+                    {s.title}
+                  </h3>
+                  <span className={styles.serviceLinkText}>
+                    Mehr erfahren <span>→</span>
+                  </span>
+                </div>
+              </Link>
             ))}
           </div>
-          <div className={styles.servicesCta} style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div className={styles.servicesCta} style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '3rem' }}>
             <Link href="/autoschluessel-bestellen" className="btn btn-green">Autoschlüssel bestellen</Link>
             <Link href="/leistungen" className="btn btn-navy">Alle Leistungen ansehen</Link>
           </div>

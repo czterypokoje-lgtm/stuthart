@@ -141,9 +141,16 @@
 .sectionHead { margin-bottom: 2.5rem; text-align: center; }
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
+@media (max-width: 1024px) {
+  .servicesGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .servicesGrid { grid-template-columns: 1fr; }
+}
+
 .serviceCard {
   display: flex; flex-direction: column;
   background: #fff;
@@ -151,84 +158,59 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: center;
 }
 .serviceCard:hover {
-  border-color: var(--navy-300);
-  text-decoration: none;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  border-color: var(--navy-200);
 }
 .serviceImgBox {
   width: 100%;
-  height: 200px;
+  aspect-ratio: 16 / 10;
   position: relative;
   overflow: hidden;
-  background: var(--navy-900);
+  border-bottom: 1px solid var(--gray-100);
 }
 .serviceImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.5s ease;
 }
 .serviceCard:hover .serviceImg {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 .serviceBody {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   flex: 1;
 }
-.serviceTitleRow {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
+.serviceTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
 }
-.serviceIconBox {
-  width: 40px; height: 40px; flex-shrink: 0;
-  background: var(--navy-50); border-radius: var(--radius-md);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--navy-600);
-  transition: background 0.15s, color 0.15s;
-}
-.serviceCard:hover .serviceIconBox {
-  background: var(--navy-800); color: #fff;
-}
-.serviceImgLink {
-  display: block;
-  overflow: hidden;
-}
-.serviceTitle { font-size: 1.08rem; font-weight: 700; color: var(--gray-900); margin: 0; }
-.serviceTitleLink {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
-.serviceTitleLink:hover {
-  color: var(--navy-800);
-}
-.serviceDesc { font-size: 0.88rem; color: var(--gray-600); margin: 0 0 1.25rem 0; line-height: 1.6; flex: 1; }
-.serviceFooter {
-  padding-top: 1rem;
-  border-top: 1px solid var(--gray-100);
-}
-.serviceCardBtn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  font-size: 0.88rem;
+.serviceLinkText {
+  font-size: 0.9rem;
   font-weight: 600;
-  color: var(--navy-800);
-  text-decoration: none;
-  transition: color 0.15s ease;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  transition: color 0.2s ease;
 }
-.serviceCardBtn:hover {
-  color: var(--navy-800);
+.serviceCard:hover .serviceLinkText {
+  color: var(--navy-700);
 }
-.serviceArrow { font-size: 1.1rem; color: var(--gray-400); transition: transform 0.2s, color 0.15s; }
-.serviceCard:hover .serviceArrow,
-.serviceCardBtn:hover .serviceArrow { color: var(--navy-800); transform: translateX(4px); }
 .servicesCta { text-align: center; margin-top: 2.5rem; }
 
 
