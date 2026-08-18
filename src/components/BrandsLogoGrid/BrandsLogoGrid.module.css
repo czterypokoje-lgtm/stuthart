@@ -142,7 +142,7 @@
   left: 50%;
   transform: translate(-40%, -60%);
   z-index: 0;
-  opacity: 0.6;
+  opacity: 0.3; /* reduced opacity to minimize bleed through */
 }
 
 .circle2 {
@@ -155,7 +155,7 @@
   left: 50%;
   transform: translate(-70%, -20%);
   z-index: 0;
-  opacity: 0.6;
+  opacity: 0.3; /* reduced opacity to minimize bleed through */
 }
 
 .personImage {
@@ -164,7 +164,7 @@
   object-fit: contain;
   max-height: 550px;
   width: auto;
-  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+  mix-blend-mode: multiply;
 }
 
 @media (max-width: 992px) {

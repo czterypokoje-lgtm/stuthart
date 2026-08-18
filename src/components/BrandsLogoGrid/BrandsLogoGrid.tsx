@@ -74,11 +74,12 @@ export default function BrandsLogoGrid({ title, subtitle, hideSeoHeader = false 
           <div className={styles.circle1}></div>
           <div className={styles.circle2}></div>
           <Image 
-            src="/images/team/berkan-acarol-autoschluesselspezialist-stuttgart.webp" 
-            alt="Autoschlüssel Experte" 
-            width={450} 
-            height={550} 
+            src="/images/team/woman_pointing.jpg" 
+            alt="Autoschlüssel Expertin" 
+            width={550} 
+            height={650} 
             className={styles.personImage}
+            unoptimized={true}
           />
         </div>
 
