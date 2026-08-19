@@ -9,10 +9,10 @@ export const SITE_CONFIG = {
   tagline: 'Ihr Autoschlüssel Spezialist vor Ort',
   domain: 'https://fc-key.de', // primary
 
-  phone: '07031-4917380',
-  phoneTel: '+4970314917380',
-  whatsapp: '491733695866',
-  whatsappDisplay: '0173 3695866',
+  phone: '0172 141 61 44',
+  phoneTel: '+491721416144',
+  whatsapp: '491721416144',
+  whatsappDisplay: '0172 141 61 44',
   email: 'info@fc-key.de',
 
   address: {

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import { SITE_CONFIG } from '@/config/site.config';
 
-const TARGET_WA_URL = `https://api.whatsapp.com/send/?phone=${SITE_CONFIG.whatsapp}&text=Hallo%2C%20ik%20heb%20hulp%20nodig%20met%20mijn%20autosleutel.%20Automerk%20en%20model%3A%20&type=phone_number&app_absent=0`;
+const TARGET_WA_URL = `https://api.whatsapp.com/send/?phone=${SITE_CONFIG.whatsapp}&text=Hallo%2C%20ich%20brauche%20Hilfe%20mit%20meinem%20Autoschlüssel.%20Automarke%20und%20Modell%3A%20&type=phone_number&app_absent=0`;
 
 export const metadata: Metadata = {
   title: 'Direct WhatsApp Contact | FC-KEY',
-  description: 'U wordt direct doorverwezen naar onze 24/7 WhatsApp spoedservice.',
+  description: 'Sie werden direkt zu unserem 24/7 WhatsApp Notdienst weitergeleitet.',
   robots: {
     index: false,
     follow: false,
@@ -24,10 +24,10 @@ export default function WhatsAppRedirectPage() {
             💬
           </div>
           <h1 style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '0.75rem', color: '#fff' }}>
-            Verbinding maken met WhatsApp...
+            Verbindung zu WhatsApp wird hergestellt...
           </h1>
           <p style={{ color: '#94a3b8', fontSize: '0.95rem', marginBottom: '2rem', lineHeight: 1.6 }}>
-            U wordt automatisch doorverwezen naar onze monteur op WhatsApp. Gaat dit niet automatisch?
+            Sie werden automatisch an unseren Monteur auf WhatsApp weitergeleitet. Funktioniert dies nicht automatisch?
           </p>
           <a
             href={TARGET_WA_URL}
