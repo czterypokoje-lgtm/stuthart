@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
-import PageHeader from '@/components/PageHeader/PageHeader';
 import B2BContactForm from '@/components/B2BContactForm/B2BContactForm';
 import styles from './page.module.css';
 
@@ -53,10 +52,10 @@ const TARGETS = [
 export default function PartnerPage() {
   return (
     <main className={styles.main}>
-      <PageHeader 
-        title="Ihr B2B-Partner für Autoschlüssel" 
-        subtitle="Spezialisierter Service für Flotten, Leasinggesellschaften, Autohäuser und Werkstätten in der Region Stuttgart."
-      />
+      <header className={styles.pageHeader}>
+        <h1>Ihr B2B-Partner für Autoschlüssel</h1>
+        <p>Spezialisierter Service für Flotten, Leasinggesellschaften, Autohäuser und Werkstätten in der Region Stuttgart.</p>
+      </header>
 
       <section className={styles.heroSection}>
         <div className={styles.heroContainer}>
