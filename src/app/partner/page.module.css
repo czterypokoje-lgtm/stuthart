@@ -1,0 +1,126 @@
+.main {
+  background-color: var(--bg-color, #f8fafc);
+  min-height: 100vh;
+}
+
+.heroSection {
+  padding: 4rem 1rem;
+  background-color: var(--bg-light, #ffffff);
+}
+
+.heroContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.heroContent h2 {
+  font-size: 2rem;
+  color: var(--text-dark, #0f172a);
+  margin-bottom: 1.5rem;
+}
+
+.heroContent p {
+  color: var(--text-muted, #475569);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.benefitIcon {
+  font-size: 1.5rem;
+  background: var(--primary-light, #eff6ff);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.benefitItem strong {
+  display: block;
+  color: var(--text-dark, #0f172a);
+  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+}
+
+.benefitItem p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.heroForm {
+  position: sticky;
+  top: 6rem;
+}
+
+.targetSection {
+  padding: 4rem 1rem;
+  background-color: var(--primary-color, #0f172a);
+  color: var(--text-light, #f8fafc);
+}
+
+.targetContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.targetHeading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.targetGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.targetCard {
+  background: var(--card-bg-dark, #1e293b);
+  padding: 2rem;
+  border-radius: var(--radius-lg, 12px);
+  border: 1px solid var(--border-color-dark, #334155);
+}
+
+.targetCard h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #fbbf24; /* Accent color */
+}
+
+.targetCard p {
+  color: var(--text-light, #cbd5e1);
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .heroContainer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .heroForm {
+    position: static;
+  }
+}
