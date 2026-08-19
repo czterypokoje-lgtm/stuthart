@@ -149,13 +149,14 @@
 }
 
 .waBtn {
-  background: var(--color-accent);
+  background: #25D366;
   color: #fff;
-  border: 1.5px solid var(--color-accent);
+  border: 1.5px solid #25D366;
 }
 
 .waBtn:hover {
-  background: var(--color-accent-hover);
+  background: #20ba59;
+  border-color: #20ba59;
   transform: translateY(-1px);
 }
 
@@ -228,11 +229,12 @@
 }
 
 .light .waBtn {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
+  background: #25D366;
+  border-color: #25D366;
 }
 
 .light .waBtn:hover {
-  background: var(--color-accent-hover);
+  background: #20ba59;
+  border-color: #20ba59;
 }
 
