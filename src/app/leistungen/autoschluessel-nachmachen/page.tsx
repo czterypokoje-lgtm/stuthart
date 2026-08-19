@@ -291,24 +291,24 @@ export default function SleutelBijmakenPage() {
                     margin: '1.5rem 0'
                   }}>
                     <img 
-                      src="/images/seo/autoschluessel-nachmachen-porsche.webp" 
-                      alt="Professionelle Ersatzschlüssel-Programmierung vor Ort" 
-                      style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
+                      src="/images/gallery/audi-a4-goeppingen-schluessel.jpg" 
+                      alt="Autoschlüssel nachmachen Audi A4 in Göppingen" 
+                      style={{ width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)' }} 
                     />
                     <img 
-                      src="/images/seo/autoschluessel-nachmachen-bmw.webp" 
-                      alt="Smart Key einlernen und Zündschloss-Reparatur" 
-                      style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
+                      src="/images/gallery/bmw-3er-mannheim-schluessel.jpg" 
+                      alt="Ersatzschlüssel programmieren BMW 3er in Mannheim" 
+                      style={{ width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)' }} 
                     />
                     <img 
-                      src="/images/seo/autoschluessel-nachmachen-workshop.webp" 
-                      alt="Werkstatt ausgestattet mit CNC-Fräsmaschinen und Lötgeräten" 
-                      style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
+                      src="/images/gallery/ford-focus-reutlingen-schluessel.jpg" 
+                      alt="Autoschlüssel nachmachen Ford Focus in Reutlingen" 
+                      style={{ width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)' }} 
                     />
                     <img 
-                      src="/images/seo/autoschluessel-nachmachen-equipment.webp" 
-                      alt="OBD2 Programmiercomputer und Transponder-Werkzeuge" 
-                      style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
+                      src="/images/gallery/bmw-f30-heidelberg-schluessel.jpg" 
+                      alt="Smart Key einlernen BMW 318d in Heidelberg" 
+                      style={{ width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)' }} 
                     />
                   </div>
                   <p>
