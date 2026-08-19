@@ -3,29 +3,61 @@
   min-height: 100vh;
 }
 
+.heroWrapper {
+  position: relative;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 100%);
+}
+
+.heroContentWrapper {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .pageHeader {
-  background-color: var(--primary-color, #0f172a);
   color: var(--text-light, #f8fafc);
-  padding: 4rem 1rem 3rem;
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .pageHeader h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 800;
   margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .pageHeader p {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   max-width: 800px;
   margin: 0 auto;
-  opacity: 0.9;
-}
-
-.heroSection {
-  padding: 4rem 1rem;
-  background-color: var(--bg-light, #ffffff);
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .heroContainer {
@@ -35,19 +67,28 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: start;
+  width: 100%;
 }
 
-.heroContent h2 {
+.trustCard {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg, 12px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.trustCard h2 {
   font-size: 2rem;
   color: var(--text-dark, #0f172a);
   margin-bottom: 1.5rem;
 }
 
-.heroContent p {
+.trustCard p {
   color: var(--text-muted, #475569);
   line-height: 1.6;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .benefitsList {
@@ -65,27 +106,33 @@
 }
 
 .benefitIcon {
-  font-size: 1.5rem;
+  color: var(--primary-color, #2563eb);
   background: var(--primary-light, #eff6ff);
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 12px;
   flex-shrink: 0;
+}
+
+.benefitIcon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .benefitItem strong {
   display: block;
   color: var(--text-dark, #0f172a);
   margin-bottom: 0.25rem;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 
 .benefitItem p {
   margin: 0;
   font-size: 0.95rem;
+  color: var(--text-muted, #64748b);
 }
 
 .heroForm {
