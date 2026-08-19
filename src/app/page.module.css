@@ -41,12 +41,25 @@
   margin-bottom: 0.75rem;
 }
 
+.heroEyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--navy-700);
+  margin-bottom: 0.75rem;
+}
+
 .heroTitle {
   color: var(--navy-900);
   font-size: clamp(1.6rem, 3.5vw, 2.6rem);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
+}
+
+.heroOrange {
+  color: var(--orange-500);
 }
 
 .heroLead {

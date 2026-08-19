@@ -113,20 +113,22 @@ export default function HomePage() {
       <section className={styles.heroSplit}>
         <div className={styles.heroSplitInner}>
           <div className={styles.heroSplitText}>
-            <div className={styles.heroLabel}>DE — BADEN-WÜRTTEMBERG</div>
+            <p className={styles.heroEyebrow}>Der mobile Autoschlüsselspezialist — Raum Stuttgart</p>
             <h1 className={styles.heroTitle}>
-              Autoschlüssel nachmachen &<br />
-              Schlüsseldienst Stuttgart —<br />
-              24/7 Service
+              Autoschlüssel verloren oder nachmachen?<br />
+              <span className={styles.heroOrange}>Wir helfen direkt vor Ort!</span>
             </h1>
             <p className={styles.heroLead}>
-              Wir sind im Durchschnitt innerhalb von <strong>15-25 Min</strong> bei Ihnen im Raum Stuttgart. 
-              Alle Marken, direkt vor Ort ohne Abschleppen programmiert.
+              Sind Sie ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. First Class Key kommt mit einem komplett ausgestatteten Servicebus zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von 30 bis 60 Minuten wieder fahrbereit!
             </p>
             
             {/* Interactive Lead Capture Form */}
             <div style={{ marginTop: '2rem' }}>
               <LeadCaptureForm phone={SITE_CONFIG.phone} theme="light" />
+            </div>
+            
+            <div style={{ marginTop: '1rem' }}>
+              <Link href="/autoschluessel-verloren" className={styles.heroUrgentBtn}>Alle Schlüssel verloren? →</Link>
             </div>
             
             <div className={styles.heroTrust} style={{marginTop: '1.5rem'}}>
