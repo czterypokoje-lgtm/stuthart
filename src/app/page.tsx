@@ -143,11 +143,11 @@ export default function HomePage() {
           
           <div className={styles.heroSplitImage}>
             <Image
-              src="/images/ueber-uns-servicebusse.jpg"
+              src="/images/hero-van-side.jpg"
               alt="First Class Key — Mobiler Schlüsseldienst Stuttgart"
               width={800}
-              height={800}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', aspectRatio: '1/1' }}
+              height={600}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', aspectRatio: '4/3' }}
               priority
               fetchPriority="high"
               quality={85}
@@ -156,7 +156,7 @@ export default function HomePage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "ImageObject",
-                "contentUrl": "https://www.fc-key.de/images/ueber-uns-servicebusse.jpg",
+                "contentUrl": "https://www.fc-key.de/images/hero-van-side.jpg",
                 "name": "First Class Key — Mobiler Schlüsseldienst Stuttgart, Servicefahrzeug vor Ort",
                 "description": "Das FC-KEY Servicefahrzeug (VW Caddy) mit vollständiger mobiler Werkstattausrüstung für Autoschlüssel nachmachen und Schlüsseldienst in Stuttgart, Sindelfingen und 50km Umkreis.",
                 "contentLocation": {
