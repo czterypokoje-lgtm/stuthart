@@ -109,52 +109,26 @@ export default function HomePage() {
       <LocalBusinessSchema />
       <Script id="home-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
-      {/* ===== HERO ===== */}
-      <section className={styles.hero}>
-        <Image
-          src="/images/hero-van-fc-key.webp"
-          alt="First Class Key — Mobiler Schlüsseldienst Stuttgart mit eigenem Servicefahrzeug"
-          fill
-          priority
-          fetchPriority="high"
-          quality={85}
-          className={styles.heroBackground}
-          sizes="100vw"
-        />
-        <Script id="hero-image-gps" type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ImageObject",
-            "contentUrl": "https://www.fc-key.de/images/hero-van-fc-key.webp",
-            "name": "First Class Key — Mobiler Schlüsseldienst Stuttgart, Servicefahrzeug vor Ort",
-            "description": "Das FC-KEY Servicefahrzeug (VW Caddy) mit vollständiger mobiler Werkstattausrüstung für Autoschlüssel nachmachen und Schlüsseldienst in Stuttgart, Sindelfingen und 50km Umkreis.",
-            "contentLocation": {
-              "@type": "Place",
-              "name": "Stuttgart, Sindelfingen",
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 48.7758,
-                "longitude": 9.1829
-              }
-            }
-          })
-        }} />
-        <div className={styles.heroInner}>
-          <div className={styles.heroContent}>
-            <p className={styles.heroEyebrow}>Der mobile Autoschlüsselspezialist — Raum Stuttgart</p>
+      {/* ===== HERO (SPLIT) ===== */}
+      <section className={styles.heroSplit}>
+        <div className={styles.heroSplitInner}>
+          <div className={styles.heroSplitText}>
+            <div className={styles.heroLabel}>DE — BADEN-WÜRTTEMBERG</div>
             <h1 className={styles.heroTitle}>
-              Autoschlüssel verloren oder nachmachen?<br />
-              <span className={styles.heroOrange}>Wir helfen direkt vor Ort!</span>
+              Autoschlüssel nachmachen &<br />
+              Schlüsseldienst Stuttgart —<br />
+              24/7 Service
             </h1>
             <p className={styles.heroLead}>
-              Sind Sie ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. First Class Key kommt mit einem komplett ausgestatteten Servicebus zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von 30 bis 60 Minuten wieder fahrbereit!
+              Wir sind im Durchschnitt innerhalb von <strong>15-25 Min</strong> bei Ihnen im Raum Stuttgart. 
+              Alle Marken, direkt vor Ort ohne Abschleppen programmiert.
             </p>
+            
             {/* Interactive Lead Capture Form */}
             <div style={{ marginTop: '2rem' }}>
-              <LeadCaptureForm phone={SITE_CONFIG.phone} />
+              <LeadCaptureForm phone={SITE_CONFIG.phone} theme="light" />
             </div>
             
-            <Link href="/autoschluessel-verloren" className={styles.heroUrgentBtn}>Alle Schlüssel verloren? →</Link>
             <div className={styles.heroTrust} style={{marginTop: '1.5rem'}}>
               <span className={styles.trustPill}>✓ {SITE_CONFIG.rating} / 5 Google ({SITE_CONFIG.reviewCount} Reviews)</span>
               <span className={styles.trustPill}>✓ 12 Monate Garantie</span>
@@ -162,9 +136,40 @@ export default function HomePage() {
               <span className={styles.trustPill}>✓ 24/7 Erreichbar</span>
             </div>
             
-            <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ marginTop: '2rem' }}>
               <HeroGoogleBadge />
             </div>
+          </div>
+          
+          <div className={styles.heroSplitImage}>
+            <Image
+              src="/images/ueber-uns-servicebusse.jpg"
+              alt="First Class Key — Mobiler Schlüsseldienst Stuttgart"
+              width={800}
+              height={800}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', aspectRatio: '1/1' }}
+              priority
+              fetchPriority="high"
+              quality={85}
+            />
+            <Script id="hero-image-gps" type="application/ld+json" dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "contentUrl": "https://www.fc-key.de/images/ueber-uns-servicebusse.jpg",
+                "name": "First Class Key — Mobiler Schlüsseldienst Stuttgart, Servicefahrzeug vor Ort",
+                "description": "Das FC-KEY Servicefahrzeug (VW Caddy) mit vollständiger mobiler Werkstattausrüstung für Autoschlüssel nachmachen und Schlüsseldienst in Stuttgart, Sindelfingen und 50km Umkreis.",
+                "contentLocation": {
+                  "@type": "Place",
+                  "name": "Stuttgart, Sindelfingen",
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 48.7758,
+                    "longitude": 9.1829
+                  }
+                }
+              })
+            }} />
           </div>
         </div>
       </section>
