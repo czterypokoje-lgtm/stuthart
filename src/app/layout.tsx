@@ -4,7 +4,6 @@ import Script from 'next/script';
 import Navigation from '@/components/Navigation/Navigation';
 import Footer from '@/components/Footer/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton/WhatsAppButton';
-import UrgencyBanner from '@/components/UrgencyBanner/UrgencyBanner';
 import StickyCallBar from '@/components/StickyCallBar/StickyCallBar';
 import { SITE_CONFIG } from '@/config/site.config';
 
@@ -177,7 +176,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <div style={{ overflowX: 'hidden', position: 'relative' }}>
-          <UrgencyBanner />
           <Navigation />
           {children}
           <Footer />
