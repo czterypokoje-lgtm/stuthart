@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import styles from './BrandModelsList.module.css';
-import { BrandConfig } from '@/config/brands';
+import { Brand } from '@/config/brands';
 
 interface BrandModelsListProps {
-  brand: BrandConfig;
+  brand: Brand;
 }
 
 export default function BrandModelsList({ brand }: BrandModelsListProps) {
