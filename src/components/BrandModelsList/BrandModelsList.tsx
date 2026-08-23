@@ -6,11 +6,37 @@ interface BrandModelsListProps {
   brand: Brand;
 }
 
+const brandImageMap: Record<string, string> = {
+  audi: 'audi.jpg',
+  citroen: 'citroen.jpg',
+  fiat: 'fiat.avif',
+  ford: 'ford.jpg',
+  honda: 'honda.jpg',
+  hyundai: 'hyundai.jpg',
+  kia: 'kia.jpg',
+  lexus: 'lexus.jpg',
+  mazda: 'mazda.jpg',
+  mercedes: 'mercedes.avif',
+  mini: 'mini.jpg',
+  nissan: 'nissan.jpg',
+  opel: 'opel.avif',
+  peugeot: 'peugeot.jpg',
+  renault: 'renault.jpg',
+  seat: 'seat.webp',
+  skoda: 'skoda.jpg',
+  toyota: 'toyota.jpg',
+  volkswagen: 'volkswagen.jpg',
+  volvo: 'volvo.jpg'
+};
+
 export default function BrandModelsList({ brand }: BrandModelsListProps) {
   const models = brand.models || [];
   
   // If there are no specific models for this brand, don't show the section.
   if (models.length === 0) return null;
+
+  const imageName = brandImageMap[brand.nameSlug.toLowerCase()] || 'fallback.jpg';
+  const imageSrc = `/images/brands/${imageName}`;
 
   return (
     <section className={styles.section}>
@@ -18,31 +44,28 @@ export default function BrandModelsList({ brand }: BrandModelsListProps) {
         <div className={styles.split}>
           <div className={styles.content}>
             <h2 className={styles.title}>
-              Warum unseren {brand.name} Service wählen?
+              Neue {brand.name} Schlüssel für die beliebtesten Modelle
             </h2>
             <p className={styles.lead}>
-              First Class Key ist Ihr erfahrener Spezialist für alle <strong>{brand.name}</strong> Modelle. Egal, ob Sie einen älteren {brand.name} mit traditionellem Schlüssel oder ein modernes Modell mit Keyless-Go haben – wir haben die originalen Diagnosegeräte und Rohlinge an Bord.
+              Das Ersetzen Ihres {brand.name} Schlüssels geht bei First Class Key immer schnell und einfach. Unsere erfahrenen Monteure können {brand.name} Schlüssel fräsen, anlernen und reparieren vor Ort im ganzen Einsatzgebiet.
             </p>
-            <h3 className={styles.subtitle}>Wir helfen Ihnen bei diesen {brand.name} Modellen:</h3>
+            <h3 className={styles.subtitle}>Wir liefern schnelle und günstige {brand.name} Ersatzschlüssel für alle Modelle, darunter:</h3>
             <ul className={styles.modelList}>
               {models.map((model, idx) => (
                 <li key={idx} className={styles.modelItem}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange-500)" strokeWidth="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  {model.name}
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--navy-900)" strokeWidth="3" aria-hidden="true"><circle cx="12" cy="12" r="5" fill="var(--gray-500)" stroke="none" /></svg>
+                  {brand.name} {model.name} Schlüssel
                 </li>
               ))}
-              <li className={styles.modelItem}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange-500)" strokeWidth="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <em>Und viele mehr...</em>
-              </li>
             </ul>
           </div>
           <div className={styles.imageCol}>
             <div className={styles.imageWrapper}>
               <Image 
-                src={`/images/seo/autoschluessel_nachmachen_home.jpg`} // Fallback generic image
-                alt={`${brand.name} Autoschlüssel Service`}
+                src={imageSrc}
+                alt={`${brand.name} Autoschlüssel nachmachen - Ersatzschlüssel und Programmierung vor Ort`}
                 fill
+                style={{ objectFit: 'cover', borderRadius: '12px' }}
                 className={styles.image}
               />
             </div>
