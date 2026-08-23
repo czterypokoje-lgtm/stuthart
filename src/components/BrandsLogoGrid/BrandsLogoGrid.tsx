@@ -37,7 +37,21 @@ export default function BrandsLogoGrid({ title, subtitle, hideSeoHeader = false 
     <section className={styles.brandsSection}>
       <div className={styles.heroContainer}>
         
-        {/* Left side text and brands */}
+        {/* Left side image */}
+        <div className={styles.imageContent}>
+          <div className={styles.circle1}></div>
+          <div className={styles.circle2}></div>
+          <Image 
+            src="/images/team/woman_pointing.jpg" 
+            alt="Autoschlüssel Expertin" 
+            width={550} 
+            height={650} 
+            className={styles.personImage}
+            unoptimized={true}
+          />
+        </div>
+
+        {/* Right side text and brands */}
         <div className={styles.textContent}>
           {!hideSeoHeader && (
             <div className={styles.badge}>
@@ -50,13 +64,13 @@ export default function BrandsLogoGrid({ title, subtitle, hideSeoHeader = false 
             </div>
           )}
 
-          <h2 className={styles.heading}>{title || 'Autoschlüssel-Service für zahlreiche Fahrzeugmarken'}</h2>
+          <h2 className={styles.heading}>{title || 'Welche Marken bedienen wir?'}</h2>
           
           <p className={styles.lead}>
-            {subtitle || 'Von Volkswagen über Audi bis Mercedes oder Skoda – mit uns finden Sie schnell geprüfte Autoschlüssel-Experten für Ihr Fahrzeug direkt vor Ort.'}
+            {subtitle || 'Wir fertigen und programmieren Autoschlüssel für alle gängigen Automarken direkt vor Ort. Unsere mobilen Händler-Niveau Geräte unterstützen:'}
           </p>
 
-          <div className={styles.brandLogosRow}>
+          <div className={styles.brandsGrid}>
             {TOP_BRANDS.map((brand) => (
               <Link
                 key={brand.slug}
@@ -65,12 +79,13 @@ export default function BrandsLogoGrid({ title, subtitle, hideSeoHeader = false 
               >
                 <Image
                   src={brand.svg}
-                  alt={`${brand.name} logo`}
+                  alt={`${brand.name} Logo — Autoschlüssel nachmachen`}
                   className={styles.brandLogoImg}
-                  width={40}
-                  height={40}
+                  width={50}
+                  height={50}
                   unoptimized={true}
                 />
+                <span className={styles.brandLabel}>{brand.name}<br/>Autoschlüssel nachmachen</span>
               </Link>
             ))}
           </div>
@@ -83,20 +98,6 @@ export default function BrandsLogoGrid({ title, subtitle, hideSeoHeader = false 
               B2B Partner
             </Link>
           </div>
-        </div>
-
-        {/* Right side image */}
-        <div className={styles.imageContent}>
-          <div className={styles.circle1}></div>
-          <div className={styles.circle2}></div>
-          <Image 
-            src="/images/team/woman_pointing.jpg" 
-            alt="Autoschlüssel Expertin" 
-            width={550} 
-            height={650} 
-            className={styles.personImage}
-            unoptimized={true}
-          />
         </div>
 
       </div>

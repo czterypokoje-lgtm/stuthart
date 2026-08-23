@@ -23,6 +23,7 @@ import StuttgartSeo from '@/content/seo/stuttgart';
 import SindelfingenSeo from '@/content/seo/sindelfingen';
 import { getFaqForCity } from '@/config/faq';
 import FaqSection from '@/components/FaqSection/FaqSection';
+import FeatureCards from '@/components/FeatureCards/FeatureCards';
 
 const SeoComponents: Record<string, React.FC> = {
   stuttgart: StuttgartSeo,
@@ -187,15 +188,28 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                   <Link href="/" style={{ color: 'var(--gray-500)' }}>Home</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <Link href="/standorte" style={{ color: 'var(--gray-500)' }}>Städte</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <span style={{ color: 'var(--navy-900)' }}>{city.city}</span>
                 </nav>
                 <div className={styles.heroLabel} style={{ color: 'var(--navy-900)' }}>DE — {city.region}</div>
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: '#fff', border: '1px solid var(--gray-200)', borderRadius: '30px', padding: '0.35rem 1rem 0.35rem 0.35rem', marginBottom: '1.5rem', boxShadow: '0 2px 10px rgba(0,0,0,0.03)' }}>
+                  <div style={{ display: 'flex' }}>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#ccc', border: '2px solid #fff', zIndex: 4, backgroundImage: 'url(https://randomuser.me/api/portraits/men/32.jpg)', backgroundSize: 'cover' }}></div>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#bbb', border: '2px solid #fff', zIndex: 3, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/women/44.jpg)', backgroundSize: 'cover' }}></div>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#aaa', border: '2px solid #fff', zIndex: 2, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/men/46.jpg)', backgroundSize: 'cover' }}></div>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#999', border: '2px solid #fff', zIndex: 1, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/women/68.jpg)', backgroundSize: 'cover' }}></div>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--navy-900)', lineHeight: '1.1' }}>
+                      5/5 <span style={{ color: '#ff9800', fontSize: '0.8rem' }}>★★★★★</span>
+                    </div>
+                    <div style={{ fontSize: '0.65rem', color: 'var(--gray-500)', marginTop: '0.1rem' }}>
+                      Basierend auf Google reviews
+                    </div>
+                  </div>
+                </div>
                 <h1>{city.customH1 || `Autoschlüssel nachmachen & Schlüsseldienst ${city.city} — 24/7 Service`}</h1>
                 <p className={styles.heroUtrechtLead}>
                   Wir sind im Durchschnitt innerhalb von <strong>{city.travelTime}</strong> bei Ihnen in {city.city}.
                   Alle Marken, vor Ort programmiert.
                 </p>
                 <LeadCaptureForm city={city.city} phone={SITE_CONFIG.phone} theme="light" />
-                <div style={{ marginTop: '1.5rem' }}>
-                  <HeroGoogleBadge />
-                </div>
               </div>
               <div className={styles.heroUtrechtImage}>
                 <Image 
@@ -218,35 +232,70 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                 <Link href="/">Home</Link> <span>/</span> <Link href="/standorte">Städte</Link> <span>/</span> <span>{city.city}</span>
               </nav>
               <div className={styles.heroLabel}>DE — {city.region}</div>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: '#fff', border: '1px solid var(--gray-200)', borderRadius: '30px', padding: '0.35rem 1rem 0.35rem 0.35rem', marginBottom: '1.5rem', boxShadow: '0 2px 10px rgba(0,0,0,0.03)' }}>
+                <div style={{ display: 'flex' }}>
+                  <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#ccc', border: '2px solid #fff', zIndex: 4, backgroundImage: 'url(https://randomuser.me/api/portraits/men/32.jpg)', backgroundSize: 'cover' }}></div>
+                  <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#bbb', border: '2px solid #fff', zIndex: 3, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/women/44.jpg)', backgroundSize: 'cover' }}></div>
+                  <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#aaa', border: '2px solid #fff', zIndex: 2, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/men/46.jpg)', backgroundSize: 'cover' }}></div>
+                  <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#999', border: '2px solid #fff', zIndex: 1, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/women/68.jpg)', backgroundSize: 'cover' }}></div>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--navy-900)', lineHeight: '1.1' }}>
+                    5/5 <span style={{ color: '#ff9800', fontSize: '0.8rem' }}>★★★★★</span>
+                  </div>
+                  <div style={{ fontSize: '0.65rem', color: 'var(--gray-500)', marginTop: '0.1rem' }}>
+                    Basierend auf Google reviews
+                  </div>
+                </div>
+              </div>
               <h1>{city.customH1 || `Autoschlüssel nachmachen & Schlüsseldienst ${city.city} — 24/7 Service`}</h1>
               <p className={styles.heroLead}>
                 Wir sind im Durchschnitt innerhalb von <strong>{city.travelTime}</strong> bei Ihnen in {city.city}.
                 Alle Marken, vor Ort programmiert.
               </p>
               <LeadCaptureForm city={city.city} phone={SITE_CONFIG.phone} />
-              <div style={{ marginTop: '1.5rem' }}>
-                <HeroGoogleBadge />
-              </div>
             </div>
           </section>
         )}
 
-        {/* ── TRUST BAR ───────────────────────────────────────────── */}
-        <div className={styles.trustBar}>
-          <div className={styles.trustBarInner}>
-            {[
-              '24/7 Mobiler Service',
-              `Innerhalb ${city.travelTime} in ${city.city}`,
-              'Festpreis vorab',
-              '12 Monate Garantie',
-              'Versichert & Zertifiziert'
-            ].map((item, idx) => (
-              <div key={idx} className={styles.trustItem}>
-                <span className={styles.trustIcon}>✓</span>
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
+        {/* ── TRUST FEATURE CARDS ───────────────────────────────────────────── */}
+        <div style={{ backgroundColor: '#f3f4f6', padding: '1px 0' }}>
+          <FeatureCards 
+            features={[
+              {
+                id: 'feature-1',
+                icon: <Image src="/images/icon_van.jpg" alt="Mobiler Service" width={90} height={90} style={{ borderRadius: '12px' }} />,
+                title: '24/7 Mobiler Schlüsseldienst',
+                description: `Wir fahren als lokaler mobiler Schlüsseldienst direkt zu Ihrem Standort in ${city.city}, um Ihnen ohne Verzögerung wieder auf den Weg zu helfen.`,
+                linkText: 'Mehr über mobilen Service',
+                linkUrl: '/leistungen'
+              },
+              {
+                id: 'feature-2',
+                icon: <Image src="/images/icon_map.jpg" alt="Aktuelle Reaktionszeiten" width={90} height={90} style={{ borderRadius: '12px' }} />,
+                title: `Schnell vor Ort in ${city.city}`,
+                description: `Unsere durchschnittliche Reaktionszeit in ${area1} ist momentan ${time1} Min. Von ${area2} beträgt die Anfahrtszeit circa ${time2} Min.`,
+                linkText: 'Einsatzgebiete ansehen',
+                linkUrl: '/standorte'
+              },
+              {
+                id: 'feature-3',
+                icon: <Image src="/images/icon_price.jpg" alt="Fester Preis" width={90} height={90} style={{ borderRadius: '12px' }} />,
+                title: 'Erfahren & Festpreis',
+                description: `Basierend auf ${jobsCount} abgeschlossenen Einsätzen in diesem Jahr in und um ${city.city}, garantieren wir fachkundigen Service mit einem Festpreis im Voraus.`,
+                linkText: 'Unsere Preise ansehen',
+                linkUrl: '/preise'
+              },
+              {
+                id: 'feature-4',
+                icon: <Image src="/images/icon_car_check.jpg" alt="Garantie" width={90} height={90} style={{ borderRadius: '12px' }} />,
+                title: '12 Monate Garantie',
+                description: 'Wir bieten standardmäßig 12 Monate volle Garantie auf alle von uns gelieferten und programmierten Schlüssel.',
+                linkText: 'Mehr erfahren',
+                linkUrl: '/leistungen'
+              }
+            ]}
+          />
         </div>
         
         {/* ── BRANDS MARQUEE ──────────────────────────────────────── */}
@@ -255,154 +304,6 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
         {/* ── HOW IT WORKS ──────────────────────────────────────────── */}
         <HowItWorks cityName={city.city} />
 
-        {/* ── LOKALE ERFAHRUNG & SAYAC DASHBOARD ─────────────── */}
-        {(city.localFact || city.popularBrands || city.commonJob) && (
-          <section className={styles.sectionAlt} style={{ padding: '4rem 0' }}>
-            <div className="container">
-                {/* E-E-A-T Local Stats Card (Sayac Visual Timeline) */}
-                <div style={{ 
-                  background: '#fff', 
-                  border: '1px solid #e2e8f0', 
-                  borderRadius: '20px', 
-                  padding: '3.5rem 2rem', 
-                  margin: '0 auto',
-                  maxWidth: '1000px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  boxShadow: '0 15px 35px -5px rgba(0, 0, 0, 0.05)',
-                  textAlign: 'center',
-                  overflow: 'hidden'
-                }}>
-                  
-                  {/* Visual Header & Image */}
-                  <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
-                    <div style={{ position: 'relative', width: '100%', height: '300px', marginBottom: '1.5rem' }}>
-                      <Image 
-                        src="/images/local-service-trust.jpg" 
-                        alt={`Zertifizierter mobiler Schlüsseldienst in ${city.city}`} 
-                        fill 
-                        style={{ objectFit: 'contain' }} 
-                      />
-                    </div>
-                    <h3 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0 0 0.5rem 0', color: 'var(--navy-900)' }}>
-                      Lokaler Schlüsseldienst in {city.city} – Reaktionszeiten & Fakten
-                    </h3>
-                    <p style={{ color: 'var(--color-primary)', fontWeight: 600, fontSize: '0.95rem', margin: 0, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-                      Transparent. Schnell. Zuverlässig.
-                    </p>
-                  </div>
-
-                  {/* The SAYAC (Visual Timeline / Stats Progress) */}
-                  <div style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    maxWidth: '850px',
-                    margin: '0 auto 3rem auto',
-                    position: 'relative',
-                    gap: '1rem',
-                    flexWrap: 'wrap'
-                  }}>
-                    {/* Background Connector Line (Hidden on mobile via media query conceptually, but we use flex/gap instead of absolute positioning to make it fully responsive easily) */}
-                    
-                    {/* Node 1: Jobs Completed */}
-                    <div style={{ flex: '1 1 200px', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'var(--gray-50)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--gray-200)', position: 'relative', zIndex: 2 }}>
-                      <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'var(--color-primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', boxShadow: '0 4px 10px rgba(0,39,82,0.2)' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-                      <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--navy-900)', lineHeight: 1 }}>{jobsCount}</div>
-                      <div style={{ fontSize: '0.85rem', color: 'var(--gray-600)', marginTop: '0.5rem', fontWeight: 500, textTransform: 'uppercase' }}>Erfolgreiche Aufträge</div>
-                    </div>
-
-                    {/* Node 2: Area 1 Response Time */}
-                    <div style={{ flex: '1 1 200px', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'var(--gray-50)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--gray-200)', position: 'relative', zIndex: 2 }}>
-                      <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'var(--orange-400)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', boxShadow: '0 4px 10px rgba(253,197,59,0.3)' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/><path d="M6.38 18.7 4 21"/><path d="M17.64 18.67 20 21"/></svg></div>
-                      <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--navy-900)', lineHeight: 1 }}>{time1} Min</div>
-                      <div style={{ fontSize: '0.85rem', color: 'var(--gray-600)', marginTop: '0.5rem', fontWeight: 500, textTransform: 'uppercase' }}>Reaktionszeit ({area1})</div>
-                    </div>
-
-                    {/* Node 3: Area 2 Response Time */}
-                    <div style={{ flex: '1 1 200px', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'var(--gray-50)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--gray-200)', position: 'relative', zIndex: 2 }}>
-                      <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'var(--orange-500)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', boxShadow: '0 4px 10px rgba(253,185,19,0.3)' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
-                      <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--navy-900)', lineHeight: 1 }}>{time2} Min</div>
-                      <div style={{ fontSize: '0.85rem', color: 'var(--gray-600)', marginTop: '0.5rem', fontWeight: 500, textTransform: 'uppercase' }}>Anfahrtszeit ({area2})</div>
-                    </div>
-                  </div>
-
-                  {/* LOKALE INSIGHTS CARDS (Integrated into Dashboard) */}
-                  <div style={{ 
-                    display: 'grid', 
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', 
-                    gap: '1.5rem', 
-                    width: '100%', 
-                    maxWidth: '900px', 
-                    margin: '0 auto 3rem auto',
-                    textAlign: 'left'
-                  }}>
-                    {city.localFact && (
-                      <div style={{ background: 'var(--navy-50)', border: '1px solid rgba(0,39,82,0.08)', borderRadius: '16px', padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
-                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy-800)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
-                        <h3 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--navy-900)' }}>Lokale Erfahrung</h3>
-                        <p style={{ fontSize: '0.9rem', color: 'var(--navy-700)', lineHeight: 1.6, margin: 0 }}>{city.localFact}</p>
-                      </div>
-                    )}
-
-                    {city.popularBrands && (
-                      <div style={{ background: 'var(--navy-50)', border: '1px solid rgba(0,39,82,0.08)', borderRadius: '16px', padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
-                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy-800)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></div>
-                        <h3 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: '0.75rem', color: 'var(--navy-900)' }}>Gefragteste Marken</h3>
-                        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                          {city.popularBrands.map(brand => (
-                            <span key={brand} style={{ background: '#fff', color: 'var(--navy-900)', border: '1px solid rgba(0,39,82,0.15)', borderRadius: '8px', padding: '0.3rem 0.6rem', fontSize: '0.8rem', fontWeight: 700 }}>{brand}</span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {city.commonJob && (
-                      <div style={{ background: 'var(--navy-50)', border: '1px solid rgba(0,39,82,0.08)', borderRadius: '16px', padding: '1.5rem', display: 'flex', flexDirection: 'column' }}>
-                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy-800)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg></div>
-                        <h3 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: '0.5rem', color: 'var(--navy-900)' }}>Häufigster Auftrag</h3>
-                        <p style={{ fontSize: '0.9rem', color: 'var(--navy-700)', lineHeight: 1.6, margin: 0 }}>{city.commonJob}</p>
-                        {city.avgJobDuration && (
-                          <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>
-                            <span style={{ display: 'inline-block', background: 'var(--orange-100)', color: 'var(--orange-700)', padding: '0.3rem 0.6rem', borderRadius: '8px', fontSize: '0.75rem', fontWeight: 700 }}>⏱ Ø Arbeitszeit: {city.avgJobDuration}</span>
-                          </div>
-                        )}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* SEO & Trust Text Algorithm Section */}
-                  <div style={{ background: 'var(--navy-50)', padding: '2rem', borderRadius: '12px', width: '100%', maxWidth: '900px', borderLeft: '4px solid var(--color-primary)', textAlign: 'left' }}>
-                    <p style={{ fontSize: '0.95rem', color: 'var(--navy-800)', lineHeight: 1.7, margin: 0 }}>
-                      <strong>Warum Sie uns vertrauen können:</strong> Basierend auf exakt <strong>{jobsCount} abgeschlossenen Einsätzen</strong> in diesem Jahr in und um <strong>{city.city}</strong>, garantieren wir höchste Zuverlässigkeit. Unsere ausgeklügelte Logistik ermöglicht es uns, eine durchschnittliche Reaktionszeit in <strong>{area1}</strong> von derzeit nur <strong>{time2} Minuten</strong> sicherzustellen. Für Einsätze aus <strong>{area2}</strong> kalkulieren wir mit einer Anfahrtszeit von ca. <strong>{time1} Minuten</strong>. Als zertifizierter lokaler Schlüsseldienst fahren wir mit voll ausgestatteten Servicefahrzeugen direkt zu Ihrem Standort, um Autoschlüssel vor Ort nachzumachen oder Türen schadenfrei zu öffnen – damit Sie ohne Verzögerung wieder auf die Straße kommen.
-                    </p>
-                  </div>
-                </div>
-            </div>
-          </section>
-        )}
-
-        {/* SEO Gallery */}
-        <section style={{ padding: '4rem 0', background: 'var(--gray-50)', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
-          <div className="container">
-            <h2 style={{ textAlign: 'center', fontSize: '2rem', marginBottom: '1rem', color: 'var(--navy-900)' }}>
-              Service in {city.city} &mdash; Galerie
-            </h2>
-            <p style={{ textAlign: 'center', color: 'var(--gray-600)', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem' }}>
-              Ein Eindruck unserer täglichen Arbeit: vom Anlernen der Schlüssel vor Ort bis zum schadenfreien Öffnen von Türen in {city.city}.
-            </p>
-            <RealGalleryShowcase />
-          </div>
-        </section>
-
-        {/* Top brands in this city (SEO List) */}
-        <BrandsLogoGrid
-          title={`Welche Marken bedienen wir in ${city.city}?`}
-          subtitle={`Wir fertigen und programmieren Autoschlüssel für alle gängigen Automarken direkt vor Ort in ${city.city}. Unsere mobilen Händler-Niveau Geräte unterstützen:`}
-        />
 
         {/* All services in this city */}
         <section className={styles.sectionAlt}>
@@ -447,6 +348,25 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
             </div>
           </div>
         </section>
+
+        {/* SEO Gallery */}
+        <section style={{ padding: '4rem 0', background: 'var(--gray-50)', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
+          <div className="container">
+            <h2 style={{ textAlign: 'center', fontSize: '2rem', marginBottom: '1rem', color: 'var(--navy-900)' }}>
+              Service in {city.city} &mdash; Galerie
+            </h2>
+            <p style={{ textAlign: 'center', color: 'var(--gray-600)', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem' }}>
+              Ein Eindruck unserer täglichen Arbeit: vom Anlernen der Schlüssel vor Ort bis zum schadenfreien Öffnen von Türen in {city.city}.
+            </p>
+            <RealGalleryShowcase />
+          </div>
+        </section>
+
+        {/* Top brands in this city (SEO List) */}
+        <BrandsLogoGrid
+          title={`Welche Marken bedienen wir in ${city.city}?`}
+          subtitle={`Wir fertigen und programmieren Autoschlüssel für alle gängigen Automarken direkt vor Ort in ${city.city}. Unsere mobilen Händler-Niveau Geräte unterstützen:`}
+        />
 
         {/* Comparison Table */}
         <section className={styles.section}>
@@ -540,35 +460,78 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
         )}
 
         {/* Neighborhoods / Nearby cities SEO block */}
-        <section className={styles.sectionAlt}>
-          <div className="container">
-            <h2>Wo kommen wir für den Auto Schlüsseldienst in {city.city} hin?</h2>
-            <p className={styles.seoIntro}>
+        <section className={styles.sectionAlt} style={{ padding: '4rem 0', background: '#f8fafc' }}>
+          <div className="container" style={{ maxWidth: '1000px' }}>
+            <h2 style={{ fontSize: '1.75rem', color: 'var(--navy-900)', marginBottom: '1.5rem', textAlign: 'left' }}>Wo kommen wir für den Auto Schlüsseldienst in {city.city} hin?</h2>
+            <p style={{ color: 'var(--navy-700)', lineHeight: '1.7', fontSize: '0.95rem', marginBottom: '2rem' }}>
               Als der mobile <strong>Auto Schlüsseldienst</strong> sind wir in der Region {city.region} und Umgebung aktiv. Haben Sie Ihren <strong>Schlüssel im Auto</strong> gelassen, benötigen Sie Hilfe beim <strong>Autotür öffnen</strong> ohne Schaden, oder müssen wir einen <strong>Autoschlüssel nachmachen</strong> oder <strong>Autoschlüssel reparieren</strong>? Innerhalb von durchschnittlich {city.travelTime} stehen wir für Sie bereit in:
             </p>
-            <ul className={styles.seoList}>
+            
+            <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', listStyle: 'none', padding: 0, margin: '2rem 0' }}>
               {city.subAreas.length > 0 ? (
                 city.subAreas.map(area => {
                   const areaLower = area.toLowerCase();
                   const cityLower = city.city.toLowerCase();
                   const displayName = areaLower.startsWith(cityLower) ? area : `${city.city} ${area}`;
-                  
                   return (
-                    <li key={area}>
-                      <strong>{displayName}</strong>
+                    <li key={area} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem', fontWeight: 700, color: 'var(--navy-800)' }}>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      {displayName}
                     </li>
                   );
                 })
               ) : (
-                nearby.map(c => (
-                  <li key={c.slug}>
-                    <Link href={`/standorte/${c.slug}`}>
-                      <strong>{c.city}</strong>
-                    </Link>
-                  </li>
-                ))
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem', fontWeight: 700, color: 'var(--navy-800)' }}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  {city.city} Zentrum
+                </li>
               )}
             </ul>
+
+            <div style={{ display: 'flex', flexWrap: 'wrap', marginTop: '3rem', borderTop: '1px solid #e2e8f0', paddingTop: '3rem' }}>
+              <div style={{ flex: '1 1 50%', minWidth: '300px', marginBottom: '2rem' }}>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--navy-900)' }}>Nahegelegene Städte</h3>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  {nearby.map(c => (
+                    <li key={c.slug}>
+                      <Link href={`/standorte/${c.slug}`} style={{ color: '#e65100', fontWeight: 600, textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.35rem', transition: 'opacity 0.2s' }}>
+                        Autoschlüssel nachmachen {c.city} 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div style={{ flex: '1 1 50%', minWidth: '300px', marginBottom: '2rem' }}>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--navy-900)' }}>Verwandte Dienstleistungen in {city.city}</h3>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <li>
+                    <Link href={`/leistungen/autoschluessel-nachmachen`} style={{ color: '#e65100', fontWeight: 600, textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.35rem', transition: 'opacity 0.2s' }}>
+                      Schlüssel nachmachen & programmieren
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/leistungen/autoschluessel-verloren`} style={{ color: '#e65100', fontWeight: 600, textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.35rem', transition: 'opacity 0.2s' }}>
+                      Alle Autoschlüssel verloren?
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/leistungen/autotuer-oeffnen`} style={{ color: '#e65100', fontWeight: 600, textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.35rem', transition: 'opacity 0.2s' }}>
+                      Schadenfrei Autotür öffnen
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/leistungen/autoschluessel-reparatur`} style={{ color: '#e65100', fontWeight: 600, textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.35rem', transition: 'opacity 0.2s' }}>
+                      Autoschlüssel Reparatur
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
 

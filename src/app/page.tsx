@@ -16,6 +16,7 @@ import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsLogoGrid from '@/components/BrandsLogoGrid/BrandsLogoGrid';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
+import FeatureCards from '@/components/FeatureCards/FeatureCards';
 import HeroGoogleBadge from '@/components/HeroGoogleBadge/HeroGoogleBadge';
 
 const RealGalleryShowcase = dynamic(() => import('@/components/RealGalleryShowcase/RealGalleryShowcase'), { ssr: true });
@@ -57,36 +58,52 @@ const breadcrumbSchema = {
 
 const simplifiedServices = [
   {
-    title: 'Autoschlüssel nachmachen lassen - schnell & professionell',
+    title: 'Autoschlüssel Nachmachen',
+    desc: 'Wir fertigen und programmieren neue Ersatzschlüssel für fast alle Automarken direkt bei Ihnen vor Ort.',
     href: '/leistungen/autoschluessel-nachmachen',
     src: '/images/seo/autoschluessel_nachmachen_home.jpg',
     alt: 'Autoschlüssel nachmachen lassen',
-    highlight: false
+    buttonText: 'Mehr über Ersatzschlüssel'
   },
   {
-    title: 'Zündschloss Reparatur & Austausch',
-    href: '/leistungen/zuendschloss-auto-wechseln',
-    src: '/images/seo/zuendschloss_reparatur_home.jpg',
-    alt: 'Zündschloss Reparatur & Austausch',
-    highlight: true
-  },
-  {
-    title: 'Autoschlüssel Verloren?',
+    title: 'Alle Autoschlüssel Verloren',
+    desc: 'Haben Sie alle Schlüssel verloren? Wir kommen zu Ihnen, öffnen das Auto und programmieren einen komplett neuen Schlüssel.',
     href: '/autoschluessel-verloren',
     src: '/images/seo/lost_car_key_concept.jpg',
-    alt: 'Autoschlüssel Verloren?'
+    alt: 'Autoschlüssel Verloren?',
+    buttonText: 'Notdienst kontaktieren'
   },
   {
     title: 'Autoschlüssel Reparatur',
+    desc: 'Ist Ihr Schlüssel abgebrochen, das Gehäuse defekt oder die Batterie leer? Wir reparieren es schnell und günstig.',
     href: '/leistungen/autoschluessel-reparieren',
     src: '/images/seo/autosleutel_reparatie_stuttgart_sindelfingen_mobiel.webp',
-    alt: 'Autoschlüssel Reparatur'
+    alt: 'Autoschlüssel Reparatur',
+    buttonText: 'Reparatur anfragen'
   },
   {
-    title: 'Auto Schlüsseldienst',
+    title: 'Zündschloss Reparatur',
+    desc: 'Klemmt das Zündschloss oder lässt sich der Schlüssel nicht mehr drehen? Wir reparieren oder tauschen es aus.',
+    href: '/leistungen/zuendschloss-auto-wechseln',
+    src: '/images/seo/zuendschloss_reparatur_home.jpg',
+    alt: 'Zündschloss Reparatur & Austausch',
+    buttonText: 'Zündschloss reparieren'
+  },
+  {
+    title: 'Auto Zerstörungsfrei Öffnen',
+    desc: 'Schlüssel im Auto vergessen und Tür zu? Mit Spezialwerkzeug öffnen wir Ihr Fahrzeug 100% ohne Schäden.',
     href: '/leistungen/auto-schluesseldienst',
     src: '/images/seo/auto_schluesseldienst_home.jpg',
-    alt: 'Auto Schlüsseldienst & Öffnung'
+    alt: 'Auto Schlüsseldienst & Öffnung',
+    buttonText: 'Auto öffnen lassen'
+  },
+  {
+    title: 'Smart Key / Keyless Go',
+    desc: 'Wir programmieren hochmoderne Keyless-Go Schlüssel und Smart Keys mit originalen Diagnosegeräten.',
+    href: '/leistungen/autoschluessel-nachmachen',
+    src: '/images/brands/mercedes.jpg', // Using generic for now
+    alt: 'Smart Key & Keyless Go Programmierung',
+    buttonText: 'Mehr über Keyless'
   }
 ];
 
@@ -113,10 +130,26 @@ export default function HomePage() {
       <section className={styles.heroSplit}>
         <div className={styles.heroSplitInner}>
           <div className={styles.heroSplitText}>
-            <p className={styles.heroEyebrow}>Der mobile Autoschlüsselspezialist — Raum Stuttgart</p>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: '#fff', border: '1px solid var(--gray-200)', borderRadius: '30px', padding: '0.35rem 1rem 0.35rem 0.35rem', marginBottom: '1.5rem', boxShadow: '0 2px 10px rgba(0,0,0,0.03)' }}>
+              <div style={{ display: 'flex' }}>
+                <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#ccc', border: '2px solid #fff', zIndex: 4, backgroundImage: 'url(https://randomuser.me/api/portraits/men/32.jpg)', backgroundSize: 'cover' }}></div>
+                <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#bbb', border: '2px solid #fff', zIndex: 3, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/women/44.jpg)', backgroundSize: 'cover' }}></div>
+                <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#aaa', border: '2px solid #fff', zIndex: 2, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/men/46.jpg)', backgroundSize: 'cover' }}></div>
+                <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#999', border: '2px solid #fff', zIndex: 1, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/women/68.jpg)', backgroundSize: 'cover' }}></div>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--navy-900)', lineHeight: '1.1' }}>
+                  5/5 <span style={{ color: '#ff9800', fontSize: '0.8rem' }}>★★★★★</span>
+                </div>
+                <div style={{ fontSize: '0.65rem', color: 'var(--gray-500)', marginTop: '0.1rem' }}>
+                  Basierend auf Google reviews
+                </div>
+              </div>
+            </div>
+            
             <h1 className={styles.heroTitle}>
               Autoschlüssel verloren oder nachmachen?<br />
-              <span className={styles.heroOrange}>Wir helfen direkt vor Ort!</span>
+              <span className={styles.heroBlue}>Wir helfen direkt vor Ort!</span>
             </h1>
             <p className={styles.heroLead}>
               Sind Sie ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. First Class Key kommt mit einem komplett ausgestatteten Servicebus zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von 30 bis 60 Minuten wieder fahrbereit!
@@ -127,20 +160,6 @@ export default function HomePage() {
               <LeadCaptureForm phone={SITE_CONFIG.phone} theme="light" />
             </div>
             
-            <div style={{ marginTop: '1rem' }}>
-              <Link href="/autoschluessel-verloren" className={styles.heroUrgentBtn}>Alle Schlüssel verloren? →</Link>
-            </div>
-            
-            <div className={styles.heroTrust} style={{marginTop: '1.5rem'}}>
-              <span className={styles.trustPill}>✓ {SITE_CONFIG.rating} / 5 Google ({SITE_CONFIG.reviewCount} Reviews)</span>
-              <span className={styles.trustPill}>✓ 12 Monate Garantie</span>
-              <span className={styles.trustPill}>✓ Versichert & Zertifiziert</span>
-              <span className={styles.trustPill}>✓ 24/7 Erreichbar</span>
-            </div>
-            
-            <div style={{ marginTop: '2rem' }}>
-              <HeroGoogleBadge />
-            </div>
           </div>
           
           <div className={styles.heroSplitImage}>
@@ -176,24 +195,55 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== EMERGENCY STRIP ===== */}
-      <section className={styles.emergencyStrip}>
-        <div className={styles.emergencyInner}>
-          <div className={styles.emergencyItem}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <span><strong>Autoschlüssel verloren?</strong> Soforthilfe</span>
-          </div>
-          <div className={styles.emergencyItem}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-            <span><strong>Auto verschlossen?</strong> Zerstörungsfrei öffnen</span>
-          </div>
-          <div className={styles.emergencyItem}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span><strong>24/7 Notdienst</strong> Jetzt anrufen</span>
-          </div>
-          <a href={`tel:${SITE_CONFIG.phoneTel}`} className={styles.emergencyPhone}>{SITE_CONFIG.phone}</a>
-        </div>
-      </section>
+      {/* ===== FEATURE CARDS ===== */}
+      <div style={{ backgroundColor: '#f3f4f6', padding: '1px 0' }}>
+        <FeatureCards 
+          title="Nachmachen. Ersetzen. Programmieren."
+          subtitle={<><span style={{ color: 'var(--orange-500)' }}>First Class Key</span> macht alles, wo immer Sie sind.</>}
+          features={[
+            {
+              id: 'feature-1',
+              icon: <Image src="/images/icon_van.jpg" alt="Autoschlüssel Verloren? Direkte Hilfe" width={90} height={90} style={{ borderRadius: '12px' }} />,
+              title: 'Autoschlüssel Verloren? Direkte Hilfe',
+              description: 'Wir kommen direkt zu Ihrem Standort für eine Reparatur oder den Ersatz.',
+              linkText: 'Mehr über den mobilen Service',
+              linkUrl: '/leistungen'
+            },
+            {
+              id: 'feature-2',
+              icon: <Image src="/images/icon_map.jpg" alt="Auto verschlossen? Zerstörungsfrei öffnen" width={90} height={90} style={{ borderRadius: '12px' }} />,
+              title: 'Auto verschlossen? Zerstörungsfrei öffnen',
+              description: `Innerhalb von 15-30 Minuten vor Ort. Unser lokaler Monteur ist immer in der Nähe.`,
+              linkText: 'Einsatzgebiete ansehen',
+              linkUrl: '/standorte'
+            },
+            {
+              id: 'feature-3',
+              icon: <Image src="/images/icon_price.jpg" alt="Fester Preis im Voraus" width={90} height={90} style={{ borderRadius: '12px' }} />,
+              title: 'Fester Preis im Voraus',
+              description: 'Keine Überraschungen im Nachhinein. Sie wissen genau, was Sie zahlen, bevor wir beginnen.',
+              linkText: 'Unsere Preise ansehen',
+              linkUrl: '/preise'
+            },
+            {
+              id: 'feature-4',
+              icon: <Image src="/images/icon_car_check.jpg" alt="12 Monate Garantie" width={90} height={90} style={{ borderRadius: '12px' }} />,
+              title: '12 Monate Garantie',
+              description: 'Wir bieten standardmäßig 12 Monate volle Garantie auf alle unsere Schlüssel.',
+              linkText: 'Mehr erfahren',
+              linkUrl: '/leistungen'
+            },
+            {
+              id: 'feature-5',
+              icon: <Image src="/images/icon_insurance.jpg" alt="24/7 Notdienst" width={90} height={90} style={{ borderRadius: '12px' }} />,
+              title: '24/7 Notdienst',
+              description: 'Sie sind zu 100% abgesichert. Tag und Nacht erreichbar für alle Notfälle.',
+              linkText: 'Direkt anrufen',
+              linkUrl: `tel:${SITE_CONFIG.phoneTel}`
+            }
+          ]}
+        />
+      </div>
 
       {/* ── BRANDS MARQUEE ──────────────────────────────────────── */}
       <BrandsMarquee />
@@ -210,7 +260,7 @@ export default function HomePage() {
           </div>
           <div className={styles.servicesGrid}>
             {simplifiedServices.map((s, i) => (
-              <Link key={i} href={s.href} className={styles.serviceCard}>
+              <div key={i} className={styles.serviceCard}>
                 <div className={styles.serviceImgBox}>
                   <Image
                     src={s.src}
@@ -220,14 +270,17 @@ export default function HomePage() {
                   />
                 </div>
                 <div className={styles.serviceBody}>
-                  <h3 className={styles.serviceTitle} style={s.highlight ? { color: 'var(--orange-500)', textDecoration: 'underline', textDecorationColor: 'rgba(251, 146, 60, 0.4)', textUnderlineOffset: '4px' } : {}}>
+                  <h3 className={styles.serviceTitle} style={{ color: 'var(--orange-600)', marginBottom: '0.75rem', fontSize: '1.2rem', fontWeight: 700 }}>
                     {s.title}
                   </h3>
-                  <span className={styles.serviceLinkText}>
-                    Mehr erfahren <span>→</span>
-                  </span>
+                  <p className={styles.serviceDesc} style={{ color: 'var(--gray-600)', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.5rem', flexGrow: 1 }}>
+                    {s.desc}
+                  </p>
+                  <Link href={s.href} className="btn btn-navy" style={{ width: '100%', textAlign: 'center', marginTop: 'auto' }}>
+                    {s.buttonText}
+                  </Link>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
           <div className={styles.servicesCta} style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '3rem' }}>

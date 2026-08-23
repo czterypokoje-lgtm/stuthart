@@ -35,13 +35,13 @@ html {
   --navy-900:  #042655;
   --navy-950:  #0a1831;
 
-  /* Orange accent — Actually Yellow/Gold for fc-key.de */
-  --orange-700: #b58500;
-  --orange-600: #d69d00;
-  --orange-500: #fdb913;
-  --orange-400: #fdc53b;
-  --orange-300: #fdd162;
-  --orange-100: #fef0cd;
+  /* Orange accent — True Autosleutel24 Orange */
+  --orange-700: #bf360c;
+  --orange-600: #d84315;
+  --orange-500: #e65100;
+  --orange-400: #f4511e;
+  --orange-300: #ff7043;
+  --orange-100: #ffccbc;
 
   /* Grays */
   --gray-900: #111827;

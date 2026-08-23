@@ -62,6 +62,10 @@
   color: var(--orange-500);
 }
 
+.heroBlue {
+  color: #1d4ed8;
+}
+
 .heroLead {
   color: var(--gray-700);
   font-size: 1.05rem;
@@ -112,6 +116,46 @@
   background: var(--gray-50);
   border: 1px solid var(--gray-200);
   padding: 0.3rem 0.75rem; border-radius: 3px;
+}
+
+.heroEmergencyBtnOrange {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: #fff3e0;
+  color: #e65100;
+  font-weight: 700;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ffd0b0;
+  text-decoration: none;
+  transition: background 0.2s;
+  font-size: 0.95rem;
+}
+.heroEmergencyBtnOrange:hover {
+  background: #ffe0b2;
+}
+
+.heroEmergencyBtnGreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 700;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #a5d6a7;
+  text-decoration: none;
+  transition: background 0.2s;
+  font-size: 0.95rem;
+}
+.heroEmergencyBtnGreen:hover {
+  background: #c8e6c9;
 }
 
 

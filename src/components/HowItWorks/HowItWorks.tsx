@@ -4,18 +4,20 @@ import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 
 interface HowItWorksProps {
   cityName?: string;
+  brandName?: string;
   variant?: 'default' | 'akl' | 'ignition' | 'lockout';
 }
 
-export default function HowItWorks({ cityName, variant = 'default' }: HowItWorksProps = {}) {
+export default function HowItWorks({ cityName, brandName, variant = 'default' }: HowItWorksProps = {}) {
   const cityText = cityName ? ` in ${cityName}` : '';
   const cityTextLoc = cityName ? ` vor Ort in ${cityName}` : ' vor Ort';
+  const brandText = brandName ? ` ${brandName}` : '';
   
   let steps = [];
-  let sectionTitle = `So funktioniert First Class Key${cityText} - in 3 Schritten`;
+  let sectionTitle = <>So funktioniert <span style={{color: 'var(--orange-500)'}}>First Class Key</span>{brandText}{cityText} - in 3 Schritten</>;
 
   if (variant === 'akl') {
-    sectionTitle = `Direkthilfe bei verlorenen Schlüsseln${cityText} - in 3 Schritten`;
+    sectionTitle = <>Direkthilfe bei <span style={{color: 'var(--orange-500)'}}>verlorenen Schlüsseln</span>{cityText} - in 3 Schritten</>;
     steps = [
       {
         imgSrc: '/images/steps/akl_step1_1786439600179.jpg',
@@ -40,7 +42,7 @@ export default function HowItWorks({ cityName, variant = 'default' }: HowItWorks
       },
     ];
   } else if (variant === 'ignition') {
-    sectionTitle = `Zündschloss defekt? So lösen wir das${cityText}`;
+    sectionTitle = <><span style={{color: 'var(--orange-500)'}}>Zündschloss defekt?</span> So lösen wir das{cityText}</>;
     steps = [
       {
         imgSrc: '/images/steps/ignition_step1_1786439640448.jpg',
@@ -65,7 +67,7 @@ export default function HowItWorks({ cityName, variant = 'default' }: HowItWorks
       },
     ];
   } else if (variant === 'lockout') {
-    sectionTitle = `Ausgesperrt? Schnell wieder hinein${cityText}`;
+    sectionTitle = <><span style={{color: 'var(--orange-500)'}}>Ausgesperrt?</span> Schnell wieder hinein{cityText}</>;
     steps = [
       {
         imgSrc: '/images/steps/lockout_step1_1786439672567.jpg',
@@ -94,10 +96,10 @@ export default function HowItWorks({ cityName, variant = 'default' }: HowItWorks
     steps = [
       {
         imgSrc: '/images/steps/step_1_contact_1786407570135.jpg',
-        alt: `Nehmen Sie Kontakt mit First Class Key auf${cityText}`,
+        alt: `Nehmen Sie Kontakt mit First Class Key auf${brandText}${cityText}`,
         step: 'Schritt 1',
         title: `Fahrzeugdaten durchgeben & Termin vereinbaren`,
-        desc: `Geben Sie Ihre Automarke, das Modell, das Baujahr und den Standort${cityText} über WhatsApp oder Telefon durch. Wir sagen Ihnen sofort, was es kostet und wann wir da sind.`,
+        desc: `Geben Sie Ihre${brandText} Automarke, das Modell, das Baujahr und den Standort${cityText} über WhatsApp oder Telefon durch. Wir sagen Ihnen sofort, was es kostet und wann wir da sind.`,
       },
       {
         imgSrc: '/images/steps/step_2_mechanic_1786407578137.jpg',
@@ -125,9 +127,11 @@ export default function HowItWorks({ cityName, variant = 'default' }: HowItWorks
             <div className={styles.imageWrapper}>
               <Image src={step.imgSrc} alt={step.alt} fill />
             </div>
-            <div className={styles.stepNum}>{step.step}</div>
-            <h3 className={styles.cardTitle}>{step.title}</h3>
-            <p className={styles.cardDesc}>{step.desc}</p>
+            <div className={styles.cardContent}>
+              <div className={styles.stepNum}>{step.step}</div>
+              <h3 className={styles.cardTitle}>{step.title}</h3>
+              <p className={styles.cardDesc}>{step.desc}</p>
+            </div>
           </div>
         ))}
       </div>
