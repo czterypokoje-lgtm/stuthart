@@ -181,9 +181,9 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
       <main>
         {/* Hero */}
         {hasHeroImage ? (
-          <section className={styles.heroUtrecht}>
-            <div className={styles.heroUtrechtInner}>
-              <div className={styles.heroUtrechtText}>
+          <section className={styles.heroStacked}>
+            <div className={styles.heroStackedInner}>
+              <div className={styles.heroStackedText}>
                 <nav className={styles.breadcrumb} aria-label="Breadcrumb">
                   <Link href="/" style={{ color: 'var(--gray-500)' }}>Home</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <Link href="/standorte" style={{ color: 'var(--gray-500)' }}>Städte</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <span style={{ color: 'var(--navy-900)' }}>{city.city}</span>
                 </nav>
@@ -205,23 +205,27 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                   </div>
                 </div>
                 <h1>{city.customH1 || `Autoschlüssel nachmachen & Schlüsseldienst ${city.city} — 24/7 Service`}</h1>
-                <p className={styles.heroUtrechtLead}>
+                <p className={styles.heroStackedLead}>
                   Wir sind im Durchschnitt innerhalb von <strong>{city.travelTime}</strong> bei Ihnen in {city.city}.
                   Alle Marken, vor Ort programmiert.
                 </p>
-                <LeadCaptureForm city={city.city} phone={SITE_CONFIG.phone} theme="light" />
               </div>
-              <div className={styles.heroUtrechtImage}>
+
+              <div className={styles.heroStackedImage}>
                 <Image 
                   src={`/images/autoschluessel-nachmachen-${city.slug}${heroImageExt}`}
                   alt={city.customMetaTitle ? `${city.customMetaTitle} | FC-KEY Mobiler Service` : `Autoschlüssel nachmachen ${city.city} - Mobiler Schlüsseldienst vor Ort`}
                   width={800}
                   height={450}
-                  style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
+                  style={{ width: '100%', height: 'auto', borderRadius: '12px', objectFit: 'cover' }}
                   priority
                   unoptimized={true}
                   fetchPriority="high"
                 />
+              </div>
+
+              <div className={styles.heroStackedForm}>
+                <LeadCaptureForm city={city.city} phone={SITE_CONFIG.phone} theme="light" />
               </div>
             </div>
           </section>

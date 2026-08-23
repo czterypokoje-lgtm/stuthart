@@ -1,34 +1,36 @@
 /* HOMEPAGE STYLES — Navy + Orange classic automotive */
 
-/* ---- HERO (SPLIT LAYOUT) ---- */
-.heroSplit {
+/* ---- HERO (STACKED LAYOUT) ---- */
+.heroStacked {
   background: #ffffff;
-  padding: 4rem 2rem 3rem;
+  padding: 2rem 1rem 3rem;
   border-bottom: 1px solid var(--gray-200);
 }
 
-.heroSplitInner {
-  max-width: 1200px;
+.heroStackedInner {
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column-reverse;
-  gap: 3rem;
-  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
 @media (min-width: 992px) {
-  .heroSplitInner {
-    flex-direction: row;
-    justify-content: space-between;
+  .heroStacked {
+    padding: 4rem 2rem 3rem;
   }
 }
 
-.heroSplitText {
-  flex: 1;
+.heroStackedText {
+  text-align: left;
 }
 
-.heroSplitImage {
-  flex: 1;
+.heroStackedImage {
+  width: 100%;
+}
+
+.heroStackedForm {
   width: 100%;
 }
 

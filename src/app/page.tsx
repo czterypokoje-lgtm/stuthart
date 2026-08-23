@@ -126,10 +126,10 @@ export default function HomePage() {
       <LocalBusinessSchema />
       <Script id="home-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
-      {/* ===== HERO (SPLIT) ===== */}
-      <section className={styles.heroSplit}>
-        <div className={styles.heroSplitInner}>
-          <div className={styles.heroSplitText}>
+      {/* ===== HERO (STACKED) ===== */}
+      <section className={styles.heroStacked}>
+        <div className={styles.heroStackedInner}>
+          <div className={styles.heroStackedText}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: '#fff', border: '1px solid var(--gray-200)', borderRadius: '30px', padding: '0.35rem 1rem 0.35rem 0.35rem', marginBottom: '1.5rem', boxShadow: '0 2px 10px rgba(0,0,0,0.03)' }}>
               <div style={{ display: 'flex' }}>
                 <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#ccc', border: '2px solid #fff', zIndex: 4, backgroundImage: 'url(https://randomuser.me/api/portraits/men/32.jpg)', backgroundSize: 'cover' }}></div>
@@ -149,26 +149,20 @@ export default function HomePage() {
             
             <h1 className={styles.heroTitle}>
               Autoschlüssel verloren oder nachmachen?<br />
-              <span className={styles.heroBlue}>Wir helfen direkt vor Ort!</span>
+              <span className={styles.heroOrange}>Wir helfen direkt vor Ort!</span>
             </h1>
             <p className={styles.heroLead}>
               Sind Sie ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. First Class Key kommt mit einem komplett ausgestatteten Servicebus zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von 30 bis 60 Minuten wieder fahrbereit!
             </p>
-            
-            {/* Interactive Lead Capture Form */}
-            <div style={{ marginTop: '2rem' }}>
-              <LeadCaptureForm phone={SITE_CONFIG.phone} theme="light" />
-            </div>
-            
           </div>
           
-          <div className={styles.heroSplitImage}>
+          <div className={styles.heroStackedImage}>
             <Image
               src="/images/hero-van-side.jpg"
               alt="First Class Key — Mobiler Schlüsseldienst Stuttgart"
               width={800}
-              height={600}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px', aspectRatio: '4/3' }}
+              height={500}
+              style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '16px' }}
               priority
               fetchPriority="high"
               quality={85}
@@ -191,6 +185,10 @@ export default function HomePage() {
                 }
               })
             }} />
+          </div>
+
+          <div className={styles.heroStackedForm}>
+            <LeadCaptureForm phone={SITE_CONFIG.phone} theme="light" />
           </div>
         </div>
       </section>
