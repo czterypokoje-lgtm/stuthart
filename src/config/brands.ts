@@ -15,6 +15,7 @@ export type Brand = {
   customH1?: string;
   customMetaTitle?: string;
   customSeoBlurb?: string; // model-specific SEO paragraph for long-tail keywords
+  specialIntents?: { slug: string; name: string }[];
 };
 
 export type BrandModel = {
