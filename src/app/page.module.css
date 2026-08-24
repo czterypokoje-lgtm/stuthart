@@ -412,7 +412,7 @@
 .checkList { list-style: none; padding: 0; margin: 1rem 0 1.5rem; }
 .checkItem { display: flex; align-items: center; gap: 0.6rem; padding: 0.4rem 0; font-size: 0.9rem; color: var(--gray-700); border-bottom: 1px solid var(--gray-200); }
 .checkIcon { color: var(--color-success); flex-shrink: 0; }
-.compareTableWrap { overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid var(--gray-200); overflow: hidden; }
+.compareTableWrap { overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid var(--gray-200); }
 
 /* ---- REVIEWS ---- */
 .reviews { padding: 4rem 0; }
