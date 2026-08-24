@@ -1,7 +1,7 @@
 import { GoogleReview } from '@/components/GoogleReviewCard/GoogleReviewCard';
 
-const FIRST_NAMES = ['Thomas', 'Sara', 'Mohammed', 'Lisa', 'Jan', 'Kees', 'Fatima', 'Peter', 'Sanne', 'Mark', 'Bram', 'Emma', 'Ali', 'Julia', 'Milan', 'Sophie', 'Kevin', 'Chantal', 'Anouk', 'Daan', 'Lars', 'Fleur', 'Eva'];
-const LAST_NAMES = ['de Vries', 'Jansen', 'van den Berg', 'Bakker', 'Visser', 'Smit', 'Meijer', 'Boer', 'Peters', 'Yilmaz', 'Kaya', 'van Dijk', 'Kok', 'Veenstra', 'Dekker', 'Kuipers', 'Vos', 'Willems', 'Hendriks'];
+const FIRST_NAMES = ['Thomas', 'Sara', 'Mohammed', 'Lisa', 'Lukas', 'Klaus', 'Fatima', 'Peter', 'Anna', 'Markus', 'Stefan', 'Emma', 'Ali', 'Julia', 'Leon', 'Sophie', 'Kevin', 'Laura', 'Mia', 'Felix', 'Jonas', 'Marie', 'Eva'];
+const LAST_NAMES = ['Müller', 'Schmidt', 'Schneider', 'Fischer', 'Weber', 'Meyer', 'Wagner', 'Becker', 'Schulz', 'Yilmaz', 'Kaya', 'Hoffmann', 'Schäfer', 'Koch', 'Bauer', 'Richter', 'Klein', 'Wolf', 'Schröder'];
 const DATES = ['Vor 1 Tag', 'Vor 2 Tagen', 'Vor 3 Tagen', 'Vor 5 Tagen', 'Vor 1 Woche', 'Vor 2 Wochen', 'Vor 4 Tagen', 'Vor 6 Tagen', 'Vor 3 Wochen'];
 
 function seededRandom(seed: number) {

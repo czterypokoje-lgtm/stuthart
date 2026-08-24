@@ -4,25 +4,25 @@ import Script from 'next/script';
 import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import { generateContextualReviews } from '@/utils/reviews';
-import KentekenForm from '@/components/KentekenForm/KentekenForm';
+import KennzeichenForm from '@/components/KennzeichenForm/KennzeichenForm';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
 import styles from './page.module.css';
 import GlobalFeatureCards from '@/components/FeatureCards/GlobalFeatureCards';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Autosleutel Bestellen op Kenteken? | Direct Prijs & Hulp op Locatie',
+    absolute: 'Autoschlüssel nach Kennzeichen bestellen? | Direkter Preis & Vor-Ort-Hilfe',
   },
-  description: 'Geen technisch gedoe! App uw kenteken naar FC-KEY en ontvang direct een vaste prijs. Wij komen op locatie in de Randstad. Inclusief 12 maanden garantie.',
+  description: 'Kein technischer Aufwand! Senden Sie uns Ihr Kennzeichen per WhatsApp und erhalten Sie sofort einen Festpreis. Wir kommen vor Ort. Inklusive 12 Monaten Garantie.',
   alternates: { canonical: `${SITE_CONFIG.domain}/autoschluessel-bestellen` },
 };
 
 export default function KentekenBestellenPage() {
   const faqItems = [
-    { q: 'Hoe snel heb ik een prijs als ik mijn kenteken doorstuur?', a: 'Tijdens onze openingstijden reageren wij via WhatsApp of telefoon vrijwel direct (vaak al binnen 5 tot 10 minuten). U weet direct waar u aan toe bent.' },
-    { q: 'Maken jullie sleutels voor alle automerken?', a: 'Ja! Omdat we op kenteken zoeken, kunnen we voor vrijwel elk merk een sleutel leveren en inleren. Of het nu gaat om een Volkswagen, BMW, Ford, Renault, of zelfs Amerikaanse merken zoals Jeep en Dodge. Ook voor moderne Keyless Go (smart keys) bent u bij ons aan het juiste adres.' },
-    { q: 'Moet ik vooraf betalen?', a: 'Nee, bij FC-KEY betaalt u nooit vooraf. U betaalt pas op locatie (via Pin of contant) nadat wij de sleutel succesvol hebben ingeleerd en getest op uw auto.' },
-    { q: 'Wat als ik al mijn autosleutels kwijt ben? Werkt het dan ook via kenteken?', a: 'Absoluut. Zelfs als u helemaal geen sleutel meer heeft, kunnen wij aan de hand van het kenteken en het chassisnummer (VIN) een compleet nieuwe sleutel "vanaf nul" genereren, frezen en inleren op de boordcomputer van uw auto.' }
+    { q: 'Wie schnell erhalte ich einen Preis, wenn ich mein Kennzeichen durchgebe?', a: 'Während unserer Öffnungszeiten antworten wir per WhatsApp oder Telefon fast sofort (oft schon innerhalb von 5 bis 10 Minuten). So wissen Sie direkt, woran Sie sind.' },
+    { q: 'Machen Sie Schlüssel für alle Automarken?', a: 'Ja! Da wir nach dem Kennzeichen suchen, können wir für fast jede Marke einen Schlüssel liefern und anlernen. Ob Volkswagen, BMW, Ford, Renault oder sogar amerikanische Marken wie Jeep und Dodge. Auch für moderne Keyless Go (Smart Keys) sind Sie bei uns an der richtigen Adresse.' },
+    { q: 'Muss ich im Voraus bezahlen?', a: 'Nein, bei FC-KEY zahlen Sie nie im Voraus. Sie zahlen erst vor Ort (bar oder mit Karte), nachdem wir den Schlüssel erfolgreich angelernt und an Ihrem Auto getestet haben.' },
+    { q: 'Was ist, wenn ich alle Autoschlüssel verloren habe? Funktioniert das auch über das Kennzeichen?', a: 'Absolut. Selbst wenn Sie gar keinen Schlüssel mehr haben, können wir anhand des Kennzeichens und der Fahrgestellnummer (VIN) einen komplett neuen Schlüssel "von Grund auf" generieren, fräsen und im Bordcomputer Ihres Autos anlernen.' }
   ];
 
   const schema = {
@@ -36,11 +36,11 @@ export default function KentekenBestellenPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
-      { '@type': 'ListItem', position: 2, name: 'Autosleutel Bestellen op Kenteken', item: `${SITE_CONFIG.domain}/autoschluessel-bestellen` },
+      { '@type': 'ListItem', position: 2, name: 'Autoschlüssel nach Kennzeichen bestellen', item: `${SITE_CONFIG.domain}/autoschluessel-bestellen` },
     ],
   };
 
-  const whatsappMsg = "Hallo, wat kost een nieuwe sleutel voor mijn auto? Mijn kenteken is: ";
+  const whatsappMsg = "Hallo, was kostet ein neuer Schlüssel für mein Auto? Mein Kennzeichen ist: ";
   const customWhatsAppUrl = `https://wa.me/${SITE_CONFIG.whatsapp}?text=${encodeURIComponent(whatsappMsg)}`;
 
   return (
@@ -52,19 +52,19 @@ export default function KentekenBestellenPage() {
         <section className={styles.hero}>
           <div className={styles.heroInner}>
             <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-              <Link href="/">Home</Link> <span>/</span> <span>Autosleutel Bestellen op Kenteken</span>
+              <Link href="/">Home</Link> <span>/</span> <span>Autoschlüssel nach Kennzeichen bestellen</span>
             </nav>
-            <h1>Autosleutel Bestellen op Kenteken: Binnen 1 Minuut de Exacte Prijs</h1>
+            <h1>Autoschlüssel nach Kennzeichen bestellen: In 1 Minute zum genauen Preis</h1>
             <p className={styles.heroLead}>
-              Heeft u een nieuwe autosleutel, reservesleutel of smart key nodig, maar weet u niet precies welk type transponder, frequentie of sleutelprofiel uw auto gebruikt? Geen enkel probleem. Bij {SITE_CONFIG.name} maken we het u graag makkelijk. U kunt bij ons eenvoudig uw autosleutel bestellen op kenteken. Aan de hand van uw kenteken kunnen wij in onze dealerkaliber database exact zien welke sleutel bij uw voertuig hoort. U hoeft niets uit te zoeken, wij regelen alles en komen direct naar uw locatie!
+              Benötigen Sie einen neuen Autoschlüssel, Ersatzschlüssel oder Smart Key, wissen aber nicht genau, welchen Transpondertyp, welche Frequenz oder welches Schlüsselprofil Ihr Auto verwendet? Kein Problem. Bei {SITE_CONFIG.name} machen wir es Ihnen einfach. Sie können Ihren Autoschlüssel bei uns bequem nach Kennzeichen bestellen. Anhand Ihres Kennzeichens sehen wir in unserer Datenbank genau, welcher Schlüssel zu Ihrem Fahrzeug gehört. Sie müssen nichts recherchieren, wir erledigen alles und kommen direkt zu Ihnen!
             </p>
             <div className={styles.heroCtas}>
               <a href={`tel:${SITE_CONFIG.phoneTel}`} className={styles.btnPhone} id="kb-hero-phone">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-                Bel: {SITE_CONFIG.phone}
+                Anrufen: {SITE_CONFIG.phone}
               </a>
-              <a href={customWhatsAppUrl} target="_blank" rel="noopener noreferrer" className={styles.btnWa} id="kb-hero-wa">WhatsApp Kenteken</a>
-              <Link href="/contact" className={styles.btnOutline} id="kb-hero-form">Direct Offerte</Link>
+              <a href={customWhatsAppUrl} target="_blank" rel="noopener noreferrer" className={styles.btnWa} id="kb-hero-wa">WhatsApp Kennzeichen</a>
+              <Link href="/contact" className={styles.btnOutline} id="kb-hero-form">Direktangebot</Link>
             </div>
           </div>
         </section>
@@ -81,7 +81,7 @@ export default function KentekenBestellenPage() {
             <div className={styles.contentGrid}>
               <div className={styles.mainContent}>
 
-                <KentekenForm />
+                <KennzeichenForm />
                 
                 {/* Section 1 - How it works */}
 
@@ -102,45 +102,45 @@ export default function KentekenBestellenPage() {
                       width: '100%',
                       textAlign: 'center'
                     }}>
-                      💬 Stuur direct uw kenteken via WhatsApp
+                      💬 Senden Sie Ihr Kennzeichen direkt per WhatsApp
                     </a>
                   </div>
 
                 {/* Section 2 - Dealer vs FC-KEY */}
                 <div>
-                  <h2>Waarom Kiezen Voor {SITE_CONFIG.name} in plaats van de Dealer?</h2>
+                  <h2>Warum {SITE_CONFIG.name} statt des Händlers wählen?</h2>
                   <p>
-                    Veel mensen denken bij een verloren of defecte autosleutel direct aan de officiële merkdealer. Maar wist u dat dit vaak onnodig duur is en veel tijd kost?
+                    Viele denken bei einem verlorenen oder defekten Autoschlüssel sofort an den offiziellen Markenhändler. Aber wussten Sie, dass dies oft unnötig teuer ist und viel Zeit kostet?
                   </p>
                   <div className={styles.tableWrapper}>
                     <table className={styles.pricingTable}>
                       <thead>
                         <tr>
-                          <th>Wat u verwacht</th>
-                          <th>De Merkdealer ❌</th>
+                          <th>Was Sie erwarten</th>
+                          <th>Der Vertragshändler ❌</th>
                           <th>{SITE_CONFIG.name} ✅</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td><strong>Locatie</strong></td>
-                          <td>U moet de auto (laten) wegslepen naar de garage.</td>
-                          <td><strong>Wij komen met onze servicebus naar ú toe.</strong></td>
+                          <td><strong>Ort</strong></td>
+                          <td>Sie müssen das Auto zur Werkstatt abschleppen (lassen).</td>
+                          <td><strong>Wir kommen mit unserem Servicefahrzeug zu Ihnen.</strong></td>
                         </tr>
                         <tr>
-                          <td><strong>Snelheid</strong></td>
-                          <td>Vaak 1 tot 2 weken wachttijd op de nieuwe sleutel.</td>
-                          <td><strong>Meestal dezelfde dag of direct de volgende dag geregeld.</strong></td>
+                          <td><strong>Geschwindigkeit</strong></td>
+                          <td>Oft 1 bis 2 Wochen Wartezeit auf den neuen Schlüssel.</td>
+                          <td><strong>Meist am selben Tag oder direkt am nächsten Tag erledigt.</strong></td>
                         </tr>
                         <tr>
-                          <td><strong>Prijs</strong></td>
-                          <td>Hoofdprijzen plus verborgen inleerkosten.</td>
-                          <td><strong>Tot 50% goedkoper met een transparante, vaste prijs vooraf.</strong></td>
+                          <td><strong>Preis</strong></td>
+                          <td>Höchstpreise plus versteckte Anlernkosten.</td>
+                          <td><strong>Bis zu 50% günstiger mit einem transparenten Festpreis vorab.</strong></td>
                         </tr>
                         <tr>
                           <td><strong>Garantie</strong></td>
-                          <td>Standaard fabrieksgarantie.</td>
-                          <td><strong>12 maanden garantie én een officiële BTW-factuur.</strong></td>
+                          <td>Standard-Werksgarantie.</td>
+                          <td><strong>12 Monate Garantie und eine offizielle Rechnung.</strong></td>
                         </tr>
                       </tbody>
                     </table>
@@ -149,26 +149,26 @@ export default function KentekenBestellenPage() {
 
                 {/* Section 3 - Privacy */}
                 <div>
-                  <h2>Veilig & Vertrouwd: Wat doen wij met uw kenteken?</h2>
+                  <h2>Sicher & Vertrauenswürdig: Was machen wir mit Ihrem Kennzeichen?</h2>
                   <p>
-                    Privacy en veiligheid staan bij ons voorop. Wanneer u uw kenteken aan ons doorgeeft, gebruiken wij dit uitsluitend om technische voertuiggegevens op te vragen (zoals het bouwjaar, model en type startonderbreker/immobilizer).
+                    Datenschutz und Sicherheit stehen bei uns an erster Stelle. Wenn Sie uns Ihr Kennzeichen mitteilen, nutzen wir dieses ausschließlich, um technische Fahrzeugdaten abzufragen (wie Baujahr, Modell und Art der Wegfahrsperre/Immobilizer).
                   </p>
                   <p>
-                    <strong>Wij hebben geen inzicht in uw persoonlijke gegevens, NAW-gegevens of verzekeringsdetails.</strong> U loopt dus geen enkel risico.
+                    <strong>Wir haben keinen Einblick in Ihre persönlichen Daten, Adressdaten oder Versicherungsdetails.</strong> Sie gehen also kein Risiko ein.
                   </p>
                 </div>
 
                 <div style={{ marginTop: '3rem', marginBottom: '3rem', textAlign: 'center' }}>
                   <img 
                     src="/images/autoschluessel-bestellen.jpg" 
-                    alt="Autosleutel bestellen op kenteken via WhatsApp - direct prijs" 
+                    alt="Autoschlüssel nach Kennzeichen bestellen per WhatsApp - direkter Preis" 
                     style={{ borderRadius: '12px', width: '100%', height: 'auto', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
                   />
                 </div>
 
                 {/* Section 4 - FAQ */}
                 <div>
-                  <h2>💡 Veelgestelde Vragen (FAQ)</h2>
+                  <h2>💡 Häufig gestellte Fragen (FAQ)</h2>
                   
                   {faqItems.map((f, i) => (
                     <details key={i} className={styles.faqItem}>
@@ -186,15 +186,15 @@ export default function KentekenBestellenPage() {
               {/* Sidebar */}
               <aside className={styles.sidebar}>
                 <div className={styles.sideCard}>
-                  <h3>Direct Prijs Aanvragen?</h3>
-                  <p>Stuur een appje met uw kenteken. Wij zijn 24/7 bereikbaar en reageren supersnel.</p>
+                  <h3>Direkt Preis anfragen?</h3>
+                  <p>Senden Sie eine Nachricht mit Ihrem Kennzeichen. Wir sind 24/7 erreichbar und antworten superschnell.</p>
                   <a href={`tel:${SITE_CONFIG.phoneTel}`} className={styles.sidePhone} id="kb-side-phone">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-                    Bel: {SITE_CONFIG.phone}
+                    Anrufen: {SITE_CONFIG.phone}
                   </a>
-                  <a href="#offerte-form" className={styles.sideWa} id="kb-side-wa">WhatsApp Direct</a>
+                  <a href="#offerte-form" className={styles.sideWa} id="kb-side-wa">Direkt WhatsApp</a>
                   <div className={styles.sideList}>
-                    {['Geen sleepkosten', 'Vaste prijs vooraf', 'Geen NAW gegevens nodig', '12 maanden garantie', 'Direct antwoord'].map(item => (
+                    {['Keine Abschleppkosten', 'Fester Preis vorab', 'Keine Adressdaten nötig', '12 Monate Garantie', 'Direkte Antwort'].map(item => (
                       <div key={item} className={styles.sideListItem}>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" width="14" height="14" style={{color:'#22c55e',flexShrink:0}} aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                         <span>{item}</span>
@@ -205,22 +205,22 @@ export default function KentekenBestellenPage() {
 
                 <div className={styles.ratingCard}>
                   <div className={styles.ratingStars}>★★★★★</div>
-                  <p className={styles.ratingText}>&ldquo;Super handig dit! Kenteken ge-appt, direct een prijs gekregen. De volgende ochtend stonden ze al voor de deur om de sleutel te programmeren. Aanrader!&rdquo;</p>
-                  <span className={styles.ratingMeta}>Bas V. — Volkswagen Golf</span>
-                  <span className={styles.ratingCount}>{SITE_CONFIG.reviewCount} Google beoordelingen · {SITE_CONFIG.rating}/5</span>
+                  <p className={styles.ratingText}>&ldquo;Super praktisch! Kennzeichen per WhatsApp geschickt, direkt einen Preis bekommen. Am nächsten Morgen standen sie schon vor der Tür, um den Schlüssel zu programmieren. Sehr zu empfehlen!&rdquo;</p>
+                  <span className={styles.ratingMeta}>Markus S. — Volkswagen Golf</span>
+                  <span className={styles.ratingCount}>{SITE_CONFIG.reviewCount} Google Bewertungen · {SITE_CONFIG.rating}/5</span>
                 </div>
               </aside>
             </div>
 
             {/* Bottom CTA block */}
             <div className={styles.ctaBlock}>
-              <h2>Weet U De Prijs Nog Niet? Vraag Het Direct Op!</h2>
-              <p>Stuur simpelweg uw kenteken via WhatsApp en wij zoeken direct in onze database de exacte prijs op voor een nieuwe sleutel.</p>
+              <h2>Kennen Sie den Preis noch nicht? Fordern Sie ihn direkt an!</h2>
+              <p>Senden Sie uns einfach Ihr Kennzeichen per WhatsApp und wir suchen in unserer Datenbank direkt den exakten Preis für einen neuen Schlüssel heraus.</p>
               <div className={styles.ctaBtnsGrid}>
-                <a href={`tel:${SITE_CONFIG.phoneTel}`} className={styles.btnPrimary} id="kb-bottom-phone">Bel: {SITE_CONFIG.phone}</a>
-                <a href="#offerte-form" className={styles.btnWhatsapp} id="kb-bottom-wa">Stuur Kenteken via WhatsApp</a>
+                <a href={`tel:${SITE_CONFIG.phoneTel}`} className={styles.btnPrimary} id="kb-bottom-phone">Anrufen: {SITE_CONFIG.phone}</a>
+                <a href="#offerte-form" className={styles.btnWhatsapp} id="kb-bottom-wa">Kennzeichen per WhatsApp senden</a>
               </div>
-              <span className={styles.microText}>Binnen 5 tot 10 minuten reactie (tijdens openingstijden)</span>
+              <span className={styles.microText}>Reaktion innerhalb von 5 bis 10 Minuten (während der Öffnungszeiten)</span>
             </div>
 
           </div>
@@ -230,17 +230,17 @@ export default function KentekenBestellenPage() {
         <section className={styles.reviews}>
           <div className={styles.container}>
             <p style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#002752', marginBottom: '0.5rem' }}>
-              KLANTBEOORDELINGEN
+              KUNDENBEWERTUNGEN
             </p>
             <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#0f172a', margin: '0 0 1rem 0', borderBottom: '2px solid #f1f5f9', paddingBottom: '0.75rem' }}>
-              Wat Klanten Zeggen Over Onze Service
+              Was Kunden über unseren Service sagen
             </h2>
             <div className={styles.ratingBig}>
               <span className={styles.ratingNum}>{SITE_CONFIG.rating}</span>
               <div>
                 <div className={styles.ratingStarsReview}>★★★★★</div>
                 <span style={{ fontSize: '0.82rem', color: '#64748b' }}>
-                  {SITE_CONFIG.reviewCount} Google beoordelingen · {SITE_CONFIG.rating}/5
+                  {SITE_CONFIG.reviewCount} Google Bewertungen · {SITE_CONFIG.rating}/5
                 </span>
               </div>
             </div>

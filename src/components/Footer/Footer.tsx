@@ -49,7 +49,7 @@ export default function Footer() {
             <div className={styles.footerContact} style={{ marginTop: '1.5rem' }}>
               <a href={`tel:${SITE_CONFIG.phoneTel}`}>{SITE_CONFIG.phone}</a>
               <a href={`mailto:${SITE_CONFIG.email}`}>{SITE_CONFIG.email}</a>
-              <span className={styles.hours}>24/7 Erreichbar</span>
+              <span className={styles.hours}>{SITE_CONFIG.hoursShort}</span>
             </div>
           </div>
 
@@ -114,13 +114,13 @@ export default function Footer() {
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem', color: 'rgba(255,255,255,0.65)' }}>
               <tbody>
                 {[
-                  ['Montag', '24 Stunden geöffnet'],
-                  ['Dienstag', '24 Stunden geöffnet'],
-                  ['Mittwoch', '24 Stunden geöffnet'],
-                  ['Donnerstag', '24 Stunden geöffnet'],
-                  ['Freitag', '24 Stunden geöffnet'],
-                  ['Samstag', '24 Stunden geöffnet'],
-                  ['Sonntag', '24 Stunden geöffnet'],
+                  ['Montag', '09:30 - 19:00 Uhr'],
+                  ['Dienstag', '09:30 - 19:00 Uhr'],
+                  ['Mittwoch', '09:30 - 19:00 Uhr'],
+                  ['Donnerstag', '09:30 - 19:00 Uhr'],
+                  ['Freitag', '09:30 - 19:00 Uhr'],
+                  ['Samstag', 'Geschlossen'],
+                  ['Sonntag', 'Geschlossen'],
                 ].map(([dag, tijd]) => (
                   <tr key={dag} style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
                     <td style={{ padding: '0.35rem 0', fontWeight: 500 }}>{dag}</td>
@@ -141,22 +141,15 @@ export default function Footer() {
             </div>
             <p>© {year} {SITE_CONFIG.fullName}. Alle Rechte vorbehalten.</p>
             <div className={styles.bottomLinks}>
-              <a
-                href="https://www.iubenda.com/privacy-policy/c53c352b-ed07-4c5b-b461-8b542ddd3aaf"
-                className="iubenda-white iubenda-noiframe iubenda-embed"
-                title="Privacy Policy"
-                rel="noopener noreferrer"
-              >
+              <Link href="/datenschutz">
                 Datenschutzerklärung
-              </a>
-              <a
-                href="https://www.iubenda.com/privacy-policy/c53c352b-ed07-4c5b-b461-8b542ddd3aaf/cookie-policy"
-                className="iubenda-white iubenda-noiframe iubenda-embed"
-                title="Cookie Policy"
-                rel="noopener noreferrer"
-              >
+              </Link>
+              <Link href="/cookie-richtlinie">
                 Cookie-Richtlinie
-              </a>
+              </Link>
+              <Link href="/impressum">
+                Impressum
+              </Link>
               <button
                 type="button"
                 className="iubenda-cs-preferences-link"

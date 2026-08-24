@@ -41,12 +41,12 @@ export const SITE_CONFIG = {
     exVatDisclaimer: 'zzgl. MwSt.',
   },
 
-  hours: 'Montag bis Sonntag 00:00–24:00',
-  hoursShort: '24/7 Erreichbar',
+  hours: 'Montag bis Freitag 09:30–19:00',
+  hoursShort: 'Abholservice Mo-Fr',
   responseTime: '30–60 Minuten',
 
-  kvk: '', // HRB number if available
-  btw: '', // USt-IdNr if available
+  kvk: '56295/56209', // HRB / USt-IdNr
+  btw: '56295/56209', // USt-IdNr
   rating: '5.0',
   reviewCount: '11',
 

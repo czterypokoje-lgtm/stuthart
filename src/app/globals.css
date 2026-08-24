@@ -629,3 +629,10 @@ details[open] summary { color: var(--orange-500); }
     padding: 1.25rem 1rem 2rem !important;
   }
 }
+
+/* Ensure mobile sticky call bar doesn't overlap footer/forms */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(65px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}

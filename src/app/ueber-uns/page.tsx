@@ -96,11 +96,23 @@ export default function OverOnsPage() {
             <p style={{ color: 'var(--gray-700)', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '1rem' }}>Unser Fokus ist einfach: Faire Preise, schnelle Reaktionszeiten und technisch einwandfreie Arbeit. Keine vagen Geschichten, sondern direkte Lösung Ihres Problems.</p>
 
             <h3 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.5rem' }}>Unsere Kernwerte</h3>
-            <ul style={{ listStyleType: 'none', padding: 0, margin: 0, fontSize: '0.88rem', color: 'var(--gray-700)', lineHeight: '1.7' }}>
-              <li style={{ marginBottom: '0.35rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span> <span><strong>Transparenz:</strong> Sie erhalten immer vorab einen Festpreis. Keine Überraschungen danach.</span></li>
-              <li style={{ marginBottom: '0.35rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span> <span><strong>Zuverlässigkeit:</strong> Wir sind bei der Handelskammer registriert, voll versichert und liefern Arbeiten mit standardmäßig 12 Monaten Garantie.</span></li>
-              <li style={{ marginBottom: '0.35rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span> <span><strong>Qualität:</strong> Wir verwenden ausschließlich professionelle (OEM) Geräte, keine billigen Nachbauten.</span></li>
-              <li style={{ marginBottom: '0.35rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span> <span><strong>Erreichbarkeit:</strong> Wir stehen Ihnen 24 Stunden am Tag, 7 Tage die Woche zur Verfügung, auch an Wochenenden und Feiertagen.</span></li>
+            <ul style={{ listStyleType: 'none', padding: 0, margin: 0, fontSize: '0.95rem', color: 'var(--gray-700)', lineHeight: '1.7' }}>
+              <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-primary)', flexShrink: 0, marginTop: '2px' }}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span><strong>Transparenz:</strong> Sie erhalten immer vorab einen Festpreis. Keine Überraschungen danach.</span>
+              </li>
+              <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-primary)', flexShrink: 0, marginTop: '2px' }}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span><strong>Zuverlässigkeit:</strong> Wir sind bei der Handelskammer registriert, voll versichert und liefern Arbeiten mit standardmäßig 12 Monaten Garantie.</span>
+              </li>
+              <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-primary)', flexShrink: 0, marginTop: '2px' }}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span><strong>Qualität:</strong> Wir verwenden ausschließlich professionelle (OEM) Geräte, keine billigen Nachbauten.</span>
+              </li>
+              <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--color-primary)', flexShrink: 0, marginTop: '2px' }}><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span><strong>Erreichbarkeit:</strong> Wir stehen Ihnen 24 Stunden am Tag, 7 Tage die Woche zur Verfügung, auch an Wochenenden und Feiertagen.</span>
+              </li>
             </ul>
           </div>
 

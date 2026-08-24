@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from './KentekenForm.module.css';
+import styles from './KennzeichenForm.module.css';
 import { SITE_CONFIG } from '@/config/site.config';
 
 type ServiceType = 'Ersatzschlüssel' | 'Alle Schlüssel verloren' | '';
 
-export default function KentekenForm() {
+export default function KennzeichenForm() {
   const [kenteken, setKenteken] = useState('');
   const [service, setService] = useState<ServiceType>('');
   const [city, setCity] = useState('');
