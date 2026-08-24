@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import FeatureCards from './FeatureCards';
-import { SITE_CONFIG } from '@/lib/constants';
+import { SITE_CONFIG } from '@/config/site.config';
 
 export default function GlobalFeatureCards() {
   return (
