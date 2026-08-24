@@ -40,14 +40,6 @@ export default function KentekenBestellenPage() {
     ],
   };
 
-  const trustItems = [
-    '24/7 Beschikbaar',
-    'Gemiddelde beoordeling 5.0/5',
-    '100% Mobiele Service',
-    '12 Maanden Garantie',
-    'Verzekerd & Gecertificeerd'
-  ];
-
   const whatsappMsg = "Hallo, wat kost een nieuwe sleutel voor mijn auto? Mijn kenteken is: ";
   const customWhatsAppUrl = `https://wa.me/${SITE_CONFIG.whatsapp}?text=${encodeURIComponent(whatsappMsg)}`;
 
@@ -82,17 +74,6 @@ export default function KentekenBestellenPage() {
 
         <BrandsMarquee />
 
-        {/* Trust Bar */}
-        <div className={styles.trustBar}>
-          <div className={styles.trustBarInner}>
-            {trustItems.map((item, idx) => (
-              <div key={idx} className={styles.trustItem}>
-                <span className={styles.trustIcon}>✓</span>
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Content Section */}
         <section className={styles.section}>

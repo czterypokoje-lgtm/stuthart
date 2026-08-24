@@ -132,14 +132,6 @@ export default function SleutelBijmakenPage() {
     ]
   };
 
-  const trustItems = [
-    '24/7 Verfügbar',
-    'In 30 Min. in Stuttgart',
-    'Festpreis ab 149€',
-    'Festpreis vorab',
-    'Versichert & Zertifiziert'
-  ];
-
   const reviews = [
     {
       text: "Großartiger Service! Ich hatte innerhalb einer halben Stunde einen neuen Ersatzschlüssel für meinen VW Polo. Der Monteur war sehr freundlich und kam einfach zu mir nach Hause nach Stuttgart.",
@@ -188,17 +180,6 @@ export default function SleutelBijmakenPage() {
 
         <BrandsMarquee />
 
-        {/* Trust Bar */}
-        <div className={styles.trustBar}>
-          <div className={styles.trustBarInner}>
-            {trustItems.map((item, idx) => (
-              <div key={idx} className={styles.trustItem}>
-                <span className={styles.trustIcon}>✓</span>
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* 3 steps HowTo */}
         <div style={{ padding: '3.5rem 0', background: '#ffffff' }}>
