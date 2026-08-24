@@ -293,6 +293,14 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                 description: 'Wir bieten standardmäßig 12 Monate volle Garantie auf alle von uns gelieferten und programmierten Schlüssel.',
                 linkText: 'Mehr erfahren',
                 linkUrl: '/leistungen'
+              },
+              {
+                id: 'feature-5',
+                icon: <Image src="/images/icon_insurance.jpg" alt="24/7 Notdienst" width={90} height={90} style={{ borderRadius: '12px' }} />,
+                title: '24/7 Notdienst',
+                description: 'Sie sind zu 100% abgesichert. Tag und Nacht erreichbar für alle Notfälle.',
+                linkText: 'Direkt anrufen',
+                linkUrl: `tel:${SITE_CONFIG.phoneTel}`
               }
             ]}
           />

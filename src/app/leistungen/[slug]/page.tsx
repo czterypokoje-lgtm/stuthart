@@ -245,6 +245,14 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
                 linkText: 'Mehr über Garantie',
                 linkUrl: '/leistungen'
               },
+              {
+                id: 'feature-5',
+                icon: <Image src="/images/icon_insurance.jpg" alt="24/7 Notdienst" width={90} height={90} style={{ borderRadius: '12px' }} />,
+                title: '24/7 Notdienst',
+                description: 'Sie sind zu 100% abgesichert. Tag und Nacht erreichbar für alle Notfälle.',
+                linkText: 'Direkt anrufen',
+                linkUrl: `tel:${SITE_CONFIG.phoneTel}`
+              },
             ]}
           />
         </div>
