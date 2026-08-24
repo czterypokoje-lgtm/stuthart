@@ -12,7 +12,6 @@ import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsLogoGrid from '@/components/BrandsLogoGrid/BrandsLogoGrid';
 import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
-import FeatureCards from '@/components/FeatureCards/FeatureCards';
 import GlobalFeatureCards from '@/components/FeatureCards/GlobalFeatureCards';
 import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
 import { generateContextualReviews } from '@/utils/reviews';

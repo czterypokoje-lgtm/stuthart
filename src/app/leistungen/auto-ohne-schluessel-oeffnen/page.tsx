@@ -8,7 +8,6 @@ import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
-import FeatureCards from '@/components/FeatureCards/FeatureCards';
 import GlobalFeatureCards from '@/components/FeatureCards/GlobalFeatureCards';
 import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
 import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
