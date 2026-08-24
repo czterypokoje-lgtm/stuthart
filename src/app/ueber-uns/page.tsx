@@ -128,7 +128,18 @@ export default function OverOnsPage() {
         {/* Workshop Image Section */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '2.5rem', marginBottom: '3.5rem', alignItems: 'start' }}>
           <div>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.6rem' }}>Unsere Werkstatt &amp; Mobiler Service<br/>📍 Zentrale in Stuttgart, Aktiv im ganzen Großraum</h2>
+            <div style={{ marginBottom: '1rem' }}>
+              <span style={{ fontSize: '0.9rem', color: '#64748b', fontWeight: 700, display: 'block', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Unsere Werkstatt &amp; Mobiler Service</span>
+              <h2 style={{ fontSize: '1.6rem', fontWeight: 800, lineHeight: 1.3, display: 'flex', alignItems: 'flex-start', margin: 0 }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '42px', height: '42px', backgroundColor: '#fff7ed', border: '1px solid #ffedd5', borderRadius: '10px', marginRight: '14px', flexShrink: 0, boxShadow: '0 2px 6px rgba(234, 88, 12, 0.08)', marginTop: '2px' }}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ea580c" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </span>
+                <span>Zentrale in Stuttgart, Aktiv im ganzen Großraum</span>
+              </h2>
+            </div>
             <p style={{ color: 'var(--gray-700)', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '0.75rem' }}>Unsere physische Werkstatt und das Lager befinden sich in Stuttgart. Von diesem zentralen Standort aus steuern wir unsere mobilen Servicebusse.</p>
             <p style={{ color: 'var(--gray-700)', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>Wir fahren täglich zu Kunden in der gesamten Region Stuttgart und Süddeutschland. So helfen wir schnell und vor Ort unter anderem in Sindelfingen, Esslingen, Ludwigsburg, Böblingen und Leonberg.</p>
           </div>
@@ -144,7 +155,18 @@ export default function OverOnsPage() {
         {/* Mobile Work & Inventory Section */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '2.5rem', marginBottom: '3.5rem', alignItems: 'start' }}>
           <div>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.6rem' }}>🚐 Voll Ausgestattete Servicebusse</h2>
+            <h2 style={{ fontSize: '1.6rem', fontWeight: 800, marginBottom: '1rem', lineHeight: 1.3, display: 'flex', alignItems: 'center' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '42px', height: '42px', backgroundColor: '#fff7ed', border: '1px solid #ffedd5', borderRadius: '10px', marginRight: '14px', flexShrink: 0, boxShadow: '0 2px 6px rgba(234, 88, 12, 0.08)' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ea580c" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M10 17h4V5H2v12h3" />
+                  <path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h2" />
+                  <path d="M14 9h5.5" />
+                  <circle cx="7.5" cy="17.5" r="2.5" />
+                  <circle cx="17.5" cy="17.5" r="2.5" />
+                </svg>
+              </span>
+              Voll Ausgestattete Servicebusse
+            </h2>
             <p style={{ color: 'var(--gray-700)', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>Probleme mit Autoschlüsseln passieren oft zu ungünstigen Zeiten. Deshalb haben wir unsere Busse als rollende Werkstätten eingerichtet. Wir fräsen Schlüssel direkt vor Ort mit CNC-gesteuerten Maschinen und haben Lötstationen für Präzisionsarbeiten dabei. Sie müssen Ihr Auto also nie teuer zu einem Händler abschleppen lassen.</p>
           </div>
           <div>
@@ -158,7 +180,16 @@ export default function OverOnsPage() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '2.5rem', marginBottom: '3.5rem', alignItems: 'start' }}>
           <div>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.6rem' }}>🔑 Großer Bestand an Originalschlüsseln</h2>
+            <h2 style={{ fontSize: '1.6rem', fontWeight: 800, marginBottom: '1rem', lineHeight: 1.3, display: 'flex', alignItems: 'center' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '42px', height: '42px', backgroundColor: '#fff7ed', border: '1px solid #ffedd5', borderRadius: '10px', marginRight: '14px', flexShrink: 0, boxShadow: '0 2px 6px rgba(234, 88, 12, 0.08)' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ea580c" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="7.5" cy="15.5" r="5.5" />
+                  <path d="m21 2-9.6 9.6" />
+                  <path d="m15.5 7.5 3 3L22 7l-3-3" />
+                </svg>
+              </span>
+              Großer Bestand an Originalschlüsseln
+            </h2>
             <p style={{ color: 'var(--gray-700)', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>Um Ihnen so schnell wie möglich wieder auf die Straße zu helfen, haben wir einen riesigen Bestand an originalen und Aftermarket-Autoschlüsseln. Von modernen Keyless-Go-Smart-Keys bis hin zu traditionellen Schlüsseln mit Transponder; für 99% aller Automarken haben wir sofort die richtige Lösung auf Lager.</p>
           </div>
           <div>
