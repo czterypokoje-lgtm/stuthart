@@ -7,7 +7,8 @@ export default function InstantServiceMap() {
     <div
       style={{
         width: '100%',
-        height: '480px',
+        height: '100%',
+        minHeight: '350px',
         borderRadius: '16px',
         overflow: 'hidden',
         boxShadow: '0 8px 32px rgba(0,0,0,0.14)',

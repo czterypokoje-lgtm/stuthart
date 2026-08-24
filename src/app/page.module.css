@@ -451,8 +451,9 @@
   .heroInner { grid-template-columns: 1.1fr 0.9fr; gap: 2rem; }
   .compareGrid { grid-template-columns: 1fr; }
   .faqGrid { grid-template-columns: 1fr; }
-  .serviceAreaGrid { grid-template-columns: 1fr; gap: 2rem; }
+  .serviceAreaGrid { display: flex; flex-direction: column-reverse; gap: 2rem; }
   .mapBox { height: 400px; }
+  .mapContainerWrap { height: 350px; min-height: 350px; }
 }
 @media (max-width: 900px) {
   .heroInner { grid-template-columns: 1fr; }
