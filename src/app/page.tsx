@@ -101,8 +101,8 @@ const simplifiedServices = [
     title: 'Smart Key / Keyless Go',
     desc: 'Wir programmieren hochmoderne Keyless-Go Schlüssel und Smart Keys mit originalen Diagnosegeräten.',
     href: '/leistungen/autoschluessel-nachmachen',
-    src: '/images/brands/mercedes.jpg', // Using generic for now
-    alt: 'Smart Key & Keyless Go Programmierung',
+    src: '/images/smart-key-start-stop.jpg',
+    alt: 'Smart Key und Keyless Go Programmierung Stuttgart - Auto Start Stop System',
     buttonText: 'Mehr über Keyless'
   }
 ];
