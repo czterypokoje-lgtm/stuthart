@@ -7,6 +7,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
 'autoschluessel-batterie-wechseln-anleitung': (
     <>
       <h2>Wie kann ich die Batterie eines Autoschlüssels wechseln? (Modell-für-Modell-Anleitung)</h2>
+      <Image src="/images/blog/autoschluessel-batterie-wechseln.jpg" alt="Person wechselt die Batterie eines Autoschlüssels" width={800} height={450} style={{ width: '100%', height: 'auto', borderRadius: '12px', marginBottom: '2rem' }} />
       <p>
         Ist die Batterie Ihres Autoschlüssels leer und das Auto startet nicht? Oder reagiert die Zentralverriegelung erst, wenn Sie sehr nah dran sind, und das Auto zeigt eine Warnung auf dem Armaturenbrett an? Dann muss die Batterie des Autoschlüssels gewechselt werden. Dies ist eine einfache Aufgabe, die Sie in vielen Fällen selbst erledigen können, vorausgesetzt, Sie verwenden die richtige Methode und die richtige Batterie. Wenn Ihr Auto mit der Fernbedienung nicht geöffnet werden kann, können Sie jederzeit den physischen Notschlüssel verwenden, um Zugang zu erhalten.
       </p>
@@ -88,6 +89,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
   'ghost-immobiliser-stuttgart': (
     <>
       <h2>Was ist ein Ghost Immobiliser und wie schützt er Ihr Auto?</h2>
+      <Image src="/images/blog/ghost-immobiliser.jpg" alt="Ghost Immobiliser schützt das Auto vor Diebstahl" width={800} height={450} style={{ width: '100%', height: 'auto', borderRadius: '12px', marginBottom: '2rem' }} />
       <p>
         Moderne Fahrzeuge mit Keyless Entry und Keyless Start sind leider äußerst diebstahlanfällig. Mit Hilfe eines sogenannten <strong>Relay Attacks</strong> (Signalverlängerung) können Diebe das Signal Ihres Autoschlüssels in Ihrem Haus abfangen, an das Auto auf der Einfahrt weiterleiten und die Türen öffnen sowie den Motor starten. Dies geschieht lautlos und innerhalb von dreißig Sekunden. Der <strong>Ghost Immobiliser</strong> ist die ultimative Lösung, um dies zu verhindern.
       </p>
@@ -116,6 +118,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
   'autoschluessel-kosten-pro-marke-2026': (
     <>
       <h2>Was kostet ein neuer Autoschlüssel je nach Marke im Jahr 2026?</h2>
+      <Image src="/images/blog/autoschluessel-kosten-pro-marke.jpg" alt="Preisliste für das Nachmachen von Autoschlüsseln verschiedener Marken" width={800} height={450} style={{ width: '100%', height: 'auto', borderRadius: '12px', marginBottom: '2rem' }} />
       <p>
         Die Kosten für das Nachmachen eines Autoschlüssels hängen stark von der Technologie im Schlüssel ab. Ein Standardschlüssel ohne Chip ist günstig, aber ein moderner Smart Key mit Transponder, Fernbedienung und Keyless Entry erfordert komplexe Anlerngeräte.
       </p>
@@ -168,6 +171,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
   'haendler-vs-schluesseldienst-kostenunterschied': (
     <>
       <h2>Händler vs. Mobiler Schlüsseldienst: Die wahren Zahlen</h2>
+      <Image src="/images/blog/haendler-vs-schluesseldienst.jpg" alt="Vergleich Autohaus vs. Schlüsseldienst beim Autoschlüssel nachmachen" width={800} height={450} style={{ width: '100%', height: 'auto', borderRadius: '12px', marginBottom: '2rem' }} />
       <p>
         Wenn Sie einen Ersatzschlüssel nachmachen lassen möchten oder alle Schlüssel verloren haben, denken Sie vielleicht direkt an Ihren Vertragshändler. Dies ist jedoch oft die teuerste und zeitaufwändigste Option. Ein mobiler Kfz-Schlüsselspezialist wie FC-KEY bietet große Vorteile.
       </p>
@@ -183,6 +187,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
   'versicherung-deckt-autoschluessel-verlust': (
     <>
       <h2>Werden die Kosten für den Ersatz Ihres Autoschlüssels erstattet?</h2>
+      <Image src="/images/blog/versicherung-verlust.jpg" alt="Autoschlüssel auf einem Versicherungsdokument" width={800} height={450} style={{ width: '100%', height: 'auto', borderRadius: '12px', marginBottom: '2rem' }} />
       <p>
         Der Verlust oder Diebstahl Ihres Autoschlüssels ist eine teure Angelegenheit. Glücklicherweise erstatten Autoversicherungen in bestimmten Fällen die Kosten für den Ersatz der Schlüssel und die Neuprogrammierung der Wegfahrsperre.
       </p>
@@ -201,6 +206,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
   'sfd-lock-vw-golf-8-erklaerung': (
     <>
       <h2>Was ist SFD Lock beim Volkswagen Golf 8?</h2>
+      <Image src="/images/blog/sfd-lock.jpg" alt="Digitaler SFD Schutz im VW Golf 8 Dashboard" width={800} height={450} style={{ width: '100%', height: 'auto', borderRadius: '12px', marginBottom: '2rem' }} />
       <p>
         Haben Sie einen Volkswagen Golf 8, Caddy (2020+) oder einen neuen Audi A3? Dann haben Sie vielleicht schon von <strong>SFD (Schutz Fahrzeug Diagnose)</strong> gehört. Dies ist eine fortschrittliche Sicherheitsbarriere, die von der VAG-Gruppe eingeführt wurde, um unbefugten Zugriff auf die lebenswichtigen Steuergeräte des Autos zu verhindern.
       </p>
@@ -217,6 +223,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
   'bmw-bdc2-schluessel-nachmachen-2026': (
     <>
       <h2>BMW BDC2 Autoschlüssel nachmachen: Technische Erklärung</h2>
+      <Image src="/images/blog/bmw-bdc2.jpg" alt="BMW BDC2 Autoschlüssel Programmierung auf einem Diagnose-Tablet" width={800} height={450} style={{ width: '100%', height: 'auto', borderRadius: '12px', marginBottom: '2rem' }} />
       <p>
         BMW verwendet in seinen F- und G-Serien-Modellen (wie dem 1er, 3er und X5 ab ca. 2015) das <strong>FEM (Front Body Module)</strong> oder <strong>BDC (Body Domain Controller)</strong> Wegfahrsperrensystem. Dies sind äußerst komplexe Computersysteme, die die elektronische Startblockierung verwalten.
       </p>
@@ -233,6 +240,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
   'faraday-pouch-schutz-relay-attack': (
     <>
       <h2>Faraday Pouch: Funktioniert sie wirklich gegen Relay Attacks?</h2>
+      <Image src="/images/blog/faraday-pouch.jpg" alt="Autoschlüssel in einer Faraday-Tasche schützt vor Signalverstärkung" width={800} height={450} style={{ width: '100%', height: 'auto', borderRadius: '12px', marginBottom: '2rem' }} />
       <p>
         Eine Faraday-Pouch (oder signalblockierende Hülle) ist ein kleines Etui, das mit einem speziellen Metallgeflecht (dem Faradayschen Käfig) gefüttert ist. Sie blockiert alle elektromagnetischen Signale Ihres Keyless Entry Autoschlüssels, sodass Diebe das Signal draußen nicht abfangen können.
       </p>
@@ -248,6 +256,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
   'toyota-hybrid-schluessel-nachmachen': (
     <>
       <h2>Toyota Hybrid Smart Key ersetzen & anlernen</h2>
+      <Image src="/images/blog/toyota-hybrid.jpg" alt="Toyota Hybrid Smart Key neben dem Startknopf" width={800} height={450} style={{ width: '100%', height: 'auto', borderRadius: '12px', marginBottom: '2rem' }} />
       <p>
         Toyota Hybridfahrzeuge (wie Prius, Auris, Yaris und RAV4) gehören zu den zuverlässigsten Autos auf der Straße, aber ihre Schlüsselsysteme sind technologisch fortschrittlich. Sie verwenden aktive Transponder mit rollierenden Codes (H-Chip oder DST-AES 128-Bit-Verschlüsselung), die kontinuierlich mit dem Startknopf des Autos kommunizieren.
       </p>
@@ -261,6 +270,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
   'fallstudie-bmw-ersparnis': (
     <>
       <h2>Fallstudie: BMW X5 Autoschlüssel in Stuttgart verloren</h2>
+      <Image src="/images/blog/fallstudie-bmw.jpg" alt="Kunde erhält glücklich seinen neuen BMW Schlüssel" width={800} height={450} style={{ width: '100%', height: 'auto', borderRadius: '12px', marginBottom: '2rem' }} />
       <p>
         Letzte Woche erhielten wir einen Anruf von einem verzweifelten Kunden, der seinen BMW X5 Schlüssel auf dem Parkplatz an der Messe in Stuttgart verloren hatte. Er hatte keinen Ersatzschlüssel und das Auto war verschlossen.
       </p>
@@ -322,6 +332,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
   'autoschluessel-nachmachen-ohne-original': (
     <>
       <h2>Kann man einen Autoschlüssel nachmachen ohne Originalschlüssel?</h2>
+      <Image src="/images/blog/ohne-original.jpg" alt="Schlüsseldienst fräst einen neuen Autoschlüssel in einem Servicefahrzeug" width={800} height={450} style={{ width: '100%', height: 'auto', borderRadius: '12px', marginBottom: '2rem' }} />
       <p>
         Ja, es ist absolut möglich, einen Autoschlüssel nachmachen zu lassen, ohne dass Sie den Originalschlüssel noch haben. Wenn Sie alle Autoschlüssel verloren haben (auch bekannt als &apos;All Keys Lost&apos;), kann ein professioneller mobiler Kfz-Schlüsselspezialist einen neuen funktionierenden Schlüssel für Sie anfertigen. Dies geschieht, indem das Auto schadenfrei geöffnet wird, der einzigartige mechanische Code aus dem Schließzylinder gelesen wird und der elektronische Startcode direkt auf die Wegfahrsperre (Immobilizer) Ihres Bordcomputers angelernt wird. Sie müssen das Auto also nicht zum Händler abschleppen lassen. Dieser Artikel erklärt, wie das funktioniert, was die Kosten sind und beantwortet die am häufigsten gestellten Fragen.
       </p>
@@ -463,6 +474,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
   'haendler-vs-mobiler-schluesseldienst': (
     <>
       <h2>Händler vs. Mobiler Schlüsseldienst: Was ist günstiger?</h2>
+      <Image src="/images/blog/mobiler-schluesseldienst.jpg" alt="Mobiler Schlüsseldienst hilft Kunden vor Ort" width={800} height={450} style={{ width: '100%', height: 'auto', borderRadius: '12px', marginBottom: '2rem' }} />
       <p>
         Wenn Sie einen neuen Autoschlüssel benötigen — sei es ein Ersatzschlüssel zur Vorbeugung oder weil Sie alle Ihre Schlüssel verloren haben — stehen Sie vor einer wichtigen Wahl. Gehen Sie zum offiziellen Markenhändler oder beauftragen Sie einen mobilen Kfz-Schlüsselspezialisten? Auf den ersten Blick scheint der Händler die vertrauenswürdigste Option zu sein, aber in der Praxis erweist sich diese Wahl fast immer als die teuerste und zeitraubendste. In diesem Artikel ziehen wir einen detaillierten Vergleich in Bezug auf Kosten, Schnelligkeit, Garantie und Servicebedingungen. Wir untermauern dies mit Preisberechnungen und drei Praxis-Szenarien, damit Sie genau wissen, welche Option für Sie am günstigsten ist.
       </p>
@@ -586,7 +598,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
       </p>
     </>
   ),
-'autoschluessel-nachmachen-tipps-schnell-sicher': (
+  'autoschluessel-nachmachen-tipps-schnell-sicher': (
     <>
       <h2>Wie läuft das Autoschlüssel nachmachen ab?</h2>
       <div style={{ margin: '2rem 0', position: 'relative', height: '350px', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
@@ -874,6 +886,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
   'auto-schluesseldienst-ultimativer-leitfaden-schnelle-hilfe': (
     <>
       <h2>Kfz-Schlüsseldienst: Der ultimative Leitfaden für schnelle Hilfe vor Ort</h2>
+      <Image src="/images/blog/leitfaden-schnelle-hilfe.jpg" alt="Professioneller Autoschlüsseldienst vor seinem Servicefahrzeug" width={800} height={450} style={{ width: '100%', height: 'auto', borderRadius: '12px', marginBottom: '2rem' }} />
       <p>
         Wenn Sie jemals in einer schwierigen Situation mit Ihrem Fahrzeug waren — wie einer geschlossenen Tür mit den Schlüsseln noch darin — wissen Sie, wie entscheidend ein zuverlässiger <strong>Kfz-Schlüsseldienst</strong> ist. In diesem umfassenden Leitfaden lesen Sie alles darüber, was ein spezialisierter Schlüsseldienst für Ihr Auto tut, mit welchen Kosten Sie rechnen müssen und wie Sie verhindern, von betrügerischen Schlüsseldiensten abgezockt zu werden.
       </p>
