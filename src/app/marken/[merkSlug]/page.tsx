@@ -170,11 +170,10 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
       <Script id={`brand-breadcrumb-${brand.slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
         {/* ── HERO SECTION ── */}
-        <section style={{ 
+        <section className={hasHeroBg ? "hero-spacing-bg" : "hero-spacing"} style={{ 
           background: heroBgStyle, 
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          padding: hasHeroBg ? '5.5rem 2rem 5rem' : '4rem 2rem 3.5rem' 
         }}>
           <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: '3rem', alignItems: 'center', flexWrap: 'wrap' }}>
             <div style={{ flex: '1 1 500px' }}>

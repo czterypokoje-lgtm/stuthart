@@ -285,7 +285,7 @@
   .whyGrid { grid-template-columns: 1fr; }
   .heroStats { gap: 1.25rem; }
   .heroCtas { flex-direction: column; }
-  .hero { padding: 2.5rem 1rem; }
+  .hero { padding: 1.25rem 1rem 2rem; }
 }
 
 /* ---- TRUST BAR ---- */
