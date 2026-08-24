@@ -11,9 +11,12 @@ import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
 import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
-import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
 import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
 import { generateContextualReviews } from '@/utils/reviews';
+import { getBaseLocalBusinessSchema } from '@/utils/schema';
+import styles from './page.module.css';
+
+export const metadata: Metadata = {
   title: {
     absolute: 'Autoschlüssel nachmachen ab 149€ | FC-KEY',
   },

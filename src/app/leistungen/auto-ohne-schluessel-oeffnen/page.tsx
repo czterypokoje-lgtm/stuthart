@@ -10,6 +10,7 @@ import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
 import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
 import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
 import { generateContextualReviews } from '@/utils/reviews';
+import { getBaseLocalBusinessSchema } from '@/utils/schema';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
