@@ -207,6 +207,19 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                 <p className={styles.heroSplitLead}>
                   Haben Sie sich ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. FC-KEY kommt mit einem voll ausgestatteten Servicefahrzeug zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von <strong>30 bis 60 Minuten</strong> wieder unterwegs in {city.city}!
                 </p>
+
+                <div className={styles.heroMobileImage}>
+                  <Image 
+                    src={`/images/cities/autoschluessel-nachmachen-${city.slug}${heroImageExt}`}
+                    alt={city.customMetaTitle ? `${city.customMetaTitle} | FC-KEY Mobiler Service` : `Autoschlüssel nachmachen ${city.city} - Mobiler Schlüsseldienst vor Ort`}
+                    width={800}
+                    height={450}
+                    style={{ width: '100%', height: 'auto', borderRadius: '12px', objectFit: 'cover' }}
+                    priority
+                    quality={85}
+                  />
+                </div>
+
                 <LeadCaptureForm city={city.city} phone={SITE_CONFIG.phone} theme="light" />
               </div>
 

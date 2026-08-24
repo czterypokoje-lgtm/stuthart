@@ -154,6 +154,20 @@ export default function HomePage() {
             <p className={styles.heroLead}>
               Haben Sie sich ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. FC-KEY kommt mit einem voll ausgestatteten Servicefahrzeug zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von <strong>30 bis 60 Minuten</strong> wieder unterwegs!
             </p>
+            
+            <div className={styles.heroMobileImage}>
+              <Image
+                src="/images/hero-van-side.jpg"
+                alt="First Class Key — Mobiler Schlüsseldienst Stuttgart"
+                width={800}
+                height={500}
+                style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '16px' }}
+                priority
+                fetchPriority="high"
+                quality={85}
+              />
+            </div>
+
             <LeadCaptureForm phone={SITE_CONFIG.phone} theme="light" />
           </div>
           

@@ -28,8 +28,27 @@
 }
 
 .heroSplitImage {
-  flex: 1;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .heroSplitImage {
+    display: block;
+    flex: 1;
+    width: 100%;
+  }
+}
+
+.heroMobileImage {
+  display: block;
+  margin: 2rem 0;
   width: 100%;
+}
+
+@media (min-width: 992px) {
+  .heroMobileImage {
+    display: none;
+  }
 }
 
 .heroLabel {
