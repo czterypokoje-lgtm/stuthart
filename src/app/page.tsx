@@ -142,17 +142,17 @@ export default function HomePage() {
                   5/5 <span style={{ color: '#ff9800', fontSize: '0.8rem' }}>★★★★★</span>
                 </div>
                 <div style={{ fontSize: '0.65rem', color: 'var(--gray-500)', marginTop: '0.1rem' }}>
-                  Gebaseerd op Google reviews
+                  Basierend auf Google Rezensionen
                 </div>
               </div>
             </div>
             
             <h1 className={styles.heroTitle}>
-              Autosleutel Kwijt of Bijmaken?<br />
-              <span className={styles.heroOrange}>Wij Helpen Direct op Locatie!</span>
+              Autoschlüssel verloren oder nachmachen?<br />
+              <span className={styles.heroOrange}>Wir helfen direkt vor Ort!</span>
             </h1>
             <p className={styles.heroLead}>
-              Staat u buitengesloten of is uw autosleutel defect? Geen paniek. Autosleutel24 komt met een volledig uitgeruste servicebus naar u toe. Geen wegsleepkosten, goedkoper dan de dealer en vaak binnen <strong>30 tot 60 minuten</strong> weer op weg!
+              Haben Sie sich ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. FC-KEY kommt mit einem voll ausgestatteten Servicefahrzeug zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von <strong>30 bis 60 Minuten</strong> wieder unterwegs!
             </p>
             <LeadCaptureForm phone={SITE_CONFIG.phone} theme="light" />
           </div>
