@@ -5,6 +5,7 @@ import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import { BRANDS } from '@/config/brands';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
+import GlobalFeatureCards from '@/components/FeatureCards/GlobalFeatureCards';
 
 export const metadata: Metadata = {
   title: {
@@ -113,6 +114,9 @@ export default function AutosleutelKwijt() {
             Durchschnittlich {SITE_CONFIG.responseTime} · 24/7 · Alle Marken
           </p>
         </section>
+
+        <GlobalFeatureCards />
+
 
         {/* Hero */}
         <section style={{ background:'linear-gradient(160deg, var(--navy-900), var(--navy-800))', padding:'3rem 2rem' }}>

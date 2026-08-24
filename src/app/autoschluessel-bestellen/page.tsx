@@ -7,6 +7,7 @@ import { generateContextualReviews } from '@/utils/reviews';
 import KentekenForm from '@/components/KentekenForm/KentekenForm';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
 import styles from './page.module.css';
+import GlobalFeatureCards from '@/components/FeatureCards/GlobalFeatureCards';
 
 export const metadata: Metadata = {
   title: {
@@ -75,6 +76,9 @@ export default function KentekenBestellenPage() {
             </div>
           </div>
         </section>
+
+        <GlobalFeatureCards />
+
 
         <BrandsMarquee />
 

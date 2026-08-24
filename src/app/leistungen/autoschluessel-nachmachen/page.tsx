@@ -15,6 +15,7 @@ import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGallerySho
 import { generateContextualReviews } from '@/utils/reviews';
 import { getBaseLocalBusinessSchema } from '@/utils/schema';
 import styles from './page.module.css';
+import GlobalFeatureCards from '@/components/FeatureCards/GlobalFeatureCards';
 
 export const metadata: Metadata = {
   title: {
@@ -181,6 +182,9 @@ export default function SleutelBijmakenPage() {
             </div>
           </div>
         </section>
+
+        <GlobalFeatureCards />
+
 
         <BrandsMarquee />
 
