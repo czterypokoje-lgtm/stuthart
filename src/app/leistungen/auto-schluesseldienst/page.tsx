@@ -412,7 +412,7 @@ export default function AutoSlotenmakerPage() {
               </div>
             </div>
             <div className={styles.reviewGrid}>
-              {generateContextualReviews('autosleutel', 'service').map((review, i) => (
+              {generateContextualReviews('autoschluessel', 'service').map((review, i) => (
                 <GoogleReviewCard key={i} review={review} />
               ))}
             </div>

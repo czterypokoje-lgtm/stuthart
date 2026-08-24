@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const corePages = [
     '', '/leistungen', '/standorte', '/marken', '/preise', '/blog', '/wissensdatenbank',
     '/ueber-uns', '/galerie', '/bewertungen', '/faq',
-    '/contact', '/privacybeleid',
+    '/kontakt', '/privacybeleid',
     '/autoschluessel-verloren', '/autoschluessel-bestellen'
   ].map(p => ({
     url: `${base}${p}`,

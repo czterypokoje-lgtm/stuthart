@@ -603,7 +603,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
       <h2>Wie läuft das Autoschlüssel nachmachen ab?</h2>
       <div style={{ margin: '2rem 0', position: 'relative', height: '350px', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
         <Image 
-          src="/images/blog/autosleutel_bijmaken_specialist_utrecht.png" 
+          src="/images/blog/autoschluessel_nachmachen_specialist_utrecht.png" 
           alt="Programmieren und Fräsen eines neuen Transponderschlüssels" 
           fill 
           style={{ objectFit: 'cover' }}
@@ -796,7 +796,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
       <h2>Was sind die Kosten für das Nachmachen eines Autoschlüssels? Eine transparente Übersicht</h2>
       <div style={{ margin: '2rem 0', position: 'relative', height: '350px', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
         <Image 
-          src="/images/blog/autosleutel_bijmaken_kosten_prijslijst.png" 
+          src="/images/blog/autoschluessel_nachmachen_kosten_prijslijst.png" 
           alt="Autoschlüssel mit Preisliste auf Tablet" 
           fill 
           style={{ objectFit: 'cover' }}
@@ -841,7 +841,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
       <h2>Autoschlüssel nachmachen: Die Stärke des mobilen Services</h2>
       <div style={{ margin: '2rem 0', position: 'relative', height: '350px', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
         <Image 
-          src="/images/blog/sleutel_bijmaken_auto_mobiele_service.png" 
+          src="/images/blog/sleutel_nachmachen_auto_mobiele_service.png" 
           alt="Fräsen eines Autoschlüssels mit CNC-Maschine" 
           fill 
           style={{ objectFit: 'cover' }}
@@ -1329,7 +1329,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
 
       <div style={{ margin: '2rem 0' }}>
         <Image
-          src="/images/blog/autosleutel-kenteken-1.jpg"
+          src="/images/blog/autoschluessel-kenteken-1.jpg"
           alt="Autoschlüssel mit Fahrzeugschein auf dem Schreibtisch"
           width={800}
           height={500}
@@ -1383,7 +1383,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
 
       <div style={{ margin: '2rem 0' }}>
         <Image
-          src="/images/blog/autosleutel-kenteken-2.jpg"
+          src="/images/blog/autoschluessel-kenteken-2.jpg"
           alt="Mechaniker programmiert Autoschlüssel mit Laptop"
           width={800}
           height={500}

@@ -345,7 +345,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
             <div className={styles.serviceCardsGrid}>
               <Link href={`/leistungen/autoschluessel-nachmachen`} className={styles.serviceCardBig}>
                 <div className={styles.serviceCardImg}>
-                  <Image src="/images/service_bijmaken.png" alt={`Autoschlüssel nachmachen in ${city.city}`} fill style={{ objectFit: 'contain' }} />
+                  <Image src="/images/service_nachmachen.png" alt={`Autoschlüssel nachmachen in ${city.city}`} fill style={{ objectFit: 'contain' }} />
                 </div>
                 <h3>Autoschlüssel nachmachen in {city.city}</h3>
                 <p>Brauchen Sie einen zusätzlichen Autoschlüssel? Wir machen einen neuen Schlüssel vor Ort, oft um die Hälfte günstiger als der Händler.</p>

@@ -92,7 +92,7 @@ export default function HowItWorks({ cityName, brandName, variant = 'default' }:
       },
     ];
   } else {
-    // default / autosleutel bijmaken
+    // default / autoschluessel nachmachen
     steps = [
       {
         imgSrc: '/images/steps/step_1_contact_1786407570135.jpg',

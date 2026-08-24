@@ -212,7 +212,7 @@ export default function PrijzenPage() {
             <div className={styles.trustItem}>
               <div className={styles.trustImgWrap}>
                 <Image
-                  src="/images/seo/autosleutel_voorraad_alle_merken_stuttgart_sindelfingen.webp"
+                  src="/images/seo/autoschluessel_voorraad_alle_merken_stuttgart_sindelfingen.webp"
                   alt="Bestand an originalen Autoschlüsseln und Transpondern für diverse Automarken"
                   fill
                   sizes="(max-width: 640px) 100vw, 500px"
@@ -298,7 +298,7 @@ export default function PrijzenPage() {
               {SITE_CONFIG.phone}
             </a>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className={styles.ctaWa} id="prijzen-cta-wa">WhatsApp</a>
-            <Link href="/contact" className={styles.ctaContact} id="prijzen-cta-form">Angebotsformular</Link>
+            <Link href="/kontakt" className={styles.ctaContact} id="prijzen-cta-form">Angebotsformular</Link>
           </div>
         </div>
 

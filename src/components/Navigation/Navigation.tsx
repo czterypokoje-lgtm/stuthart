@@ -165,7 +165,7 @@ export default function Navigation() {
             </svg>
             <span>{SITE_CONFIG.phone}</span>
           </a>
-          <Link href="/contact" className={styles.ctaBtn} id="nav-offerte-cta">
+          <Link href="/kontakt" className={styles.ctaBtn} id="nav-angebot-cta">
             Angebot anfordern
           </Link>
         </div>
@@ -224,7 +224,7 @@ export default function Navigation() {
             <Link href="/preise" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Preise</Link>
             <Link href="/blog" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Blog &amp; Ratgeber</Link>
             <Link href="/ueber-uns" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Über Uns</Link>
-            <Link href="/contact" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Kontakt</Link>
+            <Link href="/kontakt" className={styles.mobileLink} onClick={() => setMobileOpen(false)}>Kontakt</Link>
           </div>
         </>
       )}

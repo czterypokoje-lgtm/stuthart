@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_CONFIG.domain}/autoschluessel-bestellen` },
 };
 
-export default function KentekenBestellenPage() {
+export default function KennzeichenBestellenPage() {
   const faqItems = [
     { q: 'Wie schnell erhalte ich einen Preis, wenn ich mein Kennzeichen durchgebe?', a: 'Während unserer Öffnungszeiten antworten wir per WhatsApp oder Telefon fast sofort (oft schon innerhalb von 5 bis 10 Minuten). So wissen Sie direkt, woran Sie sind.' },
     { q: 'Machen Sie Schlüssel für alle Automarken?', a: 'Ja! Da wir nach dem Kennzeichen suchen, können wir für fast jede Marke einen Schlüssel liefern und anlernen. Ob Volkswagen, BMW, Ford, Renault oder sogar amerikanische Marken wie Jeep und Dodge. Auch für moderne Keyless Go (Smart Keys) sind Sie bei uns an der richtigen Adresse.' },
@@ -45,8 +45,8 @@ export default function KentekenBestellenPage() {
 
   return (
     <>
-      <Script id="kenteken-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <Script id="kenteken-bc-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <Script id="kennzeichen-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <Script id="kennzeichen-bc-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
         {/* Hero */}
         <section className={styles.hero}>
@@ -64,7 +64,7 @@ export default function KentekenBestellenPage() {
                 Anrufen: {SITE_CONFIG.phone}
               </a>
               <a href={customWhatsAppUrl} target="_blank" rel="noopener noreferrer" className={styles.btnWa} id="kb-hero-wa">WhatsApp Kennzeichen</a>
-              <Link href="/contact" className={styles.btnOutline} id="kb-hero-form">Direktangebot</Link>
+              <Link href="/kontakt" className={styles.btnOutline} id="kb-hero-form">Direktangebot</Link>
             </div>
           </div>
         </section>
@@ -192,7 +192,7 @@ export default function KentekenBestellenPage() {
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
                     Anrufen: {SITE_CONFIG.phone}
                   </a>
-                  <a href="#offerte-form" className={styles.sideWa} id="kb-side-wa">Direkt WhatsApp</a>
+                  <a href="#angebot-form" className={styles.sideWa} id="kb-side-wa">Direkt WhatsApp</a>
                   <div className={styles.sideList}>
                     {['Keine Abschleppkosten', 'Fester Preis vorab', 'Keine Adressdaten nötig', '12 Monate Garantie', 'Direkte Antwort'].map(item => (
                       <div key={item} className={styles.sideListItem}>
@@ -218,7 +218,7 @@ export default function KentekenBestellenPage() {
               <p>Senden Sie uns einfach Ihr Kennzeichen per WhatsApp und wir suchen in unserer Datenbank direkt den exakten Preis für einen neuen Schlüssel heraus.</p>
               <div className={styles.ctaBtnsGrid}>
                 <a href={`tel:${SITE_CONFIG.phoneTel}`} className={styles.btnPrimary} id="kb-bottom-phone">Anrufen: {SITE_CONFIG.phone}</a>
-                <a href="#offerte-form" className={styles.btnWhatsapp} id="kb-bottom-wa">Kennzeichen per WhatsApp senden</a>
+                <a href="#angebot-form" className={styles.btnWhatsapp} id="kb-bottom-wa">Kennzeichen per WhatsApp senden</a>
               </div>
               <span className={styles.microText}>Reaktion innerhalb von 5 bis 10 Minuten (während der Öffnungszeiten)</span>
             </div>
@@ -245,7 +245,7 @@ export default function KentekenBestellenPage() {
               </div>
             </div>
             <div className={styles.reviewGrid}>
-              {generateContextualReviews('autosleutel', 'service').map((review, i) => (
+              {generateContextualReviews('autoschluessel', 'service').map((review, i) => (
                 <GoogleReviewCard key={i} review={review} />
               ))}
             </div>

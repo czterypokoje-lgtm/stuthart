@@ -73,7 +73,7 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
   const popularBrands = BRANDS.filter(b => b.priority === 'P1').slice(0, 8);
 
   const isOpening = ['auto-ohne-schluessel-oeffnen', 'schluessel-im-auto', 'tuer-zugefallen', 'kofferraum-oeffnen', 'schluessel-im-schloss-abgebrochen', 'notoeffnung-auto', 'auto-ohne-schluessel-oeffnen'].includes(slug);
-  const isKey = ['sleutel-bijmaken', 'autoschluessel-verloren', 'alle-schluessel-verloren-auto', 'ersatz-autoschluessel', 'transponder-programmieren', 'smart-key-programmieren', 'autoschluessel-nachmachen'].includes(slug);
+  const isKey = ['sleutel-nachmachen', 'autoschluessel-verloren', 'alle-schluessel-verloren-auto', 'ersatz-autoschluessel', 'transponder-programmieren', 'smart-key-programmieren', 'autoschluessel-nachmachen'].includes(slug);
 
   let howItWorksVariant: 'default' | 'akl' | 'ignition' | 'lockout' = 'default';
   if (['autoschluessel-verloren', 'alle-schluessel-verloren-auto'].includes(slug)) {

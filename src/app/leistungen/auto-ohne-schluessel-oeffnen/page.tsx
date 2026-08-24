@@ -382,7 +382,7 @@ export default function AutoOpenenZonderSleutelPage() {
                   <p style={{ color: '#15803d', fontSize: '0.88rem' }}>
                     Nach dem Öffnen können wir direkt vor Ort einen neuen Ersatzschlüssel programmieren. Nie wieder ausgesperrt.
                   </p>
-                  <Link href="/leistungen/autoschluessel-nachmachen" className={styles.btnOutline} id="aozs-side-bijmaken" style={{ marginTop: '0.75rem', display: 'inline-block' }}>
+                  <Link href="/leistungen/autoschluessel-nachmachen" className={styles.btnOutline} id="aozs-side-nachmachen" style={{ marginTop: '0.75rem', display: 'inline-block' }}>
                     Ersatzschlüssel anfertigen →
                   </Link>
                 </div>

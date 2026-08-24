@@ -77,7 +77,7 @@ const simplifiedServices = [
     title: 'Autoschlüssel Reparatur',
     desc: 'Ist Ihr Schlüssel abgebrochen, das Gehäuse defekt oder die Batterie leer? Wir reparieren es schnell und günstig.',
     href: '/leistungen/autoschluessel-reparieren',
-    src: '/images/seo/autosleutel_reparatie_stuttgart_sindelfingen_mobiel.webp',
+    src: '/images/seo/autoschluessel_reparatie_stuttgart_sindelfingen_mobiel.webp',
     alt: 'Autoschlüssel Reparatur',
     buttonText: 'Reparatur anfragen'
   },
@@ -414,7 +414,7 @@ export default function HomePage() {
           </div>
           <h3 className="text-center" style={{ marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 600, color: 'var(--gray-600)' }}>Erfahrungen von Kunden</h3>
           <div className={styles.reviewGrid}>
-            {generateContextualReviews('autosleutel', 'general').map((r, i) => (
+            {generateContextualReviews('autoschluessel', 'general').map((r, i) => (
               <GoogleReviewCard key={i} review={r} />
             ))}
           </div>

@@ -103,7 +103,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
     if (hasGermanSEO) {
       matchedFiles = matchedFiles.filter(f => {
         const lower = f.toLowerCase();
-        return !lower.includes('-utrecht-') && !lower.includes('autosleutel-bijmaken-');
+        return !lower.includes('-utrecht-') && !lower.includes('autoschluessel-nachmachen-');
       });
     }
 
@@ -216,7 +216,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
               {/* Card 1: Nachmachen */}
               <Link href="/leistungen/autoschluessel-nachmachen" style={{ display: 'flex', flexDirection: 'column', background: '#fff', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '2.5rem 2rem 2rem', textDecoration: 'none', transition: 'all 0.2s ease', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }} id={`brand-leistung-nachmachen-${brand.slug}`}>
                 <div style={{ width: '100%', height: '160px', position: 'relative', marginBottom: '1.75rem' }}>
-                  <Image src="/images/service_bijmaken.png" alt={`${brand.name} Autoschlüssel nachmachen`} fill style={{ objectFit: 'contain' }} />
+                  <Image src="/images/service_nachmachen.png" alt={`${brand.name} Autoschlüssel nachmachen`} fill style={{ objectFit: 'contain' }} />
                 </div>
                 <h3 style={{ color: '#0f172a', fontSize: '1.2rem', fontWeight: 800, marginBottom: '0.75rem', textAlign: 'center' }}>
                   {brand.name} Schlüssel Nachmachen
@@ -429,8 +429,8 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
         <section style={{ padding: '3.5rem 0 1.5rem', background: '#ffffff' }}>
           <div className="container" style={{ maxWidth: 1000 }}>
             {(() => {
-              const key1Path = path.join(process.cwd(), 'public', 'images', 'keys', `${brand.slug}-autosleutel-bijmaken-1.webp`);
-              const key2Path = path.join(process.cwd(), 'public', 'images', 'keys', `${brand.slug}-autosleutel-bijmaken-2.webp`);
+              const key1Path = path.join(process.cwd(), 'public', 'images', 'keys', `${brand.slug}-autoschluessel-nachmachen-1.webp`);
+              const key2Path = path.join(process.cwd(), 'public', 'images', 'keys', `${brand.slug}-autoschluessel-nachmachen-2.webp`);
               
               const hasKey1 = fs.existsSync(key1Path);
               const hasKey2 = fs.existsSync(key2Path);
@@ -454,13 +454,13 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
                     {hasKey1 && (
                       <div style={{ flex: 1, background: '#f8fafc', borderRadius: '12px', padding: '1rem', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={`/images/keys/${brand.slug}-autosleutel-bijmaken-1.webp`} alt={`${brand.name} Schlüssel nachmachen Beispiel 1`} style={{ width: '100%', height: 'auto', maxHeight: '200px', objectFit: 'contain', mixBlendMode: 'multiply' }} loading="lazy" />
+                        <img src={`/images/keys/${brand.slug}-autoschluessel-nachmachen-1.webp`} alt={`${brand.name} Schlüssel nachmachen Beispiel 1`} style={{ width: '100%', height: 'auto', maxHeight: '200px', objectFit: 'contain', mixBlendMode: 'multiply' }} loading="lazy" />
                       </div>
                     )}
                     {hasKey2 && (
                       <div style={{ flex: 1, background: '#f8fafc', borderRadius: '12px', padding: '1rem', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={`/images/keys/${brand.slug}-autosleutel-bijmaken-2.webp`} alt={`${brand.name} Schlüssel nachmachen Beispiel 2`} style={{ width: '100%', height: 'auto', maxHeight: '200px', objectFit: 'contain', mixBlendMode: 'multiply' }} loading="lazy" />
+                        <img src={`/images/keys/${brand.slug}-autoschluessel-nachmachen-2.webp`} alt={`${brand.name} Schlüssel nachmachen Beispiel 2`} style={{ width: '100%', height: 'auto', maxHeight: '200px', objectFit: 'contain', mixBlendMode: 'multiply' }} loading="lazy" />
                       </div>
                     )}
                   </div>

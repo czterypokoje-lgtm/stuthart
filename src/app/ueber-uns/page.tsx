@@ -231,7 +231,7 @@ export default function OverOnsPage() {
         </div>
 
         <div style={{ textAlign: 'center', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/contact" className="btn btn-primary btn-lg" id="over-ons-contact-cta">
+          <Link href="/kontakt" className="btn btn-primary btn-lg" id="over-ons-contact-cta">
             📞 Kontakt aufnehmen
           </Link>
           <a

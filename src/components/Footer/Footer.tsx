@@ -167,7 +167,7 @@ export default function Footer() {
               </button>
               <Link href="/faq">FAQ</Link>
               <Link href="/blog">Blog</Link>
-              <Link href="/contact">Kontakt</Link>
+              <Link href="/kontakt">Kontakt</Link>
             </div>
           </div>
         </div>

@@ -155,9 +155,9 @@ export default function SleutelBijmakenPage() {
 
   return (
     <>
-      <Script id="sleutel-bijmaken-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <Script id="sleutel-bijmaken-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="sleutel-bijmaken-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <Script id="sleutel-nachmachen-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <Script id="sleutel-nachmachen-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <Script id="sleutel-nachmachen-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
         {/* Hero */}
         <section className={styles.hero}>
@@ -494,7 +494,7 @@ export default function SleutelBijmakenPage() {
               </div>
             </div>
             <div className={styles.reviewGrid}>
-              {generateContextualReviews('autosleutel', 'service').map((review, i) => (
+              {generateContextualReviews('autoschluessel', 'service').map((review, i) => (
                 <GoogleReviewCard key={i} review={review} />
               ))}
             </div>
