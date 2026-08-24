@@ -60,7 +60,7 @@ export default function BrandsLogoGrid({ title, subtitle, hideSeoHeader = false 
                 <path d="M12 8v4"></path>
                 <path d="M12 16h.01"></path>
               </svg>
-              Autosleutel24 verbindet Kunden mit geprüften Experten
+              First Class Key verbindet Kunden mit geprüften Experten
             </div>
           )}
 
