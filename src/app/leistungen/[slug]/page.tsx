@@ -11,6 +11,7 @@ import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsLogoGrid from '@/components/BrandsLogoGrid/BrandsLogoGrid';
 import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
+import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
 import { generateContextualReviews } from '@/utils/reviews';
 import { CITIES } from '@/config/cities';
 import { BRANDS } from '@/config/brands';
@@ -322,33 +323,14 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
                       style={{ width: '100%', borderRadius: '12px', margin: '1.25rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', objectFit: 'cover', aspectRatio: '16/9' }}
                     />
                   ) : slug === 'autoschluessel-reparieren' ? (
-                    <div style={{
-                      display: 'grid',
-                      gridTemplateColumns: 'repeat(2, 1fr)',
-                      gap: '1rem',
-                      margin: '1.25rem 0'
-                    }}>
-                      <img 
-                        src="/images/seo/autoschluessel-reparieren-werkstatt-stuttgart.webp" 
-                        alt="SMD-Löten von Mikroschaltern und Tasten unter dem Mikroskop" 
-                        style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
-                      />
-                      <img 
-                        src="/images/seo/autoschluessel-reparieren-inventar-sindelfingen.webp" 
-                        alt="Vorrat an OEM-Gehäusen und Ersatzschlüssel-Teilen" 
-                        style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
-                      />
-                      <img 
-                        src="/images/seo/autoschluessel-reparieren-ersatzteile-boeblingen.webp" 
-                        alt="Ersatzschlüssel-Platinen, Transponder und Spulen" 
-                        style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
-                      />
-                      <img 
-                        src="/images/seo/autoschluessel-reparieren-service-ludwigsburg.webp" 
-                        alt="Monteur repariert Schlüssel vor Ort" 
-                        style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
-                      />
-                    </div>
+                    <RealGalleryShowcase 
+                      photos={[
+                        { src: "/images/seo/autoschluessel-reparieren-werkstatt-stuttgart.webp", alt: "SMD-Löten von Mikroschaltern und Tasten unter dem Mikroskop", label: "Schlüssel Reparatur" },
+                        { src: "/images/seo/autoschluessel-reparieren-inventar-sindelfingen.webp", alt: "Vorrat an OEM-Gehäusen und Ersatzschlüssel-Teilen", label: "Gehäuseersatz" },
+                        { src: "/images/seo/autoschluessel-reparieren-ersatzteile-boeblingen.webp", alt: "Ersatzschlüssel-Platinen, Transponder und Spulen", label: "Transponder & Spulen" },
+                        { src: "/images/seo/autoschluessel-reparieren-service-ludwigsburg.webp", alt: "Monteur repariert Schlüssel vor Ort", label: "Mobiler Service" }
+                      ]}
+                    />
                   ) : slug === 'alle-schluessel-verloren-auto' ? (
                     <img 
                       src="/images/seo/alle-schluessel-verloren-auto-hero.jpg" 
@@ -356,39 +338,19 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
                       style={{ width: '100%', height: 'auto', borderRadius: '12px', margin: '1.25rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}
                     />
                   ) : slug === 'zuendschloss-auto-wechseln' ? (
-                    <div style={{
-                      display: 'grid',
-                      gridTemplateColumns: 'repeat(2, 1fr)',
-                      gap: '1rem',
-                      margin: '1.25rem 0'
-                    }}>
-                      <img 
-                        src="/images/seo/zuendschloss-auto-wechseln-werkstatt-stuttgart.webp" 
-                        alt="Demontage und Reparatur eines defekten mechanischen Zylinders" 
-                        style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
-                      />
-                      <img 
-                        src="/images/seo/zuendschloss-auto-wechseln-mobil-sindelfingen.webp" 
-                        alt="Blockiertes Zündschloss vor Ort repariert" 
-                        style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
-                      />
-                    </div>
+                    <RealGalleryShowcase 
+                      photos={[
+                        { src: "/images/seo/zuendschloss-auto-wechseln-werkstatt-stuttgart.webp", alt: "Demontage und Reparatur eines defekten mechanischen Zylinders", label: "Zylinder Reparatur" },
+                        { src: "/images/seo/zuendschloss-auto-wechseln-mobil-sindelfingen.webp", alt: "Blockiertes Zündschloss vor Ort repariert", label: "Zündschloss Service" }
+                      ]}
+                    />
                   ) : serviceImages.length > 0 ? (
-                    <div style={{
-                      display: 'grid',
-                      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-                      gap: '1rem',
-                      margin: '1.25rem 0'
-                    }}>
-                      {serviceImages.map((src, i) => (
-                        <img 
-                          key={i}
-                          src={src} 
-                          alt={`${service.title} durch FC-KEY mobilen Service - Impression`} 
-                          style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
-                        />
-                      ))}
-                    </div>
+                    <RealGalleryShowcase 
+                      photos={serviceImages.map((src) => ({
+                        src: src,
+                        alt: `${service.title} durch FC-KEY mobilen Service - Impression`
+                      }))}
+                    />
                   ) : (
                     <img 
                       src="/fc-key-schluesselnachmachen-stuttgart.webp" 

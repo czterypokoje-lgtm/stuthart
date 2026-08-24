@@ -7,6 +7,7 @@ import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
+import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
 import { generateContextualReviews } from '@/utils/reviews';
 import styles from './page.module.css';
 
@@ -258,33 +259,30 @@ export default function AutoSlotenmakerPage() {
                   <p>
                     Wir sind stolz auf unsere Handwerkskunst. Nachfolgend sehen Sie einen Auszug aus unseren jüngsten Arbeiten, von der schadensfreien Türöffnung bis hin zu komplexen Transponderreparaturen:
                   </p>
-                  <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(2, 1fr)',
-                    gap: '1rem',
-                    margin: '1.5rem 0'
-                  }}>
-                    <img 
-                      src="/images/seo/auto-schluesseldienst-werkplaats-stuttgart.webp" 
-                      alt="Professionelles Löten von Mikroschaltern und Einlernen von Transponderchips" 
-                      style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
-                    />
-                    <img 
-                      src="/images/seo/auto-schluesseldienst-bmw-openen-sindelfingen.webp" 
-                      alt="Schadensfreies Öffnen einer Autotür bei Aussperrung" 
-                      style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
-                    />
-                    <img 
-                      src="/images/seo/auto-schluesseldienst-volkswagen-golf-boeblingen.webp" 
-                      alt="Programmieren und Fräsen eines Ersatz-Klappschlüssels" 
-                      style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
-                    />
-                    <img 
-                      src="/images/seo/auto-schluesseldienst-audi-inleren-esslingen.webp" 
-                      alt="Smart Key einlernen und Transponder programmieren" 
-                      style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }} 
-                    />
-                  </div>
+                  <RealGalleryShowcase 
+                    photos={[
+                      {
+                        src: "/images/seo/auto-schluesseldienst-werkplaats-stuttgart.webp",
+                        alt: "Professionelles Löten von Mikroschaltern und Einlernen von Transponderchips",
+                        label: "Mikroschalter Reparatur"
+                      },
+                      {
+                        src: "/images/seo/auto-schluesseldienst-bmw-openen-sindelfingen.webp",
+                        alt: "Schadensfreies Öffnen einer Autotür bei Aussperrung",
+                        label: "BMW Türöffnung"
+                      },
+                      {
+                        src: "/images/seo/auto-schluesseldienst-volkswagen-golf-boeblingen.webp",
+                        alt: "Programmieren und Fräsen eines Ersatz-Klappschlüssels",
+                        label: "VW Golf Schlüssel"
+                      },
+                      {
+                        src: "/images/seo/auto-schluesseldienst-audi-inleren-esslingen.webp",
+                        alt: "Smart Key einlernen und Transponder programmieren",
+                        label: "Audi Smart Key"
+                      }
+                    ]} 
+                  />
                 </div>
 
 
