@@ -126,71 +126,61 @@ export default function OverOnsPage() {
         </div>
 
         {/* Workshop Image Section */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '2.5rem', marginBottom: '3.5rem', alignItems: 'start' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))', gap: '4rem', marginBottom: '6rem', alignItems: 'center' }}>
           <div>
-            <div style={{ marginBottom: '1.2rem' }}>
-              <span style={{ fontSize: '0.85rem', color: '#94a3b8', fontWeight: 600, display: 'block', marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '1.5px' }}>Unsere Werkstatt &amp; Mobiler Service</span>
-              <h2 style={{ fontSize: '1.45rem', fontWeight: 600, color: '#1e293b', lineHeight: 1.4, display: 'flex', alignItems: 'flex-start', margin: 0, letterSpacing: '-0.01em' }}>
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b45309" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '14px', flexShrink: 0, marginTop: '2px' }}>
-                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                <span>Zentrale in Stuttgart, Aktiv im ganzen Großraum</span>
-              </h2>
-            </div>
-            <p style={{ color: 'var(--gray-700)', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '0.75rem' }}>Unsere physische Werkstatt und das Lager befinden sich in Stuttgart. Von diesem zentralen Standort aus steuern wir unsere mobilen Servicebusse.</p>
-            <p style={{ color: 'var(--gray-700)', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>Wir fahren täglich zu Kunden in der gesamten Region Stuttgart und Süddeutschland. So helfen wir schnell und vor Ort unter anderem in Sindelfingen, Esslingen, Ludwigsburg, Böblingen und Leonberg.</p>
+            <h2 style={{ fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 800, color: '#000', marginBottom: '1.5rem', lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+              Zentrale in Stuttgart,<br/>Aktiv im ganzen Großraum
+            </h2>
+            <p style={{ color: '#111', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '1rem' }}>
+              Unsere physische Werkstatt und das Lager befinden sich in Stuttgart. Von diesem zentralen Standort aus steuern wir unsere mobilen Servicebusse.
+            </p>
+            <p style={{ color: '#111', fontSize: '1.1rem', lineHeight: 1.7, margin: 0 }}>
+              Wir fahren täglich zu Kunden in der gesamten Region Stuttgart und Süddeutschland. So helfen wir schnell und vor Ort unter anderem in Sindelfingen, Esslingen, Ludwigsburg, Böblingen und Leonberg.
+            </p>
           </div>
           <div>
             <img 
               src="/images/seo/auto_schluessel_stuttgart_24stunden_werkstatt.webp" 
               alt="Professionelle Autoschlüssel Werkstatt und Werkzeuge" 
-              style={{ width: '100%', maxWidth: '340px', height: '210px', objectFit: 'cover', borderRadius: '4px', border: '1px solid #cbd5e1', display: 'block' }} 
+              style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '12px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }} 
             />
           </div>
         </div>
 
-        {/* Mobile Work & Inventory Section */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '2.5rem', marginBottom: '3.5rem', alignItems: 'start' }}>
-          <div>
-            <h2 style={{ fontSize: '1.45rem', fontWeight: 600, color: '#1e293b', marginBottom: '1rem', lineHeight: 1.4, display: 'flex', alignItems: 'center', letterSpacing: '-0.01em' }}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b45309" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '14px', flexShrink: 0 }}>
-                <path d="M10 17h4V5H2v12h3" />
-                <path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h2" />
-                <path d="M14 9h5.5" />
-                <circle cx="7.5" cy="17.5" r="2.5" />
-                <circle cx="17.5" cy="17.5" r="2.5" />
-              </svg>
-              Voll Ausgestattete Servicebusse
-            </h2>
-            <p style={{ color: 'var(--gray-700)', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>Probleme mit Autoschlüsseln passieren oft zu ungünstigen Zeiten. Deshalb haben wir unsere Busse als rollende Werkstätten eingerichtet. Wir fräsen Schlüssel direkt vor Ort mit CNC-gesteuerten Maschinen und haben Lötstationen für Präzisionsarbeiten dabei. Sie müssen Ihr Auto also nie teuer zu einem Händler abschleppen lassen.</p>
-          </div>
+        {/* Mobile Work & Inventory Section - Image Left */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))', gap: '4rem', marginBottom: '6rem', alignItems: 'center' }}>
           <div>
             <img 
               src="/images/ueber-uns-servicebusse.jpg" 
               alt="Arbeiten vor Ort durch Monteur" 
-              style={{ width: '100%', maxWidth: '340px', height: '210px', objectFit: 'cover', objectPosition: 'top', borderRadius: '4px', border: '1px solid #cbd5e1', display: 'block' }} 
+              style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'top', borderRadius: '12px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }} 
             />
+          </div>
+          <div>
+            <h2 style={{ fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 800, color: '#000', marginBottom: '1.5rem', lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+              Voll Ausgestattete Servicebusse
+            </h2>
+            <p style={{ color: '#111', fontSize: '1.1rem', lineHeight: 1.7, margin: 0 }}>
+              Probleme mit Autoschlüsseln passieren oft zu ungünstigen Zeiten. Deshalb hebben wir unsere Busse als rollende Werkstätten eingerichtet. Wir fräsen Schlüssel direkt vor Ort mit CNC-gesteuerten Maschinen und haben Lötstationen für Präzisionsarbeiten dabei. Sie müssen Ihr Auto also nie teuer zu einem Händler abschleppen lassen.
+            </p>
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '2.5rem', marginBottom: '3.5rem', alignItems: 'start' }}>
+        {/* Inventory Section - Text Left */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))', gap: '4rem', marginBottom: '6rem', alignItems: 'center' }}>
           <div>
-            <h2 style={{ fontSize: '1.45rem', fontWeight: 600, color: '#1e293b', marginBottom: '1rem', lineHeight: 1.4, display: 'flex', alignItems: 'center', letterSpacing: '-0.01em' }}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b45309" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '14px', flexShrink: 0 }}>
-                <circle cx="7.5" cy="15.5" r="5.5" />
-                <path d="m21 2-9.6 9.6" />
-                <path d="m15.5 7.5 3 3L22 7l-3-3" />
-              </svg>
+            <h2 style={{ fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 800, color: '#000', marginBottom: '1.5rem', lineHeight: 1.1, letterSpacing: '-0.02em' }}>
               Großer Bestand an Originalschlüsseln
             </h2>
-            <p style={{ color: 'var(--gray-700)', fontSize: '0.92rem', lineHeight: 1.6, margin: 0 }}>Um Ihnen so schnell wie möglich wieder auf die Straße zu helfen, haben wir einen riesigen Bestand an originalen und Aftermarket-Autoschlüsseln. Von modernen Keyless-Go-Smart-Keys bis hin zu traditionellen Schlüsseln mit Transponder; für 99% aller Automarken haben wir sofort die richtige Lösung auf Lager.</p>
+            <p style={{ color: '#111', fontSize: '1.1rem', lineHeight: 1.7, margin: 0 }}>
+              Um Ihnen so schnell wie möglich wieder auf die Straße zu helfen, haben wir einen riesigen Bestand an originalen und Aftermarket-Autoschlüsseln. Von modernen Keyless-Go-Smart-Keys bis hin zu traditionellen Schlüsseln mit Transponder; für 99% aller Automarken haben wir sofort die richtige Lösung auf Lager.
+            </p>
           </div>
           <div>
             <img 
               src="/images/ueber-uns-maschine.jpg" 
               alt="Professionelle FUTURA PRO CNC Fräsmaschine" 
-              style={{ width: '100%', maxWidth: '340px', height: '210px', objectFit: 'cover', borderRadius: '4px', border: '1px solid #cbd5e1', display: 'block' }} 
+              style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '12px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }} 
             />
           </div>
         </div>
