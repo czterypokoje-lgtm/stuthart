@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Script from 'next/script';
+import Image from 'next/image';
 import { getRelatedBlogPosts } from '@/config/services';
 import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
+import FeatureCards from '@/components/FeatureCards/FeatureCards';
 import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
 import { generateContextualReviews } from '@/utils/reviews';
 import styles from './page.module.css';
@@ -166,16 +168,46 @@ export default function AutoSlotenmakerPage() {
 
         <BrandsMarquee />
 
-        {/* Trust Bar */}
-        <div className={styles.trustBar}>
-          <div className={styles.trustBarInner}>
-            {trustItems.map((item, idx) => (
-              <div key={idx} className={styles.trustItem}>
-                <span className={styles.trustIcon}>✓</span>
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
+        {/* ===== FEATURE CARDS ===== */}
+        <div style={{ backgroundColor: '#f3f4f6', padding: '1px 0' }}>
+          <FeatureCards 
+            title="Schadensfrei Auto öffnen."
+            subtitle={<>Ausgesperrt? <span style={{ color: 'var(--orange-500)' }}>FC-KEY</span> öffnet Ihr Auto komplett schadensfrei.</>}
+            features={[
+              {
+                id: 'feature-1',
+                icon: <Image src="/images/icon_map.jpg" alt="In 30-60 Min. vor Ort" width={90} height={90} style={{ borderRadius: '12px' }} />,
+                title: 'In 30-60 Min. vor Ort',
+                description: 'Ausgesperrt? Wir sind sofort zu Ihnen unterwegs. Unser Monteur ist immer in der Nähe.',
+                linkText: 'Standorte ansehen',
+                linkUrl: '/standorte'
+              },
+              {
+                id: 'feature-2',
+                icon: <Image src="/images/icon_van.jpg" alt="Ohne Abschleppwagen" width={90} height={90} style={{ borderRadius: '12px' }} />,
+                title: 'Ohne Abschleppwagen',
+                description: 'Wir öffnen Ihre Türen direkt an Ihrem Standort. Ihr Auto muss nicht abgeschleppt werden.',
+                linkText: 'Mehr über unseren mobilen Service',
+                linkUrl: '/leistungen'
+              },
+              {
+                id: 'feature-3',
+                icon: <Image src="/images/icon_price.jpg" alt="Festpreis vorab" width={90} height={90} style={{ borderRadius: '12px' }} />,
+                title: 'Festpreis vorab',
+                description: 'Keine bösen Überraschungen. Sie wissen sofort, was Sie bezahlen, bevor wir beginnen.',
+                linkText: 'Unsere Preise ansehen',
+                linkUrl: '/preise'
+              },
+              {
+                id: 'feature-4',
+                icon: <Image src="/images/icon_car_check.jpg" alt="100% Schadensfrei Garantie" width={90} height={90} style={{ borderRadius: '12px' }} />,
+                title: '100% Schadensfrei Garantie',
+                description: 'Wir garantieren, dass wir Ihr Auto öffnen, ohne die Scheibe einzuschlagen oder das Schloss zu beschädigen.',
+                linkText: 'Mehr über Garantie',
+                linkUrl: '/leistungen'
+              },
+            ]}
+          />
         </div>
 
         {/* 3 steps HowTo */}

@@ -202,17 +202,7 @@ export default function AutoOpenenZonderSleutelPage() {
           </div>
         </section>
 
-        {/* ── TRUST BAR ────────────────────────────────────────────── */}
-        <div className={styles.trustBar}>
-          <div className={styles.trustBarInner}>
-            {trustItems.map((item, idx) => (
-              <div key={idx} className={styles.trustItem}>
-                <span className={styles.trustIcon}>✓</span>
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+
 
         {/* ===== FEATURE CARDS ===== */}
         <div style={{ backgroundColor: '#f3f4f6', padding: '1px 0' }}>
