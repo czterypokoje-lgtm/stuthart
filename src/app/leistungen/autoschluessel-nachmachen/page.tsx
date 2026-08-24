@@ -273,24 +273,24 @@ export default function SleutelBijmakenPage() {
                   <RealGalleryShowcase 
                     photos={[
                       {
-                        src: "/images/gallery/audi-a4-goeppingen-schluessel.jpg",
-                        alt: "Autoschlüssel nachmachen Audi A4 in Göppingen",
-                        label: "Audi A4 Göppingen"
+                        src: "/images/gallery/bmw-3er-goeppingen-schluessel.jpg",
+                        alt: "Autoschlüssel nachmachen BMW 3er in Göppingen",
+                        label: "BMW 3er Göppingen"
                       },
                       {
-                        src: "/images/gallery/bmw-3er-mannheim-schluessel.jpg",
-                        alt: "Ersatzschlüssel programmieren BMW 3er in Mannheim",
-                        label: "BMW 3er Mannheim"
+                        src: "/images/gallery/ford-focus-mannheim-schluessel.jpg",
+                        alt: "Ersatzschlüssel programmieren Ford Focus in Mannheim",
+                        label: "Ford Focus Mannheim"
                       },
                       {
-                        src: "/images/gallery/ford-focus-reutlingen-schluessel.jpg",
-                        alt: "Autoschlüssel nachmachen Ford Focus in Reutlingen",
-                        label: "Ford Focus Reutlingen"
+                        src: "/images/gallery/porsche-macan-reutlingen-schluessel.jpg",
+                        alt: "Autoschlüssel nachmachen Porsche Macan in Reutlingen",
+                        label: "Porsche Macan Reutlingen"
                       },
                       {
-                        src: "/images/gallery/bmw-f30-heidelberg-schluessel.jpg",
-                        alt: "Smart Key einlernen BMW 318d in Heidelberg",
-                        label: "BMW 318d Heidelberg"
+                        src: "/images/gallery/audi-a4-heidelberg-schluessel.jpg",
+                        alt: "Smart Key einlernen Audi A4 in Heidelberg",
+                        label: "Audi A4 Heidelberg"
                       }
                     ]} 
                   />
