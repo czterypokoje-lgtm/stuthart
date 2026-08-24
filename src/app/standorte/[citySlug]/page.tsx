@@ -179,63 +179,95 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
       <Script id={`city-breadcrumb-${citySlug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
         {/* ── HERO ─────────────────────────────────────────────────── */}
-        <section className={styles.hero}>
-          <div className={styles.heroInner}>
-            <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-              <Link href="/" style={{ color: 'var(--gray-500)' }}>Home</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <Link href="/standorte" style={{ color: 'var(--gray-500)' }}>Städte</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <span style={{ color: 'var(--navy-900)' }}>{city.city}</span>
-            </nav>
-            <div className={styles.heroLabel} style={{ color: 'var(--navy-900)' }}>DE — {city.region}</div>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: '#fff', border: '1px solid var(--gray-200)', borderRadius: '30px', padding: '0.35rem 1rem 0.35rem 0.35rem', marginBottom: '1.5rem', boxShadow: '0 2px 10px rgba(0,0,0,0.03)' }}>
-              <div style={{ display: 'flex' }}>
-                <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#ccc', border: '2px solid #fff', zIndex: 4, backgroundImage: 'url(https://randomuser.me/api/portraits/men/32.jpg)', backgroundSize: 'cover' }}></div>
-                <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#bbb', border: '2px solid #fff', zIndex: 3, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/women/44.jpg)', backgroundSize: 'cover' }}></div>
-                <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#aaa', border: '2px solid #fff', zIndex: 2, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/men/46.jpg)', backgroundSize: 'cover' }}></div>
-                <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#999', border: '2px solid #fff', zIndex: 1, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/women/68.jpg)', backgroundSize: 'cover' }}></div>
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--navy-900)', lineHeight: '1.1' }}>
-                  5/5 <span style={{ color: '#ff9800', fontSize: '0.8rem' }}>★★★★★</span>
+        {hasHeroImage ? (
+          <section className={styles.heroSplit}>
+            <div className={styles.heroSplitInner}>
+              <div className={styles.heroSplitText}>
+                <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+                  <Link href="/" style={{ color: 'var(--gray-500)' }}>Home</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <Link href="/standorte" style={{ color: 'var(--gray-500)' }}>Städte</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <span style={{ color: 'var(--navy-900)' }}>{city.city}</span>
+                </nav>
+                <div className={styles.heroLabel} style={{ color: 'var(--navy-900)' }}>DE — {city.region}</div>
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: '#fff', border: '1px solid var(--gray-200)', borderRadius: '30px', padding: '0.35rem 1rem 0.35rem 0.35rem', marginBottom: '1.5rem', boxShadow: '0 2px 10px rgba(0,0,0,0.03)' }}>
+                  <div style={{ display: 'flex' }}>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#ccc', border: '2px solid #fff', zIndex: 4, backgroundImage: 'url(https://randomuser.me/api/portraits/men/32.jpg)', backgroundSize: 'cover' }}></div>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#bbb', border: '2px solid #fff', zIndex: 3, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/women/44.jpg)', backgroundSize: 'cover' }}></div>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#aaa', border: '2px solid #fff', zIndex: 2, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/men/46.jpg)', backgroundSize: 'cover' }}></div>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#999', border: '2px solid #fff', zIndex: 1, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/women/68.jpg)', backgroundSize: 'cover' }}></div>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--navy-900)', lineHeight: '1.1' }}>
+                      5/5 <span style={{ color: '#ff9800', fontSize: '0.8rem' }}>★★★★★</span>
+                    </div>
+                    <div style={{ fontSize: '0.65rem', color: 'var(--gray-500)', marginTop: '0.1rem' }}>
+                      Basierend auf Google Rezensionen
+                    </div>
+                  </div>
                 </div>
-                <div style={{ fontSize: '0.65rem', color: 'var(--gray-500)', marginTop: '0.1rem' }}>
-                  Basierend auf Google Rezensionen
-                </div>
+                <h1>{city.customH1 || `Autoschlüssel nachmachen & Schlüsseldienst ${city.city} — 24/7 Service`}</h1>
+                <p className={styles.heroSplitLead}>
+                  Haben Sie sich ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. FC-KEY kommt mit einem voll ausgestatteten Servicefahrzeug zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von <strong>30 bis 60 Minuten</strong> wieder unterwegs in {city.city}!
+                </p>
+                <LeadCaptureForm city={city.city} phone={SITE_CONFIG.phone} theme="light" />
               </div>
-            </div>
-            <h1>{city.customH1 || `Autoschlüssel nachmachen & Schlüsseldienst ${city.city} — 24/7 Service`}</h1>
-            <p className={styles.heroLead}>
-              Haben Sie sich ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. FC-KEY kommt mit einem voll ausgestatteten Servicefahrzeug zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von <strong>30 bis 60 Minuten</strong> wieder unterwegs in {city.city}!
-            </p>
-            <div style={{ marginTop: '2rem' }}>
-              <LeadCaptureForm city={city.city} phone={SITE_CONFIG.phone} />
-            </div>
-          </div>
-        </section>
 
-        {hasHeroImage && (
-          <div style={{ maxWidth: '1200px', margin: '0 auto 3rem auto', padding: '0 1rem' }}>
-            <Image 
-              src={`/images/cities/autoschluessel-nachmachen-${city.slug}${heroImageExt}`}
-              alt={city.customMetaTitle ? `${city.customMetaTitle} | FC-KEY Mobiler Service` : `Autoschlüssel nachmachen ${city.city} - Mobiler Schlüsseldienst vor Ort`}
-              width={1200}
-              height={600}
-              style={{ width: '100%', height: 'auto', borderRadius: '16px', objectFit: 'cover', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
-              priority
-              quality={85}
-            />
-            <Script id={`hero-image-gps-${city.slug}`} type="application/ld+json" dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "ImageObject",
-                "contentUrl": `https://www.fc-key.de/images/cities/autoschluessel-nachmachen-${city.slug}${heroImageExt}`,
-                "name": `First Class Key — Mobiler Schlüsseldienst ${city.city}, Servicefahrzeug vor Ort`,
-                "description": `Das FC-KEY Servicefahrzeug (VW Caddy) mit vollständiger mobiler Werkstattausrüstung für Autoschlüssel nachmachen und Schlüsseldienst in ${city.city} und Umgebung.`,
-                "contentLocation": {
-                  "@type": "Place",
-                  "name": city.city
-                }
-              })
-            }} />
-          </div>
+              <div className={styles.heroSplitImage}>
+                <Image 
+                  src={`/images/cities/autoschluessel-nachmachen-${city.slug}${heroImageExt}`}
+                  alt={city.customMetaTitle ? `${city.customMetaTitle} | FC-KEY Mobiler Service` : `Autoschlüssel nachmachen ${city.city} - Mobiler Schlüsseldienst vor Ort`}
+                  width={800}
+                  height={450}
+                  style={{ width: '100%', height: 'auto', borderRadius: '12px', objectFit: 'cover' }}
+                  priority
+                  quality={85}
+                />
+                <Script id={`hero-image-gps-${city.slug}`} type="application/ld+json" dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "contentUrl": `https://www.fc-key.de/images/cities/autoschluessel-nachmachen-${city.slug}${heroImageExt}`,
+                    "name": `First Class Key — Mobiler Schlüsseldienst ${city.city}, Servicefahrzeug vor Ort`,
+                    "description": `Das FC-KEY Servicefahrzeug (VW Caddy) mit vollständiger mobiler Werkstattausrüstung für Autoschlüssel nachmachen und Schlüsseldienst in ${city.city} und Umgebung.`,
+                    "contentLocation": {
+                      "@type": "Place",
+                      "name": city.city
+                    }
+                  })
+                }} />
+              </div>
+            </div>
+          </section>
+        ) : (
+          <section className={styles.hero}>
+            <div className={styles.heroInner}>
+              <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+                <Link href="/" style={{ color: 'var(--gray-500)' }}>Home</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <Link href="/standorte" style={{ color: 'var(--gray-500)' }}>Städte</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <span style={{ color: 'var(--navy-900)' }}>{city.city}</span>
+              </nav>
+              <div className={styles.heroLabel} style={{ color: 'var(--navy-900)' }}>DE — {city.region}</div>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: '#fff', border: '1px solid var(--gray-200)', borderRadius: '30px', padding: '0.35rem 1rem 0.35rem 0.35rem', marginBottom: '1.5rem', boxShadow: '0 2px 10px rgba(0,0,0,0.03)' }}>
+                <div style={{ display: 'flex' }}>
+                  <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#ccc', border: '2px solid #fff', zIndex: 4, backgroundImage: 'url(https://randomuser.me/api/portraits/men/32.jpg)', backgroundSize: 'cover' }}></div>
+                  <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#bbb', border: '2px solid #fff', zIndex: 3, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/women/44.jpg)', backgroundSize: 'cover' }}></div>
+                  <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#aaa', border: '2px solid #fff', zIndex: 2, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/men/46.jpg)', backgroundSize: 'cover' }}></div>
+                  <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#999', border: '2px solid #fff', zIndex: 1, marginLeft: '-10px', backgroundImage: 'url(https://randomuser.me/api/portraits/women/68.jpg)', backgroundSize: 'cover' }}></div>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--navy-900)', lineHeight: '1.1' }}>
+                    5/5 <span style={{ color: '#ff9800', fontSize: '0.8rem' }}>★★★★★</span>
+                  </div>
+                  <div style={{ fontSize: '0.65rem', color: 'var(--gray-500)', marginTop: '0.1rem' }}>
+                    Basierend auf Google Rezensionen
+                  </div>
+                </div>
+              </div>
+              <h1>{city.customH1 || `Autoschlüssel nachmachen & Schlüsseldienst ${city.city} — 24/7 Service`}</h1>
+              <p className={styles.heroLead}>
+                Haben Sie sich ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. FC-KEY kommt mit einem voll ausgestatteten Servicefahrzeug zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von <strong>30 bis 60 Minuten</strong> wieder unterwegs in {city.city}!
+              </p>
+              <div style={{ marginTop: '2rem' }}>
+                <LeadCaptureForm city={city.city} phone={SITE_CONFIG.phone} />
+              </div>
+            </div>
+          </section>
         )}
 
         {/* ── TRUST FEATURE CARDS ───────────────────────────────────────────── */}
