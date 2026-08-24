@@ -574,7 +574,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                 <div style={{ width: '100%', aspectRatio: '5/4', backgroundColor: '#ffffff', borderRadius: '12px', border: '1px solid #f1f5f9', marginBottom: '1.5rem', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/why_choose_us_2.png" alt="Schlüssel vor Ort programmieren" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  <img src="/images/why_choose_us_einfach.jpg" alt="Schlüssel vor Ort programmieren" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 </div>
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0f172a', marginBottom: '1rem' }}>Einfach</h3>
                 <p style={{ color: '#475569', fontSize: '1.05rem', lineHeight: 1.6, margin: 0 }}>
