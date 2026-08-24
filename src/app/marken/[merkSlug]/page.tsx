@@ -114,14 +114,31 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
     // ignore
   }
 
-  let carPhotoSrc = `/images/merken/bmw_car_placeholder.jpg`;
-  const exts = ['.jpg', '.png', '.webp', '.jpeg'];
-  for (const ext of exts) {
-    if (fs.existsSync(path.join(process.cwd(), 'public', 'images', 'cars', `${brand.slug}${ext}`))) {
-      carPhotoSrc = `/images/cars/${brand.slug}${ext}`;
-      break;
-    }
-  }
+  const brandImageMap: Record<string, string> = {
+    audi: 'audi.jpg',
+    citroen: 'citroen.jpg',
+    fiat: 'fiat.avif',
+    ford: 'ford.jpg',
+    honda: 'honda.jpg',
+    hyundai: 'hyundai.jpg',
+    kia: 'kia.jpg',
+    lexus: 'lexus.jpg',
+    mazda: 'mazda.jpg',
+    mercedes: 'mercedes.avif',
+    mini: 'mini.jpg',
+    nissan: 'nissan.jpg',
+    opel: 'opel.avif',
+    peugeot: 'peugeot.jpg',
+    renault: 'renault.jpg',
+    seat: 'seat.webp',
+    skoda: 'skoda.jpg',
+    toyota: 'toyota.jpg',
+    volkswagen: 'volkswagen.jpg',
+    volvo: 'volvo.jpg'
+  };
+  
+  const imageName = brandImageMap[brand.nameSlug.toLowerCase()] || 'fallback.jpg';
+  const carPhotoSrc = `/images/brands/${imageName}`;
 
   const schema = {
     '@context': 'https://schema.org', '@type': 'Service',
@@ -391,7 +408,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
 
               <div className="timpson-image-wrap" style={{ flex: '1 1 0%', width: '100%', position: 'relative', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', backgroundColor: '#fff' }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={carPhotoSrc} alt={`${brand.name} car`} style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} />
+                <img src={carPhotoSrc} alt={`${brand.name} Autoschlüssel nachmachen - Ersatzschlüssel und Programmierung vor Ort`} style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} />
               </div>
             </div>
 

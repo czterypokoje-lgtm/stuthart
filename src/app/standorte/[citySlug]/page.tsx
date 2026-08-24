@@ -181,9 +181,9 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
       <main>
         {/* Hero */}
         {hasHeroImage ? (
-          <section className={styles.heroStacked}>
-            <div className={styles.heroStackedInner}>
-              <div className={styles.heroStackedText}>
+          <section className={styles.heroSplit}>
+            <div className={styles.heroSplitInner}>
+              <div className={styles.heroSplitText}>
                 <nav className={styles.breadcrumb} aria-label="Breadcrumb">
                   <Link href="/" style={{ color: 'var(--gray-500)' }}>Home</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <Link href="/standorte" style={{ color: 'var(--gray-500)' }}>Städte</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <span style={{ color: 'var(--navy-900)' }}>{city.city}</span>
                 </nav>
@@ -200,18 +200,18 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                       5/5 <span style={{ color: '#ff9800', fontSize: '0.8rem' }}>★★★★★</span>
                     </div>
                     <div style={{ fontSize: '0.65rem', color: 'var(--gray-500)', marginTop: '0.1rem' }}>
-                      Basierend auf Google reviews
+                      Gebaseerd op Google reviews
                     </div>
                   </div>
                 </div>
                 <h1>{city.customH1 || `Autoschlüssel nachmachen & Schlüsseldienst ${city.city} — 24/7 Service`}</h1>
-                <p className={styles.heroStackedLead}>
-                  Wir sind im Durchschnitt innerhalb von <strong>{city.travelTime}</strong> bei Ihnen in {city.city}.
-                  Alle Marken, vor Ort programmiert.
+                <p className={styles.heroSplitLead}>
+                  Staat u buitengesloten of is uw autosleutel defect? Geen paniek. Autosleutel24 komt met een volledig uitgeruste servicebus naar u toe. Geen wegsleepkosten, goedkoper dan de dealer en vaak binnen <strong>30 tot 60 minuten</strong> weer op weg in {city.city}!
                 </p>
+                <LeadCaptureForm city={city.city} phone={SITE_CONFIG.phone} theme="light" />
               </div>
 
-              <div className={styles.heroStackedImage}>
+              <div className={styles.heroSplitImage}>
                 <Image 
                   src={`/images/autoschluessel-nachmachen-${city.slug}${heroImageExt}`}
                   alt={city.customMetaTitle ? `${city.customMetaTitle} | FC-KEY Mobiler Service` : `Autoschlüssel nachmachen ${city.city} - Mobiler Schlüsseldienst vor Ort`}
@@ -222,10 +222,6 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                   unoptimized={true}
                   fetchPriority="high"
                 />
-              </div>
-
-              <div className={styles.heroStackedForm}>
-                <LeadCaptureForm city={city.city} phone={SITE_CONFIG.phone} theme="light" />
               </div>
             </div>
           </section>

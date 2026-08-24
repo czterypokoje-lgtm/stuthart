@@ -12,47 +12,46 @@
 .btnPhone:hover { background: var(--navy-900); color: #fff; text-decoration: none; }
 .btnWa { display: inline-flex; align-items: center; background: #128c7e; color: #fff; padding: 0.75rem 1.25rem; border-radius: var(--radius-md); font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: background 0.15s; min-height: 46px; }
 
-/* ---- STACKED HERO ---- */
-.heroStacked {
+/* ---- SPLIT HERO ---- */
+.heroSplit {
   background: #ffffff;
-  padding: 2rem 1rem 3rem;
+  padding: 4rem 2rem 3rem;
   border-bottom: 1px solid var(--gray-200);
 }
-.heroStackedInner {
-  max-width: 800px;
+.heroSplitInner {
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: stretch;
+  flex-direction: column-reverse;
+  gap: 3rem;
+  align-items: center;
 }
 @media (min-width: 992px) {
-  .heroStacked {
-    padding: 4rem 2rem 3rem;
+  .heroSplitInner {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
-.heroStackedText {
-  text-align: left;
+.heroSplitText {
+  flex: 1;
 }
-.heroStackedImage {
+.heroSplitImage {
+  flex: 1;
   width: 100%;
 }
-.heroStackedForm {
-  width: 100%;
-}
-.heroStacked h1 {
+.heroSplit h1 {
   color: var(--navy-900);
   font-size: clamp(1.6rem, 3.5vw, 2.6rem);
   margin-bottom: 1rem;
 }
-.heroStackedLead {
+.heroSplitLead {
   color: var(--gray-700);
   font-size: 1.05rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
   max-width: 620px;
 }
-.heroStackedLead strong {
+.heroSplitLead strong {
   color: var(--navy-900);
 }
 

@@ -126,10 +126,10 @@ export default function HomePage() {
       <LocalBusinessSchema />
       <Script id="home-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
-      {/* ===== HERO (STACKED) ===== */}
-      <section className={styles.heroStacked}>
-        <div className={styles.heroStackedInner}>
-          <div className={styles.heroStackedText}>
+      {/* ===== HERO (SPLIT) ===== */}
+      <section className={styles.heroSplit}>
+        <div className={styles.heroSplitInner}>
+          <div className={styles.heroSplitText}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: '#fff', border: '1px solid var(--gray-200)', borderRadius: '30px', padding: '0.35rem 1rem 0.35rem 0.35rem', marginBottom: '1.5rem', boxShadow: '0 2px 10px rgba(0,0,0,0.03)' }}>
               <div style={{ display: 'flex' }}>
                 <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: '#ccc', border: '2px solid #fff', zIndex: 4, backgroundImage: 'url(https://randomuser.me/api/portraits/men/32.jpg)', backgroundSize: 'cover' }}></div>
@@ -142,21 +142,22 @@ export default function HomePage() {
                   5/5 <span style={{ color: '#ff9800', fontSize: '0.8rem' }}>★★★★★</span>
                 </div>
                 <div style={{ fontSize: '0.65rem', color: 'var(--gray-500)', marginTop: '0.1rem' }}>
-                  Basierend auf Google reviews
+                  Gebaseerd op Google reviews
                 </div>
               </div>
             </div>
             
             <h1 className={styles.heroTitle}>
-              Autoschlüssel verloren oder nachmachen?<br />
-              <span className={styles.heroOrange}>Wir helfen direkt vor Ort!</span>
+              Autosleutel Kwijt of Bijmaken?<br />
+              <span className={styles.heroOrange}>Wij Helpen Direct op Locatie!</span>
             </h1>
             <p className={styles.heroLead}>
-              Sind Sie ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. First Class Key kommt mit einem komplett ausgestatteten Servicebus zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von 30 bis 60 Minuten wieder fahrbereit!
+              Staat u buitengesloten of is uw autosleutel defect? Geen paniek. Autosleutel24 komt met een volledig uitgeruste servicebus naar u toe. Geen wegsleepkosten, goedkoper dan de dealer en vaak binnen <strong>30 tot 60 minuten</strong> weer op weg!
             </p>
+            <LeadCaptureForm phone={SITE_CONFIG.phone} theme="light" />
           </div>
           
-          <div className={styles.heroStackedImage}>
+          <div className={styles.heroSplitImage}>
             <Image
               src="/images/hero-van-side.jpg"
               alt="First Class Key — Mobiler Schlüsseldienst Stuttgart"
@@ -185,10 +186,6 @@ export default function HomePage() {
                 }
               })
             }} />
-          </div>
-
-          <div className={styles.heroStackedForm}>
-            <LeadCaptureForm phone={SITE_CONFIG.phone} theme="light" />
           </div>
         </div>
       </section>
