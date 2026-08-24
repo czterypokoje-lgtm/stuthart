@@ -7,6 +7,8 @@ import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
+import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
+import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
 import { generateContextualReviews } from '@/utils/reviews';
 import styles from './page.module.css';
 
@@ -291,28 +293,30 @@ export default function AutoOpenenZonderSleutelPage() {
                 <div>
                   <h2>Unser mobiler Schlüsseldienst in Aktion — Galerie</h2>
                   <p>Wir öffnen täglich dutzende Autos schadensfrei in der Region. Hier ein Auszug aus unseren jüngsten Einsätzen:</p>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', margin: '1.5rem 0' }}>
-                    <img
-                      src="/images/seo/auto-schluesseldienst-bmw-openen-sindelfingen.webp"
-                      alt="Schadensfreies Öffnen einer Autotür bei Aussperrung"
-                      style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }}
-                    />
-                    <img
-                      src="/images/seo/auto-schluesseldienst-werkplaats-stuttgart.webp"
-                      alt="Lishi-Decoder genutzt vom zertifizierten Techniker"
-                      style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }}
-                    />
-                    <img
-                      src="/images/seo/auto-schluesseldienst-volkswagen-golf-boeblingen.webp"
-                      alt="Autotür schadensfrei nach Aussperrung geöffnet"
-                      style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }}
-                    />
-                    <img
-                      src="/images/seo/auto-schluesseldienst-audi-inleren-esslingen.webp"
-                      alt="Aussperrung gelöst und Ersatzschlüssel programmiert"
-                      style={{ width: '100%', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)', objectFit: 'cover', aspectRatio: '4/3' }}
-                    />
-                  </div>
+                  <RealGalleryShowcase 
+                    photos={[
+                      {
+                        src: "/images/seo/auto-schluesseldienst-bmw-openen-sindelfingen.webp",
+                        alt: "Schadensfreies Öffnen einer Autotür bei Aussperrung",
+                        label: "BMW Öffnung Sindelfingen"
+                      },
+                      {
+                        src: "/images/seo/auto-schluesseldienst-werkplaats-stuttgart.webp",
+                        alt: "Lishi-Decoder genutzt vom zertifizierten Techniker",
+                        label: "Mobiler Service Stuttgart"
+                      },
+                      {
+                        src: "/images/seo/auto-schluesseldienst-volkswagen-golf-boeblingen.webp",
+                        alt: "Autotür schadensfrei nach Aussperrung geöffnet",
+                        label: "VW Golf Böblingen"
+                      },
+                      {
+                        src: "/images/seo/auto-schluesseldienst-audi-inleren-esslingen.webp",
+                        alt: "Aussperrung gelöst und Ersatzschlüssel programmiert",
+                        label: "Audi Service Esslingen"
+                      }
+                    ]} 
+                  />
                 </div>
 
 

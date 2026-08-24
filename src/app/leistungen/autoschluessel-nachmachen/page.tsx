@@ -11,11 +11,9 @@ import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
 import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
+import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
+import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
 import { generateContextualReviews } from '@/utils/reviews';
-import { getBaseLocalBusinessSchema } from '@/utils/schema';
-import styles from './page.module.css';
-
-export const metadata: Metadata = {
   title: {
     absolute: 'Autoschlüssel nachmachen ab 149€ | FC-KEY',
   },
@@ -284,33 +282,30 @@ export default function SleutelBijmakenPage() {
                   <p>
                     Egal, ob Sie an unserem Stützpunkt vorbeikommen oder wir unsere mobilen Busse zu Ihnen vor Ort in Stuttgart, Sindelfingen und 50km Umkreis schicken; wir garantieren einen fachmännischen Service. Sehen Sie sich hier einen Eindruck unserer Ausrüstung und kürzlich abgeschlossener Aufträge an.
                   </p>
-                  <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(2, 1fr)',
-                    gap: '1rem',
-                    margin: '1.5rem 0'
-                  }}>
-                    <img 
-                      src="/images/gallery/audi-a4-goeppingen-schluessel.jpg" 
-                      alt="Autoschlüssel nachmachen Audi A4 in Göppingen" 
-                      style={{ width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)' }} 
-                    />
-                    <img 
-                      src="/images/gallery/bmw-3er-mannheim-schluessel.jpg" 
-                      alt="Ersatzschlüssel programmieren BMW 3er in Mannheim" 
-                      style={{ width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)' }} 
-                    />
-                    <img 
-                      src="/images/gallery/ford-focus-reutlingen-schluessel.jpg" 
-                      alt="Autoschlüssel nachmachen Ford Focus in Reutlingen" 
-                      style={{ width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)' }} 
-                    />
-                    <img 
-                      src="/images/gallery/bmw-f30-heidelberg-schluessel.jpg" 
-                      alt="Smart Key einlernen BMW 318d in Heidelberg" 
-                      style={{ width: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.06)' }} 
-                    />
-                  </div>
+                  <RealGalleryShowcase 
+                    photos={[
+                      {
+                        src: "/images/gallery/audi-a4-goeppingen-schluessel.jpg",
+                        alt: "Autoschlüssel nachmachen Audi A4 in Göppingen",
+                        label: "Audi A4 Göppingen"
+                      },
+                      {
+                        src: "/images/gallery/bmw-3er-mannheim-schluessel.jpg",
+                        alt: "Ersatzschlüssel programmieren BMW 3er in Mannheim",
+                        label: "BMW 3er Mannheim"
+                      },
+                      {
+                        src: "/images/gallery/ford-focus-reutlingen-schluessel.jpg",
+                        alt: "Autoschlüssel nachmachen Ford Focus in Reutlingen",
+                        label: "Ford Focus Reutlingen"
+                      },
+                      {
+                        src: "/images/gallery/bmw-f30-heidelberg-schluessel.jpg",
+                        alt: "Smart Key einlernen BMW 318d in Heidelberg",
+                        label: "BMW 318d Heidelberg"
+                      }
+                    ]} 
+                  />
                   <p>
                     Dank unserer fortschrittlichen Ausrüstung können wir Ersatzschlüssel für mehr als 95% der Fahrzeuge anfertigen. Wir sind 24/7 für unseren mobilen Service vor Ort erreichbar.
                   </p>

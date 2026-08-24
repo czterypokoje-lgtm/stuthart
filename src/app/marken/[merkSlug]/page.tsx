@@ -15,6 +15,7 @@ import { getFaqForBrand } from '@/config/faq';
 import { getBaseLocalBusinessSchema } from '@/utils/schema';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
+import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
 
 export async function generateStaticParams() {
   return BRANDS.map(b => ({ merkSlug: `${b.nameSlug}-autoschluessel-nachmachen` }));
@@ -287,16 +288,15 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
 
         {/* ── RECENT WORK GALLERY ── */}
         {recentWorkImages.length > 0 && (
-          <section style={{ padding: '4.5rem 0', background: '#ffffff' }}>
+          <section className="gallery-section">
             <div className="container">
-              <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-                <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--navy-800)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Aktuelle Projekte</span>
-                <h2 style={{ fontSize: '1.9rem', fontWeight: 800, color: '#0f172a', marginTop: '0.35rem' }}>
-                  Aktuelle Arbeiten: {brand.name} Autoschlüssel
-                </h2>
-              </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '1.5rem' }}>
-                {recentWorkImages.map((img, idx) => {
+              <p className="section-eyebrow">AKTUALISIERT</p>
+              <h2 className="section-title">Unsere Arbeit in Bildern: {brand.name}</h2>
+              <p className="section-lead" style={{ maxWidth: 880, margin: '0 auto 2.5rem', lineHeight: '1.75', fontSize: '0.98rem', color: 'var(--gray-600)' }}>
+                Sehen Sie sich unten eine Auswahl unserer abgeschlossenen Praxisprojekte und zufriedenen Kunden für die Marke {brand.name} an. Als anerkannter Autoschlüsselspezialist sind wir täglich mit unserem komplett ausgestatteten mobilen Servicebus im Raum Stuttgart und Umgebung im Einsatz. Egal, ob es um das Nachmachen eines Ersatzschlüssels, das fachmännische Anlernen von Keyless-Entry-Smart-Keys oder Notreparaturen bei einem verlorenen oder defekten {brand.name} Autoschlüssel vor Ort geht: Wir garantieren zerstörungsfreie Arbeit mit originalen OEM-Diagnosegeräten.
+              </p>
+              <RealGalleryShowcase 
+                photos={recentWorkImages.map((img, idx) => {
                   let altText = `${brand.name} Autoschlüssel nachmachen`;
                   const lowerImg = img.toLowerCase();
                   
@@ -316,14 +316,13 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
                     altText = `${brand.name} Autoschlüssel nachmachen und anlernen lassen`;
                   }
 
-                  return (
-                    <div key={idx} style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={`/images/merken/${img}`} alt={altText} style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }} loading="lazy" />
-                    </div>
-                  );
+                  return {
+                    src: `/images/merken/${img}`,
+                    alt: altText,
+                    label: `${brand.name} Projekt`
+                  };
                 })}
-              </div>
+              />
             </div>
           </section>
         )}

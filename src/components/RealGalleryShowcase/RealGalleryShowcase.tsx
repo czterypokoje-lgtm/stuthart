@@ -34,7 +34,17 @@ const PHOTOS = [
 const CARD_W = 300; // px per card
 const GAP    = 16;  // px gap
 
-export default function RealGalleryShowcase() {
+export interface GalleryPhoto {
+  src: string;
+  alt: string;
+  label?: string;
+}
+
+interface RealGalleryShowcaseProps {
+  photos?: GalleryPhoto[];
+}
+
+export default function RealGalleryShowcase({ photos = PHOTOS }: RealGalleryShowcaseProps) {
   const rail = useRef<HTMLDivElement>(null);
 
   function slide(dir: 'left' | 'right') {
@@ -62,7 +72,7 @@ export default function RealGalleryShowcase() {
           scrollbarWidth: 'none',
         }}
       >
-        {PHOTOS.map((p, i) => (
+        {photos.map((p, i) => (
           <div
             key={i}
             style={{
@@ -85,15 +95,17 @@ export default function RealGalleryShowcase() {
               loading={i < 4 ? 'eager' : 'lazy'}
               style={{ objectFit: 'cover' }}
             />
-            {/* Label overlay */}
-            <div style={{
-              position: 'absolute', bottom: 0, left: 0, right: 0,
-              background: 'linear-gradient(to top, rgba(4,38,85,.88) 0%, transparent 100%)',
-              padding: '1.5rem 0.875rem 0.625rem',
-              color: '#fff', fontSize: '0.8rem', fontWeight: 700,
-            }}>
-              {p.label}
-            </div>
+            {/* Label overlay (optional) */}
+            {p.label && (
+              <div style={{
+                position: 'absolute', bottom: 0, left: 0, right: 0,
+                background: 'linear-gradient(to top, rgba(4,38,85,.88) 0%, transparent 100%)',
+                padding: '1.5rem 0.875rem 0.625rem',
+                color: '#fff', fontSize: '0.8rem', fontWeight: 700,
+              }}>
+                {p.label}
+              </div>
+            )}
           </div>
         ))}
       </div>
