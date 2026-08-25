@@ -130,9 +130,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* ── GEO META TAGS — Local SEO signals for Google & Bing ── */}
         <meta name="geo.region" content="DE-BW" />
-        <meta name="geo.placename" content="Stuttgart, Deutschland" />
-        <meta name="geo.position" content="48.7758;9.1829" />
-        <meta name="ICBM" content="48.7758, 9.1829" />
+        <meta name="geo.placename" content="Sindelfingen, Deutschland" />
+        <meta name="geo.position" content="48.7075;9.0031" />
+        <meta name="ICBM" content="48.7075, 9.0031" />
 
         {/* ── BUSINESS META TAGS — Open Graph extensions ── */}
         <meta property="business:contact_data:street_address" content={SITE_CONFIG.address.street} />

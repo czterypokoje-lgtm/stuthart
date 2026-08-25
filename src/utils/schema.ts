@@ -9,10 +9,11 @@ import { CITIES } from '@/config/cities';
 export function getBaseLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Locksmith',
+    '@type': ['LocalBusiness', 'AutoRepair', 'Locksmith'],
     name: SITE_CONFIG.fullName,
     url: SITE_CONFIG.domain,
     telephone: SITE_CONFIG.phoneTel,
+    priceRange: '€€',
     image: `${SITE_CONFIG.domain}/og-image.png`,
     address: {
       '@type': 'PostalAddress',

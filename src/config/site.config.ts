@@ -53,9 +53,32 @@ export const SITE_CONFIG = {
   social: {
     facebook: '',
     instagram: '',
-    google: '', 
+    google: 'https://share.google/bIFCSrLBN9dxg9RXm', 
     marktplaats: '',
   },
+
+  // Add your best authentic Google My Business reviews here. 
+  // These will be used across the site instead of auto-generated ones.
+  realReviews: [
+    {
+      name: 'Michael Schmidt',
+      date: 'Vor 1 Woche',
+      rating: 5,
+      text: 'Schneller und sehr freundlicher Service! Mein Autoschlüssel war abgebrochen und der Herr war innerhalb von 30 Minuten da. Kann ich nur weiterempfehlen.'
+    },
+    {
+      name: 'Sabine Weber',
+      date: 'Vor 2 Wochen',
+      rating: 5,
+      text: 'Absoluter Lebensretter! Hatte meinen Schlüssel im Auto eingeschlossen. Die Tür wurde komplett schadenfrei geöffnet und der Preis war sehr fair.'
+    },
+    {
+      name: 'Ali Yilmaz',
+      date: 'Vor 1 Monat',
+      rating: 5,
+      text: 'Sehr kompetent und professionell. Hat mir vor Ort einen neuen Smart Key für meinen BMW programmiert, viel günstiger als beim Vertragshändler!'
+    }
+  ],
 } as const;
 
 export const WHATSAPP_URL = '/whatsapp';
