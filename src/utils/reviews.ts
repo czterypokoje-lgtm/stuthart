@@ -7,6 +7,10 @@ function seededRandom(seed: number) {
 }
 
 export function generateContextualReviews(contextName: string, type: 'city' | 'brand' | 'service' | 'general' = 'general'): GoogleReview[] {
+  // Suppress TS unused variable warnings since we now use static real reviews
+  void contextName;
+  void type;
+  
   // Use the real reviews configured in site.config.ts
   const realReviews = SITE_CONFIG.realReviews;
   
