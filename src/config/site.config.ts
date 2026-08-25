@@ -48,7 +48,7 @@ export const SITE_CONFIG = {
   kvk: '56295/56209', // HRB / USt-IdNr
   btw: '56295/56209', // USt-IdNr
   rating: '5.0',
-  reviewCount: '11',
+  reviewCount: '129',
 
   social: {
     facebook: '',

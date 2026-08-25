@@ -7,6 +7,11 @@
   background: #f1f5f9;
 }
 
+.sliderWrapper {
+  position: relative;
+  width: 100%;
+}
+
 .backgroundLayer {
   position: absolute;
   top: 0;
@@ -88,7 +93,7 @@
 .contentLayer {
   position: relative;
   z-index: 2;
-  padding: 3rem 2rem 1.5rem 2rem;
+  padding: 0 2rem 1.5rem 2rem;
   display: flex;
   flex-direction: column;
   max-width: 1200px;
@@ -102,14 +107,14 @@
   margin-bottom: 2.5rem;
   text-align: center;
   color: #0f172a;
-  position: relative;
-  z-index: 2;
+  padding-top: 2rem;
 }
 
 .mainLayout {
   display: flex;
   gap: 2rem;
   align-items: stretch;
+  overflow: hidden; /* Fix for flex children scrolling */
 }
 
 .leftCol {
@@ -135,12 +140,14 @@
 
 .rightCol {
   flex: 1;
+  min-width: 0; /* Allows horizontal scrolling in a flex container */
   display: flex;
   gap: 1.5rem;
   overflow-x: auto;
   padding-bottom: 3rem; /* Leave space to overlap the bottom bg */
   margin-bottom: -1rem;
   scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
 .rightCol::-webkit-scrollbar {
