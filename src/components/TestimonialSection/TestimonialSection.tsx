@@ -39,14 +39,6 @@ export default function TestimonialSection() {
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
               </svg>
             </div>
-            {/* Controls on the right */}
-            <div className={styles.controls}>
-              <a href={SITE_CONFIG.social.google} target="_blank" rel="noopener noreferrer" className={styles.allReviews}>
-                Alle Bewertungen
-              </a>
-              <button onClick={scrollLeft} className={styles.arrowBtn} aria-label="Zurück">&lt;</button>
-              <button onClick={scrollRight} className={styles.arrowBtn} aria-label="Weiter">&gt;</button>
-            </div>
           </div>
         </div>
 
@@ -61,8 +53,10 @@ export default function TestimonialSection() {
                 Basierend auf {SITE_CONFIG.reviewCount} Bewertungen aus der gesamten Region.
               </div>
             </div>
-            <div className={styles.rightCol} ref={scrollRef}>
-              {reviews.map((review, i) => (
+            
+            <div className={styles.rightColWrapper}>
+              <div className={styles.rightCol} ref={scrollRef}>
+                {reviews.map((review, i) => (
               <div key={i} className={styles.card}>
                 <div className={styles.stars}>{'★'.repeat(review.rating)}</div>
                 <p className={styles.text}>{review.text}</p>
@@ -95,8 +89,18 @@ export default function TestimonialSection() {
                 </div>
               </div>
             ))}
+              </div>
+              
+              {/* Controls on the right, under the slider */}
+              <div className={styles.controls}>
+                <a href={SITE_CONFIG.social.google} target="_blank" rel="noopener noreferrer" className={styles.allReviews}>
+                  Alle Bewertungen
+                </a>
+                <button onClick={scrollLeft} className={styles.arrowBtn} aria-label="Zurück">&lt;</button>
+                <button onClick={scrollRight} className={styles.arrowBtn} aria-label="Weiter">&gt;</button>
+              </div>
+            </div>
           </div>
-        </div>
       </div>
       </div>
     </div>
