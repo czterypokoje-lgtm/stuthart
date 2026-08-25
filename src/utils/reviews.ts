@@ -13,10 +13,6 @@ export function generateContextualReviews(contextName: string, type: 'city' | 'b
   
   // Use the real reviews configured in site.config.ts
   const realReviews = SITE_CONFIG.realReviews;
-  
-  if (!realReviews || realReviews.length === 0) {
-    return [];
-  }
 
   // Map the real reviews to the GoogleReview interface format
   const mappedReviews: GoogleReview[] = realReviews.map((review, index) => {
