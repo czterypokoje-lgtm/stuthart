@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Script from 'next/script';
 import { SITE_CONFIG } from '@/config/site.config';
+import TestimonialSection from '@/components/TestimonialSection/TestimonialSection';
 
 export const metadata: Metadata = {
   title: {
@@ -197,19 +198,9 @@ export default function OverOnsPage() {
           </div>
         </div>
 
-        {/* Stats */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '1.5rem', marginBottom: '4rem' }}>
-          {[
-            { num: `${SITE_CONFIG.rating}★`, label: 'Google Score', sub: `Mehr als ${SITE_CONFIG.reviewCount} Kundenbewertungen` },
-            { num: '34 Min', label: 'Durchschnittliche Reaktionszeit', sub: 'Vor Ort' },
-            { num: '24/7', label: 'Erreichbar', sub: 'Für Notfälle in der gesamten Region' },
-          ].map((s) => (
-            <div key={s.label} style={{ textAlign: 'center', padding: '2rem', background: '#fff', border: '1px solid var(--color-border)', borderRadius: '12px' }}>
-              <div style={{ fontSize: '2rem', fontWeight: 700, color: 'var(--color-primary)', marginBottom: '0.25rem' }}>{s.num}</div>
-              <div style={{ fontWeight: 700, marginBottom: '0.25rem', fontSize: '0.9rem' }}>{s.label}</div>
-              <div style={{ fontSize: '0.78rem', color: 'var(--color-text-muted)' }}>{s.sub}</div>
-            </div>
-          ))}
+        {/* Stats replaced by Reviews Section per request */}
+        <div style={{ margin: '0 -2rem' }}>
+          <TestimonialSection />
         </div>
 
         {/* ── COMPREHENSIVE OVER ONS SEO GUIDE ARTICLE ── */}
