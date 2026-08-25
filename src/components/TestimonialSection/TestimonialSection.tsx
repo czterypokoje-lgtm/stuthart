@@ -98,6 +98,7 @@ export default function TestimonialSection() {
           </div>
         </div>
       </div>
+      </div>
     </div>
   );
 }
