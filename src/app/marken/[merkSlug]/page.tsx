@@ -339,10 +339,6 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
                 padding: 3.5rem;
                 box-shadow: 0 4px 20px rgba(0,0,0,0.03);
               }
-              .model-link-hover:hover {
-                text-decoration: underline !important;
-                color: var(--orange-500) !important;
-              }
               .models-list {
                 color: #475569;
                 font-size: 1.05rem;
@@ -386,16 +382,16 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
                 <ul className="models-list">
                   {brand.models?.map(m => (
                     <li key={m.slug} style={{ breakInside: 'avoid' }}>
-                      <Link href={`/marken/${brand.nameSlug.toLowerCase()}-autoschluessel-nachmachen/${m.slug}-schluessel-nachmachen`} style={{ color: '#1e293b', textDecoration: 'none' }} className="model-link-hover">
+                      <span style={{ color: '#1e293b' }}>
                         {brand.name} {m.name} Schlüssel
-                      </Link>
+                      </span>
                     </li>
                   ))}
                   {brand.specialIntents?.map(intent => (
                     <li key={intent.slug} style={{ breakInside: 'avoid' }}>
-                      <Link href={`/marken/${brand.nameSlug.toLowerCase()}-autoschluessel-nachmachen/${intent.slug}`} style={{ color: 'var(--orange-600)', textDecoration: 'none' }} className="model-link-hover">
+                      <span style={{ color: 'var(--orange-600)' }}>
                         {intent.name}
-                      </Link>
+                      </span>
                     </li>
                   ))}
                   {(!brand.models || brand.models.length === 0) && (
