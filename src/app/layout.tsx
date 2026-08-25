@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation/Navigation';
 import Footer from '@/components/Footer/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton/WhatsAppButton';
 import StickyCallBar from '@/components/StickyCallBar/StickyCallBar';
+import PhoneConversionTracker from '@/components/PhoneConversionTracker';
 import { SITE_CONFIG } from '@/config/site.config';
 
 export const metadata: Metadata = {
@@ -75,10 +76,8 @@ const websiteSchema = {
   description: 'Mobiler Autoschlüsselspezialist — alle Marken — 24/7',
   inLanguage: 'de-DE',
   publisher: { '@id': `${SITE_CONFIG.domain}/#localbusiness` },
-  // SearchAction removed — Next.js has no ?s= endpoint; prevents schema error in GSC
+// SearchAction removed — Next.js has no ?s= endpoint; prevents schema error in GSC
 };
-
-import PhoneConversionTracker from '@/components/PhoneConversionTracker';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
