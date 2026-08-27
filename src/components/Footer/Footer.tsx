@@ -31,13 +31,15 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <div className={styles.footerBrand}>
-              <Image
-                src="/logo-golden-crest.png"
-                alt="First Class Key Logo"
-                width={120}
-                height={120}
-                style={{ height: '120px', width: 'auto', display: 'block', borderRadius: '12px' }}
-              />
+              <Link href="/">
+                <Image
+                  src="/logo-golden-crest.png"
+                  alt="First Class Key Logo"
+                  width={120}
+                  height={120}
+                  style={{ height: '120px', width: 'auto', display: 'block', borderRadius: '12px' }}
+                />
+              </Link>
             </div>
             <p className={styles.footerDesc}>Professionelle mobile Autoschlüssel-Programmierung für alle Marken. Aktiv in <Link href="/standorte/stuttgart" className={styles.seoLink}>Stuttgart</Link>, <Link href="/standorte/sindelfingen" className={styles.seoLink}>Sindelfingen</Link>, <Link href="/standorte/boeblingen" className={styles.seoLink}>Böblingen</Link>, <Link href="/standorte/ludwigsburg" className={styles.seoLink}>Ludwigsburg</Link>, <Link href="/standorte/esslingen" className={styles.seoLink}>Esslingen</Link>, <Link href="/standorte/leonberg" className={styles.seoLink}>Leonberg</Link>, <Link href="/standorte/fellbach" className={styles.seoLink}>Fellbach</Link>, <Link href="/standorte/waiblingen" className={styles.seoLink}>Waiblingen</Link>, <Link href="/standorte/filderstadt" className={styles.seoLink}>Filderstadt</Link>, <Link href="/standorte/ditzingen" className={styles.seoLink}>Ditzingen</Link> und der restlichen Region.</p>
             <div className={styles.footerBadges}>
