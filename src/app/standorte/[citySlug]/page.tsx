@@ -246,7 +246,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
               <p className={styles.heroLead}>
                 Ausgesperrt oder Autoschlüssel defekt? Wir kommen direkt zu Ihnen! Keine Abschleppkosten, günstiger als der Händler und in <strong>30-60 Min</strong> vor Ort in {city.city}.
               </p>
-              <div style={{ marginTop: '2rem' }}>
+              <div style={{ marginTop: '0.5rem' }}>
                 <LeadCaptureForm city={city.city} phone={SITE_CONFIG.phone} />
               </div>
             </div>

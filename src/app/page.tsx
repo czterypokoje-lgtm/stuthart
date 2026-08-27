@@ -138,7 +138,7 @@ export default function HomePage() {
               <span className={styles.heroOrange}>Wir helfen direkt vor Ort!</span>
             </h1>
             <p className={styles.heroLead}>
-              Haben Sie sich ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. FC-KEY kommt mit einem voll ausgestatteten Servicefahrzeug zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von <strong>30 bis 60 Minuten</strong> wieder unterwegs!
+              Ausgesperrt oder Autoschlüssel defekt? Wir kommen direkt zu Ihnen! Keine Abschleppkosten, günstiger als der Händler und in <strong>30-60 Min</strong> vor Ort.
             </p>
             
             <div className={styles.heroMobileImage}>

@@ -176,7 +176,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
-          <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: '3rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: 'clamp(1.5rem, 4vw, 3rem)', alignItems: 'center', flexWrap: 'wrap' }}>
             <div style={{ flex: '1 1 500px' }}>
               <nav style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', marginBottom: '0.5rem', display: 'flex', gap: '0.5rem' }}>
                 <Link href="/" style={{ color: 'rgba(255,255,255,0.55)' }}>Home</Link> /
