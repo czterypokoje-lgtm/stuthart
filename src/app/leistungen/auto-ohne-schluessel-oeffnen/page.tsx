@@ -11,6 +11,7 @@ import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
 import GlobalFeatureCards from '@/components/FeatureCards/GlobalFeatureCards';
 import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
 import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
+import TrustindexHeroWidget from '@/components/TrustindexHeroWidget/TrustindexHeroWidget';
 import { generateContextualReviews } from '@/utils/reviews';
 import { getBaseLocalBusinessSchema } from '@/utils/schema';
 import styles from './page.module.css';
@@ -189,6 +190,7 @@ export default function AutoOpenenZonderSleutelPage() {
               <Link href="/leistungen">Leistungen</Link> <span>/</span>
               <span>Auto ohne Schlüssel öffnen</span>
             </nav>
+            <TrustindexHeroWidget />
             <h1>Auto ohne Schlüssel öffnen — 100% Schadensfrei &amp; 24/7 Mobiler Service</h1>
             <p className={styles.heroLead}>
               Schlüssel im Auto liegen lassen? Tür zugefallen? Aus dem Auto ausgesperrt?

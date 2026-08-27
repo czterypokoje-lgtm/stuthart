@@ -8,6 +8,7 @@ import { getRelatedBlogPosts } from '@/config/services';
 import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
+import TrustindexHeroWidget from '@/components/TrustindexHeroWidget/TrustindexHeroWidget';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsLogoGrid from '@/components/BrandsLogoGrid/BrandsLogoGrid';
 import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
@@ -188,7 +189,7 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
               <Link href="/leistungen">Leistungen</Link> <span>/</span>
               <span>{service.title}</span>
             </nav>
-
+            <TrustindexHeroWidget />
             <h1>{service.h1}</h1>
 
             <p className={styles.heroLead}>{service.intro}</p>

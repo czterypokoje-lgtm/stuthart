@@ -11,6 +11,7 @@ import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
 import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
+import TrustindexHeroWidget from '@/components/TrustindexHeroWidget/TrustindexHeroWidget';
 import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
 import { generateContextualReviews } from '@/utils/reviews';
 import { getBaseLocalBusinessSchema } from '@/utils/schema';
@@ -165,6 +166,7 @@ export default function SleutelBijmakenPage() {
             <nav className={styles.breadcrumb} aria-label="Breadcrumb">
               <Link href="/">Home</Link> <span>/</span> <Link href="/leistungen">Leistungen</Link> <span>/</span> <span>Autoschlüssel nachmachen</span>
             </nav>
+            <TrustindexHeroWidget />
             <h1>Autoschlüssel nachmachen — Ersatzschlüssel fürs Auto vor Ort anfertigen lassen</h1>
             <p className={styles.heroLead}>
               Möchten Sie einen <strong>Autoschlüssel nachmachen</strong>, ohne zum teuren Händler zu müssen? FC-KEY kommt 24/7 zu Ihnen — nach Hause, zur Arbeit oder an die Straße — und programmiert Ihren neuen Autoschlüssel, Ersatzschlüssel oder Ihre Fernbedienung direkt vor Ort. Vom einfachen Transponderschlüssel bis zum modernen Autoschlüssel mit Keyless Entry: Wir fräsen und programmieren alles, während Sie warten, ohne Abschleppkosten oder lange Wartezeiten.
