@@ -62,8 +62,8 @@ const simplifiedServices = [
     title: 'Autoschlüssel Nachmachen',
     desc: 'Wir fertigen und programmieren neue Ersatzschlüssel für fast alle Automarken direkt bei Ihnen vor Ort.',
     href: '/leistungen/autoschluessel-nachmachen',
-    src: '/images/seo/autoschluessel_nachmachen_home.jpg',
-    alt: 'Autoschlüssel nachmachen lassen',
+    src: '/images/services/autoschluessel-nachmachen-stuttgart-vor-ort.jpg',
+    alt: 'Autoschlüssel nachmachen Stuttgart vor Ort - Mobiler Schlüsseldienst Ersatzschlüssel',
     buttonText: 'Mehr über Ersatzschlüssel'
   },
   {
