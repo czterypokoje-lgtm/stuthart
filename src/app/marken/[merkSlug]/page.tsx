@@ -178,7 +178,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
         }}>
           <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', gap: '3rem', alignItems: 'center', flexWrap: 'wrap' }}>
             <div style={{ flex: '1 1 500px' }}>
-              <nav style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', marginBottom: '1.25rem', display: 'flex', gap: '0.5rem' }}>
+              <nav style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', marginBottom: '0.5rem', display: 'flex', gap: '0.5rem' }}>
                 <Link href="/" style={{ color: 'rgba(255,255,255,0.55)' }}>Home</Link> /
                 <Link href="/marken" style={{ color: 'rgba(255,255,255,0.55)' }}>Marken</Link> /
                 <span style={{ color: 'rgba(255,255,255,0.85)', fontWeight: 600 }}>{brand.name}</span>
@@ -188,10 +188,8 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
                 {brand.customH1 || <>{brand.name} Autoschlüssel Nachmachen &amp; Programmieren</>} <br />
                 <span style={{ color: 'var(--navy-700)' }}>Alle Modelle &amp; Baujahre • Mobiler Vor-Ort-Service</span>
               </h1>
-              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.08rem', lineHeight: 1.7, marginBottom: '2.2rem' }}>
-                Haben Sie Ihren {brand.name} Autoschlüssel verloren, ist der Schlüssel abgebrochen oder reagiert die Smart-Key-Fernbedienung nicht mehr?
-                Wir kommen mit unserer voll ausgestatteten mobilen Werkstatt zu Ihnen und programmieren direkt einen originalen Händlerschlüssel in den Bordcomputer.
-                <strong> 30% bis 50% günstiger als der {brand.name}-Händler</strong>, ohne Abschleppkosten!
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.08rem', lineHeight: 1.6, marginBottom: '2.2rem' }}>
+                {brand.name} Schlüssel verloren oder defekt? Wir kommen zu Ihnen und programmieren vor Ort einen neuen Schlüssel. <strong>Bis zu 50% günstiger als der Händler</strong>, keine Abschleppkosten!
               </p>
             </div>
             <div style={{ flex: '1 1 400px', maxWidth: '450px', width: '100%', margin: '0 auto' }}>

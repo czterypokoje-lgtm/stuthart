@@ -16,7 +16,7 @@ export default function TrustindexHeroWidget() {
   }, []);
 
   return (
-    <div ref={containerRef} style={{ marginBottom: '1.5rem', minHeight: '50px', display: 'flex', alignItems: 'center' }}>
+    <div ref={containerRef} style={{ marginBottom: '0.5rem', minHeight: '40px', display: 'flex', alignItems: 'center' }}>
       {/* Trustindex will inject the widget here */}
     </div>
   );

@@ -1,9 +1,9 @@
 .hero { background: linear-gradient(160deg, var(--navy-900) 0%, var(--navy-800) 100%); padding: 4rem 2rem 3rem; }
 .heroInner { max-width: 1200px; margin: 0 auto; }
-.breadcrumb { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-bottom: 1rem; display: flex; gap: 0.5rem; align-items: center; }
+.breadcrumb { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-bottom: 0.25rem; display: flex; gap: 0.5rem; align-items: center; }
 .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
 .breadcrumb a:hover { color: rgba(255,255,255,0.8); }
-.heroLabel { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--navy-700); margin-bottom: 0.75rem; }
+.heroLabel { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--navy-700); margin-bottom: 0.25rem; }
 .hero h1 { color: #fff; font-size: clamp(1.6rem, 3.5vw, 2.6rem); margin-bottom: 1rem; }
 .heroLead { color: rgba(255,255,255,0.75); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem; max-width: 620px; }
 .heroLead strong { color: #fff; }

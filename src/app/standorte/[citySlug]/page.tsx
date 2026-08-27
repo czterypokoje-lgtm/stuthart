@@ -190,7 +190,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                 <TrustindexHeroWidget />
                 <h1>{city.customH1 || `Autoschlüssel nachmachen & Schlüsseldienst ${city.city} — 24/7 Service`}</h1>
                 <p className={styles.heroSplitLead}>
-                  Haben Sie sich ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. FC-KEY kommt mit einem voll ausgestatteten Servicefahrzeug zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von <strong>30 bis 60 Minuten</strong> wieder unterwegs in {city.city}!
+                  Ausgesperrt oder Autoschlüssel defekt? Wir kommen direkt zu Ihnen! Keine Abschleppkosten, günstiger als der Händler und in <strong>30-60 Min</strong> vor Ort in {city.city}.
                 </p>
 
                 <div className={styles.heroMobileImage}>
@@ -244,7 +244,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
               <TrustindexHeroWidget />
               <h1>{city.customH1 || `Autoschlüssel nachmachen & Schlüsseldienst ${city.city} — 24/7 Service`}</h1>
               <p className={styles.heroLead}>
-                Haben Sie sich ausgesperrt oder ist Ihr Autoschlüssel defekt? Keine Panik. FC-KEY kommt mit einem voll ausgestatteten Servicefahrzeug zu Ihnen. Keine Abschleppkosten, günstiger als der Händler und oft innerhalb von <strong>30 bis 60 Minuten</strong> wieder unterwegs in {city.city}!
+                Ausgesperrt oder Autoschlüssel defekt? Wir kommen direkt zu Ihnen! Keine Abschleppkosten, günstiger als der Händler und in <strong>30-60 Min</strong> vor Ort in {city.city}.
               </p>
               <div style={{ marginTop: '2rem' }}>
                 <LeadCaptureForm city={city.city} phone={SITE_CONFIG.phone} />
