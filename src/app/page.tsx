@@ -10,7 +10,7 @@ import { CITIES } from '@/config/cities';
 import FaqSection from '@/components/FaqSection/FaqSection';
 import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import { generateContextualReviews } from '@/utils/reviews';
-import InstantServiceMap from '@/components/InstantServiceMap';
+import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
 import LocalBusinessSchema from '@/components/Schema/LocalBusinessSchema';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
@@ -254,42 +254,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== SERVICE AREA & MAP PREVIEW (SEO) ===== */}
-      <section className={styles.serviceAreaSection}>
-        <div className="container">
-          <div className="text-center" style={{ marginBottom: '2rem' }}>
-            <p className="section-eyebrow">MOBILER EINSATZBEREICH</p>
-            <h2 className="section-title">Direkt vor Ort in Ihrer Region</h2>
-            <p className="section-lead">Unsere Servicefahrzeuge sind täglich im Raum Stuttgart für Sie im Einsatz.</p>
-          </div>
-          
-          <div className={styles.serviceAreaGrid}>
-            <div className={styles.serviceAreaText}>
-              <p className={styles.serviceAreaLead}>
-                <strong>First Class Key</strong> bedient ein großes Einsatzgebiet in und um Stuttgart. Egal, ob Sie Ihren Autoschlüssel in <strong>Stuttgart</strong>, <strong>Sindelfingen</strong> oder <strong>Böblingen</strong> verloren haben, mit einem defekten Zündschloss in <strong>Ludwigsburg</strong> oder <strong>Esslingen</strong> stehen, oder dringend einen Transponderschlüssel in <strong>Fellbach</strong> (<strong>Waiblingen</strong>, <strong>Filderstadt</strong>, <strong>Ditzingen</strong>) oder <strong>Leonberg</strong> programmieren lassen müssen — wir kommen direkt zu Ihnen nach Hause oder zum Pannenort.
-              </p>
-              <p className={styles.serviceAreaSub}>
-                Dank unserer modernen, GPS-gestützten Routenplanung sind unsere Techniker meist innerhalb von <strong>20 bis 60 Minuten</strong> vor Ort. Keine Abschleppkosten zum Händler und immer 100% zerstörungsfrei geöffnet und programmiert. Klicken Sie auf Ihre Region für lokale Preise und Ankunftszeiten:
-              </p>
-              <ul style={{ listStyleType: 'disc', paddingLeft: '1.25rem', marginTop: '1.5rem', marginBottom: '1.5rem', lineHeight: '1.8', color: 'var(--gray-700)' }}>
-                {CITIES.map((city) => (
-                  <li key={city.slug} style={{ marginBottom: '0.25rem' }}>
-                    <Link href={`/standorte/${city.slug}`} style={{ color: 'var(--orange-700)', textDecoration: 'underline', fontWeight: 600 }}>
-                      Autoschlüssel nachmachen {city.city}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <div style={{ marginTop: '0.75rem' }}>
-                <Link href="/standorte" className="btn btn-navy">Alle Städte in unserem Einsatzgebiet ansehen</Link>
-              </div>
-            </div>
-
-            <div className={styles.mapContainerWrap}>
-              <InstantServiceMap />
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceCoverageMap />
 
       {/* ===== E-E-A-T MEET THE OWNER ===== */}
       <section style={{ padding: '4rem 0', background: 'var(--color-bg-alt)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
