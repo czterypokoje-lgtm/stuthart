@@ -61,22 +61,58 @@ export const SITE_CONFIG = {
   // These will be used across the site instead of auto-generated ones.
   realReviews: [
     {
-      name: 'Michael Schmidt',
-      date: 'Vor 1 Woche',
+      name: 'Alexandra Shteflyuk',
+      date: 'Vor 6 Monaten',
       rating: 5,
-      text: 'Schneller und sehr freundlicher Service! Mein Autoschlüssel war abgebrochen und der Herr war innerhalb von 30 Minuten da. Kann ich nur weiterempfehlen.'
+      text: 'Schlüssel in der Tür stecken gelassen und konnten die Türe nicht mehr öffnen. Die Firma First Class Key war sehr freundlich, kamen schnell und haben haben auch sehr schnell die Türe geöffnet. Vielen Dank, wir sind sehr zufrieden'
     },
     {
-      name: 'Sabine Weber',
-      date: 'Vor 2 Wochen',
+      name: 'Erso Eisen',
+      date: 'Vor 8 Monaten',
       rating: 5,
-      text: 'Absoluter Lebensretter! Hatte meinen Schlüssel im Auto eingeschlossen. Die Tür wurde komplett schadenfrei geöffnet und der Preis war sehr fair.'
+      text: 'Ich habe bei First Class Key einen Autoschlüssel für meinen Range Rover Evoque nachmachen lassen und bin sehr zufrieden. Alles hat einwandfrei funktioniert, der Service war sehr schnell, professionell und preislich deutlich günstiger als beim Hersteller. Der Mitarbeiter war freundlich, kompetent und hat sich Zeit genommen. Ich kann First Class Key absolut weiterempfehlen und würde jederzeit wiederkommen!'
     },
     {
-      name: 'Ali Yilmaz',
+      name: 'A. Ak',
+      date: 'Vor 1 Jahr',
+      rating: 5,
+      text: 'Ich bin wirklich begeistert von diesem Kfz-Schlüsseldienst! Mein Autoschlüssel war plötzlich defekt, und ich stand vor verschlossener Tür. Der Mitarbeiter war sehr freundlich, schnell vor Ort und hat professionell gearbeitet. Innerhalb kürzester Zeit konnte ich wieder in mein Auto – ganz ohne Schäden. Besonders hervorheben möchte ich die faire Preisgestaltung und die transparente Erklärung der Arbeitsschritte. Man merkt sofort, dass hier Fachwissen und Kundenservice großgeschrieben werden. Absolut empfehlenswert für jeden, der einen zuverlässigen und seriösen Schlüsseldienst für sein Auto sucht!'
+    },
+    {
+      name: 'Sven Haeussler',
+      date: 'Vor 9 Monaten',
+      rating: 5,
+      text: 'The electronic steering lock on my Mercedes suddenly broke down. On a recommendation, I contacted First Class KEY in Sindelfingen. The employee responded quickly and very kindly and replaced the steering lock at a fair price. I\'m very satisfied and can definitely recommend First Class KEY! :)'
+    },
+    {
+      name: 'lassmalstecken88',
+      date: 'Vor 1 Jahr',
+      rating: 5,
+      text: 'Ich habe meinen Autoschlüssel verloren und wollte ihn nachmachen lassen. Bei First Class KEY war sehr zufrieden! Sehr freundlicher Service und Kontakt, jeder Termin wurde eingehalten und der neue Autoschlüssel mit Zentralverriegelung funktioniert perfekt! Kann ich vorbehaltlos weiterempfehlen!'
+    },
+    {
+      name: 'Martina Gropper',
+      date: 'Vor 4 Jahren',
+      rating: 5,
+      text: 'Super netter Service und toller Dienstleister. Ich empfehle diesen Schlüsseldienst. Ich habe mir für meinen alten Daimler einen Autoschlüssel nachmachen lassen, was nicht einfach war. Der Herr hat nicht aufgegeben bis es gepasst hat und hat und das für die Hälfte des Preises, was es bei Mercedes gekostet hätte. 👍😁'
+    },
+    {
+      name: 'Brandon Metzger',
+      date: 'Vor 3 Jahren',
+      rating: 5,
+      text: 'Great service! Called on a Saturday and they were at the house in 30 minutes.'
+    },
+    {
+      name: 'James Harlow',
+      date: 'Vor 4 Jahren',
+      rating: 5,
+      text: 'I called and within 15 minutes he was here and 5 minutes Later I was back in the house.'
+    },
+    {
+      name: 'Bozhidara Ilieva',
       date: 'Vor 1 Monat',
       rating: 5,
-      text: 'Sehr kompetent und professionell. Hat mir vor Ort einen neuen Smart Key für meinen BMW programmiert, viel günstiger als beim Vertragshändler!'
+      text: 'Top'
     }
   ],
 } as const;
