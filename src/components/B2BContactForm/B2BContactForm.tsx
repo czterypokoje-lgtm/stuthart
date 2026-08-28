@@ -19,30 +19,33 @@ const INDUSTRIES = [
 export default function B2BContactForm({ theme = 'light' }: Props) {
   const [company, setCompany] = useState("");
   const [contactPerson, setContactPerson] = useState("");
+  const [email, setEmail] = useState("");
   const [industry, setIndustry] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  function buildWhatsAppUrl() {
+  function buildEmailUrl() {
+    const subject = `B2B Anfrage: ${company || ''}`;
     const parts = [
-      "B2B Partnerschaft Anfrage",
-      "",
+      "Neue B2B Partnerschaft Anfrage",
+      "------------------------------",
       company ? `Firma: ${company}` : null,
       contactPerson ? `Ansprechpartner: ${contactPerson}` : null,
-      industry ? `Branche: ${industry}` : null,
+      email ? `E-Mail: ${email}` : null,
       phone ? `Telefon: ${phone}` : null,
+      industry ? `Branche: ${industry}` : null,
       "",
-      message ? `Nachricht: ${message}` : null,
+      message ? `Nachricht:\n${message}` : null,
     ].filter(p => p !== null).join("\n");
-    return `https://wa.me/${SITE_CONFIG.phoneTel.replace(/\D/g,"")}?text=${encodeURIComponent(parts)}`;
+    return `mailto:info@fc-key.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(parts)}`;
   }
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSubmitted(true);
     setTimeout(() => {
-      window.open(buildWhatsAppUrl(), "_blank", "noopener,noreferrer");
+      window.location.href = buildEmailUrl();
       setSubmitted(false);
     }, 200);
   }
@@ -81,6 +84,20 @@ export default function B2BContactForm({ theme = 'light' }: Props) {
           </div>
           <div className={styles.field}>
             <input
+              type="email"
+              className={styles.input}
+              placeholder="E-Mail Adresse *"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required
+              aria-label="E-Mail Adresse"
+            />
+          </div>
+        </div>
+
+        <div className={styles.fieldGroup}>
+          <div className={styles.field}>
+            <input
               type="tel"
               className={styles.input}
               placeholder="Telefonnummer *"
@@ -90,21 +107,20 @@ export default function B2BContactForm({ theme = 'light' }: Props) {
               aria-label="Telefonnummer"
             />
           </div>
-        </div>
-
-        <div className={styles.field}>
-          <select
-            className={styles.select}
-            value={industry}
-            onChange={e => setIndustry(e.target.value)}
-            required
-            aria-label="Branche"
-          >
-            <option value="">Branche auswählen *</option>
-            {INDUSTRIES.map(ind => (
-              <option key={ind} value={ind}>{ind}</option>
-            ))}
-          </select>
+          <div className={styles.field}>
+            <select
+              className={styles.select}
+              value={industry}
+              onChange={e => setIndustry(e.target.value)}
+              required
+              aria-label="Branche"
+            >
+              <option value="">Branche auswählen *</option>
+              {INDUSTRIES.map(ind => (
+                <option key={ind} value={ind}>{ind}</option>
+              ))}
+            </select>
+          </div>
         </div>
 
         <div className={styles.field}>
@@ -121,7 +137,7 @@ export default function B2BContactForm({ theme = 'light' }: Props) {
         <button 
           type="submit" 
           className={styles.submitButton}
-          disabled={submitted || !company || !contactPerson || !phone || !industry}
+          disabled={submitted || !company || !contactPerson || !phone || !industry || !email}
         >
           {submitted ? "Leitet weiter..." : "Jetzt anfragen"}
         </button>
