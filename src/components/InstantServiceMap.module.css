@@ -30,9 +30,11 @@
 .iframeMap {
   width: 100%;
   height: calc(100% + 65px);
-  margin-top: -65px;
+  position: absolute;
+  top: -65px;
+  left: 0;
   border: none;
-  display: block;
+
 }
 
 .mapRight {
