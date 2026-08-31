@@ -1003,7 +1003,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
         Ein kaputter Autoschlüssel kann eine Quelle großer Frustration sein, besonders wenn man es eilig hat oder weit weg von zu Hause ist. Autoschlüssel sind heute viel mehr als einfache Metallschlüssel; sie enthalten fortschrittliche Technologien wie Transponder und elektronische Chips, die mit der Wegfahrsperre Ihres Autos kommunizieren. Wenn diese Schlüssel nicht mehr funktionieren, denken viele Menschen direkt an hohe Kosten beim Vertragshändler. Glücklicherweise gibt es viele Möglichkeiten, einfache Reparaturen selbst durchzuführen oder sich klug für einen Spezialisten zu entscheiden, um viel Geld zu sparen.
       </p>
       <p>
-        Die <Link href="/diensten/autoschluessel-reparieren" style={{ color: '#002752', textDecoration: 'underline' }}>Reparatur eines Autoschlüssels</Link> kann vom einfachen <Link href="/diensten/batterie-wechseln" style={{ color: '#002752', textDecoration: 'underline' }}>Austausch einer Knopfzellenbatterie</Link> bis hin zur Erneuerung des Gehäuses oder der professionellen Reparatur von Mikroschaltern auf der Platine reichen. Viele dieser kleinen Aufgaben erfordern kein tiefes technisches Wissen, sondern ein wenig Geduld und Präzision.
+        Die <Link href="/leistungen/autoschluessel-reparieren" style={{ color: '#002752', textDecoration: 'underline' }}>Reparatur eines Autoschlüssels</Link> kann vom einfachen <Link href="/leistungen/batterie-wechseln" style={{ color: '#002752', textDecoration: 'underline' }}>Austausch einer Knopfzellenbatterie</Link> bis hin zur Erneuerung des Gehäuses oder der professionellen Reparatur von Mikroschaltern auf der Platine reichen. Viele dieser kleinen Aufgaben erfordern kein tiefes technisches Wissen, sondern ein wenig Geduld und Präzision.
       </p>
 
       <h2>Häufige Probleme mit Autoschlüsseln</h2>
@@ -1015,7 +1015,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
           <strong>Leere oder schwache Batterie:</strong> Die Fernbedienung reagiert nur auf kurze Distanz oder die Kontrollleuchte am Schlüssel leuchtet nicht oder nur schwach. Dies ist das am einfachsten selbst zu lösende Problem.
         </li>
         <li>
-          <strong>Physische Schäden an Gehäuse oder Schlüsselblatt:</strong> Durch Herunterfallen oder Verschleiß kann das <Link href="/diensten/gehaeuse-wechseln" style={{ color: '#002752', textDecoration: 'underline' }}>Kunststoffgehäuse reißen</Link> oder die Gummitasten verschleißen. Auch ein metallisches Schlüsselblatt kann sich verbiegen oder abbrechen.
+          <strong>Physische Schäden an Gehäuse oder Schlüsselblatt:</strong> Durch Herunterfallen oder Verschleiß kann das <Link href="/leistungen/gehaeuse-wechseln" style={{ color: '#002752', textDecoration: 'underline' }}>Kunststoffgehäuse reißen</Link> oder die Gummitasten verschleißen. Auch ein metallisches Schlüsselblatt kann sich verbiegen oder abbrechen.
         </li>
         <li>
           <strong>Elektronische Störungen (Platine oder Transponder):</strong> Funktioniert die Zentralverriegelung, aber das Auto startet nicht und es erscheint eine Meldung wie <em>&quot;Schlüssel nicht erkannt&quot;</em>? Dann liegt oft eine Störung im internen Transponderchip vor.
@@ -1050,7 +1050,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
       </p>
       <ul>
         <li><strong>Beschädigte Platine oder gelöste SMD-Tasten:</strong> Das Löten an mikroskopisch kleinen Schlüsselplatinen erfordert feine Präzisionsgeräte.</li>
-        <li><strong>Schlüssel verloren oder vom Auto nicht mehr erkannt:</strong> Das Anlernen und <Link href="/diensten/autoschluessel-nachmachen" style={{ color: '#002752', textDecoration: 'underline' }}>Programmieren eines neuen Autoschlüssels</Link> erfordert spezielle OBD2- und Transpondergeräte.</li>
+        <li><strong>Schlüssel verloren oder vom Auto nicht mehr erkannt:</strong> Das Anlernen und <Link href="/leistungen/autoschluessel-nachmachen" style={{ color: '#002752', textDecoration: 'underline' }}>Programmieren eines neuen Autoschlüssels</Link> erfordert spezielle OBD2- und Transpondergeräte.</li>
         <li><strong>Abgebrochenes Schlüsselblatt im Zündschloss:</strong> Versuchen Sie niemals, abgebrochenes Metall selbst mit Gewalt aus dem Schloss zu fummeln, um weitere Zylinder- oder Zündschlossschäden zu vermeiden.</li>
       </ul>
 
@@ -1103,7 +1103,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
       </p>
       <ol>
         <li><strong>Verwenden Sie eine Silikon- oder Lederschutzhülle:</strong> Dies fängt Stöße bei einem Fall ab und schützt vor Regen oder Feuchtigkeit.</li>
-        <li><strong>Sorgen Sie immer für einen gut funktionierenden Ersatzschlüssel:</strong> Haben Sie derzeit nur einen Schlüssel? Lassen Sie dann rechtzeitig einen <Link href="/diensten/autoschluessel-nachmachen" style={{ color: '#002752', textDecoration: 'underline' }}>Ersatzschlüssel nachmachen</Link>, bevor Sie alles verlieren.</li>
+        <li><strong>Sorgen Sie immer für einen gut funktionierenden Ersatzschlüssel:</strong> Haben Sie derzeit nur einen Schlüssel? Lassen Sie dann rechtzeitig einen <Link href="/leistungen/autoschluessel-nachmachen" style={{ color: '#002752', textDecoration: 'underline' }}>Ersatzschlüssel nachmachen</Link>, bevor Sie alles verlieren.</li>
         <li><strong>Wechseln Sie die Batterie bei den ersten Symptomen:</strong> Warten Sie nicht, bis der Schlüssel vollständig aufhört zu funktionieren.</li>
       </ol>
 
@@ -1231,7 +1231,7 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
         In der heutigen Zeit sind elektronische Sicherheitssysteme unverzichtbar. Alarmsysteme erzeugen einen lauten Ton und Lichtsignale, sobald jemand versucht einzubrechen. Wegfahrsperren (Immobilizer) gehen noch einen Schritt weiter: Sie blockieren die Kraftstoffzufuhr und die Zündung, solange der autorisierte Transpondercode Ihres Autoschlüssels vom Motorsteuergerät nicht erkannt wird.
       </p>
       <p>
-        Möchten Sie einen <Link href="/diensten/autoschluessel-nachmachen" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>zusätzlichen Autoschlüssel mit professioneller Transpondercodierung nachmachen lassen</Link>? Unsere Spezialisten programmieren ausschließlich originale OEM-Transponder, die direkt mit Ihrer Wegfahrsperre kommunizieren.
+        Möchten Sie einen <Link href="/leistungen/autoschluessel-nachmachen" style={{ color: 'var(--color-primary)', fontWeight: 600 }}>zusätzlichen Autoschlüssel mit professioneller Transpondercodierung nachmachen lassen</Link>? Unsere Spezialisten programmieren ausschließlich originale OEM-Transponder, die direkt mit Ihrer Wegfahrsperre kommunizieren.
       </p>
 
       <h3>GPS-Tracker und Fahrzeugortungssysteme</h3>

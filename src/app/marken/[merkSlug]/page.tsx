@@ -230,7 +230,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
               </Link>
 
               {/* Card 2: Verloren */}
-              <Link href="/leistungen/alle-schluessel-verloren" style={{ display: 'flex', flexDirection: 'column', background: '#fff', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '2.5rem 2rem 2rem', textDecoration: 'none', transition: 'all 0.2s ease', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }} id={`brand-leistung-verloren-${brand.slug}`}>
+              <Link href="/autoschluessel-verloren" style={{ display: 'flex', flexDirection: 'column', background: '#fff', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '2.5rem 2rem 2rem', textDecoration: 'none', transition: 'all 0.2s ease', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }} id={`brand-leistung-verloren-${brand.slug}`}>
                 <div style={{ width: '100%', height: '160px', position: 'relative', marginBottom: '1.75rem' }}>
                   <Image src="/images/service_kwijt.png" alt={`${brand.name} Autoschlüssel verloren`} fill style={{ objectFit: 'contain' }} />
                 </div>
@@ -247,7 +247,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
               </Link>
 
               {/* Card 3: Öffnen */}
-              <Link href="/leistungen/auto-oeffnen-ohne-schluessel" style={{ display: 'flex', flexDirection: 'column', background: '#fff', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '2.5rem 2rem 2rem', textDecoration: 'none', transition: 'all 0.2s ease', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }} id={`brand-leistung-oeffnen-${brand.slug}`}>
+              <Link href="/leistungen/auto-ohne-schluessel-oeffnen" style={{ display: 'flex', flexDirection: 'column', background: '#fff', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '2.5rem 2rem 2rem', textDecoration: 'none', transition: 'all 0.2s ease', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }} id={`brand-leistung-oeffnen-${brand.slug}`}>
                 <div style={{ width: '100%', height: '160px', position: 'relative', marginBottom: '1.75rem' }}>
                   <Image src="/images/service_openen.png" alt={`${brand.name} Auto öffnen`} fill style={{ objectFit: 'contain' }} />
                 </div>

@@ -515,19 +515,19 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/leistungen/autoschluessel-verloren`} style={{ color: '#e65100', fontWeight: 600, textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.35rem', transition: 'opacity 0.2s' }}>
+                    <Link href={`/autoschluessel-verloren`} style={{ color: '#e65100', fontWeight: 600, textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.35rem', transition: 'opacity 0.2s' }}>
                       Alle Autoschlüssel verloren?
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/leistungen/autotuer-oeffnen`} style={{ color: '#e65100', fontWeight: 600, textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.35rem', transition: 'opacity 0.2s' }}>
+                    <Link href={`/leistungen/auto-ohne-schluessel-oeffnen`} style={{ color: '#e65100', fontWeight: 600, textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.35rem', transition: 'opacity 0.2s' }}>
                       Schadenfrei Autotür öffnen
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/leistungen/autoschluessel-reparatur`} style={{ color: '#e65100', fontWeight: 600, textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.35rem', transition: 'opacity 0.2s' }}>
+                    <Link href={`/leistungen/autoschluessel-reparieren`} style={{ color: '#e65100', fontWeight: 600, textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.35rem', transition: 'opacity 0.2s' }}>
                       Autoschlüssel Reparatur
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                     </Link>

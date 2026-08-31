@@ -33,7 +33,7 @@ export default function GaleriePage() {
             </div>
             <div>
               <img 
-                src="/fc-key-sleutelnachmachen-stuttgart.webp" 
+                src="/images/ueber-uns-maschine.jpg" 
                 alt="Schlüsseldienst Werkstatt mit Lötkolben und Werkzeug" 
                 style={{ width: '100%', borderRadius: '12px', boxShadow: '0 8px 30px rgba(0,0,0,0.06)' }} 
               />
