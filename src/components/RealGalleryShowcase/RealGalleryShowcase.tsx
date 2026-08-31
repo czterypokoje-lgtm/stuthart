@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 
 /* ─── Photos ─────────────────────────────────────────────── */
@@ -46,11 +46,16 @@ interface RealGalleryShowcaseProps {
 
 export default function RealGalleryShowcase({ photos = PHOTOS }: RealGalleryShowcaseProps) {
   const rail = useRef<HTMLDivElement>(null);
+  const [showAll, setShowAll] = useState(false);
+  const displayedPhotos = showAll ? photos : photos.slice(0, 6);
 
   function slide(dir: 'left' | 'right') {
-    const el = rail.current;
-    if (!el) return;
-    el.scrollBy({ left: dir === 'left' ? -(CARD_W + GAP) * 2 : (CARD_W + GAP) * 2, behavior: 'smooth' });
+    if (!showAll) setShowAll(true);
+    setTimeout(() => {
+      const el = rail.current;
+      if (!el) return;
+      el.scrollBy({ left: dir === 'left' ? -(CARD_W + GAP) * 2 : (CARD_W + GAP) * 2, behavior: 'smooth' });
+    }, 50);
   }
 
   return (
@@ -59,6 +64,9 @@ export default function RealGalleryShowcase({ photos = PHOTOS }: RealGalleryShow
       {/* ── Rail ── */}
       <div
         ref={rail}
+        onScroll={() => !showAll && setShowAll(true)}
+        onTouchStart={() => !showAll && setShowAll(true)}
+        onMouseEnter={() => !showAll && setShowAll(true)}
         style={{
           display: 'flex',
           gap: GAP,
@@ -72,7 +80,7 @@ export default function RealGalleryShowcase({ photos = PHOTOS }: RealGalleryShow
           scrollbarWidth: 'none',
         }}
       >
-        {photos.map((p, i) => (
+        {displayedPhotos.map((p, i) => (
           <div
             key={i}
             style={{

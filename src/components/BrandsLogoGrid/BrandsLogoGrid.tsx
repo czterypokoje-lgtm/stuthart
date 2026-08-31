@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './BrandsLogoGrid.module.css';
@@ -33,6 +34,8 @@ export const TOP_BRANDS = [
 ];
 
 export default function BrandsLogoGrid({ title, subtitle, hideSeoHeader = false }: BrandsLogoGridProps) {
+  const [showAll, setShowAll] = useState(false);
+  const displayedBrands = showAll ? TOP_BRANDS : TOP_BRANDS.slice(0, 8);
   return (
     <section className={styles.brandsSection}>
       <div className={styles.heroContainer}>
@@ -71,7 +74,7 @@ export default function BrandsLogoGrid({ title, subtitle, hideSeoHeader = false 
           </p>
 
           <div className={styles.brandsGrid}>
-            {TOP_BRANDS.map((brand) => (
+            {displayedBrands.map((brand) => (
               <Link
                 key={brand.slug}
                 href={`/marken/${brand.slug}`}
@@ -90,6 +93,15 @@ export default function BrandsLogoGrid({ title, subtitle, hideSeoHeader = false 
             ))}
           </div>
 
+          {!showAll && (
+            <button 
+              onClick={() => setShowAll(true)} 
+              className={styles.secondaryButton} 
+              style={{ width: '100%', marginBottom: '1rem', cursor: 'pointer', border: 'none' }}
+            >
+              Alle {TOP_BRANDS.length} Marken anzeigen
+            </button>
+          )}
           <div className={styles.actions}>
             <Link href="/kontakt" className={styles.primaryButton}>
               Kontakt aufnehmen &rarr;
