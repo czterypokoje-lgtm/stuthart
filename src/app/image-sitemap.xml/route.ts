@@ -184,7 +184,7 @@ const PAGE_ENTRIES = [
     images: [CORE_IMAGES[8], CORE_IMAGES[1]],
   },
   {
-    loc: `${BASE}/leistungen/contactslot-auto-vervangen`,
+    loc: `${BASE}/leistungen/zuendschloss-auto-wechseln`,
     images: [CORE_IMAGES[10], CORE_IMAGES[11]],
   },
 
