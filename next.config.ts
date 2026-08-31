@@ -34,6 +34,16 @@ const nextConfig: NextConfig = {
     return [
       ...brandRedirects,
       {
+        source: "/blog/auto-oeffnen-ohne-schluessel-schadenfrei",
+        destination: "/blog/autoschluessel-verloren-was-nun-anleitung",
+        permanent: true,
+      },
+      {
+        source: "/blog/schluessel-im-auto-liegen-gelassen-loesungen",
+        destination: "/blog/autoschluessel-verloren-was-nun-anleitung",
+        permanent: true,
+      },
+      {
         source: "/leistungen/notoeffnung-auto",
         destination: "/leistungen/auto-ohne-schluessel-oeffnen",
         permanent: true,

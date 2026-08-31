@@ -254,17 +254,9 @@ export const BLOG_POSTS = [
     readTime: '7 Min',
   },
   {
-    slug: 'auto-oeffnen-ohne-schluessel-schadenfrei',
-    title: 'Auto öffnen ohne Schlüssel: 100% schadenfrei',
-    excerpt: 'Schlüssel im Auto liegen gelassen? Schlagen Sie keine Scheibe ein! Entdecken Sie, wie wir Ihre Autotür mit Spezialwerkzeug schadenfrei öffnen.',
-    keywords: ['auto öffnen ohne schlüssel', 'schlüssel im auto liegen gelassen', 'autotür aufmachen ohne schaden', 'auto schlüsseldienst'],
-    publishDate: '2026-07-09',
-    readTime: '5 Min',
-  },
-  {
     slug: 'autoschluessel-verloren-was-nun-anleitung',
-    title: 'Autoschlüssel verloren? Das ist der sofortige Maßnahmenplan',
-    excerpt: 'Alle Autoschlüssel verloren? Geraten Sie nicht in Panik. Lesen Sie genau, was Sie tun müssen und wie wir direkt vor Ort einen neuen Schlüssel anlernen.',
+    title: 'Autoschlüssel verloren oder im Auto vergessen? Der ultimative Maßnahmenplan',
+    excerpt: 'Autoschlüssel verloren, im Auto eingeschlossen oder Auto lässt sich nicht öffnen? Lesen Sie unseren kompletten Guide zur schadenfreien Öffnung und Schlüssel-Neuprogrammierung.',
     keywords: ['autoschlüssel verloren', 'alle autoschlüssel verloren', 'ersatzschlüssel verloren'],
     publishDate: '2026-07-10',
     readTime: '6 Min',
@@ -316,14 +308,6 @@ export const BLOG_POSTS = [
     keywords: ['auto öffnen ohne schlüssel', 'auto aufmachen ohne schlüssel', 'ausgesperrtes auto', 'schlüssel im auto liegen gelassen'],
     publishDate: '2026-08-05',
     readTime: '7 Min',
-  },
-  {
-    slug: 'schluessel-im-auto-liegen-gelassen-loesungen',
-    title: 'Schlüssel im Auto liegen gelassen: Lösungen & Präventionstipps',
-    excerpt: 'Ihren Autoschlüssel im Auto liegen zu lassen, muss nicht länger Stress verursachen. Lesen Sie unseren Leitfaden für sofortige Lösungen, praktische Tipps und vorbeugende Maßnahmen, um eine Aussperrung zu vermeiden. Was tun, wenn man Schlüssel verliert?',
-    keywords: ['schlüssel im auto liegen gelassen', 'autoschlüssel im auto', 'auto abgeschlossen schlüssel drin', 'ausgesperrtes auto', 'schlüssel im auto gelassen'],
-    publishDate: '2026-08-05',
-    readTime: '6 Min',
   },
   {
     slug: 'auto-erkennt-schluessel-nicht-mehr',
@@ -402,7 +386,6 @@ export function getRelatedBlogPosts(serviceSlug: string) {
     ],
     // ── Autotür öffnen ───────────────────────────────────────────
     'auto-ohne-schluessel-oeffnen': [
-      'auto-oeffnen-ohne-schluessel-schadenfrei',
       'auto-schluesseldienst-ultimativer-leitfaden-schnelle-hilfe',
       'autoschluessel-verloren-was-nun-anleitung',
       'versicherung-deckt-autoschluessel-verlust',
@@ -410,7 +393,6 @@ export function getRelatedBlogPosts(serviceSlug: string) {
     // ── Auto Schlüsseldienst (static page) ───────────────────────────
     'auto-schluesseldienst': [
       'auto-schluesseldienst-ultimativer-leitfaden-schnelle-hilfe',
-      'auto-oeffnen-ohne-schluessel-schadenfrei',
       'autoschluessel-verloren-was-nun-anleitung',
       'versicherung-deckt-autoschluessel-verlust',
       'haendler-vs-mobiler-schluesseldienst',
@@ -426,7 +408,6 @@ export function getRelatedBlogPosts(serviceSlug: string) {
     'zuendschloss-auto-wechseln': [
       'autoschluessel-reparieren-tipps-kosten-sparen',
       'auto-schluesseldienst-ultimativer-leitfaden-schnelle-hilfe',
-      'auto-oeffnen-ohne-schluessel-schadenfrei',
       'versicherung-deckt-autoschluessel-verlust',
     ],
     // ── Batterie wechseln ────────────────────────────────────────

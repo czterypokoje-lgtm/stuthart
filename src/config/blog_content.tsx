@@ -691,48 +691,18 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
       </div>
     </>
   ),
-  'auto-ohne-schluessel-oeffnen-schadensfrei': (
-    <>
-      <h2>Auto öffnen ohne Schlüssel: Machen Sie es sicher und 100% schadensfrei</h2>
-      <div style={{ margin: '2rem 0', position: 'relative', height: '350px', width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
-        <Image 
-          src="/images/blog/auto_openen_zonder_sleutel_schadevrij.png" 
-          alt="Autotür schadensfrei öffnen mit Luftkissen (Air Wedge)" 
-          fill 
-          style={{ objectFit: 'cover' }}
-          unoptimized={true}
-        />
-      </div>
-      <p>
-        Haben Sie aus Versehen Ihren Schlüssel im Auto gelassen und die Tür ist ins Schloss gefallen? Das ist eine der frustrierendsten Situationen für einen Autofahrer. Der erste Impuls ist oft, das Problem selbst mit einem Kleiderbügel, einem Stück Draht oder im schlimmsten Fall: durch Einschlagen einer Scheibe zu lösen. Davon raten wir dringend ab. Ihr <strong>Auto ohne Schlüssel öffnen</strong> führt in 95% der Fälle zu schweren Lackschäden, kaputten Türgummis oder teuren Reparaturen am Fenstermechanismus.
-      </p>
-
-      <h3>Warum Sie nicht selbst versuchen sollten einzubrechen</h3>
-      <p>
-        Moderne Autos sind mit fortschrittlichen "Deadlock"-Systemen und Anti-Einbruch-Mechanismen ausgestattet. Das Aufzwingen einer Tür mit einem Brecheisen oder Draht aktiviert diese Systeme, wodurch das Auto vollständig blockiert. Zudem kostet der Austausch einer eingeschlagenen Seitenscheibe schnell €250 bis €400, ganz zu schweigen von der Zeit, die Sie mit dem Aufräumen der Glasscherben verbringen.
-      </p>
-
-      <h3>Wie wir Ihr Auto schadensfrei öffnen</h3>
-      <p>
-        Als professioneller Kfz-Schlüsseldienst verfügen wir über Spezialwerkzeuge, die speziell entwickelt wurden, um Autotüren 100% schadensfrei zu öffnen:
-      </p>
-      <ul>
-        <li><strong>Air Wedges (Pumpkissen):</strong> Wir platzieren ein spezielles Luftkissen zwischen der Tür und der Karosserie. Durch leichtes Aufpumpen schaffen wir genau genug Platz, um mit einem beschichteten Werkzeug den Türgriff von innen zu betätigen, ohne den Lack oder die Gummis zu beschädigen.</li>
-        <li><strong>Lishi Lock Picks:</strong> Für High-End-Autos (wie BMW, Mercedes oder Audi), die über einen "Deadlock" verfügen, verwenden wir Lishi-Decoder. Damit "lesen" wir das Schloss von außen und öffnen die Tür, als ob wir den Originalschlüssel verwenden würden.</li>
-      </ul>
-
-      <h3>Soforthilfe vor Ort</h3>
-      <p>
-        Stehen Sie in der Kälte und das Auto muss geöffnet werden? Unser mobiler Service-Bus ist 24/7 in der gesamten Region verfügbar. Wir sind oft innerhalb von 30 bis 60 Minuten vor Ort, um Ihnen wieder auf den Weg zu helfen.
-      </p>
-      <div style={{ background: '#f8fafc', borderLeft: '4px solid #dc2626', padding: '1rem', margin: '1.5rem 0', borderRadius: '4px' }}>
-        <strong>Schlüssel im Auto? Brechen Sie nichts ab!</strong> Rufen Sie sofort FC-KEY unter <a href={WHATSAPP_URL} style={{ color: '#dc2626', fontWeight: 'bold', textDecoration: 'underline' }}>06 11 75 12 31</a> an. Wir öffnen Ihre Tür garantiert 100% schadensfrei.
-      </div>
-    </>
-  ),
-  'autoschluessel-verloren-was-nun-stufenplan': (
+  'autoschluessel-verloren-was-nun-anleitung': (
     <>
       <h2>Autoschlüssel verloren? Der komplette Stufenplan (Inklusive Kosten & Lösungen)</h2>
+      <div style={{ padding: "1.5rem", backgroundColor: "#f8fafc", borderRadius: "12px", marginBottom: "2rem", borderLeft: "4px solid var(--color-primary)" }}>
+        <p style={{ margin: 0, fontWeight: 500, color: "var(--navy-900)" }}>
+          <strong>Update 2026:</strong> Dieser Leitfaden wurde erweitert und deckt nun alle Szenarien ab: Komplett verlorene Schlüssel, Schlüssel im Auto eingeschlossen (Aussperrung) und die schadenfreie Notöffnung durch Spezialisten. Egal welches Problem Sie haben, hier finden Sie die Lösung.
+        </p>
+      </div>
+      <h3 style={{ marginTop: "2.5rem" }}>Szenario 1: Schlüssel im Auto liegen gelassen (Aussperrung)</h3>
+      <p>Es passiert schneller, als man denkt: Die Autotür fällt zu, das Auto verriegelt sich automatisch und der Schlüssel liegt noch auf dem Fahrersitz oder im Kofferraum. In dieser Situation ist das Wichtigste: <strong>Schlagen Sie keine Scheibe ein!</strong> Moderne Fahrzeuge lassen sich von Schlüsseldiensten, die auf Autos spezialisiert sind, durch den Einsatz von Lishi-Decodern 100% schadenfrei über den Schließzylinder öffnen. Dies ist deutlich günstiger und schneller als ein Werkstattbesuch oder der Austausch einer Seitenscheibe.</p>
+      <h3 style={{ marginTop: "2.5rem" }}>Szenario 2: Auto öffnen ohne Schlüssel (Schadenfreie Notöffnung)</h3>
+      <p>Wenn sich Ihr Auto nicht mehr öffnen lässt (z. B. weil die Batterie leer ist und das Funksignal nicht reagiert), gibt es immer einen mechanischen Notschließzylinder, oft versteckt unter einer Kappe am Türgriff. Ein Profi kann diesen Zylinder abtasten und entriegeln, selbst wenn sich das Auto im "Deadlock"-Modus befindet. So erhalten Sie sofort wieder Zugang zu Ihrem Fahrzeug, ganz ohne Kratzer am Lack oder kaputte Gummidichtungen.</p>
       
       <p className="lead" style={{ fontSize: '1.15rem', lineHeight: 1.7, fontWeight: 500, color: 'var(--navy-800)', marginBottom: '1.5rem' }}>
         Ein verlorener Autoschlüssel ist besonders stressig, besonders wenn Sie keinen Ersatzschlüssel haben. Entdecken Sie in diesem umfassenden Leitfaden sofort, welche Optionen Sie haben, wie ein Spezialist sicher einen neuen Schlüssel anlernt und mit welchen Kosten zu rechnen ist.
@@ -1583,110 +1553,6 @@ export const BLOG_CONTENT: Record<string, React.ReactNode> = {
       <p>
         Einige Autos haben einen Notschlüssel am Schlüsselbund. Überprüfen Sie, ob Ihr Auto diese Funktion hat, bevor Sie andere Methoden ausprobieren.
       </p>
-    </>
-  ),
-  'schluessel-im-auto-liegen-lassen-loesungen': (
-    <>
-      <h2>Technologische Lösungen für moderne Autos</h2>
-      <p>
-        Moderne Autos sind mit fortschrittlichen Technologien ausgestattet, die helfen können, wenn Sie ausgesperrt sind. Viele neuere Modelle verfügen über schlüssellose Zugangssysteme. Diese Systeme verwenden Sensoren, um zu erkennen, ob sich der Schlüssel in der Nähe des Autos befindet. Das bedeutet, dass Sie die Tür oft mit einer einfachen Berührung öffnen können, ohne den Schlüssel physisch benutzen zu müssen.
-      </p>
-      <p>
-        Darüber hinaus bieten viele Automarken heutzutage Smartphone-Apps an. Mit diesen Apps können Sie Ihr Auto aus der Ferne entriegeln, oft sogar mit einem Knopfdruck. Dies ist eine äußerst bequeme Lösung, wenn Sie Ihre Schlüssel im Auto liegen gelassen haben. Sie benötigen nur Ihr Smartphone und eine Internetverbindung, um wieder Zugang zu Ihrem Fahrzeug zu erhalten.
-      </p>
-      <p>
-        Eine weitere technologische Option ist die Verwendung von Telematikdiensten wie OnStar. Diese Dienste können Ihr Auto aus der Ferne entriegeln, nachdem Sie Ihre Identität bestätigt haben. Dies bietet zusätzliche Sicherheit und Bequemlichkeit.
-      </p>
-      <p>Hier sind einige technologische Optionen:</p>
-      <ul>
-        <li>Schlüssellose Zugangssysteme</li>
-        <li>Smartphone-Apps zum Entriegeln</li>
-        <li>Telematikdienste (z. B. OnStar)</li>
-        <li>Ersatzschlüssel, die in Keyless-Systeme integriert sind</li>
-      </ul>
-      <p>
-        Es ist entscheidend zu verstehen, wie Ihr Auto funktioniert und welche Werkzeuge zur Verfügung stehen. Damit können Sie sowohl zukünftige Probleme vermeiden als auch Lösungen finden, wenn Sie sich ausgesperrt haben. Es ist immer nützlich, sich mit der Bedienungsanleitung Ihres Fahrzeugs vertraut zu machen.
-      </p>
-      <p><em>von JavyGo (https://unsplash.com/@laideaes)</em></p>
-
-      <h2>Prävention: Wie verhindern Sie, dass Sie Ihren Autoschlüssel im Auto liegen lassen?</h2>
-      <p>
-        Niemand möchte diese ärgerliche Situation eines verschlossenen Autos mit dem Schlüssel darin erleben. Deshalb ist Prävention entscheidend. Eine der einfachsten Möglichkeiten, dies zu verhindern, ist, einen festen Platz für Ihre Autoschlüssel zu haben. Dies verringert die Wahrscheinlichkeit, dass Sie sie in Ihrem Auto vergessen.
-      </p>
-      <p>
-        Ein weiterer nützlicher Tipp ist, immer kurz zu prüfen, ob Sie Ihren Schlüssel in der Hand haben, bevor Sie die Tür schließen. Machen Sie es sich zur Gewohnheit, Ihre Schlüssel in Ihre Tasche oder Handtasche zu stecken, sobald Sie aussteigen. Kleine Gewohnheiten können erhebliche Probleme verhindern.
-      </p>
-      <p>
-        Ein Ersatzschlüssel kann in Notfällen auch eine Rettung sein. Erwägen Sie, einen Ersatzschlüssel an einem sicheren Ort aufzubewahren, der leicht zugänglich ist. Denken Sie an einen Schlüsselkasten oder eine diskrete Magnetbox unter dem Auto.
-      </p>
-      <p>
-        Erwägen Sie außerdem ein schlüsselloses Zugangssystem. Obwohl dies eine anfängliche Investition erfordern kann, eliminiert es die Möglichkeit, Ihren Autoschlüssel im Auto liegen zu lassen, vollständig. Diese Systeme bieten sowohl Komfort als auch Sicherheit.
-      </p>
-      <p>Einige präventive Maßnahmen sind:</p>
-      <ul>
-        <li>Bewahren Sie einen Ersatzschlüssel an einem sicheren Ort auf</li>
-        <li>Installieren Sie ein schlüsselloses Zugangssystem</li>
-        <li>Schaffen Sie Schlüsselgewohnheiten und -routinen</li>
-      </ul>
-      <p><em>von Max Smith (https://unsplash.com/@maximo169)</em></p>
-
-      <h2>Häufig gestellte Fragen zu ausgesperrten Autos</h2>
-      <h3>Was sollte ich als Erstes tun, wenn ich ausgesperrt bin?</h3>
-      <p>
-        Bleiben Sie ruhig und überprüfen Sie, ob eine Tür oder der Kofferraum geöffnet ist. Dies kann oft eine schnelle Lösung sein, um ohne weitere Hilfsmittel oder Kosten ins Auto zu gelangen.
-      </p>
-      
-      <h3>Hilft die Autoversicherung beim Öffnen des Autos?</h3>
-      <p>
-        In einigen Fällen ja. Überprüfen Sie Ihre Police, um zu sehen, ob die Kosten für das Öffnen des Autos gedeckt sind. Dies kann die Kosten erheblich senken, wenn ein Schlüsseldienst benötigt wird.
-      </p>
-
-      <h3>Was, wenn mein Auto mit dem Schlüssel darin automatisch abschließt?</h3>
-      <p>
-        Überprüfen Sie, ob Ihr Fahrzeug über ein Backup-System verfügt, wie ein verstecktes Schlüsselloch oder eine Notentriegelung. Moderne Autos verfügen manchmal über Funktionen, die in Notfällen helfen.
-      </p>
-
-      <h3>Gibt es riskante Methoden, die ich vermeiden sollte?</h3>
-      <p>
-        Ja, aggressive Methoden wie die Verwendung von scharfen Gegenständen können Ihr Auto beschädigen. Dies kann höhere Kosten verursachen, als professionelle Hilfe in Anspruch zu nehmen.
-      </p>
-
-      <h3>Gibt es Werkzeuge, die ich verwenden kann, um mir selbst zu helfen?</h3>
-      <p>
-        Ein aufblasbarer Keil und eine lange Metallstange können nützlich sein. Sie können helfen, die Tür schnell und sicher ohne Beschädigung zu öffnen.
-      </p>
-
-      <h2>Checkliste: Was tun, wenn Ihr Schlüssel im Auto liegt</h2>
-      <p>
-        Wenn Sie Ihren Autoschlüssel versehentlich im Auto liegen gelassen haben, ist es wichtig, strukturiert zu handeln. Befolgen Sie diese Checkliste, um Stress und zusätzliche Kosten zu vermeiden:
-      </p>
-      <ul>
-        <li>Überprüfen Sie alle Türen und den Kofferraum auf mögliche Öffnungen.</li>
-        <li>Verwenden Sie einen Ersatzschlüssel, falls vorhanden.</li>
-        <li>Rufen Sie ein Familienmitglied oder einen Freund um Hilfe an.</li>
-        <li>Erwägen Sie, den Pannendienst zu rufen, wenn Sie Mitglied sind.</li>
-        <li>Suchen Sie einen zuverlässigen Schlüsseldienst für professionelle Hilfe.</li>
-        <li>Halten Sie wichtige Telefonnummern für Notfälle griffbereit.</li>
-      </ul>
-      <p>Wenn Sie diese Schritte befolgen, können Sie das Problem eines ausgesperrten Autos schnell und effektiv lösen.</p>
-
-      <h2>Fazit und letzte Tipps</h2>
-      <p>
-        Das Verlieren Ihrer Autoschlüssel kann stressig sein, aber es gibt immer Lösungen. Von praktischen Do-it-yourself-Methoden bis hin zu professioneller Hilfe können Sie ohne bleibende Schäden wieder in Ihr Fahrzeug gelangen.
-      </p>
-      <p>
-        Um zukünftige Probleme zu vermeiden, ist es ratsam, einen Ersatzschlüssel sicher aufzubewahren und in moderne Technologien wie schlüssellosen Zugang zu investieren. Denken Sie immer voraus und bereiten Sie sich auf Notfälle vor. So erleben Sie keine Überraschungen mehr, wenn Sie Ihren Schlüssel im Auto liegen lassen.
-      </p>
-
-      <div style={{ background: 'var(--color-primary)', borderRadius: '12px', padding: '2rem', marginTop: '3rem', textAlign: 'center' }}>
-        <h3 style={{ color: '#fff', marginBottom: '0.5rem' }}>Benötigen Sie sofortige Hilfe oder möchten Sie einen Ersatzschlüssel nachmachen?</h3>
-        <p style={{ color: 'rgba(255,255,255,0.85)', marginBottom: '1.5rem' }}>Unsere zertifizierten Spezialisten stehen Ihnen 24/7 zur Verfügung.</p>
-        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ background: '#fff', color: 'var(--color-primary)', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 700, textDecoration: 'none' }}>
-            📞 {SITE_CONFIG.phone}
-          </a>
-        </div>
-      </div>
     </>
   ),
   'auto-erkennt-schluessel-nicht-mehr': (

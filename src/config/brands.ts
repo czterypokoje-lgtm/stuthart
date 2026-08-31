@@ -1,1177 +1,582 @@
-// ============================================================
-// BRANDS CONFIG — 59 Car Brands
-// Each brand: slug, name, priority, system, models
-// Expanded with Year Ranges for SEO
-// ============================================================
-
 export type Brand = {
   slug: string;
   name: string;
-  nameSlug: string; // for URL: /marken/[nameSlug]
-  priority: 'P1' | 'P2' | 'P3';
-  system: string;   // ECU/immobilizer system
+  nameSlug: string;
+  priority: string;
+  system: string;
   excerpt: string;
-  models?: BrandModel[];
-  customH1?: string;
+  customSeoBlurb?: string;
   customMetaTitle?: string;
-  customSeoBlurb?: string; // model-specific SEO paragraph for long-tail keywords
   specialIntents?: { slug: string; name: string }[];
-};
-
-export type BrandModel = {
-  slug: string;
-  name: string;
-  generations?: string;
-  years: string; // e.g. "2011–2024" or "2010, 2011, 2012, 2013, 2014, 2015"
+  customH1?: string;
+  models: { slug: string; name: string; years: string }[];
 };
 
 export const BRANDS: Brand[] = [
   {
-    slug: 'bmw', name: 'BMW', nameSlug: 'bmw', priority: 'P1',
-    system: 'CAS2 / CAS3+ / CAS4+ / FEM / BDC',
-    excerpt: 'BMW Schlüsselprogrammierung für alle Serien. CAS, FEM und BDC Systeme. 1/3/5/7 Serie, X1–X7, M-series, i-series.',
-    customSeoBlurb: 'Wir helfen Ihnen beim Nachmachen des BMW X1 Schlüssels, BMW X2 Schlüssels und berechnen die Kosten transparent. Der BMW X1 (E84, F48) und X2 (F39) nutzen das BDC-System. Auch Schlüssel für die 1er, 3er, X3 und X5 Reihe programmieren wir vor Ort. Die Kosten für einen BMW-Schlüssel sind bei uns bis zu 50% günstiger als beim BMW-Händler.',
-    models: [
-      { slug: '1-serie', name: '1 Serie', years: 'Alle Baujahre' },
-      { slug: '2-serie', name: '2 Serie', years: 'Alle Baujahre' },
-      { slug: '3-serie', name: '3 Serie', years: 'Alle Baujahre' },
-      { slug: '4-serie', name: '4 Serie', years: 'Alle Baujahre' },
-      { slug: '5-serie', name: '5 Serie', years: 'Alle Baujahre' },
-      { slug: '6-serie', name: '6 Serie', years: 'Alle Baujahre' },
-      { slug: '7-serie', name: '7 Serie', years: 'Alle Baujahre' },
-      { slug: '8-serie', name: '8 Serie', years: 'Alle Baujahre' },
-      { slug: 'i3', name: 'i3', years: 'Alle Baujahre' },
-      { slug: 'i4', name: 'i4', years: 'Alle Baujahre' },
-      { slug: 'i5', name: 'i5', years: 'Alle Baujahre' },
-      { slug: 'i7', name: 'i7', years: 'Alle Baujahre' },
-      { slug: 'i8', name: 'i8', years: 'Alle Baujahre' },
-      { slug: 'ix', name: 'iX', years: 'Alle Baujahre' },
-      { slug: 'ix1', name: 'iX1', years: 'Alle Baujahre' },
-      { slug: 'ix2', name: 'iX2', years: 'Alle Baujahre' },
-      { slug: 'ix3', name: 'iX3', years: 'Alle Baujahre' },
-      { slug: 'x1', name: 'X1', years: 'Alle Baujahre' },
-      { slug: 'x2', name: 'X2', years: 'Alle Baujahre' },
-      { slug: 'x3', name: 'X3', years: 'Alle Baujahre' },
-      { slug: 'x4', name: 'X4', years: 'Alle Baujahre' },
-      { slug: 'x5', name: 'X5', years: 'Alle Baujahre' },
-      { slug: 'x6', name: 'X6', years: 'Alle Baujahre' },
-      { slug: 'x7', name: 'X7', years: 'Alle Baujahre' },
-      { slug: 'z3', name: 'Z3', years: 'Alle Baujahre' },
-      { slug: 'z4', name: 'Z4', years: 'Alle Baujahre' },
-      { slug: 'm2', name: 'M2', years: 'Alle Baujahre' },
-      { slug: 'm3', name: 'M3', years: 'Alle Baujahre' },
-      { slug: 'm4', name: 'M4', years: 'Alle Baujahre' },
-      { slug: 'm5', name: 'M5', years: 'Alle Baujahre' },
-      { slug: 'm6', name: 'M6', years: 'Alle Baujahre' },
-      { slug: 'm8', name: 'M8', years: 'Alle Baujahre' },
-    ],
+    "slug": "volkswagen",
+    "name": "Volkswagen",
+    "nameSlug": "volkswagen",
+    "priority": "P1",
+    "system": "MQB / PQ35 / KESSY / UDS",
+    "excerpt": "VW Schlüssel nachmachen: Golf, Polo, Passat, T5/T6.",
+    "customSeoBlurb": "Wir sind auf Volkswagen spezialisiert. Egal ob ältere PQ35-Plattform (Golf 5/6) oder moderne MQB-Systeme (Golf 7/8, Passat B8) mit KESSY – wir programmieren neue VW-Autoschlüssel und Transponder direkt vor Ort. Selbst bei \"All Keys Lost\" (AKL) greifen wir auf sichere Online-VAG-Datenbanken zurück.",
+    "models": [
+      {
+        "slug": "golf",
+        "name": "Golf",
+        "years": "Alle Baujahre (inkl. MQB & SFD)"
+      },
+      {
+        "slug": "polo",
+        "name": "Polo",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "passat",
+        "name": "Passat",
+        "years": "B5, B6, B7, B8, B9"
+      },
+      {
+        "slug": "transporter",
+        "name": "Transporter (T4/T5/T6)",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'mercedes', name: 'Mercedes-Benz', nameSlug: 'mercedes', priority: 'P1',
-    system: 'IR / HFM / NEC / EIS / ESL',
-    excerpt: 'Mercedes Schlüsselprogrammierung. W204, W205, W213, Sprinter, Vito. EIS/ESL bench Programmierung.',
-    customSeoBlurb: 'Benötigen Sie einen Mercedes Benz CLK Schlüssel, einen Mercedes Benz ML Autoschlüssel oder einen Mercedes Benz SL Klasse Autoschlüssel? Auch das Nachmachen eines Mercedes Benz CL Klasse Autoschlüssels gehört zu unserer täglichen Arbeit. Wir arbeiten mit EIS/ESL-Bench-Programmierung für alle Modelle, von der A-Klasse bis zur S-Klasse, CLA, GLA und GLC.',
-    models: [
-      { slug: 'a-klasse', name: 'A-Klasse', years: 'Alle Baujahre' },
-      { slug: 'b-klasse', name: 'B-Klasse', years: 'Alle Baujahre' },
-      { slug: 'c-klasse', name: 'C-Klasse', years: 'Alle Baujahre' },
-      { slug: 'cla', name: 'CLA', years: 'Alle Baujahre' },
-      { slug: 'clk', name: 'CLK', years: 'Alle Baujahre' },
-      { slug: 'cls', name: 'CLS', years: 'Alle Baujahre' },
-      { slug: 'e-klasse', name: 'E-Klasse', years: 'Alle Baujahre' },
-      { slug: 'g-klasse', name: 'G-Klasse', years: 'Alle Baujahre' },
-      { slug: 'gl', name: 'GL', years: 'Alle Baujahre' },
-      { slug: 'gla', name: 'GLA', years: 'Alle Baujahre' },
-      { slug: 'glb', name: 'GLB', years: 'Alle Baujahre' },
-      { slug: 'glc', name: 'GLC', years: 'Alle Baujahre' },
-      { slug: 'gle', name: 'GLE', years: 'Alle Baujahre' },
-      { slug: 'glk', name: 'GLK', years: 'Alle Baujahre' },
-      { slug: 'gls', name: 'GLS', years: 'Alle Baujahre' },
-      { slug: 'm-klasse', name: 'M-Klasse', years: 'Alle Baujahre' },
-      { slug: 'r-klasse', name: 'R-Klasse', years: 'Alle Baujahre' },
-      { slug: 's-klasse', name: 'S-Klasse', years: 'Alle Baujahre' },
-      { slug: 'sl', name: 'SL', years: 'Alle Baujahre' },
-      { slug: 'slc', name: 'SLC', years: 'Alle Baujahre' },
-      { slug: 'slk', name: 'SLK', years: 'Alle Baujahre' },
-      { slug: 'sls-amg', name: 'SLS AMG', years: 'Alle Baujahre' },
-      { slug: 'sprinter', name: 'Sprinter', years: 'Alle Baujahre' },
-      { slug: 'v-klasse', name: 'V-Klasse', years: 'Alle Baujahre' },
-      { slug: 'viano', name: 'Viano', years: 'Alle Baujahre' },
-      { slug: 'vito', name: 'Vito', years: 'Alle Baujahre' },
-      { slug: 'eqe', name: 'EQE', years: 'Alle Baujahre' },
-      { slug: 'eqs', name: 'EQS', years: 'Alle Baujahre' },
-      { slug: 'eqc', name: 'EQC', years: 'Alle Baujahre' },
-      { slug: 'eqa', name: 'EQA', years: 'Alle Baujahre' },
-      { slug: 'eqb', name: 'EQB', years: 'Alle Baujahre' },
-    ],
+    "slug": "bmw",
+    "name": "BMW",
+    "nameSlug": "bmw",
+    "priority": "P1",
+    "system": "CAS (1-4) / FEM / BDC",
+    "excerpt": "BMW Schlüssel programmieren: 1er, 3er, 5er, X-Modelle.",
+    "customSeoBlurb": "Die Programmierung von BMW-Schlüsseln erfordert höchste Präzision. Wir bearbeiten alle Wegfahrsperren-Generationen: Vom älteren EWS und CAS1-CAS4 (E- und frühe F-Modelle) bis hin zu hochkomplexen FEM- und BDC-Modulen (F- und G-Modelle). Ihr neuer BMW Smart Key wird sicher in die Bordelektronik integriert.",
+    "models": [
+      {
+        "slug": "1er",
+        "name": "1er",
+        "years": "E87, F20, F40"
+      },
+      {
+        "slug": "3er",
+        "name": "3er",
+        "years": "E46, E90, F30, G20"
+      },
+      {
+        "slug": "5er",
+        "name": "5er",
+        "years": "E39, E60, F10, G30"
+      },
+      {
+        "slug": "x3-x5",
+        "name": "X3 & X5",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'volkswagen', name: 'Volkswagen', nameSlug: 'volkswagen', priority: 'P1',
-    system: 'MQB / MLB / PQ35 / SFD',
-    excerpt: 'VW Schlüsselprogrammierung. Golf 7/8, Tiguan, Polo, Passat. SFD Entriegelungs Spezialist.',
-    customSeoBlurb: 'Beliebte Anfragen bei uns: Volkswagen Eos Schlüssel nachmachen, Volkswagen Jetta Schlüssel nachmachen und Volkswagen Transporter Schlüssel nachmachen. Der VW Eos (2006-2015) und VW Jetta (2005-2018) nutzen das PQ35-Plattform. Der Transporter T5/T6 arbeitet mit MQB. Wir programmieren alle VW-Schlüssel vor Ort.',
-    models: [
-      { slug: 'caddy', name: 'Caddy', years: 'Alle Baujahre' },
-      { slug: 'caravelle', name: 'Caravelle', years: 'Alle Baujahre' },
-      { slug: 'crafter', name: 'Crafter', years: 'Alle Baujahre' },
-      { slug: 'cross-golf', name: 'Cross Golf', years: 'Alle Baujahre' },
-      { slug: 'eos', name: 'Eos', years: 'Alle Baujahre' },
-      { slug: 'euro-van', name: 'Euro Van', years: 'Alle Baujahre' },
-      { slug: 'fox', name: 'Fox', years: 'Alle Baujahre' },
-      { slug: 'golf', name: 'Golf', years: 'Alle Baujahre' },
-      { slug: 'golf-cabrio', name: 'Golf Cabrio', years: 'Alle Baujahre' },
-      { slug: 'golf-gti', name: 'Golf Gti', years: 'Alle Baujahre' },
-      { slug: 'golf-plus', name: 'Golf Plus', years: 'Alle Baujahre' },
-      { slug: 'jetta', name: 'Jetta', years: 'Alle Baujahre' },
-      { slug: 'kombi', name: 'Kombi', years: 'Alle Baujahre' },
-      { slug: 'lavida', name: 'Lavida', years: 'Alle Baujahre' },
-      { slug: 'lt28', name: 'LT28', years: 'Alle Baujahre' },
-      { slug: 'lupo', name: 'Lupo', years: 'Alle Baujahre' },
-      { slug: 'maggiolino', name: 'Maggiolino', years: 'Alle Baujahre' },
-      { slug: 'magotan', name: 'Magotan', years: 'Alle Baujahre' },
-      { slug: 'multivan', name: 'Multivan', years: 'Alle Baujahre' },
-      { slug: 'nouvelle', name: 'Nouvelle', years: 'Alle Baujahre' },
-      { slug: 'coccinelle', name: 'Coccinelle', years: 'Alle Baujahre' },
-      { slug: 'passat', name: 'Passat', years: 'Alle Baujahre' },
-      { slug: 'passat-w8', name: 'Passat W8', years: 'Alle Baujahre' },
-      { slug: 'polo', name: 'Polo', years: 'Alle Baujahre' },
-      { slug: 'rabbit', name: 'Rabbit', years: 'Alle Baujahre' },
-      { slug: 'routan', name: 'Routan', years: 'Alle Baujahre' },
-      { slug: 'sagitar', name: 'Sagitar', years: 'Alle Baujahre' },
-      { slug: 'saveiro', name: 'Saveiro', years: 'Alle Baujahre' },
-      { slug: 'scirocco', name: 'Scirocco', years: 'Alle Baujahre' },
-      { slug: 'sharan', name: 'Sharan', years: 'Alle Baujahre' },
-      { slug: 'tiguan', name: 'Tiguan', years: 'Alle Baujahre' },
-      { slug: 'touareg', name: 'Touareg', years: 'Alle Baujahre' },
-      { slug: 'touran', name: 'Touran', years: 'Alle Baujahre' },
-      { slug: 'transporter', name: 'Transporter', years: 'Alle Baujahre' },
-      { slug: 'up', name: 'Up', years: 'Alle Baujahre' },
-      { slug: 'vento', name: 'Vento', years: 'Alle Baujahre' },
-    ],
+    "slug": "mercedes",
+    "name": "Mercedes",
+    "nameSlug": "mercedes",
+    "priority": "P1",
+    "system": "FBS3 / FBS4 / EZS / ELV",
+    "excerpt": "Mercedes-Benz Schlüssel Ersatz & EZS/ELV Reparatur.",
+    "customSeoBlurb": "Mercedes-Schlüssel verloren? Wir codieren FBS3 und FBS4 (Fahrberechtigungssystem) Smart Keys. Zudem beheben wir den berüchtigten \"Zündschloss dreht nicht\"-Fehler bei W204/W212 Modellen durch professionelle EZS/ELV (elektronische Lenkradverriegelung) Reparatur oder Emulatoren vor Ort.",
+    "models": [
+      {
+        "slug": "a-klasse",
+        "name": "A-Klasse",
+        "years": "W169, W176, W177"
+      },
+      {
+        "slug": "c-klasse",
+        "name": "C-Klasse",
+        "years": "W203, W204, W205, W206"
+      },
+      {
+        "slug": "e-klasse",
+        "name": "E-Klasse",
+        "years": "W211, W212, W213"
+      },
+      {
+        "slug": "sprinter",
+        "name": "Sprinter",
+        "years": "W906, W907"
+      }
+    ]
   },
   {
-    slug: 'audi', name: 'Audi', nameSlug: 'audi', priority: 'P1',
-    system: 'MMI / MIB / VW Group',
-    excerpt: 'Audi Schlüsselprogrammierung. A3, A4, A6, Q3, Q5, Q7. VW Group platform Spezialist.',
-    customSeoBlurb: 'Viele Kunden fragen uns nach einem Audi A6 Schlüssel oder einem Audi S3 Schlüssel. Das Nachmachen eines Audi A6 Autoschlüssels (C6, C7, C8) erfordert MLB-Plattform-Programmierung. Der Audi S3 Schlüssel nutzt dieselbe Plattform wie der A3. Immer vor Ort, mit 12 Monaten Garantie.',
-    models: [
-      { slug: 'a1', name: 'A1', years: 'Alle Baujahre' },
-      { slug: 'a2', name: 'A2', years: 'Alle Baujahre' },
-      { slug: 'a3', name: 'A3', years: 'Alle Baujahre' },
-      { slug: 'a4', name: 'A4', years: 'Alle Baujahre' },
-      { slug: 'a5', name: 'A5', years: 'Alle Baujahre' },
-      { slug: 'a6', name: 'A6', years: 'Alle Baujahre' },
-      { slug: 'a7', name: 'A7', years: 'Alle Baujahre' },
-      { slug: 'a8', name: 'A8', years: 'Alle Baujahre' },
-      { slug: 'q2', name: 'Q2', years: 'Alle Baujahre' },
-      { slug: 'q3', name: 'Q3', years: 'Alle Baujahre' },
-      { slug: 'q5', name: 'Q5', years: 'Alle Baujahre' },
-      { slug: 'q7', name: 'Q7', years: 'Alle Baujahre' },
-      { slug: 'q8', name: 'Q8', years: 'Alle Baujahre' },
-      { slug: 'r8', name: 'R8', years: 'Alle Baujahre' },
-      { slug: 'tt', name: 'TT', years: 'Alle Baujahre' },
-      { slug: 'e-tron', name: 'e-tron', years: 'Alle Baujahre' },
-      { slug: 'q4-e-tron', name: 'Q4 e-tron', years: 'Alle Baujahre' },
-      { slug: 'e-tron-gt', name: 'e-tron GT', years: 'Alle Baujahre' },
-      { slug: 's1', name: 'S1', years: 'Alle Baujahre' },
-      { slug: 's3', name: 'S3', years: 'Alle Baujahre' },
-      { slug: 's4', name: 'S4', years: 'Alle Baujahre' },
-      { slug: 's5', name: 'S5', years: 'Alle Baujahre' },
-      { slug: 's6', name: 'S6', years: 'Alle Baujahre' },
-      { slug: 's7', name: 'S7', years: 'Alle Baujahre' },
-      { slug: 's8', name: 'S8', years: 'Alle Baujahre' },
-      { slug: 'rs3', name: 'RS3', years: 'Alle Baujahre' },
-      { slug: 'rs4', name: 'RS4', years: 'Alle Baujahre' },
-      { slug: 'rs5', name: 'RS5', years: 'Alle Baujahre' },
-      { slug: 'rs6', name: 'RS6', years: 'Alle Baujahre' },
-      { slug: 'rs7', name: 'RS7', years: 'Alle Baujahre' },
-      { slug: 'rs-q3', name: 'RS Q3', years: 'Alle Baujahre' },
-      { slug: 'rs-q8', name: 'RS Q8', years: 'Alle Baujahre' },
-    ],
+    "slug": "audi",
+    "name": "Audi",
+    "nameSlug": "audi",
+    "priority": "P1",
+    "system": "UDS / BCM2 / MQB / MLB",
+    "excerpt": "Audi Schlüssel nachmachen: A3, A4, A6, Q-Modelle.",
+    "customSeoBlurb": "Für Audi bieten wir die komplette Palette an Schlüsselservices. Von älteren Megamos48-Transpondern bis hin zu modernen BCM2-Systemen (Audi A4, A5, Q5) und der MLB-Plattform. Wir fräsen den Notschlüsselbart CNC-genau und lernen Ihren neuen Advanced Key (Keyless Go) fachgerecht an.",
+    "models": [
+      {
+        "slug": "a3",
+        "name": "A3",
+        "years": "8L, 8P, 8V, 8Y"
+      },
+      {
+        "slug": "a4",
+        "name": "A4",
+        "years": "B5, B6, B7, B8, B9"
+      },
+      {
+        "slug": "a6",
+        "name": "A6",
+        "years": "C5, C6, C7, C8"
+      },
+      {
+        "slug": "q5",
+        "name": "Q5",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'volvo', name: 'Volvo', nameSlug: 'volvo', priority: 'P2',
-    system: 'Volvo VIDA / DICE / CEM',
-    excerpt: 'Volvo Schlüsselprogrammierung. V40, V60, XC60, XC90, S60. CEM Modul Spezialist.',
-    models: [
-      { slug: 'c30', name: 'C30', years: 'Alle Baujahre' },
-      { slug: 'c70', name: 'C70', years: 'Alle Baujahre' },
-      { slug: 's40', name: 'S40', years: 'Alle Baujahre' },
-      { slug: 's60', name: 'S60', years: 'Alle Baujahre' },
-      { slug: 's70', name: 'S70', years: 'Alle Baujahre' },
-      { slug: 's80', name: 'S80', years: 'Alle Baujahre' },
-      { slug: 's90', name: 'S90', years: 'Alle Baujahre' },
-      { slug: 'v40', name: 'V40', years: 'Alle Baujahre' },
-      { slug: 'v50', name: 'V50', years: 'Alle Baujahre' },
-      { slug: 'v60', name: 'V60', years: 'Alle Baujahre' },
-      { slug: 'v70', name: 'V70', years: 'Alle Baujahre' },
-      { slug: 'v90', name: 'V90', years: 'Alle Baujahre' },
-      { slug: 'xc40', name: 'XC40', years: 'Alle Baujahre' },
-      { slug: 'xc60', name: 'XC60', years: 'Alle Baujahre' },
-      { slug: 'xc70', name: 'XC70', years: 'Alle Baujahre' },
-      { slug: 'xc90', name: 'XC90', years: 'Alle Baujahre' },
-      { slug: 'ex30', name: 'EX30', years: 'Alle Baujahre' },
-      { slug: 'ex90', name: 'EX90', years: 'Alle Baujahre' },
-      { slug: 'c40', name: 'C40', years: 'Alle Baujahre' },
-    ],
+    "slug": "skoda",
+    "name": "Skoda",
+    "nameSlug": "skoda",
+    "priority": "P1",
+    "system": "VAG MQB / KESSY",
+    "excerpt": "Skoda Autoschlüssel: Octavia, Fabia, Superb.",
+    "customSeoBlurb": "Als Teil des VW-Konzerns nutzt Skoda die gleichen Wegfahrsperren wie VW (MQB-Plattform). Wir können für Modelle wie den Octavia 3/4 oder Kodiaq problemlos neue KESSY-Schlüssel anlernen, ohne dass Sie Wochen auf einen Termin beim VAG-Händler warten müssen.",
+    "models": [
+      {
+        "slug": "octavia",
+        "name": "Octavia",
+        "years": "Alle Generationen"
+      },
+      {
+        "slug": "fabia",
+        "name": "Fabia",
+        "years": "Alle Generationen"
+      },
+      {
+        "slug": "superb",
+        "name": "Superb",
+        "years": "Alle Generationen"
+      },
+      {
+        "slug": "kodiaq",
+        "name": "Kodiaq",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'toyota', name: 'Toyota', nameSlug: 'toyota', priority: 'P1',
-    system: 'Smart Key / G chip',
-    excerpt: 'Toyota Schlüsselprogrammierung Spezialist.',
-    models: [
-      { slug: 'auris', name: 'Auris', years: 'Alle Baujahre' },
-      { slug: 'avensis', name: 'Avensis', years: 'Alle Baujahre' },
-      { slug: 'aygo', name: 'Aygo', years: 'Alle Baujahre' },
-      { slug: 'c-hr', name: 'C-HR', years: 'Alle Baujahre' },
-      { slug: 'camry', name: 'Camry', years: 'Alle Baujahre' },
-      { slug: 'celica', name: 'Celica', years: 'Alle Baujahre' },
-      { slug: 'corolla', name: 'Corolla', years: 'Alle Baujahre' },
-      { slug: 'corolla-cross', name: 'Corolla Cross', years: 'Alle Baujahre' },
-      { slug: 'gt86', name: 'GT86', years: 'Alle Baujahre' },
-      { slug: 'highlander', name: 'Highlander', years: 'Alle Baujahre' },
-      { slug: 'hilux', name: 'Hilux', years: 'Alle Baujahre' },
-      { slug: 'iq', name: 'IQ', years: 'Alle Baujahre' },
-      { slug: 'land-cruiser', name: 'Land Cruiser', years: 'Alle Baujahre' },
-      { slug: 'mr2', name: 'MR2', years: 'Alle Baujahre' },
-      { slug: 'prius', name: 'Prius', years: 'Alle Baujahre' },
-      { slug: 'proace', name: 'Proace', years: 'Alle Baujahre' },
-      { slug: 'proace-city', name: 'Proace City', years: 'Alle Baujahre' },
-      { slug: 'rav4', name: 'RAV4', years: 'Alle Baujahre' },
-      { slug: 'supra', name: 'Supra', years: 'Alle Baujahre' },
-      { slug: 'urban-cruiser', name: 'Urban Cruiser', years: 'Alle Baujahre' },
-      { slug: 'verso', name: 'Verso', years: 'Alle Baujahre' },
-      { slug: 'yaris', name: 'Yaris', years: 'Alle Baujahre' },
-      { slug: 'yaris-cross', name: 'Yaris Cross', years: 'Alle Baujahre' },
-      { slug: 'bz4x', name: 'bZ4X', years: 'Alle Baujahre' },
-    ],
+    "slug": "opel",
+    "name": "Opel",
+    "nameSlug": "opel",
+    "priority": "P2",
+    "system": "GM PATS / PSA",
+    "excerpt": "Opel Schlüssel nachmachen: Corsa, Astra, Insignia.",
+    "customSeoBlurb": "Ob ältere GM-basierte Wegfahrsperren (Astra H/J) oder neuere PSA-basierte Systeme (Corsa F) – wir haben die korrekten Security-Pins und OBD-Diagnosegeräte, um Opel-Autoschlüssel kostengünstig und schnell nachzumachen.",
+    "models": [
+      {
+        "slug": "corsa",
+        "name": "Corsa",
+        "years": "C, D, E, F"
+      },
+      {
+        "slug": "astra",
+        "name": "Astra",
+        "years": "G, H, J, K, L"
+      },
+      {
+        "slug": "insignia",
+        "name": "Insignia",
+        "years": "Alle Generationen"
+      }
+    ]
   },
   {
-    slug: 'ford', name: 'Ford', nameSlug: 'ford', priority: 'P1',
-    system: 'Ford PATS / Passive Anti-Theft System',
-    excerpt: 'Ford Schlüsselprogrammierung Spezialist. Fiesta, Focus, Mondeo, Transit, Kuga. PATS Systeme.',
-    models: [
-      { slug: 'b-max', name: 'B-Max', years: 'Alle Baujahre' },
-      { slug: 'c-max', name: 'C-Max', years: 'Alle Baujahre' },
-      { slug: 'cougar', name: 'Cougar', years: 'Alle Baujahre' },
-      { slug: 'courier', name: 'Courier', years: 'Alle Baujahre' },
-      { slug: 'ecosport', name: 'EcoSport', years: 'Alle Baujahre' },
-      { slug: 'edge', name: 'Edge', years: 'Alle Baujahre' },
-      { slug: 'escape', name: 'Escape', years: 'Alle Baujahre' },
-      { slug: 'escort', name: 'Escort', years: 'Alle Baujahre' },
-      { slug: 'explorer', name: 'Explorer', years: 'Alle Baujahre' },
-      { slug: 'f-150', name: 'F-150', years: 'Alle Baujahre' },
-      { slug: 'fiesta', name: 'Fiesta', years: 'Alle Baujahre' },
-      { slug: 'focus', name: 'Focus', years: 'Alle Baujahre' },
-      { slug: 'fusion', name: 'Fusion', years: 'Alle Baujahre' },
-      { slug: 'galaxy', name: 'Galaxy', years: 'Alle Baujahre' },
-      { slug: 'grand-c-max', name: 'Grand C-Max', years: 'Alle Baujahre' },
-      { slug: 'ka', name: 'KA', years: 'Alle Baujahre' },
-      { slug: 'ka', name: 'KA+', years: 'Alle Baujahre' },
-      { slug: 'kuga', name: 'Kuga', years: 'Alle Baujahre' },
-      { slug: 'mondeo', name: 'Mondeo', years: 'Alle Baujahre' },
-      { slug: 'mustang', name: 'Mustang', years: 'Alle Baujahre' },
-      { slug: 'mustang-mach-e', name: 'Mustang Mach-E', years: 'Alle Baujahre' },
-      { slug: 'puma', name: 'Puma', years: 'Alle Baujahre' },
-      { slug: 'ranger', name: 'Ranger', years: 'Alle Baujahre' },
-      { slug: 's-max', name: 'S-Max', years: 'Alle Baujahre' },
-      { slug: 'tourneo', name: 'Tourneo', years: 'Alle Baujahre' },
-      { slug: 'transit', name: 'Transit', years: 'Alle Baujahre' },
-      { slug: 'transit-connect', name: 'Transit Connect', years: 'Alle Baujahre' },
-      { slug: 'transit-courier', name: 'Transit Courier', years: 'Alle Baujahre' },
-      { slug: 'transit-custom', name: 'Transit Custom', years: 'Alle Baujahre' },
-    ],
+    "slug": "ford",
+    "name": "Ford",
+    "nameSlug": "ford",
+    "priority": "P2",
+    "system": "PATS / Incode / Keyless",
+    "excerpt": "Ford Autoschlüssel: Fiesta, Focus, Transit.",
+    "customSeoBlurb": "Ford verwendet das PATS-Sicherheitssystem. Wir berechnen Incode/Outcode für ältere Modelle offline und besitzen Händlerzugänge für die neuesten Ford-Modelle. Besonders für Handwerker mit Ford Transit bieten wir einen ultra-schnellen Schlüssel-Ersatz direkt auf der Baustelle.",
+    "models": [
+      {
+        "slug": "fiesta",
+        "name": "Fiesta",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "focus",
+        "name": "Focus",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "transit",
+        "name": "Transit",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'opel', name: 'Opel', nameSlug: 'opel', priority: 'P1',
-    system: 'Opel Immobiliser I / II / III',
-    excerpt: 'Opel Schlüsselprogrammierung Spezialist. Corsa, Astra, Insignia, Vivaro. PIN-Code Extraktion.',
-    customSeoBlurb: 'Wir fertigen regelmäßig Opel Crossland und Opel Vivaro Autoschlüssel an. Der Opel Crossland (ab 2017) nutzt die PSA-Plattform mit PIN-Code-Extraktion. Der Opel Vivaro ist ein beliebter Transporter, für den wir Schlüssel vor Ort anfertigen. Autoschlüssel für Opel Corsa, Astra, Insignia und Mokka gehören ebenfalls zu unserem Standardangebot.',
-    models: [
-      { slug: 'agila', name: 'Agila', years: 'Alle Baujahre' },
-      { slug: 'amperia', name: 'Amperia', years: 'Alle Baujahre' },
-      { slug: 'antara', name: 'Antara', years: 'Alle Baujahre' },
-      { slug: 'astra', name: 'Astra', years: 'Alle Baujahre' },
-      { slug: 'calibra', name: 'Calibra', years: 'Alle Baujahre' },
-      { slug: 'combo', name: 'Combo', years: 'Alle Baujahre' },
-      { slug: 'corsa', name: 'Corsa', years: 'Alle Baujahre' },
-      { slug: 'crossland', name: 'Crossland', years: 'Alle Baujahre' },
-      { slug: 'frontera', name: 'Frontera', years: 'Alle Baujahre' },
-      { slug: 'insignia', name: 'Insignia', years: 'Alle Baujahre' },
-      { slug: 'meriva', name: 'Meriva', years: 'Alle Baujahre' },
-      { slug: 'mokka', name: 'Mokka', years: 'Alle Baujahre' },
-      { slug: 'movano', name: 'Movano', years: 'Alle Baujahre' },
-      { slug: 'omega', name: 'Omega', years: 'Alle Baujahre' },
-      { slug: 'signum', name: 'Signum', years: 'Alle Baujahre' },
-      { slug: 'karl', name: 'Karl', years: 'Alle Baujahre' },
-      { slug: 'sintra', name: 'Sintra', years: 'Alle Baujahre' },
-      { slug: 'speedster', name: 'Speedster', years: 'Alle Baujahre' },
-      { slug: 'tigra', name: 'Tigra', years: 'Alle Baujahre' },
-      { slug: 'vectra', name: 'Vectra', years: 'Alle Baujahre' },
-      { slug: 'vivaro', name: 'Vivaro', years: 'Alle Baujahre' },
-      { slug: 'zafira', name: 'Zafira', years: 'Alle Baujahre' },
-    ],
+    "slug": "seat",
+    "name": "Seat",
+    "nameSlug": "seat",
+    "priority": "P2",
+    "system": "MQB / VAG KESSY",
+    "excerpt": "Seat / Cupra Schlüssel: Leon, Ibiza, Ateca.",
+    "customSeoBlurb": "Seat- und Cupra-Fahrzeuge basieren technisch auf der VAG-Architektur. Unser mobiler Service fräst und programmiert Ibiza- oder Leon-Schlüssel direkt vor Ihrer Haustür, voll kompatibel mit dem Seat KESSY Keyless-Entry System.",
+    "models": [
+      {
+        "slug": "leon",
+        "name": "Leon",
+        "years": "Alle Generationen"
+      },
+      {
+        "slug": "ibiza",
+        "name": "Ibiza",
+        "years": "Alle Generationen"
+      },
+      {
+        "slug": "ateca",
+        "name": "Ateca",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'renault', name: 'Renault', nameSlug: 'renault', priority: 'P2',
-    system: 'Renault Card Key / UCH',
-    excerpt: 'Renault Karten-Schlüsselspezialist. Clio, Captur, Megane, Scenic, Trafic. Kartenprogrammierung.',
-    customSeoBlurb: 'Ein vielgefragter Service ist das Nachmachen von Renault Laguna Autoschlüsseln. Der Renault Laguna II und III (1994-2015) arbeitet mit dem bekannten Kartenschlüssel und UCH-Modul. Wir lesen den PIN-Code aus und programmieren direkt eine neue Schlüsselkarte vor Ort. Auch für Clio, Megane, Trafic und Captur sind Sie bei uns richtig.',
-    models: [
-      { slug: 'arkana', name: 'Arkana', years: 'Alle Baujahre' },
-      { slug: 'austral', name: 'Austral', years: 'Alle Baujahre' },
-      { slug: 'avantime', name: 'Avantime', years: 'Alle Baujahre' },
-      { slug: 'captur', name: 'Captur', years: 'Alle Baujahre' },
-      { slug: 'clio', name: 'Clio', years: 'Alle Baujahre' },
-      { slug: 'clio-ii', name: 'Clio II', years: 'Alle Baujahre' },
-      { slug: 'clio-iii', name: 'Clio III', years: 'Alle Baujahre' },
-      { slug: 'clio-iv', name: 'Clio IV', years: 'Alle Baujahre' },
-      { slug: 'coach', name: 'Coach', years: 'Alle Baujahre' },
-      { slug: 'espace', name: 'Espace', years: 'Alle Baujahre' },
-      { slug: 'espace-iii', name: 'Espace III', years: 'Alle Baujahre' },
-      { slug: 'espace-iv', name: 'Espace IV', years: 'Alle Baujahre' },
-      { slug: 'fluence', name: 'Fluence', years: 'Alle Baujahre' },
-      { slug: 'kadjar', name: 'Kadjar', years: 'Alle Baujahre' },
-      { slug: 'kangoo', name: 'Kangoo', years: 'Alle Baujahre' },
-      { slug: 'koleos', name: 'Koleos', years: 'Alle Baujahre' },
-      { slug: 'kyron', name: 'Kyron', years: 'Alle Baujahre' },
-      { slug: 'laguna', name: 'Laguna', years: 'Alle Baujahre' },
-      { slug: 'laguna-ii', name: 'Laguna II', years: 'Alle Baujahre' },
-      { slug: 'laguna-iii', name: 'Laguna III', years: 'Alle Baujahre' },
-      { slug: 'latitude', name: 'Latitude', years: 'Alle Baujahre' },
-      { slug: 'master', name: 'Master', years: 'Alle Baujahre' },
-      { slug: 'megane', name: 'Megane', years: 'Alle Baujahre' },
-      { slug: 'megane-e-tech', name: 'Megane E-Tech', years: 'Alle Baujahre' },
-      { slug: 'megane-ii', name: 'Megane II', years: 'Alle Baujahre' },
-      { slug: 'megane-iii', name: 'Megane III', years: 'Alle Baujahre' },
-      { slug: 'megane-iv', name: 'Megane IV', years: 'Alle Baujahre' },
-      { slug: 'modus', name: 'Modus', years: 'Alle Baujahre' },
-      { slug: 'safrane', name: 'Safrane', years: 'Alle Baujahre' },
-      { slug: 'scenic', name: 'Scenic', years: 'Alle Baujahre' },
-      { slug: 'talisman', name: 'Talisman', years: 'Alle Baujahre' },
-      { slug: 'trafic', name: 'Trafic', years: 'Alle Baujahre' },
-      { slug: 'twingo', name: 'Twingo', years: 'Alle Baujahre' },
-      { slug: 'twizy', name: 'Twizy', years: 'Alle Baujahre' },
-      { slug: 'zoe', name: 'Zoe', years: 'Alle Baujahre' },
-    ],
+    "slug": "hyundai",
+    "name": "Hyundai",
+    "nameSlug": "hyundai",
+    "priority": "P2",
+    "system": "Smart Key / ID46 / ID8A",
+    "excerpt": "Hyundai Schlüssel: i10, i20, i30, Tucson.",
+    "customSeoBlurb": "Wir programmieren sowohl herkömmliche Transponderschlüssel mit Fernbedienung (ID46) als auch die neuesten kapazitiven Smart Keys (ID8A) für Hyundai-Modelle. Ihr neuer Tucson- oder i30-Schlüssel ist innerhalb von 30 Minuten einsatzbereit.",
+    "models": [
+      {
+        "slug": "i10",
+        "name": "i10",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "i20",
+        "name": "i20",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "i30",
+        "name": "i30",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "tucson",
+        "name": "Tucson",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'peugeot', name: 'Peugeot', nameSlug: 'peugeot', priority: 'P2',
-    system: 'PSA BSI / PIN Extraktion',
-    excerpt: 'Peugeot Schlüsselprogrammierung Spezialist. 208, 308, 508, Partner. BSI Programmierung.',
-    customSeoBlurb: 'Wir kümmern uns regelmäßig um Peugeot 607 Schlüssel, Peugeot 5008 Autoschlüssel, Peugeot 406 Autoschlüssel und Peugeot Expert Schlüssel. Der Peugeot 607 (1999-2010) und 406 (1995-2004) sind ältere Modelle. Der Peugeot 5008 und Expert nutzen das BSI-System. Wir lesen den PIN-Code aus und programmieren den Schlüssel bei Ihnen vor Ort.',
-    models: [
-      { slug: '106', name: '106', years: 'Alle Baujahre' },
-      { slug: '107', name: '107', years: 'Alle Baujahre' },
-      { slug: '108', name: '108', years: 'Alle Baujahre' },
-      { slug: '206', name: '206', years: 'Alle Baujahre' },
-      { slug: '206-cabrio', name: '206 Cabrio', years: 'Alle Baujahre' },
-      { slug: '207', name: '207', years: 'Alle Baujahre' },
-      { slug: '301', name: '301', years: 'Alle Baujahre' },
-      { slug: '306-sb', name: '306 SB', years: 'Alle Baujahre' },
-      { slug: '306-sc', name: '306 SC', years: 'Alle Baujahre' },
-      { slug: '307', name: '307', years: 'Alle Baujahre' },
-      { slug: '308', name: '308', years: 'Alle Baujahre' },
-      { slug: '406', name: '406', years: 'Alle Baujahre' },
-      { slug: '406-sb', name: '406 SB', years: 'Alle Baujahre' },
-      { slug: '406-sc', name: '406 SC', years: 'Alle Baujahre' },
-      { slug: '406-sv', name: '406 SV', years: 'Alle Baujahre' },
-      { slug: '407', name: '407', years: 'Alle Baujahre' },
-      { slug: '607', name: '607', years: 'Alle Baujahre' },
-      { slug: '806', name: '806', years: 'Alle Baujahre' },
-      { slug: '806-sb', name: '806 SB', years: 'Alle Baujahre' },
-      { slug: '806-sc', name: '806 SC', years: 'Alle Baujahre' },
-      { slug: '807', name: '807', years: 'Alle Baujahre' },
-      { slug: '1007', name: '1007', years: 'Alle Baujahre' },
-      { slug: '3008', name: '3008', years: 'Alle Baujahre' },
-      { slug: '4007', name: '4007', years: 'Alle Baujahre' },
-      { slug: '5008', name: '5008', years: 'Alle Baujahre' },
-      { slug: 'bipper', name: 'Bipper', years: 'Alle Baujahre' },
-      { slug: 'boxer', name: 'Boxer', years: 'Alle Baujahre' },
-      { slug: 'expert', name: 'Expert', years: 'Alle Baujahre' },
-      { slug: 'partner', name: 'Partner', years: 'Alle Baujahre' },
-      { slug: 'ranch', name: 'Ranch', years: 'Alle Baujahre' },
-      { slug: 'rcz', name: 'RCZ', years: 'Alle Baujahre' },
-      { slug: 'traveller', name: 'Traveller', years: 'Alle Baujahre' },
-    ],
+    "slug": "renault",
+    "name": "Renault",
+    "nameSlug": "renault",
+    "priority": "P2",
+    "system": "Keycard / UCH / Hands-free",
+    "excerpt": "Renault Keycards: Clio, Megane, Captur.",
+    "customSeoBlurb": "Renault ist bekannt für seine empfindlichen Keycards, die oft in der Hosentasche brechen. Wir haben Megane-, Clio- und Scenic-Keycards (Hands-free) stets auf Lager und programmieren diese über das UCH-Modul direkt bei Ihnen vor Ort neu.",
+    "models": [
+      {
+        "slug": "clio",
+        "name": "Clio",
+        "years": "Alle Generationen"
+      },
+      {
+        "slug": "megane",
+        "name": "Megane (Keycard)",
+        "years": "Alle Generationen"
+      },
+      {
+        "slug": "captur",
+        "name": "Captur",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'fiat', name: 'Fiat', nameSlug: 'fiat', priority: 'P2',
-    system: 'Fiat Code 2 / Delphi / Marelli',
-    excerpt: 'Fiat Schlüsselprogrammierung Spezialist. 500, Punto, Ducato, Panda. Body Computer Spezialist.',
-    models: [
-      { slug: '124-spider', name: '124 Spider', years: 'Alle Baujahre' },
-      { slug: '500', name: '500', years: 'Alle Baujahre' },
-      { slug: '500c', name: '500C', years: 'Alle Baujahre' },
-      { slug: '500l', name: '500L', years: 'Alle Baujahre' },
-      { slug: '500x', name: '500X', years: 'Alle Baujahre' },
-      { slug: '600', name: '600', years: 'Alle Baujahre' },
-      { slug: 'barchetta', name: 'Barchetta', years: 'Alle Baujahre' },
-      { slug: 'bravo', name: 'Bravo', years: 'Alle Baujahre' },
-      { slug: 'croma', name: 'Croma', years: 'Alle Baujahre' },
-      { slug: 'doblo', name: 'Doblo', years: 'Alle Baujahre' },
-      { slug: 'ducato', name: 'Ducato', years: 'Alle Baujahre' },
-      { slug: 'fiorino', name: 'Fiorino', years: 'Alle Baujahre' },
-      { slug: 'freemont', name: 'Freemont', years: 'Alle Baujahre' },
-      { slug: 'grande-punto', name: 'Grande Punto', years: 'Alle Baujahre' },
-      { slug: 'idea', name: 'Idea', years: 'Alle Baujahre' },
-      { slug: 'multipla', name: 'Multipla', years: 'Alle Baujahre' },
-      { slug: 'palio', name: 'Palio', years: 'Alle Baujahre' },
-      { slug: 'panda', name: 'Panda', years: 'Alle Baujahre' },
-      { slug: 'punto', name: 'Punto', years: 'Alle Baujahre' },
-      { slug: 'punto-evo', name: 'Punto Evo', years: 'Alle Baujahre' },
-      { slug: 'qubo', name: 'Qubo', years: 'Alle Baujahre' },
-      { slug: 'scudo', name: 'Scudo', years: 'Alle Baujahre' },
-      { slug: 'sedici', name: 'Sedici', years: 'Alle Baujahre' },
-      { slug: 'seicento', name: 'Seicento', years: 'Alle Baujahre' },
-      { slug: 'stilo', name: 'Stilo', years: 'Alle Baujahre' },
-      { slug: 'talento', name: 'Talento', years: 'Alle Baujahre' },
-      { slug: 'tipo', name: 'Tipo', years: 'Alle Baujahre' },
-      { slug: 'ulysse', name: 'Ulysse', years: 'Alle Baujahre' },
-    ],
+    "slug": "fiat",
+    "name": "Fiat",
+    "nameSlug": "fiat",
+    "priority": "P2",
+    "system": "BSI / Marelli / Megamos",
+    "excerpt": "Fiat Schlüssel: 500, Ducato, Panda.",
+    "customSeoBlurb": "Das Programmieren eines Fiat 500 oder Fiat Ducato Schlüssels erfordert das direkte Auslesen des BSI-Moduls (Body Computer). Wir erledigen diese Pre-Codierung professionell und sicher am Fahrzeug, ideal auch für Ducato-Wohnmobile.",
+    "models": [
+      {
+        "slug": "500",
+        "name": "500",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "ducato",
+        "name": "Ducato",
+        "years": "Alle Generationen"
+      },
+      {
+        "slug": "panda",
+        "name": "Panda",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'seat', name: 'Seat', nameSlug: 'seat', priority: 'P2',
-    system: 'VAG Immobiliser / MQB',
-    excerpt: 'Seat Schlüsselprogrammierung Spezialist. Ibiza, Leon, Ateca. VAG Gruppen-Plattform.',
-    customSeoBlurb: 'Beliebte Anfragen sind Seat Alhambra Schlüssel nachmachen und Seat Arosa Schlüssel nachmachen. Der Seat Alhambra (1996-2020) ist ein Familienauto auf der VAG-Plattform. Der Seat Arosa (1997-2004) ist ein Kleinwagen, für den wir noch immer Schlüssel anfertigen. Wir programmieren Ibiza, Leon, Arona, Ateca und Tarraco über OBD2.',
-    models: [
-      { slug: 'alhambra', name: 'Alhambra', years: 'Alle Baujahre' },
-      { slug: 'altea', name: 'Altea', years: 'Alle Baujahre' },
-      { slug: 'altea-xl', name: 'Altea XL', years: 'Alle Baujahre' },
-      { slug: 'arona', name: 'Arona', years: 'Alle Baujahre' },
-      { slug: 'arosa', name: 'Arosa', years: 'Alle Baujahre' },
-      { slug: 'ateca', name: 'Ateca', years: 'Alle Baujahre' },
-      { slug: 'cordoba', name: 'Cordoba', years: 'Alle Baujahre' },
-      { slug: 'exeo', name: 'Exeo', years: 'Alle Baujahre' },
-      { slug: 'ibiza', name: 'Ibiza', years: 'Alle Baujahre' },
-      { slug: 'leon', name: 'Leon', years: 'Alle Baujahre' },
-      { slug: 'mii', name: 'Mii', years: 'Alle Baujahre' },
-      { slug: 'tarraco', name: 'Tarraco', years: 'Alle Baujahre' },
-      { slug: 'toledo', name: 'Toledo', years: 'Alle Baujahre' },
-    ],
+    "slug": "toyota",
+    "name": "Toyota",
+    "nameSlug": "toyota",
+    "priority": "P2",
+    "system": "H-Chip / G-Chip / Smart Key",
+    "excerpt": "Toyota Schlüssel: Yaris, Corolla, RAV4.",
+    "customSeoBlurb": "Wir sind Experten für Toyota-Wegfahrsperren. Ob alter G-Chip, neuerer H-Chip oder das Smart Key Keyless-Go-System im neuen RAV4 Hybrid – wir führen auch bei komplett verlorenen Schlüsseln einen Wegfahrsperren-Reset (Immo Reset) durch.",
+    "models": [
+      {
+        "slug": "yaris",
+        "name": "Yaris",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "corolla",
+        "name": "Corolla",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "rav4",
+        "name": "RAV4",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'skoda', name: 'Skoda', nameSlug: 'skoda', priority: 'P2',
-    system: 'VAG Immobiliser / MQB / SFD',
-    excerpt: 'Skoda Schlüsselprogrammierung Spezialist. Octavia, Fabia, Superb. VAG Gruppen-Plattform.',
-    models: [
-      { slug: 'citigo', name: 'Citigo', years: 'Alle Baujahre' },
-      { slug: 'enyaq', name: 'Enyaq', years: 'Alle Baujahre' },
-      { slug: 'fabia', name: 'Fabia', years: 'Alle Baujahre' },
-      { slug: 'kamiq', name: 'Kamiq', years: 'Alle Baujahre' },
-      { slug: 'karoq', name: 'Karoq', years: 'Alle Baujahre' },
-      { slug: 'kodiaq', name: 'Kodiaq', years: 'Alle Baujahre' },
-      { slug: 'octavia', name: 'Octavia', years: 'Alle Baujahre' },
-      { slug: 'praktik', name: 'Praktik', years: 'Alle Baujahre' },
-      { slug: 'rapid', name: 'Rapid', years: 'Alle Baujahre' },
-      { slug: 'roomster', name: 'Roomster', years: 'Alle Baujahre' },
-      { slug: 'scala', name: 'Scala', years: 'Alle Baujahre' },
-      { slug: 'superb', name: 'Superb', years: 'Alle Baujahre' },
-      { slug: 'yeti', name: 'Yeti', years: 'Alle Baujahre' },
-    ],
+    "slug": "kia",
+    "name": "Kia",
+    "nameSlug": "kia",
+    "priority": "P3",
+    "system": "Smart Key / ID8A",
+    "excerpt": "Kia Autoschlüssel: Ceed, Sportage, Picanto.",
+    "customSeoBlurb": "Die Technik von Kia ist eng mit Hyundai verwandt. Wir bieten raschen Ersatz für Ihren Kia Ceed oder Sportage Smart Key. Alle unsere Schlüssel verfügen über die originale Funkfrequenz und Keyless-Go-Funktionalität.",
+    "models": [
+      {
+        "slug": "ceed",
+        "name": "Ceed",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "sportage",
+        "name": "Sportage",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "picanto",
+        "name": "Picanto",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'mazda', name: 'Mazda', nameSlug: 'mazda', priority: 'P2',
-    system: 'Mazda PATS / Mitsubishi System',
-    excerpt: 'Mazda Schlüsselprogrammierung Spezialist. Mazda 2, 3, 6, CX-5. Smart key Spezialist.',
-    customSeoBlurb: 'Wir erhalten viele Anfragen für Mazda 3 Autoschlüssel, Mazda CX-3 Autoschlüssel und Mazda 2 Autoschlüssel. Der Mazda 3 ist eines der beliebtesten Modelle in Deutschland. Der CX-3 und Mazda 2 nutzen das PATS-System. Wir programmieren alle Mazda-Schlüssel direkt vor Ort.',
-    models: [
-      { slug: 'mazda-121', name: 'Mazda 121', years: 'Alle Baujahre' },
-      { slug: 'mazda-2', name: 'Mazda 2', years: 'Alle Baujahre' },
-      { slug: 'mazda-3', name: 'Mazda 3', years: 'Alle Baujahre' },
-      { slug: 'mazda-323', name: 'Mazda 323', years: 'Alle Baujahre' },
-      { slug: 'mazda-5', name: 'Mazda 5', years: 'Alle Baujahre' },
-      { slug: 'mazda-6', name: 'Mazda 6', years: 'Alle Baujahre' },
-      { slug: 'mazda-626', name: 'Mazda 626', years: 'Alle Baujahre' },
-      { slug: 'bt-50', name: 'BT-50', years: 'Alle Baujahre' },
-      { slug: 'cx-3', name: 'CX-3', years: 'Alle Baujahre' },
-      { slug: 'cx-30', name: 'CX-30', years: 'Alle Baujahre' },
-      { slug: 'cx-5', name: 'CX-5', years: 'Alle Baujahre' },
-      { slug: 'cx-60', name: 'CX-60', years: 'Alle Baujahre' },
-      { slug: 'cx-7', name: 'CX-7', years: 'Alle Baujahre' },
-      { slug: 'cx-9', name: 'CX-9', years: 'Alle Baujahre' },
-      { slug: 'mx-3', name: 'MX-3', years: 'Alle Baujahre' },
-      { slug: 'mx-5', name: 'MX-5', years: 'Alle Baujahre' },
-      { slug: 'rx-8', name: 'RX-8', years: 'Alle Baujahre' },
-      { slug: 'tribute', name: 'Tribute', years: 'Alle Baujahre' },
-    ],
+    "slug": "peugeot",
+    "name": "Peugeot",
+    "nameSlug": "peugeot",
+    "priority": "P3",
+    "system": "BSI / PSA",
+    "excerpt": "Peugeot Schlüssel: 208, 308, 2008.",
+    "customSeoBlurb": "Wir lesen den PIN-Code Ihrer Peugeot-Wegfahrsperre sicher aus dem BSI-System aus und codieren neue Funkschlüssel für Modelle wie den 208, 308 oder Boxer. Schnell, verlässlich und deutlich günstiger als in der PSA-Vertragswerkstatt.",
+    "models": [
+      {
+        "slug": "208",
+        "name": "208",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "308",
+        "name": "308",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "2008",
+        "name": "2008",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'kia', name: 'Kia', nameSlug: 'kia', priority: 'P2',
-    system: 'Hyundai/Kia Smart Key',
-    excerpt: 'Kia Schlüsselprogrammierung Spezialist. Picanto, Rio, Sportage, Niro. PIN-Code Spezialist.',
-    customSeoBlurb: 'Das Nachmachen eines Kia-Autoschlüssels ist eine unserer Spezialitäten. Wir können schnell und günstig einen Kia-Autoschlüssel für alle Modelle direkt vor Ort anfertigen. Zum Beispiel machen wir täglich einen Kia Picanto Autoschlüssel oder einen Kia Rio Autoschlüssel nach. Suchen Sie speziell nach Kia Rio Autoschlüssel nachmachen oder Kia Ceed Autoschlüssel nachmachen (auch Kia Ceed Autoschlüssel nachmachen)? Unsere Monteure helfen Ihnen schnell, auch für einen Kia Autoschlüssel in Esslingen und Umgebung. Neben den bekannten Modellen programmieren wir auch den Rest der Flotte. Denken Sie dabei an Kia Sportage Autoschlüssel nachmachen, Kia Sorento Autoschlüssel nachmachen, Kia Optima Autoschlüssel nachmachen und Kia Soul Autoschlüssel nachmachen. Auch für die geräumigeren Modelle wie Kia Carens Autoschlüssel nachmachen, Kia Carnival Autoschlüssel nachmachen und Kia Sedona Autoschlüssel nachmachen haben wir die passenden Chips auf Lager. Haben Sie ein selteneres oder älteres Modell? Keine Sorge, auch ein Kia Amanti Autoschlüssel nachmachen, Kia Clarence Autoschlüssel nachmachen, Kia Forte Autoschlüssel nachmachen oder Kia Pride Autoschlüssel nachmachen ist für uns kein Problem. Kunden fragen uns oft nach den Kosten für das Nachmachen eines Kia Autoschlüssels. Da wir vor Ort arbeiten, ist der Preis für das Nachmachen eines Autoschlüssels bei uns fast immer günstiger als beim Vertragshändler. Möchten Sie sicher einen Kia Autoschlüssel nachmachen lassen? Nehmen Sie direkt Kontakt auf für ein genaues Preisangebot.',
-    models: [
-      { slug: 'carens', name: 'Carens', years: 'Alle Baujahre' },
-      { slug: 'carnival', name: 'Carnival', years: 'Alle Baujahre' },
-      { slug: 'ceed', name: 'Ceed', years: 'Alle Baujahre' },
-      { slug: 'cerato', name: 'Cerato', years: 'Alle Baujahre' },
-      { slug: 'ev6', name: 'EV6', years: 'Alle Baujahre' },
-      { slug: 'ev9', name: 'EV9', years: 'Alle Baujahre' },
-      { slug: 'niro', name: 'Niro', years: 'Alle Baujahre' },
-      { slug: 'optima', name: 'Optima', years: 'Alle Baujahre' },
-      { slug: 'picanto', name: 'Picanto', years: 'Alle Baujahre' },
-      { slug: 'proceed', name: 'ProCeed', years: 'Alle Baujahre' },
-      { slug: 'rio', name: 'Rio', years: 'Alle Baujahre' },
-      { slug: 'sorento', name: 'Sorento', years: 'Alle Baujahre' },
-      { slug: 'soul', name: 'Soul', years: 'Alle Baujahre' },
-      { slug: 'sportage', name: 'Sportage', years: 'Alle Baujahre' },
-      { slug: 'stinger', name: 'Stinger', years: 'Alle Baujahre' },
-      { slug: 'stonic', name: 'Stonic', years: 'Alle Baujahre' },
-      { slug: 'venga', name: 'Venga', years: 'Alle Baujahre' },
-      { slug: 'xceed', name: 'XCeed', years: 'Alle Baujahre' },
-    ],
+    "slug": "dacia",
+    "name": "Dacia",
+    "nameSlug": "dacia",
+    "priority": "P3",
+    "system": "Renault UCH",
+    "excerpt": "Dacia Schlüssel nachmachen: Sandero, Duster.",
+    "customSeoBlurb": "Die Wegfahrsperrentechnik von Dacia basiert auf der Renault UCH-Plattform. Wir können herkömmliche Schlüssel für den Dacia Sandero oder Duster sowie die modernen Keycard-Systeme problemlos vor Ort anlernen.",
+    "models": [
+      {
+        "slug": "sandero",
+        "name": "Sandero",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "duster",
+        "name": "Duster",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'hyundai', name: 'Hyundai', nameSlug: 'hyundai', priority: 'P2',
-    system: 'Hyundai/Kia Smart Key',
-    excerpt: 'Hyundai Schlüsselprogrammierung Spezialist. i10, i20, i30, Tucson, Kona.',
-    customSeoBlurb: 'Viel gefragt sind: Hyundai Santamo Autoschlüssel, Hyundai Getz Autoschlüssel, Hyundai Atos Prime Autoschlüssel und Hyundai Excel Schlüssel. Der Santamo (1996-2003) und Excel (1985-1999) sind ältere Modelle, für die wir noch Schlüssel anfertigen. Getz und Atos Prime programmieren wir täglich. Auch für i10, i20, i30, Tucson und Kona sind Sie bei uns richtig.',
-    models: [
-      { slug: 'atos', name: 'Atos', years: 'Alle Baujahre' },
-      { slug: 'bayon', name: 'Bayon', years: 'Alle Baujahre' },
-      { slug: 'coupe', name: 'Coupe', years: 'Alle Baujahre' },
-      { slug: 'elantra', name: 'Elantra', years: 'Alle Baujahre' },
-      { slug: 'excel', name: 'Excel', years: 'Alle Baujahre' },
-      { slug: 'galloper', name: 'Galloper', years: 'Alle Baujahre' },
-      { slug: 'getz', name: 'Getz', years: 'Alle Baujahre' },
-      { slug: 'grandeur', name: 'Grandeur', years: 'Alle Baujahre' },
-      { slug: 'h-1', name: 'H-1', years: 'Alle Baujahre' },
-      { slug: 'h200', name: 'H200', years: 'Alle Baujahre' },
-      { slug: 'i10', name: 'i10', years: 'Alle Baujahre' },
-      { slug: 'i20', name: 'i20', years: 'Alle Baujahre' },
-      { slug: 'i30', name: 'i30', years: 'Alle Baujahre' },
-      { slug: 'i40', name: 'i40', years: 'Alle Baujahre' },
-      { slug: 'ioniq', name: 'Ioniq', years: 'Alle Baujahre' },
-      { slug: 'ioniq-5', name: 'Ioniq 5', years: 'Alle Baujahre' },
-      { slug: 'ioniq-6', name: 'Ioniq 6', years: 'Alle Baujahre' },
-      { slug: 'ix20', name: 'ix20', years: 'Alle Baujahre' },
-      { slug: 'ix35', name: 'ix35', years: 'Alle Baujahre' },
-      { slug: 'kona', name: 'Kona', years: 'Alle Baujahre' },
-      { slug: 'matrix', name: 'Matrix', years: 'Alle Baujahre' },
-      { slug: 'nexo', name: 'NEXO', years: 'Alle Baujahre' },
-      { slug: 'santa-fe', name: 'Santa Fe', years: 'Alle Baujahre' },
-      { slug: 'sonata', name: 'Sonata', years: 'Alle Baujahre' },
-      { slug: 'terracan', name: 'Terracan', years: 'Alle Baujahre' },
-      { slug: 'trajet', name: 'Trajet', years: 'Alle Baujahre' },
-      { slug: 'tucson', name: 'Tucson', years: 'Alle Baujahre' },
-      { slug: 'veloster', name: 'Veloster', years: 'Alle Baujahre' },
-    ],
+    "slug": "volvo",
+    "name": "Volvo",
+    "nameSlug": "volvo",
+    "priority": "P3",
+    "system": "CEM / KVM",
+    "excerpt": "Volvo Schlüssel: XC60, XC90, V40, V60.",
+    "customSeoBlurb": "Die Programmierung von Volvo-Smartkeys erfordert den Zugriff auf das CEM- oder KVM-Modul, welches wir sicher decodieren. Wir bieten neue Funkschlüssel für Ihren XC60 oder V60, inklusive dem präzisen Fräsen des Volvo-Notbartes.",
+    "models": [
+      {
+        "slug": "xc60",
+        "name": "XC60",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "xc90",
+        "name": "XC90",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "v60",
+        "name": "V60",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'nissan', name: 'Nissan', nameSlug: 'nissan', priority: 'P2',
-    system: 'Nissan NATS / BCM',
-    excerpt: 'Nissan Schlüsselprogrammierung Spezialist. Micra, Qashqai, Juke, Leaf.',
-    customSeoBlurb: 'Wir fertigen täglich Nissan Primastar Autoschlüssel, Nissan Qashqai Schlüssel, Nissan Juke Autoschlüssel, Nissan 350Z Schlüssel, Nissan Maxima Schlüssel und Nissan Sentra Schlüssel an. Der Nissan Primastar (2001-2014) teilt sich die Renault Trafic-Plattform. 350Z, Maxima und Sentra verfügen über NATS-Sicherheit. Wir programmieren auch Transponderschlüssel direkt vor Ort.',
-    models: [
-      { slug: '200sx', name: '200SX', years: 'Alle Baujahre' },
-      { slug: '350z', name: '350Z', years: 'Alle Baujahre' },
-      { slug: '370z', name: '370Z', years: 'Alle Baujahre' },
-      { slug: 'almera', name: 'Almera', years: 'Alle Baujahre' },
-      { slug: 'almera-tino', name: 'Almera Tino', years: 'Alle Baujahre' },
-      { slug: 'ariya', name: 'Ariya', years: 'Alle Baujahre' },
-      { slug: 'cube', name: 'Cube', years: 'Alle Baujahre' },
-      { slug: 'evalia', name: 'Evalia', years: 'Alle Baujahre' },
-      { slug: 'gt-r', name: 'GT-R', years: 'Alle Baujahre' },
-      { slug: 'interstar', name: 'Interstar', years: 'Alle Baujahre' },
-      { slug: 'juke', name: 'Juke', years: 'Alle Baujahre' },
-      { slug: 'kubistar', name: 'Kubistar', years: 'Alle Baujahre' },
-      { slug: 'leaf', name: 'Leaf', years: 'Alle Baujahre' },
-      { slug: 'maxima', name: 'Maxima', years: 'Alle Baujahre' },
-      { slug: 'micra', name: 'Micra', years: 'Alle Baujahre' },
-      { slug: 'murano', name: 'Murano', years: 'Alle Baujahre' },
-      { slug: 'navara', name: 'Navara', years: 'Alle Baujahre' },
-      { slug: 'note', name: 'Note', years: 'Alle Baujahre' },
-      { slug: 'nv200', name: 'NV200', years: 'Alle Baujahre' },
-      { slug: 'nv250', name: 'NV250', years: 'Alle Baujahre' },
-      { slug: 'nv300', name: 'NV300', years: 'Alle Baujahre' },
-      { slug: 'nv400', name: 'NV400', years: 'Alle Baujahre' },
-      { slug: 'pathfinder', name: 'Pathfinder', years: 'Alle Baujahre' },
-      { slug: 'patrol', name: 'Patrol', years: 'Alle Baujahre' },
-      { slug: 'pixo', name: 'Pixo', years: 'Alle Baujahre' },
-      { slug: 'primastar', name: 'Primastar', years: 'Alle Baujahre' },
-      { slug: 'primera', name: 'Primera', years: 'Alle Baujahre' },
-      { slug: 'qashqai', name: 'Qashqai', years: 'Alle Baujahre' },
-      { slug: 'qashqai2', name: 'Qashqai+2', years: 'Alle Baujahre' },
-      { slug: 'serena', name: 'Serena', years: 'Alle Baujahre' },
-      { slug: 'skyline', name: 'Skyline', years: 'Alle Baujahre' },
-      { slug: 'sunny', name: 'Sunny', years: 'Alle Baujahre' },
-      { slug: 'terrano', name: 'Terrano', years: 'Alle Baujahre' },
-      { slug: 'townstar', name: 'Townstar', years: 'Alle Baujahre' },
-      { slug: 'x-trail', name: 'X-Trail', years: 'Alle Baujahre' },
-    ],
+    "slug": "nissan",
+    "name": "Nissan",
+    "nameSlug": "nissan",
+    "priority": "P3",
+    "system": "NATS / BCM",
+    "excerpt": "Nissan Schlüssel: Qashqai, Micra, Juke.",
+    "customSeoBlurb": "Nissan nutzt das NATS-System (Nissan Anti-Theft System). Wir berechnen den korrekten BCM-Rolling-Code und programmieren neue Intelligent Keys (Keyless) für beliebte Modelle wie den Qashqai oder Micra im Handumdrehen.",
+    "models": [
+      {
+        "slug": "qashqai",
+        "name": "Qashqai",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "micra",
+        "name": "Micra",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "juke",
+        "name": "Juke",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'honda', name: 'Honda', nameSlug: 'honda', priority: 'P2',
-    system: 'Honda Immobiliser System',
-    excerpt: 'Honda Schlüsselprogrammierung Spezialist. Civic, Jazz, CR-V.',
-    models: [
-      { slug: 'accord', name: 'Accord', years: 'Alle Baujahre' },
-      { slug: 'civic', name: 'Civic', years: 'Alle Baujahre' },
-      { slug: 'cr-v', name: 'CR-V', years: 'Alle Baujahre' },
-      { slug: 'cr-z', name: 'CR-Z', years: 'Alle Baujahre' },
-      { slug: 'fr-v', name: 'FR-V', years: 'Alle Baujahre' },
-      { slug: 'hr-v', name: 'HR-V', years: 'Alle Baujahre' },
-      { slug: 'insight', name: 'Insight', years: 'Alle Baujahre' },
-      { slug: 'jazz', name: 'Jazz', years: 'Alle Baujahre' },
-      { slug: 'legend', name: 'Legend', years: 'Alle Baujahre' },
-      { slug: 'logo', name: 'Logo', years: 'Alle Baujahre' },
-      { slug: 'nsx', name: 'NSX', years: 'Alle Baujahre' },
-      { slug: 'prelude', name: 'Prelude', years: 'Alle Baujahre' },
-      { slug: 's2000', name: 'S2000', years: 'Alle Baujahre' },
-      { slug: 'stream', name: 'Stream', years: 'Alle Baujahre' },
-      { slug: 'e', name: 'e', years: 'Alle Baujahre' },
-    ],
+    "slug": "mazda",
+    "name": "Mazda",
+    "nameSlug": "mazda",
+    "priority": "P3",
+    "system": "Mazda Advanced Key",
+    "excerpt": "Mazda Autoschlüssel: Mazda3, CX-5, MX-5.",
+    "customSeoBlurb": "Haben Sie Ihren Mazda Advanced Key verloren? Wir nutzen spezifische Mazda-Diagnosesoftware, um Ihr Fahrzeug zu öffnen und sicher einen neuen, voll funktionstüchtigen Proximity-Schlüssel für Ihren Mazda3 oder CX-5 zu codieren.",
+    "models": [
+      {
+        "slug": "mazda3",
+        "name": "Mazda3",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "cx-5",
+        "name": "CX-5",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "mx-5",
+        "name": "MX-5",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'land-rover', name: 'Land Rover', nameSlug: 'land-rover', priority: 'P3',
-    system: 'JLR KVM / RFA / BCM',
-    excerpt: 'Land Rover Schlüsselspezialist. Range Rover, Discovery, Evoque. KVM Modul Spezialist.',
-    customSeoBlurb: 'Wir erhalten regelmäßig Anfragen für Land Rover Freelander Schlüssel und Range Rover Sport Autoschlüssel. Der Freelander (1997-2014) verfügt über ein KVM-System, das direkte OBD-Programmierung erfordert. Der Range Rover Sport (ab 2005) nutzt ein modernes RFA-Modul-System. Wir arbeiten mit JLR-Software für alle Land Rover Modelle.',
-    models: [
-      { slug: 'defender', name: 'Defender', years: 'Alle Baujahre' },
-      { slug: 'discovery', name: 'Discovery', years: 'Alle Baujahre' },
-      { slug: 'discovery-sport', name: 'Discovery Sport', years: 'Alle Baujahre' },
-      { slug: 'freelander', name: 'Freelander', years: 'Alle Baujahre' },
-      { slug: 'range-rover', name: 'Range Rover', years: 'Alle Baujahre' },
-      { slug: 'range-rover-evoque', name: 'Range Rover Evoque', years: 'Alle Baujahre' },
-      { slug: 'range-rover-sport', name: 'Range Rover Sport', years: 'Alle Baujahre' },
-      { slug: 'range-rover-velar', name: 'Range Rover Velar', years: 'Alle Baujahre' },
-    ],
+    "slug": "citroen",
+    "name": "Citroen",
+    "nameSlug": "citroen",
+    "priority": "P3",
+    "system": "PSA BSI",
+    "excerpt": "Citroën Schlüssel: C3, C4, Berlingo, Jumper.",
+    "customSeoBlurb": "Wir sind Experten für PSA-Fahrzeuge. Unser mobiler Service programmiert neue Fernbedienungen für Ihren Citroën C3, Berlingo oder Jumper-Transporter. Wir lesen den Wegfahrsperren-Code direkt am Fahrzeug aus, ohne den Händler kontaktieren zu müssen.",
+    "models": [
+      {
+        "slug": "c3",
+        "name": "C3",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "berlingo",
+        "name": "Berlingo",
+        "years": "Alle Baujahre"
+      },
+      {
+        "slug": "jumper",
+        "name": "Jumper",
+        "years": "Alle Baujahre"
+      }
+    ]
   },
   {
-    slug: 'porsche', name: 'Porsche', nameSlug: 'porsche', priority: 'P3',
-    system: 'Porsche KESSY / BCM',
-    excerpt: 'Porsche Schlüsselspezialist. 911, Cayenne, Macan, Panamera.',
-    models: [
-      { slug: '911', name: '911', years: 'Alle Baujahre' },
-      { slug: '968', name: '968', years: 'Alle Baujahre' },
-      { slug: 'boxster', name: 'Boxster', years: 'Alle Baujahre' },
-      { slug: 'panamera', name: 'Panamera', years: 'Alle Baujahre' },
-      { slug: 'macan', name: 'Macan', years: 'Alle Baujahre' },
-      { slug: 'cayenne', name: 'Cayenne', years: 'Alle Baujahre' },
-      { slug: 'cayman', name: 'Cayman', years: 'Alle Baujahre' },
-    ],
+    "slug": "mini",
+    "name": "Mini",
+    "nameSlug": "mini",
+    "priority": "P3",
+    "system": "CAS / FEM / BDC",
+    "excerpt": "Mini Schlüssel: Cooper, Clubman, Countryman.",
+    "customSeoBlurb": "Als Teil der BMW-Gruppe verwendet Mini identische CAS- und BDC-Wegfahrsperrentechnik. Egal ob älterer Cooper mit Steckschlüssel (UFO-Form) oder neuer Countryman mit Smart Key – wir bieten fachgerechte Programmierung vor Ort.",
+    "models": [
+      {
+        "slug": "cooper",
+        "name": "Cooper",
+        "years": "R50, R56, F56"
+      },
+      {
+        "slug": "countryman",
+        "name": "Countryman",
+        "years": "R60, F60"
+      }
+    ]
   },
   {
-    slug: 'tesla', name: 'Tesla', nameSlug: 'tesla', priority: 'P3',
-    system: 'Tesla Key Card / NFC',
-    excerpt: 'Tesla Schlüsselkarte & Fob Spezialist. Model 3, Y, S, X.',
-    models: [
-      { slug: 'cybertruck', name: 'Cybertruck', years: 'Alle Baujahre' },
-      { slug: 'model-3', name: 'Model 3', years: 'Alle Baujahre' },
-      { slug: 'model-s', name: 'Model S', years: 'Alle Baujahre' },
-      { slug: 'model-x', name: 'Model X', years: 'Alle Baujahre' },
-      { slug: 'model-y', name: 'Model Y', years: 'Alle Baujahre' },
-      { slug: 'roadster', name: 'Roadster', years: 'Alle Baujahre' },
-    ],
-  },
-  {
-    slug: 'lexus', name: 'Lexus', nameSlug: 'lexus', priority: 'P2',
-    system: 'Toyota/Lexus Smart Key',
-    excerpt: 'Lexus Schlüsselspezialist. RX, NX, IS, ES.',
-    models: [
-      { slug: 'ct', name: 'CT', years: 'Alle Baujahre' },
-      { slug: 'es', name: 'ES', years: 'Alle Baujahre' },
-      { slug: 'gs', name: 'GS', years: 'Alle Baujahre' },
-      { slug: 'is', name: 'IS', years: 'Alle Baujahre' },
-      { slug: 'lc', name: 'LC', years: 'Alle Baujahre' },
-      { slug: 'lfa', name: 'LFA', years: 'Alle Baujahre' },
-      { slug: 'ls', name: 'LS', years: 'Alle Baujahre' },
-      { slug: 'nx', name: 'NX', years: 'Alle Baujahre' },
-      { slug: 'rc', name: 'RC', years: 'Alle Baujahre' },
-      { slug: 'rx', name: 'RX', years: 'Alle Baujahre' },
-      { slug: 'rz', name: 'RZ', years: 'Alle Baujahre' },
-      { slug: 'sc', name: 'SC', years: 'Alle Baujahre' },
-      { slug: 'ux', name: 'UX', years: 'Alle Baujahre' },
-    ],
-  },
-  {
-    slug: 'mini', name: 'Mini', nameSlug: 'mini', priority: 'P2',
-    system: 'BMW CAS / FEM',
-    excerpt: 'Mini Schlüsselspezialist. Cooper, One, Countryman.',
-    models: [
-      { slug: 'clubman', name: 'Clubman', years: 'Alle Baujahre' },
-      { slug: 'convertible', name: 'Convertible', years: 'Alle Baujahre' },
-      { slug: 'cooper', name: 'Cooper', years: 'Alle Baujahre' },
-      { slug: 'countryman', name: 'Countryman', years: 'Alle Baujahre' },
-      { slug: 'coupe', name: 'Coupe', years: 'Alle Baujahre' },
-      { slug: 'paceman', name: 'Paceman', years: 'Alle Baujahre' },
-      { slug: 'roadster', name: 'Roadster', years: 'Alle Baujahre' },
-    ],
-  },
-  {
-    slug: 'citroen', name: 'Citroën', nameSlug: 'citroen', priority: 'P2',
-    system: 'PSA BSI / CAN Bus',
-    excerpt: 'Citroën Schlüsselspezialist. C1, C3, C4, Berlingo.',
-    models: [
-      { slug: 'ami', name: 'AMI', years: 'Alle Baujahre' },
-      { slug: 'berlingo', name: 'Berlingo', years: 'Alle Baujahre' },
-      { slug: 'c-crosser', name: 'C-Crosser', years: 'Alle Baujahre' },
-      { slug: 'c-elyse', name: 'C-Elysée', years: 'Alle Baujahre' },
-      { slug: 'c-zero', name: 'C-Zero', years: 'Alle Baujahre' },
-      { slug: 'c1', name: 'C1', years: 'Alle Baujahre' },
-      { slug: 'c2', name: 'C2', years: 'Alle Baujahre' },
-      { slug: 'c3', name: 'C3', years: 'Alle Baujahre' },
-      { slug: 'c3-aircross', name: 'C3 Aircross', years: 'Alle Baujahre' },
-      { slug: 'c3-picasso', name: 'C3 Picasso', years: 'Alle Baujahre' },
-      { slug: 'c4', name: 'C4', years: 'Alle Baujahre' },
-      { slug: 'c4-aircross', name: 'C4 Aircross', years: 'Alle Baujahre' },
-      { slug: 'c4-cactus', name: 'C4 Cactus', years: 'Alle Baujahre' },
-      { slug: 'c4-picasso', name: 'C4 Picasso', years: 'Alle Baujahre' },
-      { slug: 'c4-spacetourer', name: 'C4 SpaceTourer', years: 'Alle Baujahre' },
-      { slug: 'c5', name: 'C5', years: 'Alle Baujahre' },
-      { slug: 'c5-aircross', name: 'C5 Aircross', years: 'Alle Baujahre' },
-      { slug: 'c5-x', name: 'C5 X', years: 'Alle Baujahre' },
-      { slug: 'c6', name: 'C6', years: 'Alle Baujahre' },
-      { slug: 'c8', name: 'C8', years: 'Alle Baujahre' },
-      { slug: 'ds3', name: 'DS3', years: 'Alle Baujahre' },
-      { slug: 'ds4', name: 'DS4', years: 'Alle Baujahre' },
-      { slug: 'ds5', name: 'DS5', years: 'Alle Baujahre' },
-      { slug: 'e-mehari', name: 'E-Mehari', years: 'Alle Baujahre' },
-      { slug: 'grand-c4-picasso', name: 'Grand C4 Picasso', years: 'Alle Baujahre' },
-      { slug: 'grand-c4-spacetourer', name: 'Grand C4 SpaceTourer', years: 'Alle Baujahre' },
-      { slug: 'jumper', name: 'Jumper', years: 'Alle Baujahre' },
-      { slug: 'jumpy', name: 'Jumpy', years: 'Alle Baujahre' },
-      { slug: 'nemo', name: 'Nemo', years: 'Alle Baujahre' },
-      { slug: 'saxo', name: 'Saxo', years: 'Alle Baujahre' },
-      { slug: 'spacetourer', name: 'SpaceTourer', years: 'Alle Baujahre' },
-      { slug: 'xsara', name: 'Xsara', years: 'Alle Baujahre' },
-      { slug: 'xsara-picasso', name: 'Xsara Picasso', years: 'Alle Baujahre' },
-    ],
-  },
-  {
-    slug: 'alfa-romeo', name: 'Alfa Romeo', nameSlug: 'alfa-romeo', priority: 'P3',
-    system: 'Marelli / CODE / RFHUB',
-    excerpt: 'Alfa Romeo Autoschlüsselprogrammierung vor Ort. Giulia, Stelvio, Giulietta, MiTo.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Alfa Romeo Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Alfa Romeo an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Giulia suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: '145', name: '145', years: 'Alle Baujahre' },
-      { slug: '146', name: '146', years: 'Alle Baujahre' },
-      { slug: '147', name: '147', years: 'Alle Baujahre' },
-      { slug: '156', name: '156', years: 'Alle Baujahre' },
-      { slug: '159', name: '159', years: 'Alle Baujahre' },
-      { slug: '166', name: '166', years: 'Alle Baujahre' },
-      { slug: '4c', name: '4C', years: 'Alle Baujahre' },
-      { slug: '8c', name: '8C', years: 'Alle Baujahre' },
-      { slug: 'brera', name: 'Brera', years: 'Alle Baujahre' },
-      { slug: 'giulia', name: 'Giulia', years: 'Alle Baujahre' },
-      { slug: 'giulietta', name: 'Giulietta', years: 'Alle Baujahre' },
-      { slug: 'gt', name: 'GT', years: 'Alle Baujahre' },
-      { slug: 'gtv', name: 'GTV', years: 'Alle Baujahre' },
-      { slug: 'mito', name: 'MiTo', years: 'Alle Baujahre' },
-      { slug: 'spider', name: 'Spider', years: 'Alle Baujahre' },
-      { slug: 'stelvio', name: 'Stelvio', years: 'Alle Baujahre' },
-      { slug: 'tonale', name: 'Tonale', years: 'Alle Baujahre' },
-    ],
-  },
-  {
-    slug: 'buick', name: 'Buick', nameSlug: 'buick', priority: 'P3',
-    system: 'GM PASS-Key / PK3 / Global A',
-    excerpt: 'Buick Autoschlüsselprogrammierung vor Ort. Encore, Envision, Regal.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Buick Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Buick an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Encore suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'encore', name: 'Encore', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'envision', name: 'Envision', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'regal', name: 'Regal', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'cadillac', name: 'Cadillac', nameSlug: 'cadillac', priority: 'P3',
-    system: 'GM Global A / Global B / PK3',
-    excerpt: 'Cadillac Autoschlüsselprogrammierung vor Ort. Escalade, CTS, XT5, ATS.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Cadillac Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Cadillac an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Escalade suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'escalade', name: 'Escalade', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'cts', name: 'CTS', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'xt5', name: 'XT5', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'ats', name: 'ATS', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'chery', name: 'Chery', nameSlug: 'chery', priority: 'P3',
-    system: 'Chery Immo / Smart Key',
-    excerpt: 'Chery Autoschlüsselprogrammierung vor Ort. Tiggo, QQ, Arrizo.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Chery Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Chery an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Tiggo suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'tiggo', name: 'Tiggo', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'qq', name: 'QQ', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'arrizo', name: 'Arrizo', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'chevrolet', name: 'Chevrolet', nameSlug: 'chevrolet', priority: 'P3',
-    system: 'GM Global A / Global B',
-    excerpt: 'Chevrolet Autoschlüsselprogrammierung vor Ort. Spark, Matiz, Captiva, Cruze, Corvette.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Chevrolet Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Chevrolet an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Spark suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'spark', name: 'Spark', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'matiz', name: 'Matiz', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'captiva', name: 'Captiva', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'cruze', name: 'Cruze', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'corvette', name: 'Corvette', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'chrysler', name: 'Chrysler', nameSlug: 'chrysler', priority: 'P3',
-    system: 'FOBIK / SKIM / SKREEM',
-    excerpt: 'Chrysler Autoschlüsselprogrammierung vor Ort. 300C, Voyager, PT Cruiser.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Chrysler Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Chrysler an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren 300C suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: '300c', name: '300C', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'voyager', name: 'Voyager', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'pt-cruiser', name: 'PT Cruiser', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'cobra', name: 'Cobra', nameSlug: 'cobra', priority: 'P3',
-    system: 'Aftermarket Immo / Basic',
-    excerpt: 'Cobra Autoschlüsselprogrammierung vor Ort. AC Cobra.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Cobra Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Cobra an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren AC Cobra suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'ac-cobra', name: 'AC Cobra', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'dacia', name: 'Dacia', nameSlug: 'dacia', priority: 'P3',
-    system: 'Renault UCH / HFM',
-    excerpt: 'Dacia Autoschlüsselprogrammierung vor Ort. Duster, Sandero, Logan, Spring.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Dacia Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Dacia an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Duster suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'duster', name: 'Duster', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'sandero', name: 'Sandero', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'logan', name: 'Logan', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'spring', name: 'Spring', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'daewoo', name: 'Daewoo', nameSlug: 'daewoo', priority: 'P3',
-    system: 'GM / Megamos',
-    excerpt: 'Daewoo Autoschlüsselprogrammierung vor Ort. Matiz, Kalos, Lanos.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Daewoo Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Daewoo an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Matiz suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'matiz', name: 'Matiz', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'kalos', name: 'Kalos', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'lanos', name: 'Lanos', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'daf', name: 'DAF', nameSlug: 'daf', priority: 'P3',
-    system: 'DAF Immo (Truck)',
-    excerpt: 'DAF Autoschlüsselprogrammierung vor Ort. XF, CF, LF.',
-    customSeoBlurb: 'Benötigen Sie einen neuen DAF Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren DAF an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren XF suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'xf', name: 'XF', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'cf', name: 'CF', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'lf', name: 'LF', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'daihatsu', name: 'Daihatsu', nameSlug: 'daihatsu', priority: 'P3',
-    system: 'Toyota Immo / 4C / 4D',
-    excerpt: 'Daihatsu Autoschlüsselprogrammierung vor Ort. Cuore, Sirion, Terios.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Daihatsu Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Daihatsu an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Cuore suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'cuore', name: 'Cuore', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'sirion', name: 'Sirion', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'terios', name: 'Terios', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'dodge', name: 'Dodge', nameSlug: 'dodge', priority: 'P3',
-    system: 'FOBIK / RFHUB',
-    excerpt: 'Dodge Autoschlüsselprogrammierung vor Ort. RAM, Challenger, Charger, Caliber.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Dodge Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Dodge an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren RAM suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'ram', name: 'RAM', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'challenger', name: 'Challenger', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'charger', name: 'Charger', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'caliber', name: 'Caliber', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'ferrari', name: 'Ferrari', nameSlug: 'ferrari', priority: 'P3',
-    system: 'Marelli / CODE / Keyless',
-    excerpt: 'Ferrari Autoschlüsselprogrammierung vor Ort. 458, 488, California, F430.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Ferrari Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Ferrari an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren 458 suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: '458', name: '458', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: '488', name: '488', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'california', name: 'California', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'f430', name: 'F430', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'holden', name: 'Holden', nameSlug: 'holden', priority: 'P3',
-    system: 'GM Global A',
-    excerpt: 'Holden Autoschlüsselprogrammierung vor Ort. Commodore, Colorado.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Holden Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Holden an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Commodore suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'commodore', name: 'Commodore', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'colorado', name: 'Colorado', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'infiniti', name: 'Infiniti', nameSlug: 'infiniti', priority: 'P3',
-    system: 'Nissan NATS / BCM',
-    excerpt: 'Infiniti Autoschlüsselprogrammierung vor Ort. Q50, Q30, FX35.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Infiniti Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Infiniti an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Q50 suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'q50', name: 'Q50', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'q30', name: 'Q30', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'fx35', name: 'FX35', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'isuzu', name: 'Isuzu', nameSlug: 'isuzu', priority: 'P3',
-    system: 'Isuzu Immo / GM',
-    excerpt: 'Isuzu Autoschlüsselprogrammierung vor Ort. D-Max, N-Series.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Isuzu Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Isuzu an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren D-Max suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'd-max', name: 'D-Max', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'n-series', name: 'N-Series', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'iveco', name: 'Iveco', nameSlug: 'iveco', priority: 'P3',
-    system: 'Fiat CODE / BSI',
-    excerpt: 'Iveco Autoschlüsselprogrammierung vor Ort. Daily, Eurocargo.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Iveco Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Iveco an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Daily suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'daily', name: 'Daily', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'eurocargo', name: 'Eurocargo', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'jaguar', name: 'Jaguar', nameSlug: 'jaguar', priority: 'P3',
-    system: 'KVM / BCM / JLR',
-    excerpt: 'Jaguar Autoschlüsselprogrammierung vor Ort. F-Type, XF, XE, F-Pace.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Jaguar Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Jaguar an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren F-Type suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'f-type', name: 'F-Type', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'xf', name: 'XF', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'xe', name: 'XE', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'f-pace', name: 'F-Pace', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'lada', name: 'Lada', nameSlug: 'lada', priority: 'P3',
-    system: 'Renault UCH / Basic',
-    excerpt: 'Lada Autoschlüsselprogrammierung vor Ort. Niva, Vesta.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Lada Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Lada an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Niva suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'niva', name: 'Niva', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'vesta', name: 'Vesta', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'lancia', name: 'Lancia', nameSlug: 'lancia', priority: 'P3',
-    system: 'Fiat CODE / BSI',
-    excerpt: 'Lancia Autoschlüsselprogrammierung vor Ort. Ypsilon, Delta.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Lancia Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Lancia an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Ypsilon suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'ypsilon', name: 'Ypsilon', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'delta', name: 'Delta', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'lexus', name: 'Lexus', nameSlug: 'lexus', priority: 'P3',
-    system: 'Toyota Smart Key / Immo',
-    excerpt: 'Lexus Autoschlüsselprogrammierung vor Ort. CT200h, RX, IS, NX.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Lexus Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Lexus an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren CT200h suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'ct', name: 'CT', years: 'Alle Baujahre' },
-      { slug: 'es', name: 'ES', years: 'Alle Baujahre' },
-      { slug: 'gs', name: 'GS', years: 'Alle Baujahre' },
-      { slug: 'is', name: 'IS', years: 'Alle Baujahre' },
-      { slug: 'lc', name: 'LC', years: 'Alle Baujahre' },
-      { slug: 'lfa', name: 'LFA', years: 'Alle Baujahre' },
-      { slug: 'ls', name: 'LS', years: 'Alle Baujahre' },
-      { slug: 'nx', name: 'NX', years: 'Alle Baujahre' },
-      { slug: 'rc', name: 'RC', years: 'Alle Baujahre' },
-      { slug: 'rx', name: 'RX', years: 'Alle Baujahre' },
-      { slug: 'rz', name: 'RZ', years: 'Alle Baujahre' },
-      { slug: 'sc', name: 'SC', years: 'Alle Baujahre' },
-      { slug: 'ux', name: 'UX', years: 'Alle Baujahre' },
-    ],
-  },
-  {
-    slug: 'lincoln', name: 'Lincoln', nameSlug: 'lincoln', priority: 'P3',
-    system: 'Ford PATS / BCM',
-    excerpt: 'Lincoln Autoschlüsselprogrammierung vor Ort. Navigator, Aviator, MKX.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Lincoln Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Lincoln an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Navigator suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'navigator', name: 'Navigator', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'aviator', name: 'Aviator', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'mkx', name: 'MKX', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'maserati', name: 'Maserati', nameSlug: 'maserati', priority: 'P3',
-    system: 'Marelli / RFHUB',
-    excerpt: 'Maserati Autoschlüsselprogrammierung vor Ort. Ghibli, Levante, Quattroporte.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Maserati Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Maserati an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Ghibli suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'ghibli', name: 'Ghibli', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'levante', name: 'Levante', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'quattroporte', name: 'Quattroporte', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'mclaren', name: 'McLaren', nameSlug: 'mclaren', priority: 'P3',
-    system: 'McLaren Smart Key',
-    excerpt: 'McLaren Autoschlüsselprogrammierung vor Ort. 570S, 720S, MP4-12C.',
-    customSeoBlurb: 'Benötigen Sie einen neuen McLaren Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren McLaren an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren 570S suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: '570s', name: '570S', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: '720s', name: '720S', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'mp4-12c', name: 'MP4-12C', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'mitsubishi', name: 'Mitsubishi', nameSlug: 'mitsubishi', priority: 'P3',
-    system: 'ETACS / KOS',
-    excerpt: 'Mitsubishi Autoschlüsselprogrammierung vor Ort. Outlander, Space Star, Colt, ASX.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Mitsubishi Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Mitsubishi an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Outlander suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'outlander', name: 'Outlander', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'space-star', name: 'Space Star', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'colt', name: 'Colt', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'asx', name: 'ASX', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'oldsmobile', name: 'Oldsmobile', nameSlug: 'oldsmobile', priority: 'P3',
-    system: 'GM PASS-Key',
-    excerpt: 'Oldsmobile Autoschlüsselprogrammierung vor Ort. Aurora, Alero.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Oldsmobile Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Oldsmobile an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Aurora suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'aurora', name: 'Aurora', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'alero', name: 'Alero', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'proton', name: 'Proton', nameSlug: 'proton', priority: 'P3',
-    system: 'Bosch / Megamos',
-    excerpt: 'Proton Autoschlüsselprogrammierung vor Ort. Wira, Gen-2.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Proton Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Proton an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Wira suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'wira', name: 'Wira', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'gen-2', name: 'Gen-2', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'rolls-royce', name: 'Rolls Royce', nameSlug: 'rolls-royce', priority: 'P3',
-    system: 'BMW CAS / FEM / BDC',
-    excerpt: 'Rolls Royce Autoschlüsselprogrammierung vor Ort. Phantom, Ghost, Cullinan.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Rolls Royce Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Rolls Royce an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Phantom suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'phantom', name: 'Phantom', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'ghost', name: 'Ghost', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'cullinan', name: 'Cullinan', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'rover', name: 'Rover', nameSlug: 'rover', priority: 'P3',
-    system: 'Lucas / Pektron',
-    excerpt: 'Rover Autoschlüsselprogrammierung vor Ort. 75, 45, 25.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Rover Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Rover an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren 75 suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: '75', name: '75', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: '45', name: '45', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: '25', name: '25', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'saab', name: 'Saab', nameSlug: 'saab', priority: 'P3',
-    system: 'CIM / TWICE',
-    excerpt: 'Saab Autoschlüsselprogrammierung vor Ort. 9-3, 9-5.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Saab Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Saab an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren 9-3 suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: '9-3', name: '9-3', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: '9-5', name: '9-5', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'smart', name: 'Smart', nameSlug: 'smart', priority: 'P3',
-    system: 'SAM / DAS',
-    excerpt: 'Smart Autoschlüsselprogrammierung vor Ort. Fortwo, Forfour.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Smart Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Smart an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Fortwo suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'fortwo', name: 'Fortwo', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'forfour', name: 'Forfour', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'ssangyong', name: 'SsangYong', nameSlug: 'ssangyong', priority: 'P3',
-    system: 'Delphi / REKES',
-    excerpt: 'SsangYong Autoschlüsselprogrammierung vor Ort. Rexton, Korando, Tivoli.',
-    customSeoBlurb: 'Benötigen Sie einen neuen SsangYong Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren SsangYong an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Rexton suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'rexton', name: 'Rexton', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'korando', name: 'Korando', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'tivoli', name: 'Tivoli', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'subaru', name: 'Subaru', nameSlug: 'subaru', priority: 'P3',
-    system: 'Subaru Smart Key / Immo',
-    excerpt: 'Subaru Autoschlüsselprogrammierung vor Ort. Impreza, Forester, Outback.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Subaru Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Subaru an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Impreza suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'impreza', name: 'Impreza', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'forester', name: 'Forester', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'outback', name: 'Outback', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'suzuki', name: 'Suzuki', nameSlug: 'suzuki', priority: 'P3',
-    system: 'Suzuki Immo / Keyless',
-    excerpt: 'Suzuki Autoschlüsselprogrammierung vor Ort. Swift, Alto, Vitara, Ignis.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Suzuki Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Suzuki an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Swift suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'swift', name: 'Swift', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'alto', name: 'Alto', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'vitara', name: 'Vitara', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'ignis', name: 'Ignis', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  },
-  {
-    slug: 'tesla', name: 'Tesla', nameSlug: 'tesla', priority: 'P3',
-    system: 'NFC / BLE / RFID',
-    excerpt: 'Tesla Autoschlüsselprogrammierung vor Ort. Model S, Model 3, Model X, Model Y.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Tesla Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Tesla an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Model S suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'cybertruck', name: 'Cybertruck', years: 'Alle Baujahre' },
-      { slug: 'model-3', name: 'Model 3', years: 'Alle Baujahre' },
-      { slug: 'model-s', name: 'Model S', years: 'Alle Baujahre' },
-      { slug: 'model-x', name: 'Model X', years: 'Alle Baujahre' },
-      { slug: 'model-y', name: 'Model Y', years: 'Alle Baujahre' },
-      { slug: 'roadster', name: 'Roadster', years: 'Alle Baujahre' },
-    ],
-  },
-  {
-    slug: 'gmc', name: 'GMC', nameSlug: 'gmc', priority: 'P3',
-    system: 'GM Global A / PK3',
-    excerpt: 'GMC Autoschlüsselprogrammierung vor Ort. Sierra, Yukon, Acadia.',
-    customSeoBlurb: 'Benötigen Sie einen neuen GMC Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren GMC an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Sierra suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'sierra', name: 'Sierra', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'yukon', name: 'Yukon', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'acadia', name: 'Acadia', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
-  }
-,
-  {
-    slug: 'bentley', name: 'Bentley', nameSlug: 'bentley', priority: 'P3',
-    system: 'VW Group / KESSY',
-    excerpt: 'Bentley Autoschlüsselprogrammierung vor Ort. Continental GT, Bentayga, Flying Spur.',
-    customSeoBlurb: 'Benötigen Sie einen neuen Bentley Autoschlüssel? Wir fertigen direkt vor Ort einen neuen Schlüssel oder Smart Key für Ihren Bentley an. Egal, ob Sie alle Ihre Schlüssel verloren haben oder einfach einen Ersatzschlüssel für Ihren Continental GT suchen; wir bieten Händlerqualität zu einem günstigeren Preis.',
-    models: [
-      { slug: 'continental-gt', name: 'Continental GT', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'bentayga', name: 'Bentayga', years: '2016, 2017, 2018, 2019, 2020, 2021, 2022' },
-      { slug: 'flying-spur', name: 'Flying Spur', years: '2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022' }
-    ],
+    "slug": "porsche",
+    "name": "Porsche",
+    "nameSlug": "porsche",
+    "priority": "P3",
+    "system": "VAG BCM / KESSY",
+    "excerpt": "Porsche Schlüssel: 911, Cayenne, Macan.",
+    "customSeoBlurb": "Wir programmieren Ersatzschlüssel für Porsche Cayenne, Macan und 911-Modelle. Da viele Porsche-Wegfahrsperren auf der VAG-Architektur basieren, können wir auch hier mit maximaler Sicherheit und ohne Beschädigungen anlernen.",
+    "models": [
+      {
+        "slug": "911",
+        "name": "911",
+        "years": "996, 997, 991, 992"
+      },
+      {
+        "slug": "cayenne",
+        "name": "Cayenne",
+        "years": "Alle Generationen"
+      },
+      {
+        "slug": "macan",
+        "name": "Macan",
+        "years": "Alle Baujahre"
+      }
+    ]
   }
 ];
