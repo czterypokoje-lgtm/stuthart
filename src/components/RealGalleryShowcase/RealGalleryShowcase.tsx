@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 /* ─── Photos ─────────────────────────────────────────────── */
 const PHOTOS = [
-  { src: '/images/hero-van-fc-key.webp',                                  alt: 'First Class Key Servicefahrzeug VW Caddy — mobiler Schlüsseldienst Stuttgart',          label: 'Unser Servicefahrzeug' },
+  { src: '/images/hero-van-2400.webp',                                  alt: 'First Class Key Servicefahrzeug VW Caddy — mobiler Schlüsseldienst Stuttgart',          label: 'Unser Servicefahrzeug' },
   { src: '/images/merken/autoschluessel-nachmachen-bmw-1.webp',           alt: 'BMW Autoschlüssel nachmachen und programmieren vor Ort in Stuttgart',                   label: 'BMW Schlüssel' },
   { src: '/images/merken/autoschluessel-nachmachen-bmw-2.webp',           alt: 'BMW Smart Key CAS/FEM anlernen — mobiler Kfz-Schlüsseldienst Sindelfingen',            label: 'BMW Smart Key' },
   { src: '/images/merken/autoschluessel-nachmachen-mercedes-benz-1.webp', alt: 'Mercedes-Benz Schlüssel nachmachen — EIS/FBS Programmierung Stuttgart',               label: 'Mercedes-Benz' },
