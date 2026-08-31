@@ -40,7 +40,7 @@ export async function generateMetadata(props: { params: Promise<{ merkSlug: stri
     title: {
       absolute: brand.customMetaTitle || `${brand.name} Autoschlüssel Nachmachen | Alle Modelle & Baujahre | FC-KEY`,
     },
-    description: `${brand.name} Autoschlüssel nachmachen & programmieren vor Ort. Komplette A-Z Modellübersicht (${brand.system}). Bis zu 50% günstiger als der ${brand.name} Händler. Direkt anrufen: ${SITE_CONFIG.phone}`,
+    description: `Ab 99€ & 30 Min vor Ort: ${brand.name} Autoschlüssel nachmachen. Günstiger als der Händler, inkl. Codierung (${brand.system}).`.substring(0, 155),
     alternates: {
       canonical: pageUrl,
       languages: {
@@ -52,7 +52,7 @@ export async function generateMetadata(props: { params: Promise<{ merkSlug: stri
       type: 'website',
       url: pageUrl,
       title: `${brand.name} Autoschlüssel Nachmachen & Programmieren | Alle Modelle & Baujahre`,
-      description: `${brand.name} Autoschlüssel nachmachen & anlernen vor Ort. Günstiger als der Händler. Am selben Tag fertig mit 12 Monaten Garantie. Direkt anrufen!`,
+      description: `Ab 99€ & 30 Min vor Ort: ${brand.name} Autoschlüssel nachmachen. Günstiger als der Händler, inkl. Codierung (${brand.system}).`.substring(0, 155),
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `${brand.name} Ersatzschlüssel nachmachen — FC-KEY` }],
     },
   };
@@ -145,7 +145,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
   const schema = {
     '@context': 'https://schema.org', '@type': 'Service',
     name: `${brand.name} Autoschlüssel Nachmachen — Autoschlüssel Spezialist`,
-    description: `Professionell Autoschlüssel nachmachen & programmieren für alle ${brand.name} Modelle (${brand.system}). FC-KEY mobiler Service vor Ort.`,
+    description: `Ab 99€ & 30 Min vor Ort: ${brand.name} Autoschlüssel nachmachen. Günstiger als der Händler, inkl. Codierung (${brand.system}).`.substring(0, 155),
     provider: getBaseLocalBusinessSchema(),
   };
 

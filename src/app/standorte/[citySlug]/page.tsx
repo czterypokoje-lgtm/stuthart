@@ -102,7 +102,7 @@ export async function generateMetadata({ params }: { params: Promise<{ citySlug:
     title: {
       absolute: city.customMetaTitle || `Autoschlüssel nachmachen & Schlüsseldienst ${city.city} | 24/7`,
     },
-    description: city.customMetaDesc || `Autoschlüssel verloren oder defekt in ${city.city}? Mobiler Autoschlüsselspezialist innerhalb ${city.travelTime} vor Ort. Alle Automarken. Günstiger als beim Händler. Direkt anrufen!`,
+    description: city.customMetaDesc || `Ab 99€ & ${city.travelTime} vor Ort in ${city.city}: Autoschlüssel nachmachen. Günstiger als der Händler, inkl. Programmierung. Direkt anrufen!`.substring(0, 155),
     keywords: [city.keyword, `autoschlüssel ${city.city.toLowerCase()}`, `schlüsseldienst auto ${city.city.toLowerCase()}`, `autoschlüssel verloren ${city.city.toLowerCase()}`, `ersatzschlüssel auto ${city.city.toLowerCase()}`],
     alternates: {
       canonical: pageUrl,
@@ -115,7 +115,7 @@ export async function generateMetadata({ params }: { params: Promise<{ citySlug:
       type: 'website',
       url: pageUrl,
       title: `Autoschlüssel nachmachen ${city.city} | Mobil Programmieren 24/7`,
-      description: `Autoschlüssel verloren oder Ersatz nachmachen in ${city.city}? Wir sind innerhalb ${city.travelTime} vor Ort. Alle Automarken. Anrufen: ${SITE_CONFIG.phone}`,
+      description: `Ab 99€ & ${city.travelTime} vor Ort in ${city.city}: Autoschlüssel nachmachen. Günstiger als der Händler, inkl. Programmierung.`.substring(0, 155),
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `Autoschlüssel nachmachen ${city.city} — FC-KEY` }],
     },
   };

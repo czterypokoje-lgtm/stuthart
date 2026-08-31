@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: {
     absolute: 'Häufig gestellte Fragen Autoschlüssel | FAQ | FC-KEY',
   },
-  description: `Antworten auf alle Fragen rund um Autoschlüssel nachmachen, Kosten, Transponder programmieren, Smart Key und Auto öffnen. Rufen Sie direkt an: ${SITE_CONFIG.phone}`,
+  description: `FAQ: Autoschlüssel nachmachen, Kosten & Smart Keys programmieren. Alle Antworten hier. Mobiler Service ab 99€. Jetzt anfragen!`,
   alternates: {
     canonical: `${SITE_CONFIG.domain}/faq`,
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     url: `${SITE_CONFIG.domain}/faq`,
     type: 'website',
     title: 'Häufig gestellte Fragen Autoschlüssel Nachmachen | FC-KEY',
-    description: `Alles, was Sie über das Nachmachen von Autoschlüsseln, die Kosten und unseren Service wissen möchten. Rufen Sie an: ${SITE_CONFIG.phone}`,
+    description: `FAQ: Autoschlüssel nachmachen, Kosten & Smart Keys programmieren. Alle Antworten hier. Mobiler Service ab 99€. Jetzt anfragen!`,
     images: [{ url: `${SITE_CONFIG.domain}/og-image.png`, width: 1200, height: 630, alt: 'Häufig gestellte Fragen Autoschlüssel Nachmachen — FC-KEY' }],
   },
 };

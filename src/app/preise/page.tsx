@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: {
     absolute: 'Preise Autoschlüssel nachmachen & programmieren | FC-KEY',
   },
-  description: 'Ungefähre Preise für das Nachmachen und Programmieren von Autoschlüsseln. Der genaue Preis wird immer im Voraus vereinbart. Sparen Sie 30–50% gegenüber dem Händler. Rufen Sie an für ein Angebot.',
+  description: 'Unsere Preise: Autoschlüssel nachmachen & programmieren. Sparen Sie bis zu 50% gegenüber dem Händler. Festpreis im Voraus. Jetzt anrufen!',
   alternates: {
     canonical: `${SITE_CONFIG.domain}/preise`,
     languages: {

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: {
     absolute: 'Autoschlüssel nachmachen ab 149€ | FC-KEY',
   },
-  description: 'Autoschlüssel nachmachen? 24/7 vor Ort, Festpreis ab 149€ — günstiger als beim Händler. Innerhalb von 30 Min. vor Ort. Rufen Sie jetzt an oder schreiben Sie per WhatsApp!',
+  description: 'Ab 149€ in 30 Min vor Ort: Autoschlüssel nachmachen. 24/7 mobiler Service, günstiger als der Händler. Direkt anrufen oder WhatsApp!',
   alternates: { canonical: `${SITE_CONFIG.domain}/leistungen/autoschluessel-nachmachen` },
   openGraph: {
     title: 'Autoschlüssel nachmachen ab 149€ | FC-KEY',

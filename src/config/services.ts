@@ -216,7 +216,7 @@ export const BLOG_POSTS = [
   {
     slug: 'autoschluessel-gestohlen-was-tun',
     title: 'Autoschlüssel gestohlen oder Auto gestohlen? Sofort-Maßnahmenplan',
-    excerpt: 'Ist Ihr Autoschlüssel gestohlen worden oder haben Sie den Verdacht auf Autodiebstahl? Auto gestohlen, was nun? Lesen Sie hier, welche Schritte Sie sofort unternehmen müssen, um Ihr Auto zu sichern und den Versicherungsschutz zu gewährleisten.',
+    excerpt: 'Auto gestohlen oder Schlüssel weg? Sperren Sie sofort Ihren Schlüssel im Steuergerät. Wir helfen vor Ort in 30 Min. ab 99€.',
     keywords: ['autoschlüssel gestohlen', 'auto gestohlen mit schlüssel', 'autoschlüssel deprogrammieren', 'versicherung autoschlüssel diebstahl', 'auto gestohlen was nun'],
     publishDate: '2026-04-02',
     readTime: '6 Min',
@@ -224,7 +224,7 @@ export const BLOG_POSTS = [
   {
     slug: 'auto-vor-diebstahl-schuetzen-tipps',
     title: 'Auto vor Diebstahl schützen: Effektive Tipps & Strategien',
-    excerpt: 'Entdecken Sie effektive Tipps, um Ihr Auto vor Diebstahl zu schützen. Lernen Sie, wie Sie Autodiebstahl mit physischen und elektronischen Maßnahmen verhindern können. Sorgen Sie für innere Ruhe mit unserem umfassenden Sicherheitsleitfaden.',
+    excerpt: 'So schützen Sie Ihr Auto effektiv vor Diebstahl: Physische und elektronische Tipps. Ab 99€ programmieren wir sichere Ersatzschlüssel in 30 Min vor Ort.',
     keywords: ['auto vor diebstahl schützen', 'effektive tipps für autosicherheit', 'autodiebstahl verhindern', 'keyless entry sichern', 'autoschlüssel sicher aufbewahren'],
     publishDate: '2026-07-11',
     readTime: '9 Min',
@@ -232,7 +232,7 @@ export const BLOG_POSTS = [
   {
     slug: 'autoschluessel-nachmachen-ohne-original',
     title: 'Kann ich einen Autoschlüssel ohne Original nachmachen?',
-    excerpt: 'Haben Sie Ihren einzigen Autoschlüssel verloren? Lesen Sie hier, wie ein mobiler Kfz-Schlüsselspezialist einen neuen Schlüssel ohne den Originalschlüssel nachmachen und anlernen kann.',
+    excerpt: 'Alle Schlüssel verloren? Kein Problem! Ab 99€ fräsen & programmieren wir in 30 Min vor Ort einen neuen Autoschlüssel komplett ohne Original.',
     keywords: ['autoschlüssel nachmachen ohne original', 'autoschlüssel kopieren ohne schlüssel', 'auto öffnen und schlüssel machen'],
     publishDate: '2026-04-09',
     readTime: '6 Min',
@@ -240,7 +240,7 @@ export const BLOG_POSTS = [
   {
     slug: 'haendler-vs-mobiler-schluesseldienst',
     title: 'Händler vs. Mobiler Schlüsseldienst: Was ist günstiger?',
-    excerpt: 'Ein ehrlicher und detaillierter Preisvergleich zwischen dem Vertragshändler und einem mobilen Kfz-Schlüsselspezialisten für den Ersatz Ihres Autoschlüssels.',
+    excerpt: 'Händler vs. Mobiler Schlüsseldienst: Wir sparen Ihnen bis zu 50% und programmieren Autoschlüssel ab 99€ in 30 Min vor Ort.',
     keywords: ['händler vs mobiler schlüsseldienst', 'neuer autoschlüssel kosten händler', 'günstiger autoschlüsseldienst'],
     publishDate: '2026-04-16',
     readTime: '8 Min',
@@ -248,7 +248,7 @@ export const BLOG_POSTS = [
   {
     slug: 'autoschluessel-nachmachen-tipps-schnell-sicher',
     title: 'Autoschlüssel nachmachen: Tipps für ein schnelles und sicheres Ergebnis',
-    excerpt: 'Verlieren Sie oft Ihren Autoschlüssel? Keine Panik! Entdecken Sie praktische Tipps zum schnellen und sicheren Nachmachen Ihres Autoschlüssels bei FC-KEY, damit Sie immer mobil bleiben.',
+    excerpt: 'Immer mobil bleiben: Wir machen Autoschlüssel sicher & schnell nach. Ab 99€ in 30 Min bei Ihnen vor Ort inkl. Programmierung.',
     keywords: ['autoschlüssel nachmachen', 'schnell autoschlüssel nachmachen', 'sicher autoschlüssel nachmachen', 'autoschlüssel duplizieren'],
     publishDate: '2026-07-08',
     readTime: '7 Min',
@@ -256,7 +256,7 @@ export const BLOG_POSTS = [
   {
     slug: 'autoschluessel-verloren-was-nun-anleitung',
     title: 'Autoschlüssel verloren oder im Auto vergessen? Der ultimative Maßnahmenplan',
-    excerpt: 'Autoschlüssel verloren, im Auto eingeschlossen oder Auto lässt sich nicht öffnen? Lesen Sie unseren kompletten Guide zur schadenfreien Öffnung und Schlüssel-Neuprogrammierung.',
+    excerpt: 'Schlüssel verloren oder im Auto vergessen? Wir öffnen schadenfrei und programmieren Ersatzschlüssel ab 99€ in 30 Min vor Ort. Der Komplett-Guide.',
     keywords: ['autoschlüssel verloren', 'alle autoschlüssel verloren', 'ersatzschlüssel verloren'],
     publishDate: '2026-07-10',
     readTime: '6 Min',
@@ -264,7 +264,7 @@ export const BLOG_POSTS = [
   {
     slug: 'autoschluessel-nachmachen-kosten-preisliste',
     title: 'Was kostet es, einen Autoschlüssel nachmachen zu lassen?',
-    excerpt: 'Eine ehrliche und transparente Preisliste für das Nachmachen von Transponderschlüsseln, Klappschlüsseln und Smart Keys. Entdecken Sie, warum wir günstiger sind als der Händler.',
+    excerpt: 'Unsere Preise: Autoschlüssel nachmachen ab 99€. Sparen Sie 50% gegenüber dem Händler! Mobiler Service in 30 Min vor Ort.',
     keywords: ['autoschlüssel nachmachen kosten', 'was kostet ein autoschlüssel', 'autoschlüssel preis', 'günstig autoschlüssel nachmachen'],
     publishDate: '2026-07-11',
     readTime: '6 Min',
@@ -272,7 +272,7 @@ export const BLOG_POSTS = [
   {
     slug: 'autoschluessel-nachmachen-mobiler-service',
     title: 'Autoschlüssel nachmachen: Schnell, mobil & zuverlässig',
-    excerpt: 'Einen Ersatzschlüssel für Ihr Auto nachmachen zu lassen war noch nie so einfach. Unsere mobile Werkstatt kommt für alle Marken und Modelle zu Ihnen.',
+    excerpt: 'Ersatzschlüssel ab 99€: Unsere mobile Werkstatt kommt zu Ihnen. Wir programmieren in 30 Min vor Ort alle Modelle.',
     keywords: ['autoschlüssel nachmachen auto', 'auto ersatzschlüssel machen', 'mobiler autoschlüsseldienst', 'autoschlüssel kopieren'],
     publishDate: '2026-07-12',
     readTime: '5 Min',
@@ -280,7 +280,7 @@ export const BLOG_POSTS = [
   {
     slug: 'auto-schluesseldienst-ultimativer-leitfaden-schnelle-hilfe',
     title: 'Auto Schlüsseldienst: Der ultimative Leitfaden für schnelle Hilfe',
-    excerpt: 'Brauchen Sie Hilfe bei einer Aussperrung, einem verlorenen Schlüssel oder einem defekten Autoschloss? Lesen Sie hier alles über den Auto-Schlüsseldienst, die Kosten und wie Sie zuverlässige Hilfe auswählen.',
+    excerpt: 'Auto-Schlüsseldienst ab 99€: Wir helfen in 30 Min vor Ort bei Aussperrung & Schlüsselverlust. Schadenfreie Öffnung garantiert.',
     keywords: ['auto schlüsseldienst', 'autoschlüsseldienst', 'günstiger auto schlüsseldienst', 'schlüsseldienst auto öffnen'],
     publishDate: '2026-07-13',
     readTime: '6 Min',
@@ -288,7 +288,7 @@ export const BLOG_POSTS = [
   {
     slug: 'autoschluessel-reparieren-tipps-kosten-sparen',
     title: 'Autoschlüssel reparieren: Tipps zum Selbermachen und Geld sparen',
-    excerpt: 'Ein kaputter Autoschlüssel muss nicht teuer sein. Entdecken Sie praktische Tipps, um Ihre Batterie oder das Gehäuse selbst zu reparieren und sparen Sie massiv bei den Kosten!',
+    excerpt: 'Kaputter Schlüssel? Wir reparieren Gehäuse & Batterie ab 99€ in 30 Min vor Ort. Sparen Sie massiv im Vergleich zum Neukauf.',
     keywords: ['autoschlüssel reparieren', 'selbst autoschlüssel reparieren', 'autoschlüssel gehäuse wechseln', 'autoschlüssel batterie wechseln', 'autoschlüssel reparieren kosten'],
     publishDate: '2026-07-14',
     readTime: '6 Min',
@@ -296,7 +296,7 @@ export const BLOG_POSTS = [
   {
     slug: 'autoschluessel-bestellen-nach-fahrgestellnummer',
     title: 'Autoschlüssel bestellen nach Fahrgestellnummer: Anleitung & Kosten',
-    excerpt: 'Die Bestellung eines Autoschlüssels nach Fahrgestellnummer (VIN) ist eine praktische Lösung für Autobesitzer. Dieser Prozess nutzt die VIN, um den richtigen Schlüssel zu identifizieren. Dadurch wird es einfacher, schnell einen Ersatzschlüssel zu erhalten.',
+    excerpt: 'Autoschlüssel nach Fahrgestellnummer (VIN) bestellen? Wir fräsen und programmieren Ihren Ersatzschlüssel in 30 Min vor Ort ab 99€.',
     keywords: ['autoschlüssel bestellen nach vin', 'autoschlüssel nachmachen nach fahrgestellnummer', 'neuer autoschlüssel nach fahrgestellnummer'],
     publishDate: '2026-08-05',
     readTime: '5 Min',
@@ -304,7 +304,7 @@ export const BLOG_POSTS = [
   {
     slug: 'auto-oeffnen-ohne-schluessel-tipps-hilfe',
     title: 'Auto öffnen ohne Schlüssel: Tipps & Hilfe bei Aussperrung',
-    excerpt: 'Entdecken Sie clevere Methoden, um Ihr Auto ohne Schlüssel zu öffnen, von professioneller Hilfe bis hin zu Do-it-yourself-Lösungen. Vermeiden Sie Aussperrungen mit unseren Tipps!',
+    excerpt: 'Ausgesperrt? Wir öffnen Ihr Auto 100% schadenfrei in 30 Min vor Ort ab 99€. Keine Kratzer, keine kaputten Scheiben.',
     keywords: ['auto öffnen ohne schlüssel', 'auto aufmachen ohne schlüssel', 'ausgesperrtes auto', 'schlüssel im auto liegen gelassen'],
     publishDate: '2026-08-05',
     readTime: '7 Min',
@@ -312,7 +312,7 @@ export const BLOG_POSTS = [
   {
     slug: 'auto-erkennt-schluessel-nicht-mehr',
     title: 'Auto erkennt Schlüssel nicht mehr: Ursachen & Lösungen',
-    excerpt: 'Erleben Sie Stress, weil Ihr Auto den Schlüssel nicht mehr erkennt? Entdecken Sie hier schnelle Lösungen und häufige Ursachen für ein Auto, das nicht auf Ihren Schlüssel reagiert.',
+    excerpt: 'Auto erkennt Schlüssel nicht? Wir diagnostizieren & programmieren in 30 Min vor Ort ab 99€. Schnelle Hilfe bei defekten Schlüsseln.',
     keywords: ['auto erkennt schlüssel nicht mehr', 'auto reagiert nicht auf schlüssel', 'autoschlüssel verweigert dienst', 'wegfahrsperre erkennt schlüssel nicht'],
     publishDate: '2026-08-05',
     readTime: '6 Min',
@@ -320,7 +320,7 @@ export const BLOG_POSTS = [
   {
     slug: 'volkswagen-schluessel-nachmachen',
     title: 'Volkswagen Schlüssel nachmachen: Kosten, Optionen und Tipps',
-    excerpt: 'Entdecken Sie alles über das Nachmachen eines Schlüssels für Ihren Volkswagen, einschließlich der Kosten und Optionen zwischen Händler und Spezialist. Stellen Sie sicher, dass Sie immer mit einem VW-Ersatzschlüssel vorbereitet sind.',
+    excerpt: 'Volkswagen Schlüssel nachmachen lassen ab 99€. In 30 Min vor Ort fertig codiert. Sparen Sie 50% gegenüber dem VW Händler.',
     keywords: ['volkswagen schlüssel nachmachen', 'volkswagen autoschlüssel verloren', 'neuer schlüssel vw', 'autoschlüssel spezialist versus offizieller händler', 'volkswagen schlüssel anlernen kosten'],
     publishDate: '2026-08-05',
     readTime: '8 Min',

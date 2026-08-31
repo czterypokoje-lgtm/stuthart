@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: {
     absolute: 'Autoschlüssel nach Kennzeichen bestellen? | Direkter Preis & Vor-Ort-Hilfe',
   },
-  description: 'Kein technischer Aufwand! Senden Sie uns Ihr Kennzeichen per WhatsApp und erhalten Sie sofort einen Festpreis. Wir kommen vor Ort. Inklusive 12 Monaten Garantie.',
+  description: 'Autoschlüssel bestellen leicht gemacht! Kennzeichen per WhatsApp senden & sofort Festpreis erhalten. Inklusive 12 Mon. Garantie & Vor-Ort Service.',
   alternates: { canonical: `${SITE_CONFIG.domain}/autoschluessel-bestellen` },
 };
 

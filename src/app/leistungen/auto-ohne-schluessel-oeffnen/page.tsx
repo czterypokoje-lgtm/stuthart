@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: {
     absolute: 'Auto ohne Schlüssel öffnen | 24/7 Schadensfrei | FC-KEY',
   },
-  description: 'Auto ohne Schlüssel öffnen? Unser mobiler Schlüsseldienst öffnet Ihr Auto 100% schadensfrei innerhalb von 30 Min. Festpreis ab 149€. Aktiv in Stuttgart, Sindelfingen und 50km Umkreis. 24/7 anrufen!',
+  description: 'Ab 149€ in 30 Min vor Ort: Auto 100% schadenfrei öffnen. Unser Schlüsseldienst hilft schnell in Stuttgart & 50km Umkreis. 24/7 anrufen!',
   alternates: { canonical: `${SITE_CONFIG.domain}/leistungen/auto-ohne-schluessel-oeffnen` },
   keywords: [
     'auto ohne schlüssel öffnen',

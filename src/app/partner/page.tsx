@@ -6,7 +6,7 @@ import styles from './page.module.css';
 
 export const metadata: Metadata = {
   title: 'B2B Partnerschaften - Autoschlüssel für Flotten & Werkstätten | FC-KEY',
-  description: 'Zuverlässiger B2B-Partner für Autoschlüssel-Nachmachen. Speziell für Leasinggesellschaften, Flottenmanagement, Autohäuser und Werkstätten. Express-Service vor Ort.',
+  description: 'B2B-Partner für Autoschlüssel: Mobiler Express-Service für Leasing, Flotten & Werkstätten ab 99€. Reduzieren Sie Ausfallzeiten noch heute.',
 };
 
 const B2B_FAQS = [

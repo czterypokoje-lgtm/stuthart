@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: {
     absolute: 'Auto Schlüsseldienst | 24/7 Mobil & Schadensfrei | FC-KEY',
   },
-  description: 'Notfall Auto Schlüsseldienst benötigt? Wir öffnen Ihr Auto 100% schadensfrei und fertigen direkt vor Ort einen neuen Schlüssel an. Festpreise ab 149€. Jetzt 24/7 anrufen.',
+  description: 'Ab 149€ & 30 Min vor Ort: Auto Schlüsseldienst. 100% schadenfreie Öffnung & neuer Schlüssel direkt vor Ort. 24/7 Notdienst. Jetzt anrufen!',
   alternates: { canonical: `${SITE_CONFIG.domain}/leistungen/auto-schluesseldienst` },
 };
 

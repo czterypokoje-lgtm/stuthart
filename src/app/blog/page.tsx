@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   title: {
     absolute: 'Autoschlüssel Blog & Ratgeber | FC-KEY Stuttgart',
   },
-  description: 'Tipps, Anleitungen und Praxisfälle rund um Autoschlüssel. Alle Schlüssel verloren, Kosten je Marke, BMW BDC2, SFD-Unlock, Ghost-Wegfahrsperre und vieles mehr.',
+  description: 'Ratgeber Autoschlüssel: Tipps zu Kosten, Transponder, Smart Key, Sicherheit & Notfallhilfe. Mobiler Service ab 99€ in 30 Min vor Ort.',
   alternates: { canonical: `${SITE_CONFIG.domain}/blog` },
   openGraph: {
     type: 'website',
     url: `${SITE_CONFIG.domain}/blog`,
     title: 'Autoschlüssel Blog & Ratgeber | FC-KEY Stuttgart',
-    description: 'Ihr Ratgeber rund um Autoschlüssel: Kosten, Transponder, Smart Key, Sicherheit und Notfallhilfe. Kostenlose Tipps vom Fachmann.',
+    description: 'Ratgeber Autoschlüssel: Tipps zu Kosten, Transponder, Smart Key, Sicherheit & Notfallhilfe. Mobiler Service ab 99€ in 30 Min vor Ort.',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'FC-KEY Autoschlüssel Ratgeber Stuttgart' }],
   },
 };

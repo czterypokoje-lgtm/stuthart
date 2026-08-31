@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: {
     absolute: 'Über Uns | FC-KEY: Zertifizierter Autoschlüssel Spezialist',
   },
-  description: `Lernen Sie FC-KEY kennen. Unter der Leitung von Gungor Demir bieten wir professionellen, mobilen Autoschlüsselservice im gesamten Großraum und in Süddeutschland.`,
+  description: `FC-KEY: Ihr zertifizierter Autoschlüsselspezialist. Mobiler Service für Transponder, Smart Keys & Zündschlösser in ganz Süddeutschland.`,
   alternates: {
     canonical: `${SITE_CONFIG.domain}/ueber-uns`,
     languages: {
