@@ -1,4 +1,6 @@
+const fs = require('fs');
 
+let content = `
 'use client';
 
 import React, { useState } from 'react';
@@ -29,11 +31,11 @@ export default function KennzeichenForm() {
 
   // Build WhatsApp URL synchronously at click time — never from stale state
   const buildWhatsappUrl = () => {
-    let msg = `Hallo, ich hätte gerne ein Preisangebot für einen Autoschlüssel.\n\n`;
-    msg += `*Kennzeichen:* ${kenteken || 'Nicht ausgefüllt'}\n`;
-    if (service) msg += `*Service:* ${service}\n`;
-    if (city) msg += `*Standort:* ${city}\n`;
-    return `https://wa.me/${SITE_CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+    let msg = \`Hallo, ich hätte gerne ein Preisangebot für einen Autoschlüssel.\\n\\n\`;
+    msg += \`*Kennzeichen:* \${kenteken || 'Nicht ausgefüllt'}\\n\`;
+    if (service) msg += \`*Service:* \${service}\\n\`;
+    if (city) msg += \`*Standort:* \${city}\\n\`;
+    return \`https://wa.me/\${SITE_CONFIG.whatsapp}?text=\${encodeURIComponent(msg)}\`;
   };
 
   const handleWhatsappSubmit = async (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -51,7 +53,7 @@ export default function KennzeichenForm() {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
-            _subject: `WhatsApp Weiterleitung: ${kenteken}`,
+            _subject: \`WhatsApp Weiterleitung: \${kenteken}\`,
             Kennzeichen: kenteken,
             Situation: service || 'Nicht angegeben',
             Standort: city || 'Nicht angegeben'
@@ -79,7 +81,7 @@ export default function KennzeichenForm() {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
-            _subject: `Rückruf Anfrage: ${kenteken}`,
+            _subject: \`Rückruf Anfrage: \${kenteken}\`,
             Kennzeichen: kenteken,
             Situation: service || 'Nicht angegeben',
             Standort: city || 'Nicht angegeben',
@@ -155,14 +157,14 @@ export default function KennzeichenForm() {
             <button
               type="button"
               onClick={() => setService(service === 'Ersatzschlüssel' ? '' : 'Ersatzschlüssel')}
-              className={`${styles.optionBtn} ${service === 'Ersatzschlüssel' ? styles.optionActive : ''}`}
+              className={\`\${styles.optionBtn} \${service === 'Ersatzschlüssel' ? styles.optionActive : ''}\`}
             >
               🔑 Extra (Ersatz) Schlüssel
             </button>
             <button
               type="button"
               onClick={() => setService(service === 'Alle Schlüssel verloren' ? '' : 'Alle Schlüssel verloren')}
-              className={`${styles.optionBtn} ${service === 'Alle Schlüssel verloren' ? styles.optionActive : ''}`}
+              className={\`\${styles.optionBtn} \${service === 'Alle Schlüssel verloren' ? styles.optionActive : ''}\`}
             >
               🚨 Alle Schlüssel verloren
             </button>
@@ -208,7 +210,7 @@ export default function KennzeichenForm() {
         {!showCallback && (
           <div className={styles.actions}>
             <a
-              href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
+              href={\`https://wa.me/\${SITE_CONFIG.whatsapp}\`}
               onClick={handleWhatsappSubmit}
               target="_blank"
               rel="noopener noreferrer"
@@ -239,3 +241,7 @@ export default function KennzeichenForm() {
     </div>
   );
 }
+`;
+
+fs.writeFileSync('src/components/KennzeichenForm/KennzeichenForm.tsx', content);
+console.log('Fixed KennzeichenForm.tsx');

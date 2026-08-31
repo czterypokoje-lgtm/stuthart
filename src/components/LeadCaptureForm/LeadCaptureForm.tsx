@@ -41,13 +41,31 @@ export default function LeadCaptureForm({ city = "", phone, theme = 'dark' }: Pr
     return `https://wa.me/${SITE_CONFIG.phoneTel.replace(/\D/g,"")}?text=${encodeURIComponent(parts)}`;
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    
+    // Open WhatsApp synchronously to bypass popup blockers
+    window.open(buildWhatsAppUrl(), "_blank", "noopener,noreferrer");
+    
+    // Server-side lead capture
     setSubmitted(true);
-    setTimeout(() => {
-      window.open(buildWhatsAppUrl(), "_blank", "noopener,noreferrer");
-      setSubmitted(false);
-    }, 200);
+    try {
+      await fetch("https://formsubmit.co/ajax/info@fc-key.de", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+            _subject: `Neue Lead-Anfrage: ${brand || 'Unbekannt'} ${model || ''}`,
+            Marke: brand || 'Nicht angegeben',
+            Modell: model || 'Nicht angegeben',
+            Baujahr: year || 'Nicht angegeben',
+            Leistung: service || 'Nicht angegeben',
+            Ort: location || 'Nicht angegeben',
+        })
+      });
+    } catch (err) {
+      console.error(err);
+    }
+    setSubmitted(false);
   }
 
   return (
