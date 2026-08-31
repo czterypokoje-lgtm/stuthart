@@ -45,8 +45,8 @@ export default function KennzeichenBestellenPage() {
 
   return (
     <>
-      <Script id="kennzeichen-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <Script id="kennzeichen-bc-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="kennzeichen-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script id="kennzeichen-bc-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
         {/* Hero */}
         <section className={styles.hero}>

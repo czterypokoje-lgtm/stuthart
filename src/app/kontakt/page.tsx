@@ -69,7 +69,7 @@ export default async function ContactPage(props: Props) {
 
   return (
     <>
-      <Script id="contact-bc-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="contact-bc-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
         
         {/* ── HERO & SUBHEADLINE ─────────────────────────────────────── */}

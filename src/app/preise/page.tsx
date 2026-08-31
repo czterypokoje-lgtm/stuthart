@@ -74,7 +74,7 @@ const breadcrumbSchema = {
 export default function PrijzenPage() {
   return (
     <>
-      <Script id="prijzen-bc-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="prijzen-bc-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
       {/* Hero */}
       <section className={styles.hero}>

@@ -175,8 +175,8 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
 
   return (
     <>
-      <Script id={`city-schema-${citySlug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <Script id={`city-breadcrumb-${citySlug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id={`city-schema-${citySlug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script id={`city-breadcrumb-${citySlug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
         {/* ── HERO ─────────────────────────────────────────────────── */}
         {hasHeroImage ? (
@@ -218,7 +218,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                   priority
                   quality={85}
                 />
-                <Script id={`hero-image-gps-${city.slug}`} type="application/ld+json" dangerouslySetInnerHTML={{
+                <script id={`hero-image-gps-${city.slug}`} type="application/ld+json" dangerouslySetInnerHTML={{
                   __html: JSON.stringify({
                     "@context": "https://schema.org",
                     "@type": "ImageObject",

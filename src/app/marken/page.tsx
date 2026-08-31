@@ -41,7 +41,7 @@ export default function MarkenPage() {
         {/* Dark overlay for text readability */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(15, 23, 42, 0.75)', zIndex: 1, pointerEvents: 'none' }} />
         
-        <Script id="merken-image-gps" type="application/ld+json" dangerouslySetInnerHTML={{
+        <script id="merken-image-gps" type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ImageObject",

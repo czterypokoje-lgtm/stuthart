@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Script from 'next/script';
+import ArticleSchema from "@/components/Schema/ArticleSchema";
 import { BLOG_POSTS } from '@/config/services';
 import { SITE_CONFIG } from '@/config/site.config';
 import { BLOG_CONTENT } from '@/config/blog_content';
@@ -65,63 +66,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const postContent = BLOG_CONTENT[slug];
 
-  const blogPostingSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    '@id': `${SITE_CONFIG.domain}/blog/${slug}#blogposting`,
-    headline: post.title,
-    description: post.excerpt,
-    datePublished: post.publishDate,
-    dateModified: post.publishDate,
-    inLanguage: 'de-DE',
-    mainEntityOfPage: `${SITE_CONFIG.domain}/blog/${slug}`,
-    // ── E-E-A-T: Namentlich genannte Person als Autor statt anonymer Organisation ──
-    author: {
-      '@type': 'Person',
-      '@id': `${SITE_CONFIG.domain}/#specialist`,
-      name: 'Gungor Demir',
-      jobTitle: 'Inhaber & Kfz-Schlüsselspezialist',
-      url: `${SITE_CONFIG.domain}/ueber-uns`,
-      worksFor: {
-        '@type': 'LocalBusiness',
-        name: SITE_CONFIG.fullName,
-        url: SITE_CONFIG.domain,
-      },
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_CONFIG.fullName,
-      url: SITE_CONFIG.domain,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${SITE_CONFIG.domain}/logo.png`,
-      },
-    },
-    image: `${SITE_CONFIG.domain}/og-image.jpg`,
-    // ── Individuelle Bewertungen für Stern-Rich-Results ──
-    review: REVIEW_SCHEMA_DATA.map((r) => ({
-      '@type': 'Review',
-      author: { '@type': 'Person', name: r.author },
-      datePublished: r.datePublished,
-      reviewBody: r.reviewBody,
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: r.ratingValue,
-        bestRating: 5,
-        worstRating: 1,
-      },
-      itemReviewed: {
-        '@id': `${SITE_CONFIG.domain}/#localbusiness`,
-      },
-    })),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: parseFloat(SITE_CONFIG.rating),
-      reviewCount: parseInt(SITE_CONFIG.reviewCount, 10),
-      bestRating: 5,
-      worstRating: 1,
-    },
-  };
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -185,10 +129,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
-      <Script id={`blog-post-schema-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
-      <Script id={`blog-post-bc-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ArticleSchema title={post.title} description={post.excerpt} url={`${SITE_CONFIG.domain}/blog/${slug}`} datePublished={post.publishDate} />
+      <script id={`blog-post-bc-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {faqSchema && (
-        <Script id={`blog-post-faq-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script id={`blog-post-faq-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
       <main>
       <section style={{ background: 'linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%)', padding: '5rem 2rem' }}>

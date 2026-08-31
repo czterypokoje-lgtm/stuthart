@@ -125,7 +125,7 @@ export default function HomePage() {
   return (
     <>
       <LocalBusinessSchema />
-      <Script id="home-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="home-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
       {/* ===== HERO (SPLIT) ===== */}
       <section className={styles.heroSplit}>
@@ -168,7 +168,7 @@ export default function HomePage() {
               fetchPriority="high"
               quality={85}
             />
-            <Script id="hero-image-gps" type="application/ld+json" dangerouslySetInnerHTML={{
+            <script id="hero-image-gps" type="application/ld+json" dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "ImageObject",
