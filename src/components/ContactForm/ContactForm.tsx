@@ -20,15 +20,32 @@ export default function ContactForm() {
     const email = formData.get('email') as string;
     const message = formData.get('message') as string;
 
-    const subject = encodeURIComponent(`Neue Anfrage von ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nTelefon: ${phone}\nE-Mail: ${email}\nAuto: ${car}\n\nNachricht:\n${message}`);
-
-    window.location.href = `mailto:${SITE_CONFIG.email}?subject=${subject}&body=${body}`;
-    
-    setTimeout(() => {
-      setStatus('succeeded');
-      form.reset();
-    }, 500);
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/info@fc-key.de", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            _subject: `Neue Kunden-Anfrage von ${name}`,
+            Name: name,
+            Telefon: phone,
+            Auto: car,
+            Email: email,
+            Nachricht: message,
+        })
+      });
+      
+      if (response.ok) {
+        setStatus('succeeded');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
   };
 
   if (status === 'succeeded') {
