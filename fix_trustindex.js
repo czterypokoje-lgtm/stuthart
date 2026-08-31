@@ -1,3 +1,5 @@
+const fs = require('fs');
+let content = `
 'use client';
 
 import React, { useEffect, useRef } from 'react';
@@ -33,3 +35,6 @@ export default function TrustindexHeroWidget() {
     </div>
   );
 }
+`;
+fs.writeFileSync('src/components/TrustindexHeroWidget/TrustindexHeroWidget.tsx', content.trim() + '\\n');
+console.log('Fixed TrustindexHeroWidget.tsx');

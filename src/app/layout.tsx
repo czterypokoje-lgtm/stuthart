@@ -1,5 +1,13 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { IBM_Plex_Sans } from 'next/font/google';
+
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-ibm-plex-sans',
+});
 import Script from 'next/script';
 import Navigation from '@/components/Navigation/Navigation';
 import Footer from '@/components/Footer/Footer';
@@ -84,6 +92,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="de">
       <head>
+        {/* Google Consent Mode Default */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied',
+                'wait_for_update': 500
+              });
+            `
+          }}
+        />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
@@ -95,19 +117,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         {/* End Google Tag Manager */}
-        {/* Google tag (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-C4WR7TYCTV"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-C4WR7TYCTV');
-          `}
-        </Script>
+        
         {/* Google Ads Click to call conversion snippet */}
         <Script id="google-ads-conversion" strategy="afterInteractive">
           {`
@@ -117,7 +127,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   window.location = url;
                 }
               };
-              gtag('event', 'conversion', {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                  'event': 'conversion',
                   'send_to': 'AW-18315813515/qKjlCPGp_d0cEIvF1J1E',
                   'event_callback': callback
               });
@@ -153,9 +165,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="me" href={SITE_CONFIG.social.google} />
 
         {/* ── FONTS ── */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        
         {/* ── STRUCTURED DATA ── */}
         <script
           id="schema-website"
@@ -163,7 +173,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body>
+      <body className={ibmPlexSans.variable}>
         <PhoneConversionTracker />
         {/* Google Tag Manager (noscript) */}
         <noscript>
