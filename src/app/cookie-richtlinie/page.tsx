@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function CookiePage() {
   return (
-    <main>
+    <main id="main-content">
       <section style={{ background: 'linear-gradient(135deg, #070e1a 0%, #0a1628 100%)', padding: '4rem 2rem' }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <h1 style={{ color: '#fff' }}>Cookie-Richtlinie</h1>

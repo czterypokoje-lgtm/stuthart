@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function BewertungenPage() {
   return (
-    <main>
+    <main id="main-content">
       <section style={{ background: 'linear-gradient(135deg, #070e1a 0%, #0a1628 100%)', padding: '5rem 2rem', textAlign: 'center' }}>
         <span className="section-label">BEWERTUNGEN</span>
         <h1 style={{ color: '#fff', marginBottom: '1rem' }}>Kundenbewertungen</h1>

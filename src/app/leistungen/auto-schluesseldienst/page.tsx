@@ -149,7 +149,7 @@ export default function AutoSlotenmakerPage() {
     <>
       <script id="auto-slotenmaker-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script id="auto-slotenmaker-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className={styles.hero}>
           <div className={styles.heroInner}>

@@ -11,7 +11,6 @@ import FaqSection from '@/components/FaqSection/FaqSection';
 import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import { generateContextualReviews } from '@/utils/reviews';
 import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
-import LocalBusinessSchema from '@/components/Schema/LocalBusinessSchema';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsLogoGrid from '@/components/BrandsLogoGrid/BrandsLogoGrid';
@@ -124,9 +123,8 @@ const serviceAreaCities = [
 export default function HomePage() {
   return (
     <>
-      <LocalBusinessSchema />
       <script id="home-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <main>
+      <main id="main-content">
       {/* ===== HERO (SPLIT) ===== */}
       <section className={styles.heroSplit}>
         <div className={styles.heroSplitInner}>

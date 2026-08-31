@@ -25,7 +25,7 @@ export default function MarkenPage() {
   const p3Brands = BRANDS.filter(b => b.priority === 'P3');
 
   return (
-    <main>
+    <main id="main-content">
       {/* Hero */}
       <section style={{ background: 'var(--navy-900)', padding: '6rem 2rem', textAlign: 'center', overflow: 'hidden', position: 'relative' }}>
         <Image

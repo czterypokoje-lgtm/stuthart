@@ -95,7 +95,7 @@ const TARGETS = [
 
 export default function PartnerPage() {
   return (
-    <main className={styles.main}>
+    <main id="main-content" className={styles.main}>
       
       <section className={styles.heroWrapper}>
         <div className={styles.heroBackground}>

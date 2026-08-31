@@ -75,7 +75,7 @@ export default function PrijzenPage() {
   return (
     <>
       <script id="prijzen-bc-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <main>
+      <main id="main-content">
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>

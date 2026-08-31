@@ -169,7 +169,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
     <>
       <script id={`brand-schema-${brand.slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script id={`brand-breadcrumb-${brand.slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <main>
+      <main id="main-content">
         {/* ── HERO SECTION ── */}
         <section className={hasHeroBg ? "hero-spacing-bg" : "hero-spacing"} style={{ 
           background: heroBgStyle, 

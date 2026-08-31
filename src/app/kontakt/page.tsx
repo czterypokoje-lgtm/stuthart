@@ -70,7 +70,7 @@ export default async function ContactPage(props: Props) {
   return (
     <>
       <script id="contact-bc-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <main>
+      <main id="main-content">
         
         {/* ── HERO & SUBHEADLINE ─────────────────────────────────────── */}
         <section style={{ background: 'linear-gradient(135deg, #070e1a 0%, #0a1628 100%)', padding: '5rem 1.5rem', textAlign: 'center', color: '#fff' }}>

@@ -177,7 +177,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
     <>
       <script id={`city-schema-${citySlug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script id={`city-breadcrumb-${citySlug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <main>
+      <main id="main-content">
         {/* ── HERO ─────────────────────────────────────────────────── */}
         {hasHeroImage ? (
           <section className={styles.heroSplit}>

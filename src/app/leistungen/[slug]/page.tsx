@@ -180,7 +180,7 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
       <script id={`faq-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script id={`svc-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id={`bc-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <main>
+      <main id="main-content">
         {/* ── HERO ─────────────────────────────────────────────────── */}
         <section className={styles.hero}>
           <div className={styles.heroInner}>

@@ -99,7 +99,7 @@ export default function AutosleutelKwijt() {
       <script id="akl-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script id="akl-bc-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script id="akl-howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      <main>
+      <main id="main-content">
         {/* EMERGENCY HERO — CTA absolute top priority */}
         <section style={{ background:'var(--color-danger)', padding:'2rem', textAlign:'center' }}>
           <p style={{ color:'rgba(255,255,255,0.9)', fontSize:'0.875rem', fontWeight:600, margin:'0 0 0.5rem' }}>

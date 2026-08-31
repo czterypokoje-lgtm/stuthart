@@ -174,6 +174,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={ibmPlexSans.variable}>
+        <a href="#main-content" className="skip-link">Zum Hauptinhalt springen</a>
         <PhoneConversionTracker />
         {/* Google Tag Manager (noscript) */}
         <noscript>

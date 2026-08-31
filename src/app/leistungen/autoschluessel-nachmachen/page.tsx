@@ -159,7 +159,7 @@ export default function SleutelBijmakenPage() {
       <script id="sleutel-nachmachen-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script id="sleutel-nachmachen-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script id="sleutel-nachmachen-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className={styles.hero}>
           <div className={styles.heroInner}>

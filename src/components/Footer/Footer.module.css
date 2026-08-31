@@ -15,27 +15,27 @@
 .footerLogo { width: 40px; height: 40px; flex-shrink: 0; }
 .footerBrandName { font-size: 0.95rem; font-weight: 700; color: #fff; }
 .footerBrandSub { font-size: 0.65rem; color: var(--orange-400); text-transform: uppercase; letter-spacing: 0.08em; }
-.seoLink { color: var(--gray-400); text-decoration: none; transition: color 0.15s ease; }
+.seoLink { color: var(--gray-400); text-decoration: none; transition: color 0.15s ease; display: inline-block; padding: 4px 0; min-height: 24px; }
 .seoLink:hover { text-decoration: underline; color: var(--orange-400); }
 .footerDesc { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 0.75rem; }
 .footerBadges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
 .footerBadges span { font-size: 0.68rem; background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.08); padding: 0.2rem 0.5rem; border-radius: 2px; }
 .footerContact { display: flex; flex-direction: column; gap: 0.25rem; }
-.footerContact a { font-size: 0.82rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.12s; }
+.footerContact a { font-size: 0.82rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.12s; display: inline-block; padding: 4px 0; min-height: 24px; }
 .footerContact a:hover { color: var(--orange-400); }
 .hours { font-size: 0.78rem; color: var(--gray-400); font-weight: 600; }
 
 .colTitle { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.5); margin-bottom: 0.75rem; }
 .linkList { list-style: none; padding: 0; margin: 0; }
 .linkList li { margin-bottom: 0.35rem; }
-.linkList a { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.12s; }
+.linkList a { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.12s; display: inline-block; padding: 4px 0; min-height: 24px; }
 .linkList a:hover { color: #fff; }
 
 .bottomBar { border-top: 1px solid rgba(255,255,255,0.06); }
 .bottomInner { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 .bottomInner p { font-size: 0.75rem; color: rgba(255,255,255,0.3); margin: 0; }
 .bottomLinks { display: flex; gap: 1.5rem; }
-.bottomLinks a { font-size: 0.75rem; color: rgba(255,255,255,0.55); text-decoration: none; }
+.bottomLinks a { font-size: 0.75rem; color: rgba(255,255,255,0.55); text-decoration: none; display: inline-block; padding: 4px 0; min-height: 24px; }
 .bottomLinks a:hover { color: rgba(255,255,255,0.9); }
 
 @media (max-width: 1024px) { .footerGrid { grid-template-columns: 1fr 1fr; } }

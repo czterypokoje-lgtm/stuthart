@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <main>
+    <main id="main-content">
       <section style={{ background: 'linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%)', padding: '5rem 2rem', textAlign: 'center' }}>
         <span className="section-label">BLOG &amp; RATGEBER</span>
         <h1 style={{ color: '#fff', marginBottom: '1rem' }}>Autoschlüssel Tipps &amp; Wissenswertes</h1>

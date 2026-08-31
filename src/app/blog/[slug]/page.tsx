@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Script from 'next/script';
-import ArticleSchema from "@/components/Schema/ArticleSchema";
 import { BLOG_POSTS } from '@/config/services';
 import { SITE_CONFIG } from '@/config/site.config';
 import { BLOG_CONTENT } from '@/config/blog_content';
@@ -129,12 +128,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
-      <ArticleSchema title={post.title} description={post.excerpt} url={`${SITE_CONFIG.domain}/blog/${slug}`} datePublished={post.publishDate} />
       <script id={`blog-post-bc-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {faqSchema && (
         <script id={`blog-post-faq-${slug}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
-      <main>
+      <main id="main-content">
       <section style={{ background: 'linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%)', padding: '5rem 2rem' }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <Link href="/blog" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', textDecoration: 'none' }}>← Zurück zum Blog</Link>

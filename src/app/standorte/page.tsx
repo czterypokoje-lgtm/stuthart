@@ -33,7 +33,7 @@ const groups = [
 
 export default function Steden() {
   return (
-    <main>
+    <main id="main-content">
       <section style={{ 
         background: 'linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url("/images/standorte-hero-bg.webp")', 
         backgroundSize: 'cover',

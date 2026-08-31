@@ -180,7 +180,7 @@ export default function AutoOpenenZonderSleutelPage() {
       <script id="aozs-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script id="aozs-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
       <script id="aozs-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <main>
+      <main id="main-content">
 
         {/* ── HERO ─────────────────────────────────────────────────── */}
         <section className={styles.hero}>

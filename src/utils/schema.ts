@@ -3,7 +3,7 @@ import { CITIES } from '@/config/cities';
 
 /**
  * Returns a standardized Locksmith (LocalBusiness) schema object.
- * This guarantees consistent NAP data (Utrecht) and a full areaServed list
+ * This guarantees consistent NAP data (Stuttgart) and a full areaServed list
  * across all pages (City, Service, and Brand pages).
  */
 export function getBaseLocalBusinessSchema() {

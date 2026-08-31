@@ -31,7 +31,7 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <div className={styles.footerBrand}>
-              <Link href="/">
+              <Link href="/" aria-label="Startseite">
                 <Image
                   src="/logo-golden-crest.png"
                   alt="First Class Key Logo"
@@ -57,11 +57,11 @@ export default function Footer() {
 
           {/* Leistungen & Spoed */}
           <div>
-            <h4 className={styles.colTitle}>Notdienst</h4>
+            <h3 className={styles.colTitle}>Notdienst</h3>
             <ul className={styles.linkList}>
               {spoed.map(([label, href]) => <li key={href}><Link href={href} style={{ color: 'var(--orange-400)' }}>{label}</Link></li>)}
             </ul>
-            <h4 className={styles.colTitle} style={{ marginTop: '1.5rem' }}>Leistungen</h4>
+            <h3 className={styles.colTitle} style={{ marginTop: '1.5rem' }}>Leistungen</h3>
             <ul className={styles.linkList}>
               {leistungen.map(([label, href]) => <li key={href}><Link href={href}>{label}</Link></li>)}
             </ul>
@@ -69,14 +69,14 @@ export default function Footer() {
 
           {/* Merken */}
           <div>
-            <h4 className={styles.colTitle}>Marken</h4>
+            <h3 className={styles.colTitle}>Marken</h3>
             <ul className={styles.linkList}>
               {BRANDS.filter(b => b.priority === 'P1').map(b => (
                 <li key={b.slug}><Link href={`/marken/${b.nameSlug}-autoschluessel-nachmachen`}>{b.name} Schlüssel nachmachen</Link></li>
               ))}
               <li><Link href="/marken">Alle 59 Marken →</Link></li>
             </ul>
-            <h4 className={styles.colTitle} style={{ marginTop: '1.5rem' }}>Blog &amp; Ratgeber</h4>
+            <h3 className={styles.colTitle} style={{ marginTop: '1.5rem' }}>Blog &amp; Ratgeber</h3>
             <ul className={styles.linkList}>
               <li><Link href="/blog/autoschluessel-batterie-wechseln-anleitung">Batterie wechseln</Link></li>
               <li><Link href="/blog/autoschluessel-gestohlen-was-tun">Schlüssel gestohlen?</Link></li>
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Steden */}
           <div>
-            <h4 className={styles.colTitle}>Städte</h4>
+            <h3 className={styles.colTitle}>Städte</h3>
             <ul className={styles.linkList}>
               {CITIES.map(c => (
                 <li key={c.slug}>
@@ -105,14 +105,14 @@ export default function Footer() {
 
           {/* Over Ons & Openingstijden */}
           <div>
-            <h4 className={styles.colTitle}>Über Uns</h4>
+            <h3 className={styles.colTitle}>Über Uns</h3>
             <ul className={styles.linkList} style={{ marginBottom: '1.5rem' }}>
               <li><Link href="/bewertungen">Kundenbewertungen</Link></li>
               <li><Link href="/galerie">Unsere Galerie</Link></li>
               <li><Link href="/ueber-uns">Über Uns</Link></li>
             </ul>
 
-            <h4 className={styles.colTitle}>Öffnungszeiten</h4>
+            <h3 className={styles.colTitle}>Öffnungszeiten</h3>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem', color: 'rgba(255,255,255,0.65)' }}>
               <tbody>
                 {[

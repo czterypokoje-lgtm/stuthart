@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function LeistungenOverviewPage() {
   return (
-    <main>
+    <main id="main-content">
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <span className={styles.label}>UNSERE LEISTUNGEN</span>
