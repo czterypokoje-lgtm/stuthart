@@ -7,6 +7,7 @@ import WhatsAppButton from '@/components/WhatsAppButton/WhatsAppButton';
 import StickyCallBar from '@/components/StickyCallBar/StickyCallBar';
 import PhoneConversionTracker from '@/components/PhoneConversionTracker';
 import { SITE_CONFIG } from '@/config/site.config';
+import CookieBanner from "@/components/CookieBanner/CookieBanner";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.domain),
@@ -181,11 +182,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <WhatsAppButton />
           <StickyCallBar />
         </div>
-        {/* ── iubenda Cookie Solution & Privacy Controls ── */}
-        <Script
-          strategy="lazyOnload"
-          src="https://embeds.iubenda.com/widgets/c53c352b-ed07-4c5b-b461-8b542ddd3aaf.js"
-        />
+        {/* ── Cookie Solution & Privacy Controls ── */}
+        <CookieBanner />
       </body>
     </html>
   );
