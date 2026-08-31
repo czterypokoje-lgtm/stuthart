@@ -193,7 +193,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
               </p>
             </div>
             <div style={{ flex: '1 1 400px', maxWidth: '450px', width: '100%', margin: '0 auto' }}>
-              <LeadCaptureForm phone={SITE_CONFIG.phone} theme="light" />
+              <LeadCaptureForm phone={SITE_CONFIG.phone} theme="light" urgencyColor="#ffffff" />
             </div>
           </div>
         </section>

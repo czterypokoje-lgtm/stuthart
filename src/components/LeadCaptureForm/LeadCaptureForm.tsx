@@ -8,9 +8,10 @@ interface Props {
   city?: string;
   phone: string;
   theme?: 'dark' | 'light';
+  urgencyColor?: string;
 }
 
-export default function LeadCaptureForm({ city = "", phone, theme = 'dark' }: Props) {
+export default function LeadCaptureForm({ city = "", phone, theme = 'dark', urgencyColor }: Props) {
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
   const [year, setYear] = useState("");
@@ -171,7 +172,7 @@ export default function LeadCaptureForm({ city = "", phone, theme = 'dark' }: Pr
         </button>
       </form>
 
-      <p className={styles.urgency}>
+      <p className={styles.urgency} style={urgencyColor ? { color: urgencyColor } : undefined}>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
         Notfall oder dringend? Kontaktieren Sie uns direkt:
       </p>
