@@ -33,6 +33,26 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       ...brandRedirects,
+      {
+        source: "/leistungen/notoeffnung-auto",
+        destination: "/leistungen/auto-ohne-schluessel-oeffnen",
+        permanent: true,
+      },
+      {
+        source: "/leistungen/tuer-zugefallen",
+        destination: "/leistungen/auto-ohne-schluessel-oeffnen",
+        permanent: true,
+      },
+      {
+        source: "/leistungen/kofferraum-oeffnen",
+        destination: "/leistungen/auto-ohne-schluessel-oeffnen",
+        permanent: true,
+      },
+      {
+        source: "/leistungen/schluessel-im-auto",
+        destination: "/leistungen/auto-ohne-schluessel-oeffnen",
+        permanent: true,
+      },
     ];
   },
   async headers() {

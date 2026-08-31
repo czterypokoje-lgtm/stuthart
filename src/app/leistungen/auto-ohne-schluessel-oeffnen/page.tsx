@@ -225,17 +225,21 @@ export default function AutoOpenenZonderSleutelPage() {
 
                 {/* Section 1: Wanneer nodig */}
                 <div>
-                  <h2>Wann müssen Sie Ihr Auto ohne Schlüssel öffnen lassen?</h2>
-                  <p>
-                    Es gibt mehrere Situationen, in denen Sie Ihr Auto ohne Ihren eigenen Schlüssel öffnen müssen. In all diesen Fällen ist FC-KEY Ihre schnellste und schadensfreiste Option:
-                  </p>
-                  <ul className={styles.bulletList}>
-                    <li><strong>Schlüssel im Auto liegen gelassen:</strong> Sie haben das Auto verlassen, die Türen sind ins Schloss gefallen und der Schlüssel liegt noch auf dem Sitz oder im Zündschloss. Rufen Sie uns an — wir öffnen die Türen schadensfrei.</li>
-                    <li><strong>Tür zugefallen mit Schlüssel darin:</strong> Sie haben die Tür geschlossen und das Auto hat sich automatisch verriegelt. Auch das lösen wir ohne eine Scheibe einzuschlagen.</li>
-                    <li><strong>Kofferraum verschlossen mit Schlüssel darin:</strong> Der Kofferraum oder die Heckklappe ist zu und der Schlüssel liegt drinnen. Wir öffnen über das Türschloss oder die Kofferraumklappe.</li>
-                    <li><strong>Alle Schlüssel verloren (Aussperrung):</strong> Sie haben keinen einzigen Schlüssel mehr — verloren oder gestohlen. Wir öffnen das Auto und programmieren am selben Tag einen neuen Schlüssel.</li>
-                    <li><strong>Abgebrochener oder klemmender Schlüssel im Schloss:</strong> Der Schlüsselbart ist im Zylinder abgebrochen. Wir entfernen das Fragment und öffnen das Auto.</li>
-                  </ul>
+                {/* ── NEW CONSOLIDATED SECTIONS ── */}
+                <div style={{ marginBottom: "3rem" }}>
+                  <h2>Szenario 1: Schlüssel im Auto liegen gelassen</h2>
+                  <p>Haben Sie Ihren Schlüssel im Auto liegen gelassen und die Tür ist verschlossen? Dies ist der häufigste Grund für eine Aussperrung. Wir nutzen spezialisierte Werkzeuge wie den Lishi-Decoder (HU66, HU92, HU101, etc.), um den Schließzylinder schadenfrei abzutasten. Der Wagen wird so geöffnet, als ob der Originalschlüssel verwendet wird. Keine eingeschlagenen Scheiben, kein Lackschaden.</p>
+                </div>
+
+                <div style={{ marginBottom: "3rem" }}>
+                  <h2>Szenario 2: Autotür zugefallen (Door slammed shut)</h2>
+                  <p>Viele moderne Fahrzeuge haben eine automatische Verriegelung (Auto-Relock), die das Auto nach wenigen Sekunden abschließt. Wenn in diesem Moment die Autotür zufällt, sind Sie ausgesperrt. Keine Sorge – unsere 24/7 Notöffnung ist darauf spezialisiert, in solchen Notfällen innerhalb von 30 Minuten vor Ort zu sein und die Tür ohne Beschädigungen an der Elektronik oder den Dichtungen wieder zu öffnen.</p>
+                </div>
+
+                <div style={{ marginBottom: "3rem" }}>
+                  <h2>Szenario 3: Schlüssel im Kofferraum vergessen</h2>
+                  <p>Einen Kofferraum zu öffnen, ist oft komplexer als eine Autotür. Besonders bei Limousinen (z.B. BMW oder Audi) deaktiviert sich der zentrale Entriegelungsknopf, sobald das Auto verschlossen ist. Wir umgehen dieses Problem, indem wir den Kofferraumzylinder direkt mit Laser-Picks decodieren oder die elektronische Heckklappe sicher über die OBD-Schnittstelle ansteuern.</p>
+                </div>
                 </div>
 
 

@@ -44,72 +44,6 @@ export const LEISTUNGEN: Service[] = [
     relatedSlugs: ['schluessel-im-auto', 'tuer-zugefallen', 'kofferraum-oeffnen', 'schluessel-im-schloss-abgebrochen']
   },
   {
-    slug: 'schluessel-im-auto',
-    title: 'Schlüssel im Auto',
-    metaTitle: 'Schlüssel im Auto vergessen? | Auto zerstörungsfrei öffnen | 24/7',
-    metaDesc: 'Autoschlüssel im Auto vergessen und Türen verschlossen? Wir öffnen Ihr Auto 100% zerstörungsfrei vor Ort. 24/7 Notdienst. Jetzt anrufen!',
-    h1: 'Schlüssel im Auto vergessen? — Wir öffnen Ihr Auto zerstörungsfrei',
-    intro: 'Schlüssel im Auto liegen gelassen? Keine Panik. Unsere Spezialisten öffnen Ihr Auto sofort und ohne Beschädigung.',
-    system: 'Lishi HU66, HU92, HU101, HU162T Decoder',
-    priceFrom: `Ab €${SITE_CONFIG.prices.unlock}`,
-    duration: '15–30 Minuten',
-    steps: [
-      'Rufen Sie sofort an und schildern Sie die Situation',
-      'Unser mobiler Service kommt direkt zu Ihrem Standort in Stuttgart oder Umgebung',
-      'Wir decodieren den Schließzylinder, um das Auto zu entriegeln',
-      'Sie haben Ihren Schlüssel zurück, ohne Abschleppkosten oder Händlerpreise'
-    ],
-    faq: [
-      { q: 'Wie öffnen Sie ein Auto, wenn der Schlüssel noch drin steckt?', a: 'Wir verwenden mechanische Decoder (Lishi), die die Schließplättchen im Zylinder einzeln ausrichten, als würde der Originalschlüssel gedreht. So vermeiden wir eingeschlagene Scheiben oder beschädigte Türdichtungen.' },
-      { q: 'Funktioniert das auch bei leerer Autobatterie?', a: 'Ja. Auch bei leerer Batterie können wir das Auto mechanisch über den Notschließzylinder im Türgriff öffnen.' }
-    ],
-    relatedSlugs: ['auto-ohne-schluessel-oeffnen', 'tuer-zugefallen', 'kofferraum-oeffnen', 'notoeffnung-auto']
-  },
-  {
-    slug: 'tuer-zugefallen',
-    title: 'Tür zugefallen',
-    metaTitle: 'Autotür zugefallen mit Schlüssel drin? | Schnell geöffnet | 24/7',
-    metaDesc: 'Autotür zugefallen und der Schlüssel ist drin? Unser mobiler Schlüsseldienst öffnet Ihre Tür zerstörungsfrei. 24/7 Stuttgart.',
-    h1: 'Autotür zugefallen mit Schlüssel drin? — Sofort geöffnet',
-    intro: 'Autotür zugefallen? Wir sind 24/7 erreichbar und garantieren eine schnelle, zerstörungsfreie Öffnung Ihres Fahrzeugs.',
-    system: 'Professionelles Schlüsseldienst-Werkzeug',
-    priceFrom: `Ab €${SITE_CONFIG.prices.unlock}`,
-    duration: '15–30 Minuten',
-    steps: [
-      'Rufen Sie unseren Notdienst für sofortige Hilfe an',
-      'Wir schicken den nächsten verfügbaren Techniker zu Ihnen',
-      'Zerstörungsfreie Öffnung über den Türgriff oder Schließzylinder',
-      'Sie können Ihre Fahrt sofort fortsetzen'
-    ],
-    faq: [
-      { q: 'Warum verriegelt sich ein Auto einfach, wenn die Tür zufällt?', a: 'Viele moderne Autos haben eine automatische Verriegelungsfunktion (Auto-Relock), die nach einer bestimmten Zeit aktiviert wird oder wenn sich der Schlüssel außerhalb der Reichweite der Antenne der Wegfahrsperre befindet.' },
-      { q: 'Muss ich danach mein Türschloss austauschen?', a: 'Nein, unsere Techniken lassen das Türschloss und die Elektronik völlig intakt. Sie können Ihre vorhandenen Schlüssel weiterhin normal verwenden.' }
-    ],
-    relatedSlugs: ['auto-ohne-schluessel-oeffnen', 'schluessel-im-auto', 'kofferraum-oeffnen', 'schluessel-im-schloss-abgebrochen']
-  },
-  {
-    slug: 'kofferraum-oeffnen',
-    title: 'Kofferraum öffnen',
-    metaTitle: 'Schlüssel im Kofferraum vergessen? | Zerstörungsfrei öffnen | 24/7',
-    metaDesc: 'Autoschlüssel im Kofferraum vergessen und Auto verschlossen? Wir öffnen Ihren Kofferraum 100% zerstörungsfrei vor Ort. Jetzt anrufen!',
-    h1: 'Kofferraum öffnen ohne Schlüssel — Schnell & Zerstörungsfrei',
-    intro: 'Schlüssel im Kofferraum? Wir öffnen Kofferräume aller Automarken schadensfrei und professionell.',
-    system: 'Lishi Laser Picks & OBD electronic triggers',
-    priceFrom: `Ab €${SITE_CONFIG.prices.unlock}`,
-    duration: '20–45 Minuten',
-    steps: [
-      'Sie rufen uns an und melden, dass der Schlüssel im Kofferraum liegt',
-      'Unser Spezialist kommt vor Ort und inspiziert das Fahrzeug',
-      'Das Auto wird über das Türschloss oder den Kofferraumzylinder geöffnet',
-      'Sie haben Ihren Schlüssel sofort wieder'
-    ],
-    faq: [
-      { q: 'Warum ist das Öffnen eines Kofferraums schwieriger als eine Tür?', a: 'Bei vielen Autos (besonders bei Limousinen und Premium-Marken wie BMW oder Audi) schaltet sich der Zentralverriegelungsknopf am Armaturenbrett ab, wenn das Auto verriegelt ist. Wir müssen den Kofferraum mechanisch manipulieren oder das Modul direkt über den OBD-Anschluss ansteuern.' },
-      { q: 'Kann der Kofferraum ohne Schäden an Lack oder Schloss geöffnet werden?', a: 'Ja, 100% garantiert. Wir verwenden Laser-Lockpicks, die den Lack und den Zylinder absolut nicht beschädigen.' }
-    ],
-    relatedSlugs: ['auto-ohne-schluessel-oeffnen', 'schluessel-im-auto', 'tuer-zugefallen', 'schluessel-im-schloss-abgebrochen']
-  },
-  {
     slug: 'schluessel-im-schloss-abgebrochen',
     title: 'Schlüssel im Schloss abgebrochen',
     metaTitle: 'Autoschlüssel im Schloss oder Zündschloss abgebrochen? | Hilfe',
@@ -247,28 +181,6 @@ export const LEISTUNGEN: Service[] = [
     relatedSlugs: ['autoschluessel-nachmachen', 'transponder-programmieren', 'fernbedienung-nachmachen', 'smart-key-programmieren']
   },
 
-  {
-    slug: 'notoeffnung-auto',
-    title: 'Notöffnung',
-    metaTitle: 'Auto Notöffnung | Schnell & Zerstörungsfrei geöffnet | 24/7',
-    metaDesc: 'Notöffnung Ihres Autos nötig? In 30 Min vor Ort im Raum Stuttgart. 100% zerstörungsfreie Öffnung durch Experten. Direkt anrufen!',
-    h1: 'Auto Notöffnung — Schnell & Zerstörungsfrei in 30 Minuten',
-    intro: 'Notfall: Haustier oder Kind im Auto? Wir kommen sofort und öffnen Ihr Fahrzeug 100% zerstörungsfrei. 24/7 Notdienst.',
-    system: 'Deadlock bypass tools & Laser Decoders',
-    priceFrom: `Ab €${SITE_CONFIG.prices.unlock}`,
-    duration: '15–30 Minuten',
-    steps: [
-      'Sie rufen unsere Notfall-Hotline an (höchste Priorität)',
-      'Unser mobiler Techniker fährt sofort zu Ihnen',
-      'Das Türschloss wird mechanisch decodiert und innerhalb von Minuten geöffnet',
-      'Sofortiger Zugang zum Auto'
-    ],
-    faq: [
-      { q: 'Können Sie auch Autos öffnen, die auf "Deadlock" stehen?', a: 'Ja. Deadlock bedeutet, dass die Türgriffe an der Innenseite elektronisch deaktiviert sind. Wir öffnen diese Fahrzeuge über den mechanischen Schließzylinder mit Lishi-Decodern.' },
-      { q: 'Wie schnell sind Sie bei einem Notfall bei mir?', a: 'Bei echten Notfällen (z. B. Kind oder Tier im Auto) geben wir absolute Priorität und sind meist innerhalb von 15 bis 20 Minuten vor Ort.' }
-    ],
-    relatedSlugs: ['auto-ohne-schluessel-oeffnen', 'schluessel-im-auto', 'tuer-zugefallen', 'autoschluessel-verloren']
-  },
   {
     slug: 'alle-schluessel-verloren-auto',
     title: 'Alle Schlüssel verloren (AKL)',
