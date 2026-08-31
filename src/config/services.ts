@@ -175,7 +175,7 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'ghost-immobiliser-stuttgart',
-    title: 'Ghost Immobiliser: Warum jedes Keyless-Auto in Stuttgart einen braucht',
+    title: 'Ghost Immobiliser: Schutz für jedes Keyless-Auto in Stuttgart',
     excerpt: 'Relay-Attacken in Stuttgart und Umgebung nehmen zu. Der Ghost Immobiliser ist die definitive Lösung.',
     keywords: ['ghost immobiliser stuttgart', 'relay attacken schutz'],
     publishDate: '2026-02-26',
@@ -247,7 +247,7 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'autoschluessel-nachmachen-tipps-schnell-sicher',
-    title: 'Autoschlüssel nachmachen: Tipps für ein schnelles und sicheres Ergebnis',
+    title: 'Autoschlüssel nachmachen: Tipps für ein sicheres Ergebnis',
     excerpt: 'Immer mobil bleiben: Wir machen Autoschlüssel sicher & schnell nach. Ab 99€ in 30 Min bei Ihnen vor Ort inkl. Programmierung.',
     keywords: ['autoschlüssel nachmachen', 'schnell autoschlüssel nachmachen', 'sicher autoschlüssel nachmachen', 'autoschlüssel duplizieren'],
     publishDate: '2026-07-08',
@@ -255,7 +255,7 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'autoschluessel-verloren-was-nun-anleitung',
-    title: 'Autoschlüssel verloren oder im Auto vergessen? Der ultimative Maßnahmenplan',
+    title: 'Autoschlüssel verloren oder im Auto vergessen? Maßnahmenplan',
     excerpt: 'Schlüssel verloren oder im Auto vergessen? Wir öffnen schadenfrei und programmieren Ersatzschlüssel ab 99€ in 30 Min vor Ort. Der Komplett-Guide.',
     keywords: ['autoschlüssel verloren', 'alle autoschlüssel verloren', 'ersatzschlüssel verloren'],
     publishDate: '2026-07-10',

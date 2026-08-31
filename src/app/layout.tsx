@@ -12,8 +12,8 @@ import CookieBanner from "@/components/CookieBanner/CookieBanner";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.domain),
   title: {
-    template: '%s | First Class Key',
-    default: 'Autoschlüssel Nachmachen oder Verloren? 24/7 Mobiler Service | First Class Key',
+    template: '%s | FC-KEY',
+    default: 'Autoschlüssel Nachmachen oder Verloren? 24/7 Mobiler Service | FC-KEY',
   },
   description: `Autoschlüssel nachmachen oder alle Schlüssel verloren? Unsere mobilen Monteure kommen direkt zu Ihnen im Raum Stuttgart. Zerstörungsfrei öffnen & anlernen. Jetzt anrufen!`,
   alternates: {

@@ -38,7 +38,7 @@ export async function generateMetadata(props: { params: Promise<{ merkSlug: stri
   const pageUrl = `${SITE_CONFIG.domain}/marken/${brand.nameSlug.toLowerCase()}-autoschluessel-nachmachen`;
   return {
     title: {
-      absolute: brand.customMetaTitle || `${brand.name} Autoschlüssel Nachmachen | Alle Modelle & Baujahre | FC-KEY`,
+      absolute: brand.customMetaTitle || `${brand.name} Autoschlüssel nachmachen Stuttgart | FC-KEY`,
     },
     description: `Ab 99€ & 30 Min vor Ort: ${brand.name} Autoschlüssel nachmachen. Günstiger als der Händler, inkl. Codierung (${brand.system}).`.substring(0, 155),
     alternates: {
@@ -51,7 +51,7 @@ export async function generateMetadata(props: { params: Promise<{ merkSlug: stri
     openGraph: {
       type: 'website',
       url: pageUrl,
-      title: `${brand.name} Autoschlüssel Nachmachen & Programmieren | Alle Modelle & Baujahre`,
+      title: `${brand.name} Autoschlüssel nachmachen Stuttgart | FC-KEY`,
       description: `Ab 99€ & 30 Min vor Ort: ${brand.name} Autoschlüssel nachmachen. Günstiger als der Händler, inkl. Codierung (${brand.system}).`.substring(0, 155),
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `${brand.name} Ersatzschlüssel nachmachen — FC-KEY` }],
     },

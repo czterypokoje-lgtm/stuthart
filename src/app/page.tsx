@@ -24,7 +24,7 @@ const RealGalleryShowcase = dynamic(() => import('@/components/RealGalleryShowca
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Autoschlüssel nachmachen oder verloren? 24/7 Mobiler Service | First Class Key',
+    absolute: 'Autoschlüssel nachmachen oder verloren? 24/7 Mobiler Service | FC-KEY',
   },
   description: `Autoschlüssel nachmachen oder alle Schlüssel verloren? Unsere mobilen Mechaniker kommen direkt zu Ihnen in Stuttgart. Zerstörungsfrei öffnen & anlernen. Jetzt anrufen!`,
   alternates: {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: SITE_CONFIG.domain,
-    title: 'Autoschlüssel nachmachen oder verloren? 24/7 Mobiler Service | First Class Key',
+    title: 'Autoschlüssel nachmachen oder verloren? 24/7 Mobiler Service | FC-KEY',
     description: 'Autoschlüssel nachmachen oder alle Schlüssel verloren? Unsere mobilen Mechaniker kommen direkt zu Ihnen in Stuttgart. Zerstörungsfrei öffnen & anlernen. Jetzt anrufen!',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'First Class Key mobiler Autoschlüsselspezialist' }],
   },

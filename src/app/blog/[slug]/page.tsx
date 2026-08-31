@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return {};
   return {
     title: {
-      absolute: `${post.title} | ${SITE_CONFIG.name}`,
+      absolute: post.title,
     },
     description: post.excerpt,
     alternates: {
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       type: 'article',
       url: `${SITE_CONFIG.domain}/blog/${slug}`,
-      title: `${post.title} | ${SITE_CONFIG.name}`,
+      title: post.title,
       description: post.excerpt,
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: post.title }],
     },
