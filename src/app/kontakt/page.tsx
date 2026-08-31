@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   description: `Kontaktieren Sie ${SITE_CONFIG.fullName}. Anrufen, WhatsApp oder Nachricht senden. 24/7 erreichbar. Reaktionszeit: ${SITE_CONFIG.responseTime}.`,
   alternates: {
-    canonical: `${SITE_CONFIG.domain}/contact`,
+    canonical: `${SITE_CONFIG.domain}/kontakt`,
   },
 };
 
