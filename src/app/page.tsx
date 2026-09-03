@@ -17,7 +17,6 @@ import BrandsLogoGrid from '@/components/BrandsLogoGrid/BrandsLogoGrid';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
 import GlobalFeatureCards from '@/components/FeatureCards/GlobalFeatureCards';
 import HeroGoogleBadge from '@/components/HeroGoogleBadge/HeroGoogleBadge';
-import TrustindexHeroWidget from '@/components/TrustindexHeroWidget/TrustindexHeroWidget';
 
 const RealGalleryShowcase = dynamic(() => import('@/components/RealGalleryShowcase/RealGalleryShowcase'), { ssr: true });
 
@@ -129,7 +128,7 @@ export default function HomePage() {
       <section className={styles.heroSplit}>
         <div className={styles.heroSplitInner}>
           <div className={styles.heroSplitText}>
-            <TrustindexHeroWidget />
+            <HeroGoogleBadge />
             
             <h1 className={styles.heroTitle}>
               Autoschlüssel verloren oder nachmachen?<br />

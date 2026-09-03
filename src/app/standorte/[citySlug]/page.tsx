@@ -10,7 +10,7 @@ import { BRANDS } from '@/config/brands';
 import { LEISTUNGEN } from '@/config/leistungen';
 import BrandsLogoGrid from '@/components/BrandsLogoGrid/BrandsLogoGrid';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
-import TrustindexHeroWidget from '@/components/TrustindexHeroWidget/TrustindexHeroWidget';
+import HeroGoogleBadge from '@/components/HeroGoogleBadge/HeroGoogleBadge';
 import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
 import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
@@ -187,7 +187,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                   <Link href="/" style={{ color: 'var(--gray-500)' }}>Home</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <Link href="/standorte" style={{ color: 'var(--gray-500)' }}>Städte</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <span style={{ color: 'var(--navy-900)' }}>{city.city}</span>
                 </nav>
                 <div className={styles.heroLabel} style={{ color: 'var(--navy-900)' }}>DE — {city.region}</div>
-                <TrustindexHeroWidget />
+                <HeroGoogleBadge />
                 <h1>{city.customH1 || `Autoschlüssel nachmachen & Schlüsseldienst ${city.city} — 24/7 Service`}</h1>
                 <p className={styles.heroSplitLead}>
                   Ausgesperrt oder Autoschlüssel defekt? Wir kommen direkt zu Ihnen! Keine Abschleppkosten, günstiger als der Händler und in <strong>30-60 Min</strong> vor Ort in {city.city}.
@@ -241,7 +241,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                 <Link href="/" style={{ color: 'var(--gray-500)' }}>Home</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <Link href="/standorte" style={{ color: 'var(--gray-500)' }}>Städte</Link> <span style={{ color: 'var(--gray-400)' }}>/</span> <span style={{ color: 'var(--navy-900)' }}>{city.city}</span>
               </nav>
               <div className={styles.heroLabel} style={{ color: 'var(--navy-900)' }}>DE — {city.region}</div>
-              <TrustindexHeroWidget />
+              <HeroGoogleBadge />
               <h1>{city.customH1 || `Autoschlüssel nachmachen & Schlüsseldienst ${city.city} — 24/7 Service`}</h1>
               <p className={styles.heroLead}>
                 Ausgesperrt oder Autoschlüssel defekt? Wir kommen direkt zu Ihnen! Keine Abschleppkosten, günstiger als der Händler und in <strong>30-60 Min</strong> vor Ort in {city.city}.

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { LEISTUNGEN } from '@/config/leistungen';
 import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
-import TrustindexHeroWidget from '@/components/TrustindexHeroWidget/TrustindexHeroWidget';
+import HeroGoogleBadge from '@/components/HeroGoogleBadge/HeroGoogleBadge';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function LeistungenOverviewPage() {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <span className={styles.label}>UNSERE LEISTUNGEN</span>
-          <TrustindexHeroWidget />
+          <HeroGoogleBadge />
           <h1>Professionelle Autoschlüssel Services</h1>
           <p className={styles.heroSub}>
             Wir lösen jedes Autoschlüssel Problem direkt vor Ort. Keine Abschleppkosten, keine langen Wartezeiten beim Händler.

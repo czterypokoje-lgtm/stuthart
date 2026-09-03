@@ -12,7 +12,7 @@ export default function HeroGoogleBadge() {
         </div>
         <div className={styles.textStack}>
           <span className={styles.ratingNum}>5/5</span>
-          <span className={styles.basedOn}>Gebaseerd op Google<br/>reviews</span>
+          <span className={styles.basedOn}>Basierend auf Google<br/>Bewertungen</span>
         </div>
       </div>
       

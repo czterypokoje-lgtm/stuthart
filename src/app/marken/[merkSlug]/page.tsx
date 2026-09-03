@@ -16,7 +16,7 @@ import { getBaseLocalBusinessSchema } from '@/utils/schema';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
-import TrustindexHeroWidget from '@/components/TrustindexHeroWidget/TrustindexHeroWidget';
+import HeroGoogleBadge from '@/components/HeroGoogleBadge/HeroGoogleBadge';
 
 export async function generateStaticParams() {
   return BRANDS.map(b => ({ merkSlug: `${b.nameSlug}-autoschluessel-nachmachen` }));
@@ -183,7 +183,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
                 <Link href="/marken" style={{ color: 'rgba(255,255,255,0.55)' }}>Marken</Link> /
                 <span style={{ color: 'rgba(255,255,255,0.85)', fontWeight: 600 }}>{brand.name}</span>
               </nav>
-              <TrustindexHeroWidget />
+              <HeroGoogleBadge />
               <h1 style={{ color: '#fff', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800, lineHeight: 1.2, marginBottom: '1.2rem' }}>
                 {brand.customH1 || <>{brand.name} Autoschlüssel Nachmachen &amp; Programmieren</>} <br />
                 <span style={{ color: 'var(--navy-700)' }}>Alle Modelle &amp; Baujahre • Mobiler Vor-Ort-Service</span>

@@ -9,7 +9,7 @@ import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
-import TrustindexHeroWidget from '@/components/TrustindexHeroWidget/TrustindexHeroWidget';
+import HeroGoogleBadge from '@/components/HeroGoogleBadge/HeroGoogleBadge';
 import GlobalFeatureCards from '@/components/FeatureCards/GlobalFeatureCards';
 import RealGalleryShowcase from '@/components/RealGalleryShowcase/RealGalleryShowcase';
 import { generateContextualReviews } from '@/utils/reviews';
@@ -156,7 +156,7 @@ export default function AutoSlotenmakerPage() {
             <nav className={styles.breadcrumb} aria-label="Breadcrumb">
               <Link href="/">Home</Link> <span>/</span> <Link href="/leistungen">Leistungen</Link> <span>/</span> <span>Auto Schlüsseldienst</span>
             </nav>
-            <TrustindexHeroWidget />
+            <HeroGoogleBadge />
             <h1>24/7 Mobiler Auto Schlüsseldienst — Schnell &amp; Schadensfrei vor Ort</h1>
             <p className={styles.heroLead}>
               Haben Sie sich aus Ihrem Auto ausgesperrt, den Schlüssel im Auto liegen lassen oder haben Sie einen Einbruchschaden am Türschloss? 
