@@ -13,7 +13,6 @@ import Navigation from '@/components/Navigation/Navigation';
 import Footer from '@/components/Footer/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton/WhatsAppButton';
 import StickyCallBar from '@/components/StickyCallBar/StickyCallBar';
-import PhoneConversionTracker from '@/components/PhoneConversionTracker';
 import { SITE_CONFIG } from '@/config/site.config';
 import CookieBanner from "@/components/CookieBanner/CookieBanner";
 
@@ -106,37 +105,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `
           }}
         />
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-PRT75SWX');`
-          }}
-        />
-        {/* End Google Tag Manager */}
-        
-        {/* Google Ads Click to call conversion snippet */}
-        <Script id="google-ads-conversion" strategy="afterInteractive">
-          {`
-            window.gtag_report_conversion = function(url) {
-              var callback = function () {
-                if (typeof(url) != 'undefined') {
-                  window.location = url;
-                }
-              };
-              window.dataLayer = window.dataLayer || [];
-              window.dataLayer.push({
-                  'event': 'conversion',
-                  'send_to': 'AW-18315813515/qKjlCPGp_d0cEIvF1J1E',
-                  'event_callback': callback
-              });
-              return false;
-            };
-          `}
-        </Script>
 
         <meta name="theme-color" content="#0d2137" />
 
@@ -175,17 +143,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={ibmPlexSans.variable}>
         <a href="#main-content" className="skip-link">Zum Hauptinhalt springen</a>
-        <PhoneConversionTracker />
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PRT75SWX"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
+        
         <div style={{ overflowX: 'hidden', position: 'relative' }}>
           <Navigation />
           {children}
