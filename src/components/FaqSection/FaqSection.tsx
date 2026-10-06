@@ -41,10 +41,10 @@ export default function FaqSection({ customFaqs, cityName, brandName }: FaqSecti
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    '@id': 'https://www.fc-key.nl/#faqpage',
+    '@id': `${SITE_CONFIG.domain}/#faqpage`,
     mainEntity: displayFaqs.map((f, i) => ({
       '@type': 'Question',
-      '@id': `https://www.fc-key.nl/#faq-${i}`,
+      '@id': `${SITE_CONFIG.domain}/#faq-${i}`,
       name: f.question,
       acceptedAnswer: {
         '@type': 'Answer',
@@ -58,7 +58,7 @@ export default function FaqSection({ customFaqs, cityName, brandName }: FaqSecti
   const speakableSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': 'https://www.fc-key.nl/#webpage',
+    '@id': `${SITE_CONFIG.domain}/#webpage`,
     speakable: {
       '@type': 'SpeakableSpecification',
       // CSS selectors pointing to the FAQ question+answer pairs

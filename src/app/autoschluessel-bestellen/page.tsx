@@ -11,7 +11,7 @@ import GlobalFeatureCards from '@/components/FeatureCards/GlobalFeatureCards';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Autoschlüssel nach Kennzeichen bestellen? | Direkter Preis & Vor-Ort-Hilfe',
+    absolute: 'Autoschlüssel nach Kennzeichen bestellen | FC-KEY',
   },
   description: 'Autoschlüssel bestellen leicht gemacht! Kennzeichen per WhatsApp senden & sofort Festpreis erhalten. Inklusive 12 Mon. Garantie & Vor-Ort Service.',
   alternates: { canonical: `${SITE_CONFIG.domain}/autoschluessel-bestellen` },

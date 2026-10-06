@@ -112,7 +112,7 @@ export default function Footer() {
               <li><Link href="/ueber-uns">Über Uns</Link></li>
             </ul>
 
-            <h3 className={styles.colTitle}>Öffnungszeiten</h3>
+            <h3 className={styles.colTitle}>Werkstatt & Abholservice</h3>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem', color: 'rgba(255,255,255,0.65)' }}>
               <tbody>
                 {[
@@ -121,8 +121,8 @@ export default function Footer() {
                   ['Mittwoch', '09:30 - 19:00 Uhr'],
                   ['Donnerstag', '09:30 - 19:00 Uhr'],
                   ['Freitag', '09:30 - 19:00 Uhr'],
-                  ['Samstag', 'Geschlossen'],
-                  ['Sonntag', 'Geschlossen'],
+                  ['Samstag', 'nur Notdienst'],
+                  ['Sonntag', 'nur Notdienst'],
                 ].map(([dag, tijd]) => (
                   <tr key={dag} style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
                     <td style={{ padding: '0.35rem 0', fontWeight: 500 }}>{dag}</td>
@@ -131,6 +131,10 @@ export default function Footer() {
                 ))}
               </tbody>
             </table>
+            <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.55)', marginTop: '0.75rem', lineHeight: 1.6 }}>
+              Mobiler <strong style={{ color: 'var(--orange-300)' }}>Notdienst rund um die Uhr</strong> — auch
+              abends, am Wochenende und an Feiertagen telefonisch erreichbar.
+            </p>
           </div>
         </div>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SITE_CONFIG } from '@/config/site.config';
+import CookieSettingsButton from '@/components/CookieBanner/CookieSettingsButton';
 
 export const metadata: Metadata = {
   title: {
@@ -15,15 +16,15 @@ export default function CookiePage() {
       <section style={{ background: 'linear-gradient(135deg, #070e1a 0%, #0a1628 100%)', padding: '4rem 2rem' }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <h1 style={{ color: '#fff' }}>Cookie-Richtlinie</h1>
-          <p style={{ color: 'rgba(255,255,255,0.6)' }}>Letzte Aktualisierung: {new Date().toLocaleDateString('de-DE')}</p>
+          <p style={{ color: 'rgba(255,255,255,0.6)' }}>Letzte Aktualisierung: 6. Oktober 2026</p>
         </div>
       </section>
 
       <div className="container" style={{ padding: '3rem 2rem', maxWidth: 900 }}>
         {[
           { title: '1. Was sind Cookies?', content: 'Cookies sind kleine Textdateien, die beim Besuch unserer Website auf Ihrem Computer oder mobilen Gerät gespeichert werden. Sie helfen uns, die Website ordnungsgemäß funktionieren zu lassen und die Benutzererfahrung zu verbessern.' },
-          { title: '2. Welche Cookies verwenden wir?', content: 'Wir verwenden funktionale Cookies (die für den Betrieb der Website zwingend erforderlich sind) und analytische Cookies (wie Google Analytics, in anonymisierter Form), um zu verstehen, wie Besucher mit unserer Website interagieren.' },
-          { title: '3. Google Analytics', content: 'Wir nutzen Google Analytics, um das Nutzerverhalten auszuwerten. Dabei haben wir IP-Anonymisierung aktiviert, sodass keine Rückschlüsse auf Ihre Person gezogen werden können. Die gesammelten Daten werden nicht mit anderen Diensten von Google geteilt.' },
+          { title: '2. Welche Cookies verwenden wir?', content: 'Derzeit setzen wir ausschliesslich technisch notwendige Speicherung ein: Ihre Cookie-Entscheidung wird lokal in Ihrem Browser (localStorage) gespeichert, damit der Hinweis nicht bei jedem Besuch erneut erscheint. Analyse- oder Marketing-Cookies werden aktuell nicht gesetzt.' },
+          { title: '3. Analyse- und Marketing-Cookies', content: 'Sollten wir künftig Analyse- oder Marketing-Dienste einsetzen, geschieht dies ausschliesslich nach Ihrer ausdrücklichen Einwilligung über unseren Cookie-Hinweis. Ohne Ihre Einwilligung werden keine solchen Cookies gesetzt.' },
           { title: '4. Cookies verwalten oder löschen', content: 'Sie können Cookies jederzeit über die Einstellungen Ihres Webbrowsers verwalten oder löschen. Bitte beachten Sie, dass das Deaktivieren von Cookies die Funktionalität unserer Website einschränken kann.' },
           { title: '5. Kontakt', content: `Haben Sie Fragen zu unserer Cookie-Richtlinie? Kontaktieren Sie uns unter ${SITE_CONFIG.email}.` },
         ].map((section) => (
@@ -32,6 +33,15 @@ export default function CookiePage() {
             <p style={{ lineHeight: 1.7, fontSize: '0.95rem' }}>{section.content}</p>
           </div>
         ))}
+
+        <div style={{ marginBottom: '2rem' }}>
+          <h2 style={{ fontSize: '1.15rem', marginBottom: '0.75rem' }}>6. Einwilligung widerrufen</h2>
+          <p style={{ lineHeight: 1.7, fontSize: '0.95rem', marginBottom: '1rem' }}>
+            Sie können Ihre Cookie-Entscheidung jederzeit mit einem Klick zurücksetzen. Der Cookie-Hinweis
+            wird Ihnen danach erneut angezeigt.
+          </p>
+          <CookieSettingsButton />
+        </div>
       </div>
     </main>
   );

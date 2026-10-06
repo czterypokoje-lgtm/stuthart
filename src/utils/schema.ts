@@ -10,11 +10,14 @@ export function getBaseLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'AutoRepair', 'Locksmith'],
+    '@id': `${SITE_CONFIG.domain}/#localbusiness`,
     name: SITE_CONFIG.fullName,
     url: SITE_CONFIG.domain,
     telephone: SITE_CONFIG.phoneTel,
     priceRange: '€€',
     image: `${SITE_CONFIG.domain}/og-image.png`,
+    logo: `${SITE_CONFIG.domain}/logo.png`,
+    sameAs: [SITE_CONFIG.social.google, SITE_CONFIG.social.facebook, SITE_CONFIG.social.instagram].filter(Boolean),
     address: {
       '@type': 'PostalAddress',
       streetAddress: SITE_CONFIG.address.street,
@@ -31,28 +34,14 @@ export function getBaseLocalBusinessSchema() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: [
-          'Monday',
-          'Tuesday',
-          'Wednesday',
-          'Thursday',
-          'Friday',
-          'Saturday',
-          'Sunday',
-        ],
-        opens: '00:00',
-        closes: '23:59',
+        dayOfWeek: [...SITE_CONFIG.workshopHours.days],
+        opens: SITE_CONFIG.workshopHours.opens,
+        closes: SITE_CONFIG.workshopHours.closes,
       },
     ],
     areaServed: CITIES.map((c) => ({
       '@type': 'City',
       name: c.city,
     })),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: parseFloat(SITE_CONFIG.rating),
-      reviewCount: parseInt(SITE_CONFIG.reviewCount, 10),
-      bestRating: 5,
-    },
   };
 }

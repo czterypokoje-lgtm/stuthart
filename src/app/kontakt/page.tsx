@@ -21,7 +21,7 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_CONFIG.domain },
-    { '@type': 'ListItem', position: 2, name: 'Kontakt', item: `${SITE_CONFIG.domain}/contact` },
+    { '@type': 'ListItem', position: 2, name: 'Kontakt', item: `${SITE_CONFIG.domain}/kontakt` },
   ],
 };
 
@@ -50,8 +50,12 @@ type Props = {
 
 export default async function ContactPage(props: Props) {
   const searchParams = await props.searchParams;
-  const q = typeof searchParams?.q === 'string' ? searchParams.q : null;
-  
+  // ?q= drives the ad-landing headline. It is attacker-controllable, so keep it to
+  // plain words and a sane length — otherwise anyone can render arbitrary copy
+  // under our own domain and screenshot it.
+  const raw = typeof searchParams?.q === 'string' ? searchParams.q : null;
+  const q = raw?.replace(/[^a-zA-Z0-9äöüÄÖÜß \-]/g, '').trim().slice(0, 60) || null;
+
   const defaultH1 = `Autoschlüssel nachmachen? Durchschnittlich in ${SITE_CONFIG.responseTime} bei Ihnen`;
   let h1Text = defaultH1;
   if (q) {

@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import sitemap from '../../sitemap';
+import { SITE_CONFIG } from '@/config/site.config';
 
 export async function GET() {
   // Get all URLs from the sitemap dynamically
@@ -7,9 +8,9 @@ export async function GET() {
   const urls = sitemapData.map(item => item.url);
   
   const payload = {
-    host: "www.fc-key.nl",
+    host: new URL(SITE_CONFIG.domain).host,
     key: "3afd2ed80ce14931a7e74761f40741d6",
-    keyLocation: "https://www.fc-key.nl/3afd2ed80ce14931a7e74761f40741d6.txt",
+    keyLocation: `${SITE_CONFIG.domain}/3afd2ed80ce14931a7e74761f40741d6.txt`,
     urlList: urls
   };
   

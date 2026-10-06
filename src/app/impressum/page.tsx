@@ -20,7 +20,7 @@ export default function ImpressumPage() {
 
       <div className="container" style={{ padding: '3rem 2rem', maxWidth: 900 }}>
         <div style={{ marginBottom: '2rem', paddingBottom: '2rem', borderBottom: '1px solid var(--color-border)' }}>
-          <h2 style={{ fontSize: '1.15rem', marginBottom: '0.75rem' }}>Angaben gemäß § 5 TMG</h2>
+          <h2 style={{ fontSize: '1.15rem', marginBottom: '0.75rem' }}>Angaben gemäß § 5 DDG</h2>
           <p style={{ lineHeight: 1.7, fontSize: '0.95rem' }}>
             First Class Key<br />
             Mercedes str 12<br />
@@ -44,13 +44,7 @@ export default function ImpressumPage() {
           </p>
         </div>
 
-        <div style={{ marginBottom: '2rem', paddingBottom: '2rem', borderBottom: '1px solid var(--color-border)' }}>
-          <h2 style={{ fontSize: '1.15rem', marginBottom: '0.75rem' }}>EU-Streitschlichtung</h2>
-          <p style={{ lineHeight: 1.7, fontSize: '0.95rem' }}>
-            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-blue)' }}>https://ec.europa.eu/consumers/odr/</a>.<br />
-            Unsere E-Mail-Adresse finden Sie oben im Impressum.
-          </p>
-        </div>
+        
 
         <div style={{ marginBottom: '2rem', paddingBottom: '2rem', borderBottom: '1px solid var(--color-border)' }}>
           <h2 style={{ fontSize: '1.15rem', marginBottom: '0.75rem' }}>Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>

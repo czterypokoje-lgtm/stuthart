@@ -5,7 +5,7 @@ import FaqSection from '@/components/FaqSection/FaqSection';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'B2B Partnerschaften - Autoschlüssel für Flotten & Werkstätten | FC-KEY',
+  title: 'B2B Autoschlüssel-Service für Flotten & Werkstätten',
   description: 'B2B-Partner für Autoschlüssel: Mobiler Express-Service für Leasing, Flotten & Werkstätten ab 99€. Reduzieren Sie Ausfallzeiten noch heute.',
 };
 

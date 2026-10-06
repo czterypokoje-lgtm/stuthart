@@ -1,8 +1,14 @@
 import { SITE_CONFIG } from '@/config/site.config';
 import { BLOG_POSTS } from '@/config/services';
 import { CITIES } from '@/config/cities';
+import fs from 'fs';
+import path from 'path';
 
-const BASE = 'https://www.fc-key.nl';
+// Only advertise images that are actually on disk. The city galleries were assumed
+// to exist for every city, which put 146 dead URLs into this sitemap.
+const exists = (url: string) => fs.existsSync(path.join(process.cwd(), 'public', url));
+
+const BASE = SITE_CONFIG.domain;
 
 // ── Core SEO images with descriptive alt/title metadata ──
 const CORE_IMAGES = [
@@ -193,11 +199,16 @@ const PAGE_ENTRIES = [
     images: [BLOG_IMAGES[0]],
   })),
 
-  // Dynamically add all 8 gallery images for each city
+  // City gallery images, where they exist
   ...CITIES.map((city) => ({
     loc: `${BASE}/standorte/${city.slug}`,
-    images: Array.from({ length: 8 }).map((_, i) => ({
-      url: `/images/cities/${city.slug}/autoschluessel-nachmachen-${city.slug}-${i + 1}.webp`,
+    images: [
+      ...Array.from({ length: 8 }).map((_, i) =>
+        `/images/cities/${city.slug}/autoschluessel-nachmachen-${city.slug}-${i + 1}.webp`),
+      `/images/cities/autoschluessel-nachmachen-${city.slug}.webp`,
+      `/images/cities/autoschluessel-nachmachen-${city.slug}.png`,
+    ].filter(exists).map((url, i) => ({
+      url,
       title: `Autoschlüssel Nachmachen ${city.city} - Foto ${i + 1}`,
       caption: `Professionell Autoschlüssel nachmachen und programmieren in ${city.city}`,
       geo_location: `${city.city}, ${city.region}, Deutschland`,
@@ -215,11 +226,17 @@ function escapeXml(str: string) {
 }
 
 export async function GET() {
+  // Drop dead image URLs and any page left with no images at all — a sitemap full of
+  // 404s is worse than a short one.
+  const entries = PAGE_ENTRIES
+    .map((e) => ({ ...e, images: e.images.filter((img) => exists(img.url)) }))
+    .filter((e) => e.images.length > 0);
+
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${PAGE_ENTRIES.map(({ loc, images }) => `  <url>
+${entries.map(({ loc, images }) => `  <url>
     <loc>${escapeXml(loc)}</loc>
 ${images.map((img) => `    <image:image>
       <image:loc>${escapeXml(BASE + img.url)}</image:loc>

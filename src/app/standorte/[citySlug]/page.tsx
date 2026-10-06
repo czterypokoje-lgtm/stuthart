@@ -222,7 +222,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                   __html: JSON.stringify({
                     "@context": "https://schema.org",
                     "@type": "ImageObject",
-                    "contentUrl": `https://www.fc-key.de/images/cities/autoschluessel-nachmachen-${city.slug}${heroImageExt}`,
+                    "contentUrl": `${SITE_CONFIG.domain}/images/cities/autoschluessel-nachmachen-${city.slug}${heroImageExt}`,
                     "name": `First Class Key — Mobiler Schlüsseldienst ${city.city}, Servicefahrzeug vor Ort`,
                     "description": `Das FC-KEY Servicefahrzeug (VW Caddy) mit vollständiger mobiler Werkstattausrüstung für Autoschlüssel nachmachen und Schlüsseldienst in ${city.city} und Umgebung.`,
                     "contentLocation": {

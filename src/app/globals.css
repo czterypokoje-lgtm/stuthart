@@ -231,9 +231,9 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .btn-primary {
-  background: var(--orange-500);
+  background: var(--orange-700); /* 5.60:1 on white text — orange-500 was 3.79:1, below WCAG AA */
   color: #fff;
-  border-color: var(--orange-500);
+  border-color: var(--orange-700);
 }
 .btn-primary:hover {
   background: var(--orange-600);

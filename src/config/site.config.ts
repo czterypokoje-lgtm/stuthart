@@ -41,8 +41,12 @@ export const SITE_CONFIG = {
     exVatDisclaimer: 'zzgl. MwSt.',
   },
 
+  // Two distinct things — keep them apart. The workshop/drop-off window is what goes in
+  // openingHoursSpecification and in the footer table; the emergency line is a separate claim.
   hours: 'Montag bis Freitag 09:30–19:00',
   hoursShort: 'Abholservice Mo-Fr',
+  workshopHours: { days: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '09:30', closes: '19:00' },
+  emergency247: true, // mobile call-out line answered outside workshop hours
   responseTime: '30–60 Minuten',
 
   kvk: '56295/56209', // HRB / USt-IdNr

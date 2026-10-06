@@ -23,8 +23,12 @@ import styles from './page.module.css';
 import fs from 'fs';
 import path from 'path';
 
+// These two slugs have their own dedicated page directories, which win over this
+// dynamic segment at routing time. Generating them here just builds dead pages.
+const DEDICATED_SLUGS = ['autoschluessel-nachmachen', 'auto-ohne-schluessel-oeffnen'];
+
 export async function generateStaticParams() {
-  return LEISTUNGEN.map(s => ({ slug: s.slug }));
+  return LEISTUNGEN.filter(s => !DEDICATED_SLUGS.includes(s.slug)).map(s => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -88,7 +92,7 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
   // Load recent work images for this service
   const imagesDirMerken = path.join(process.cwd(), 'public', 'images', 'merken');
   const imagesDirLeistungen = path.join(process.cwd(), 'public', 'images', 'leistungen');
-  let serviceImages: string[] = [];
+  const serviceImages: string[] = [];
   try {
     if (fs.existsSync(imagesDirMerken)) {
       const files = fs.readdirSync(imagesDirMerken);
@@ -97,9 +101,7 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
         if (isKey && f.includes('autoschluessel-nachmachen')) return true;
         return false;
       });
-      // Mix up the array to get a variety
-      const shuffled = matched.sort(() => 0.5 - Math.random());
-      serviceImages.push(...shuffled.slice(0, 4).map(f => `/images/marken/${f}`));
+      serviceImages.push(...matched.slice(0, 4).map(f => `/images/marken/${f}`));
     }
     
     // Fallback/fill with general equipment if needed

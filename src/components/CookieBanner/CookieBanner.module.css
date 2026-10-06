@@ -94,15 +94,17 @@
   }
 }
 
+/* Accept and decline must carry equal visual weight — a ghost "reject" next to a
+   solid "accept" is a dark pattern under the DSK guidance on consent. */
 .declineButton {
-  background-color: transparent;
-  color: #94a3b8;
+  background-color: #475569;
+  color: #ffffff;
   border: 1px solid #475569;
 }
 
 .declineButton:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  color: white;
+  background-color: #52637a;
+  color: #ffffff;
 }
 
 .acceptButton {

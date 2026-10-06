@@ -14,6 +14,7 @@ import Footer from '@/components/Footer/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton/WhatsAppButton';
 import StickyCallBar from '@/components/StickyCallBar/StickyCallBar';
 import { SITE_CONFIG } from '@/config/site.config';
+import { getBaseLocalBusinessSchema } from '@/utils/schema';
 import CookieBanner from "@/components/CookieBanner/CookieBanner";
 
 export const metadata: Metadata = {
@@ -139,6 +140,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           id="schema-website"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        {/* Defines the #localbusiness entity the WebSite schema above points at.
+            Page-level schemas reference the same @id instead of redefining the business. */}
+        <script
+          id="schema-localbusiness"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getBaseLocalBusinessSchema()) }}
         />
       </head>
       <body className={ibmPlexSans.variable}>

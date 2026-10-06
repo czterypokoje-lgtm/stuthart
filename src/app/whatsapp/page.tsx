@@ -4,7 +4,7 @@ import { SITE_CONFIG } from '@/config/site.config';
 const TARGET_WA_URL = `https://api.whatsapp.com/send/?phone=${SITE_CONFIG.whatsapp}&text=Hallo%2C%20ich%20brauche%20Hilfe%20mit%20meinem%20Autoschlüssel.%20Automarke%20und%20Modell%3A%20&type=phone_number&app_absent=0`;
 
 export const metadata: Metadata = {
-  title: 'Direct WhatsApp Contact | FC-KEY',
+  title: 'WhatsApp Kontakt',
   description: 'Sie werden direkt zu unserem 24/7 WhatsApp Notdienst weitergeleitet.',
   robots: {
     index: false,

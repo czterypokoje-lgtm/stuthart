@@ -5,7 +5,7 @@ import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Autoschlüssel Wissensdatenbank | Transpondertechnologie & Programmierung | FC-KEY',
+    absolute: 'Autoschlüssel Wissensdatenbank & Technikguide | FC-KEY',
   },
   description:
     'Die komplette Wissensdatenbank über Autoschlüssel-Programmierung, Transponderchips (Hitag, Megamos), OBD2-Diagnose, Eeprom-Bench-Flashing und All-Keys-Lost-Verfahren.',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     url: `${SITE_CONFIG.domain}/wissensdatenbank`,
     type: 'website',
-    title: 'Autoschlüssel Wissensdatenbank & Technischer Leitfaden | FC-KEY',
+    title: 'Autoschlüssel Wissensdatenbank & Technikguide',
     description: 'Alles über das Anlernen, Programmieren und Fräsen von Autoschlüsseln und Transponderchips.',
     images: [{ url: `${SITE_CONFIG.domain}/og-image.png`, width: 1200, height: 630, alt: 'Autoschlüssel Wissensdatenbank — Transpondertechnologie & Programmierung | FC-KEY' }],
   },

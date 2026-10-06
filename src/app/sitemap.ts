@@ -6,23 +6,32 @@ import { BRANDS } from '@/config/brands';
 import { BLOG_POSTS } from '@/config/services';
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
+
+// Last real content change, not build time — Google ignores lastmod it can see is bogus.
+const lastContentChange = (() => {
+  try {
+    return new Date(execSync('git log -1 --format=%cI -- src/', { encoding: 'utf8' }).trim());
+  } catch {
+    return new Date();
+  }
+})();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE_CONFIG.domain;
-  const now = new Date();
+  const now = lastContentChange;
 
   // 1. Core Pages
   const corePages = [
     '', '/leistungen', '/standorte', '/marken', '/preise', '/blog', '/wissensdatenbank',
     '/ueber-uns', '/galerie', '/bewertungen', '/faq',
-    '/kontakt', '/datenschutz', '/cookie-richtlinie', '/impressum',
+    '/kontakt', '/partner', '/datenschutz', '/cookie-richtlinie', '/impressum',
     '/autoschluessel-verloren', '/autoschluessel-bestellen'
   ].map(p => ({
     url: `${base}${p}`,
     lastModified: now,
     changeFrequency: 'weekly' as const,
     priority: p === '' ? 1.0 : 0.8,
-    images: [`${base}/og-image.png`, `${base}/logo.png`],
   }));
 
   // 2. Service Pages

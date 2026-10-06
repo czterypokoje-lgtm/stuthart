@@ -45,7 +45,7 @@ export default function MarkenPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ImageObject",
-            "contentUrl": "https://www.fc-key.de/autoschluessel-merken-nachmachen-stuttgart-sindelfingen.webp",
+            "contentUrl": `${SITE_CONFIG.domain}/autoschluessel-marken-nachmachen-stuttgart-sindelfingen.webp`,
             "name": "Autoschlüssel nachmachen Stuttgart & Sindelfingen",
             "description": "Vollständige Übersicht der 59 Automarken, für die FC-KEY Autoschlüssel programmiert und nachmacht in Stuttgart und Sindelfingen.",
             "contentLocation": {
