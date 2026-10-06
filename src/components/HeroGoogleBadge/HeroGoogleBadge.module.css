@@ -1,79 +1,57 @@
-.badgeContainer {
-  display: flex;
+/* One row at every width — the old two-column layout stacked into a tall
+   card on phones and pushed the hero CTA below the fold. */
+.badge {
+  display: inline-flex;
   align-items: center;
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  gap: 2rem;
-  width: fit-content;
-  color: #000; /* Ensure text is visible if placed on dark background */
+  gap: 0.5rem;
+  background: #fff;
+  border: 1px solid #e6e8eb;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: #1f2937;
   font-family: inherit;
+  max-width: 100%;
 }
 
-.leftSection {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  border-right: 1px solid #eaeaea;
-  padding-right: 1.5rem;
+.badge:hover {
+  text-decoration: none;
+  border-color: #d2d6db;
 }
 
-.iconBox svg {
-  color: #ff6a00; /* orange */
+.g {
+  flex-shrink: 0;
 }
 
-.textStack {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.ratingNum {
-  color: #ff6a00;
-  font-weight: 700;
+.score {
   font-size: 1rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1;
 }
 
-.basedOn {
-  font-size: 0.75rem;
-  color: #333;
-  margin-top: 2px;
+.stars {
+  flex-shrink: 0;
+  display: block;
 }
 
-.rightSection {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.count {
+  font-size: 0.8rem;
+  color: #5f6368;
+  white-space: nowrap;
 }
 
-.googleG {
-  display: flex;
-  align-items: center;
-}
-
-.starsRow {
-  display: flex;
-  gap: 0.15rem;
-}
-
-@media (max-width: 600px) {
-  .badgeContainer {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-    border-radius: 6px;
+@media (max-width: 420px) {
+  .badge {
+    gap: 0.4rem;
+    padding: 0.45rem 0.7rem;
   }
-  .leftSection {
-    border-right: none;
-    border-bottom: 1px solid #eaeaea;
-    padding-right: 0;
-    padding-bottom: 0.75rem;
-    width: 100%;
-    justify-content: center;
+  .stars {
+    width: 84px;
+    height: 17px;
   }
-  .rightSection {
-    width: 100%;
-    justify-content: center;
+  .count {
+    font-size: 0.72rem;
   }
 }

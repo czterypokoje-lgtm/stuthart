@@ -640,7 +640,7 @@ export default async function BrandPage(props: { params: Promise<{ merkSlug: str
         <section style={{ padding: '4rem 0', background: 'var(--gray-50)' }}>
           <div className="container">
             <h2 className="text-center" style={{ marginBottom: '0.5rem' }}>Was Kunden über unseren {brand.name} Service sagen</h2>
-            <p className="text-center" style={{ color: 'var(--gray-600)', marginBottom: '2.5rem' }}>Bewertet mit {SITE_CONFIG.rating} / 5.0 basierend auf Hunderten von zufriedenen Autofahrern</p>
+            <p className="text-center" style={{ color: 'var(--gray-600)', marginBottom: '2.5rem' }}>Bewertet mit {SITE_CONFIG.rating} von 5 Sternen aus {SITE_CONFIG.reviewCount} Google-Bewertungen</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '1.5rem' }}>
               {generateContextualReviews(brand.name, 'brand').map((r, idx) => (
                 <GoogleReviewCard key={idx} review={r} />

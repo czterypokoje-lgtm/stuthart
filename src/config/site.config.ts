@@ -47,13 +47,14 @@ export const SITE_CONFIG = {
 
   kvk: '56295/56209', // HRB / USt-IdNr
   btw: '56295/56209', // USt-IdNr
-  rating: '5.0',
-  reviewCount: '129',
+  // Real figures from the Google Business Profile — do not round up.
+  rating: '4.7',
+  reviewCount: '128',
 
   social: {
     facebook: '',
     instagram: '',
-    google: 'https://share.google/bIFCSrLBN9dxg9RXm', 
+    google: 'https://share.google/hMK5gFTaj3AKXeygm',
     marktplaats: '',
   },
 
