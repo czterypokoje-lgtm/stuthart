@@ -33,11 +33,11 @@ export default function Footer() {
             <div className={styles.footerBrand}>
               <Link href="/" aria-label="Startseite">
                 <Image
-                  src="/logo-golden-crest.png"
-                  alt="First Class Key Logo"
-                  width={120}
-                  height={120}
-                  style={{ height: '120px', width: 'auto', display: 'block', borderRadius: '12px' }}
+                  src="/logo-lockup.png"
+                  alt="First Class Key — Schlüsseldienst"
+                  width={121}
+                  height={110}
+                  style={{ height: '110px', width: 'auto', display: 'block' }}
                 />
               </Link>
             </div>

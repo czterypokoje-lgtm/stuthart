@@ -91,11 +91,12 @@ export default function Navigation() {
         {/* Logo */}
         <Link href="/" className={styles.logo} aria-label="First Class Key — 24/7 Autoschlüsselspezialist Stuttgart homepage">
           <Image
-            src="/logo-golden-crest.png"
-            alt="First Class Key Logo"
-            width={80}
-            height={80}
-            style={{ height: '80px', width: 'auto', display: 'block', borderRadius: '8px' }}
+            src="/logo-lockup.png"
+            alt="First Class Key — Schlüsseldienst"
+            width={79}
+            height={72}
+            priority
+            style={{ height: '72px', width: 'auto', display: 'block' }}
           />
         </Link>
 
