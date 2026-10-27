@@ -129,60 +129,62 @@ export default function HomePage() {
         <div className={styles.heroSplitInner}>
           <div className={styles.heroSplitText}>
             <HeroGoogleBadge />
-            
+
             <h1 className={styles.heroTitle}>
               Autoschlüssel verloren oder nachmachen?<br />
               <span className={styles.heroOrange}>Wir helfen direkt vor Ort!</span>
             </h1>
             <p className={styles.heroLead}>
-              Ausgesperrt oder Autoschlüssel defekt? Wir kommen direkt zu Ihnen! Keine Abschleppkosten, günstiger als der Händler und in <strong>30-60 Min</strong> vor Ort.
+              Ausgesperrt oder Autoschlüssel defekt? <strong>Güngör Demir</strong> und sein Team kommen
+              direkt zu Ihnen — keine Abschleppkosten, günstiger als der Händler und in <strong>30-60 Min</strong> vor Ort.
             </p>
-            
-            <div className={styles.heroMobileImage}>
-              <Image
-                src="/images/hero-van-2400.webp"
-                alt="First Class Key — Mobiler Schlüsseldienst Stuttgart"
-                width={800}
-                height={500}
-                style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '16px' }}
-                priority
-                fetchPriority="high"
-                quality={85}
-              />
-            </div>
 
-            <LeadCaptureForm phone={SITE_CONFIG.phone} theme="light" />
+            <ul className={styles.heroTrust}>
+              <li className={styles.heroTrustItem}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                15 Jahre Erfahrung
+              </li>
+              <li className={styles.heroTrustItem}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.36-1.86M17 20H7m10 0v-2c0-.66-.13-1.3-.36-1.86m0 0A5 5 0 0012 14a5 5 0 00-4.64 2.14M7 20H2v-2a3 3 0 015.36-1.86M7 20v-2c0-.66.13-1.3.36-1.86m0 0A5 5 0 0112 14m0-4a3 3 0 100-6 3 3 0 000 6z" /></svg>
+                Familienbetrieb
+              </li>
+              <li className={styles.heroTrustItem}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                Alle Marken &amp; Modelle
+              </li>
+            </ul>
           </div>
-          
+
           <div className={styles.heroSplitImage}>
             <Image
-              src="/images/hero-van-2400.webp"
-              alt="First Class Key — Mobiler Schlüsseldienst Stuttgart"
-              width={800}
-              height={500}
+              src="/images/hero/autoschluessel-spezialist-guengoer-demir-servicefahrzeug-stuttgart.webp"
+              alt="Güngör Demir, Inhaber von First Class Key, am mobilen Servicefahrzeug für Autoschlüssel-Notdienst in Stuttgart und Sindelfingen"
+              width={2000}
+              height={1333}
+              sizes="(min-width: 992px) 50vw, 100vw"
               style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '16px' }}
               priority
               fetchPriority="high"
-              quality={85}
+              quality={82}
             />
             <script id="hero-image-gps" type="application/ld+json" dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "ImageObject",
-                "contentUrl": `${SITE_CONFIG.domain}/images/hero-van-2400.webp`,
-                "name": "First Class Key — Mobiler Schlüsseldienst Stuttgart, Servicefahrzeug vor Ort",
-                "description": "Das FC-KEY Servicefahrzeug (VW Caddy) mit vollständiger mobiler Werkstattausrüstung für Autoschlüssel nachmachen und Schlüsseldienst in Stuttgart, Sindelfingen und 50km Umkreis.",
+                "contentUrl": `${SITE_CONFIG.domain}/images/hero/autoschluessel-spezialist-guengoer-demir-servicefahrzeug-stuttgart.webp`,
+                "name": "Güngör Demir mit dem Servicefahrzeug von First Class Key",
+                "description": "Güngör Demir, Inhaber von First Class Key, am voll ausgestatteten mobilen Servicefahrzeug für Autoschlüssel nachmachen, Programmierung und Notöffnung in Stuttgart, Sindelfingen und 50km Umkreis.",
                 "contentLocation": {
                   "@type": "Place",
                   "name": "Stuttgart, Sindelfingen",
-                  "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": 48.7758,
-                    "longitude": 9.1829
-                  }
+                  "geo": { "@type": "GeoCoordinates", "latitude": 48.7758, "longitude": 9.1829 }
                 }
               })
             }} />
+          </div>
+
+          <div className={styles.heroSplitForm}>
+            <LeadCaptureForm phone={SITE_CONFIG.phone} theme="light" />
           </div>
         </div>
       </section>
@@ -255,33 +257,55 @@ export default function HomePage() {
 
       {/* ===== E-E-A-T MEET THE OWNER ===== */}
       <section style={{ padding: '4rem 0', background: 'var(--color-bg-alt)', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
+        <script id="owner-person-schema" type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": `${SITE_CONFIG.domain}/#guengoer-demir`,
+            "name": "Güngör Demir",
+            "jobTitle": "Inhaber & Autoschlüssel-Spezialist",
+            "image": `${SITE_CONFIG.domain}/images/team/guengoer-demir-inhaber-first-class-key-sindelfingen.webp`,
+            "worksFor": { "@id": `${SITE_CONFIG.domain}/#localbusiness` },
+            "knowsAbout": [
+              "Autoschlüssel nachmachen", "Transponder programmieren", "Smart Key / Keyless Go",
+              "All Keys Lost", "Zündschloss-Reparatur", "Schadensfreie Autoöffnung"
+            ]
+          })
+        }} />
         <div className="container">
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))',
             gap: '2.5rem',
-            alignItems: 'start'
+            alignItems: 'center'
           }}>
             <div>
-              <p className="section-eyebrow" style={{ color: 'var(--color-primary)' }}>LOKALE EXPERTISE &amp; VERTRAUEN</p>
-              <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: 'var(--navy-900)', marginBottom: '0.75rem', marginTop: '0.25rem' }}>
-                Lernen Sie uns kennen
+              <p className="section-eyebrow" style={{ color: 'var(--color-primary)' }}>INHABER &amp; FAMILIENBETRIEB</p>
+              <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 700, color: 'var(--navy-900)', marginBottom: '0.5rem', marginTop: '0.25rem' }}>
+                Güngör Demir — Ihr Autoschlüssel-Spezialist
               </h2>
               <p style={{ fontWeight: 600, color: 'var(--orange-700)', fontSize: '0.95rem', marginBottom: '1rem' }}>
-                Geprüfte Techniker von First Class Key
+                Inhaber von First Class Key, Sindelfingen · 15 Jahre Erfahrung
               </p>
-              <p style={{ color: 'var(--gray-700)', lineHeight: 1.6, marginBottom: '1.25rem', fontSize: '0.92rem' }}>
-                Wenn Sie wegen eines Autoschlüsselproblems anrufen, haben Sie es direkt mit einem Experten zu tun. Als Haupttechniker garantiere ich persönlich für die Qualität unseres Service. Mit jahrelanger aktiver Erfahrung in der Kfz-Schlosserbranche und zertifiziert von Marktführern wie Autel, programmieren wir jeden Schlüssel schnell, sicher und vor Ort.
+              <p style={{ color: 'var(--gray-700)', lineHeight: 1.65, marginBottom: '1.25rem', fontSize: '0.92rem' }}>
+                Wenn Sie bei uns anrufen, sprechen Sie nicht mit einem Callcenter, sondern direkt mit dem
+                Fachmann, der anschliessend zu Ihnen herausfährt. First Class Key ist ein
+                <strong> inhabergeführter Familienbetrieb</strong> — kein Franchise und keine Vermittlung.
+                In 15 Jahren habe ich Tausende Autoschlüssel gefräst, programmiert und Fahrzeuge schadensfrei
+                geöffnet, vom einfachen Transponder bis zum Keyless-Go-System nach Totalverlust aller Schlüssel.
               </p>
               <ul style={{ listStyleType: 'none', padding: 0, margin: '0 0 1.5rem 0', fontSize: '0.88rem', color: 'var(--gray-700)', lineHeight: '1.7' }}>
-                <li style={{ marginBottom: '0.4rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span> <span><strong>Zertifizierte Experten:</strong> Spezialisiert auf Autel IM608 Pro II &amp; AVDI Abrites.</span>
+                <li style={{ marginBottom: '0.4rem', display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                  <span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span> <span><strong>15 Jahre Erfahrung:</strong> täglich an allen gängigen Marken und Schliesssystemen.</span>
                 </li>
-                <li style={{ marginBottom: '0.4rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span> <span><strong>Umfangreiche Erfahrung:</strong> Jahrelange Erfahrung mit allen Automarken und -systemen.</span>
+                <li style={{ marginBottom: '0.4rem', display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                  <span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span> <span><strong>Familienbetrieb:</strong> Sie haben immer denselben Ansprechpartner — vom Anruf bis zum fertigen Schlüssel.</span>
                 </li>
-                <li style={{ marginBottom: '0.4rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span> <span><strong>Zuverlässig &amp; Lokal:</strong> Faire, im Voraus kommunizierte Festpreise ohne Überraschungen.</span>
+                <li style={{ marginBottom: '0.4rem', display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                  <span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span> <span><strong>Eigene Werkstatt &amp; Technik:</strong> CNC-Fräse, Autel IM608 Pro II und AVDI Abrites — auch Elektronik-Reparatur im Haus.</span>
+                </li>
+                <li style={{ marginBottom: '0.4rem', display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                  <span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span> <span><strong>Festpreis vorab:</strong> Sie erfahren den Preis am Telefon, bevor wir losfahren.</span>
                 </li>
               </ul>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -289,23 +313,24 @@ export default function HomePage() {
                   📞 Direkt anrufen: {SITE_CONFIG.phone}
                 </a>
                 <Link href="/ueber-uns" className="btn btn-outline" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
-                  Lesen Sie mehr über uns →
+                  Mehr über uns →
                 </Link>
               </div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img
-                src="/images/seo/skoda-enyaq-key.jpg"
-                alt="Autoschlüssel programmieren Skoda Enyaq iV"
-                style={{
-                  width: '100%',
-                  maxWidth: '480px',
-                  height: 'auto',
-                  borderRadius: '12px',
-                  boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-                  display: 'block'
-                }}
-              />
+              <figure style={{ margin: 0, maxWidth: '440px', width: '100%' }}>
+                <Image
+                  src="/images/team/guengoer-demir-inhaber-first-class-key-sindelfingen.webp"
+                  alt="Güngör Demir, Inhaber von First Class Key, in seiner Schlüsselwerkstatt in Sindelfingen"
+                  width={1100}
+                  height={1650}
+                  sizes="(min-width: 768px) 440px, 100vw"
+                  style={{ width: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.12)', display: 'block' }}
+                />
+                <figcaption style={{ marginTop: '0.75rem', fontSize: '0.8rem', color: 'var(--gray-600)', textAlign: 'center' }}>
+                  Güngör Demir in der eigenen Werkstatt im Stern Center, Sindelfingen
+                </figcaption>
+              </figure>
             </div>
           </div>
         </div>

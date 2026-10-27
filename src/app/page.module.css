@@ -7,48 +7,68 @@
   border-bottom: 1px solid var(--gray-200);
 }
 
+/* One hero image at every width. It used to be rendered twice, once per
+   breakpoint; grid lets the single image sit beside the copy on desktop and
+   between the copy and the form on mobile. */
 .heroSplitInner {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  align-items: center;
+  gap: 2rem;
+  align-items: stretch;
 }
 
 @media (min-width: 992px) {
   .heroSplitInner {
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 3.5rem;
+    row-gap: 1.75rem;
+    align-items: start;
   }
-}
-
-.heroSplitText {
-  flex: 1;
-}
-
-.heroSplitImage {
-  display: none;
-}
-
-@media (min-width: 992px) {
+  .heroSplitText { grid-column: 1; grid-row: 1; }
+  .heroSplitForm { grid-column: 1; grid-row: 2; }
   .heroSplitImage {
-    display: block;
-    flex: 1;
-    width: 100%;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
   }
 }
 
-.heroMobileImage {
-  display: block;
-  margin: 2rem 0;
-  width: 100%;
+.heroSplitText { min-width: 0; }
+.heroSplitImage { display: block; width: 100%; min-width: 0; }
+
+/* Trust row: experience, family business, coverage */
+.heroTrust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-@media (min-width: 992px) {
-  .heroMobileImage {
-    display: none;
-  }
+.heroTrustItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--navy-50);
+  border: 1px solid var(--navy-100);
+  color: var(--navy-900);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.heroTrustItem svg {
+  width: 15px;
+  height: 15px;
+  color: var(--orange-700);
+  flex-shrink: 0;
 }
 
 .heroLabel {
