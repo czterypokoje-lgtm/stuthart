@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Script from 'next/script';
 import { SITE_CONFIG } from '@/config/site.config';
 import TestimonialSection from '@/components/TestimonialSection/TestimonialSection';
@@ -12,7 +13,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${SITE_CONFIG.domain}/ueber-uns`,
     languages: {
-      'nl-NL': `${SITE_CONFIG.domain}/ueber-uns`,
       'de-DE': `${SITE_CONFIG.domain}/ueber-uns`,
       'x-default': `${SITE_CONFIG.domain}/ueber-uns`,
     },
@@ -34,10 +34,11 @@ const breadcrumbSchema = {
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  '@id': `${SITE_CONFIG.domain}/#specialist`,
-  name: 'Gungor Demir',
-  jobTitle: 'Cheftechniker & Autoschlüssel Spezialist',
-  description: 'Zertifizierter Autoschlüsselspezialist mit jahrelanger Erfahrung in Fahrzeugsicherheit und Autoschlüsselcodierung. Spezialist für Transponderprogrammierung, Smart Key Systeme und Zündschlossreparatur für alle Automarken.',
+  '@id': `${SITE_CONFIG.domain}/#guengoer-demir`,
+  name: 'Güngör Demir',
+  jobTitle: 'Inhaber & Autoschlüssel-Spezialist',
+  image: `${SITE_CONFIG.domain}/images/team/guengoer-demir-inhaber-first-class-key-sindelfingen.webp`,
+  description: 'Inhaber von First Class Key mit 15 Jahren Erfahrung in Fahrzeugsicherheit und Autoschlüsselcodierung. Spezialist für Transponderprogrammierung, Smart Key Systeme und Zündschlossreparatur für alle Automarken.',
   worksFor: {
     '@id': `${SITE_CONFIG.domain}/#localbusiness`,
   },
@@ -92,7 +93,7 @@ export default function OverOnsPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))', gap: '2.5rem', marginBottom: '3.5rem', alignItems: 'start' }}>
           <div>
             <h2 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '0.75rem' }}>Wer sind wir?</h2>
-            <p style={{ color: 'var(--gray-700)', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '0.75rem' }}>FC-KEY wird von Gungor Demir geleitet. Er ist ein zertifizierter Experte für Fahrzeugsicherheit und Autoschlüsselcodierung. Gemeinsam mit einem eng verbundenen Team erfahrener mobiler Monteure helfen wir täglich Privatpersonen, Flottenmanagern und Werkstätten.</p>
+            <p style={{ color: 'var(--gray-700)', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '0.75rem' }}>First Class Key ist ein inhabergeführter Familienbetrieb und wird von Güngör Demir geleitet — kein Franchise und keine Vermittlung. Mit 15 Jahren Erfahrung in Fahrzeugsicherheit und Autoschlüsselcodierung helfen wir gemeinsam mit einem kleinen, eingespielten Team täglich Privatpersonen, Flottenmanagern und Werkstätten.</p>
             <p style={{ color: 'var(--gray-700)', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '0.75rem' }}>Wir kommen immer zu Ihnen. Egal ob Sie zu Hause sind, bei der Arbeit oder am Straßenrand gestrandet sind.</p>
             <p style={{ color: 'var(--gray-700)', fontSize: '0.92rem', lineHeight: 1.6, marginBottom: '1rem' }}>Unser Fokus ist einfach: Faire Preise, schnelle Reaktionszeiten und technisch einwandfreie Arbeit. Keine vagen Geschichten, sondern direkte Lösung Ihres Problems.</p>
 
@@ -118,23 +119,16 @@ export default function OverOnsPage() {
           </div>
 
           <div>
-            <img
-              src="/images/gungor-demir.webp"
-              alt="Gungor Demir — Cheftechniker"
-              style={{
-                width: '100%',
-                maxWidth: '340px',
-                height: '220px',
-                objectFit: 'cover',
-                objectPosition: 'top',
-                borderRadius: '4px',
-                border: '1px solid #cbd5e1',
-                display: 'block',
-                marginBottom: '0.75rem'
-              }}
+            <Image
+              src="/images/team/guengoer-demir-inhaber-first-class-key-sindelfingen.webp"
+              alt="Güngör Demir, Inhaber von First Class Key, in der eigenen Schlüsselwerkstatt in Sindelfingen"
+              width={1100}
+              height={1650}
+              sizes="(min-width: 768px) 340px, 100vw"
+              style={{ width: '100%', maxWidth: '340px', height: 'auto', borderRadius: '8px', display: 'block', marginBottom: '0.75rem' }}
             />
-            <h3 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.2rem' }}>Gungor Demir</h3>
-            <p style={{ color: 'var(--navy-800)', fontWeight: 600, fontSize: '0.85rem', margin: 0 }}>Cheftechniker</p>
+            <h3 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '0.2rem' }}>Güngör Demir</h3>
+            <p style={{ color: 'var(--navy-800)', fontWeight: 600, fontSize: '0.85rem', margin: 0 }}>Inhaber · 15 Jahre Erfahrung</p>
           </div>
         </div>
 
@@ -142,20 +136,23 @@ export default function OverOnsPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))', gap: '4rem', marginBottom: '6rem', alignItems: 'center' }}>
           <div>
             <h2 style={{ fontSize: 'clamp(2.2rem, 4vw, 3rem)', fontWeight: 800, color: '#000', marginBottom: '1.5rem', lineHeight: 1.1, letterSpacing: '-0.02em' }}>
-              Zentrale in Stuttgart,<br/>Aktiv im ganzen Großraum
+              Zentrale in Sindelfingen,<br/>Aktiv im ganzen Großraum Stuttgart
             </h2>
             <p style={{ color: '#111', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '1rem' }}>
-              Unsere physische Werkstatt und das Lager befinden sich in Stuttgart. Von diesem zentralen Standort aus steuern wir unsere mobilen Servicebusse.
+              Unsere physische Werkstatt und das Lager befinden sich im Stern Center in Sindelfingen. Von diesem zentralen Standort aus steuern wir unsere mobilen Servicefahrzeuge.
             </p>
             <p style={{ color: '#111', fontSize: '1.1rem', lineHeight: 1.7, margin: 0 }}>
               Wir fahren täglich zu Kunden in der gesamten Region Stuttgart und Süddeutschland. So helfen wir schnell und vor Ort unter anderem in Sindelfingen, Esslingen, Ludwigsburg, Böblingen und Leonberg.
             </p>
           </div>
           <div>
-            <img 
-              src="/images/seo/auto_schluessel_stuttgart_24stunden_werkstatt.webp" 
-              alt="Professionelle Autoschlüssel Werkstatt und Werkzeuge" 
-              style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '12px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }} 
+            <Image
+              src="/images/team/first-class-key-werkstatt-sindelfingen-stern-center.webp"
+              alt="Güngör Demir vor der First Class Key Werkstatt im Stern Center Sindelfingen"
+              width={1400}
+              height={2100}
+              sizes="(min-width: 900px) 50vw, 100vw"
+              style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'top', borderRadius: '12px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}
             />
           </div>
         </div>
@@ -163,10 +160,13 @@ export default function OverOnsPage() {
         {/* Mobile Work & Inventory Section - Image Left */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))', gap: '4rem', marginBottom: '6rem', alignItems: 'center' }}>
           <div>
-            <img 
-              src="/images/ueber-uns-servicebusse.jpg" 
-              alt="Arbeiten vor Ort durch Monteur" 
-              style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'top', borderRadius: '12px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }} 
+            <Image
+              src="/images/werkstatt/autotuer-oeffnen-spezialwerkzeug-vor-ort.webp"
+              alt="Mobiler Einsatz vor Ort: Fahrzeug wird mit Spezialwerkzeug schadensfrei geöffnet"
+              width={1400}
+              height={2100}
+              sizes="(min-width: 900px) 50vw, 100vw"
+              style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'center', borderRadius: '12px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}
             />
           </div>
           <div>
@@ -174,7 +174,7 @@ export default function OverOnsPage() {
               Voll Ausgestattete Servicebusse
             </h2>
             <p style={{ color: '#111', fontSize: '1.1rem', lineHeight: 1.7, margin: 0 }}>
-              Probleme mit Autoschlüsseln passieren oft zu ungünstigen Zeiten. Deshalb hebben wir unsere Busse als rollende Werkstätten eingerichtet. Wir fräsen Schlüssel direkt vor Ort mit CNC-gesteuerten Maschinen und haben Lötstationen für Präzisionsarbeiten dabei. Sie müssen Ihr Auto also nie teuer zu einem Händler abschleppen lassen.
+              Probleme mit Autoschlüsseln passieren oft zu ungünstigen Zeiten. Deshalb haben wir unsere Busse als rollende Werkstätten eingerichtet. Wir fräsen Schlüssel direkt vor Ort mit CNC-gesteuerten Maschinen und haben Lötstationen für Präzisionsarbeiten dabei. Sie müssen Ihr Auto also nie teuer zu einem Händler abschleppen lassen.
             </p>
           </div>
         </div>
@@ -190,10 +190,13 @@ export default function OverOnsPage() {
             </p>
           </div>
           <div>
-            <img 
-              src="/images/ueber-uns-maschine.jpg" 
-              alt="Professionelle FUTURA PRO CNC Fräsmaschine" 
-              style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '12px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }} 
+            <Image
+              src="/images/werkstatt/autoschluessel-fraesen-cnc-maschine-sindelfingen.webp"
+              alt="Autoschlüssel wird auf der CNC-Fräsmaschine in der Werkstatt in Sindelfingen gefräst"
+              width={1400}
+              height={933}
+              sizes="(min-width: 900px) 50vw, 100vw"
+              style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '12px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}
             />
           </div>
         </div>
@@ -208,7 +211,7 @@ export default function OverOnsPage() {
           <h2>Warum FC-KEY wählen?</h2>
           <h3>Echte Expertise, keine Standard-Werkstatt</h3>
           <p>
-            Gungor Demir und sein Team arbeiten immer mit der neuesten Software für Schlüssel- und Fahrzeugdiagnose. Wo eine Standard-Werkstatt aufhört, machen wir weiter. Wir sind spezialisiert auf komplexe Fahrzeugelektronik, das Auslesen von EEPROM, CAN-Bus-Sicherheit und das Programmieren von Transponderchips auf Werksniveau.
+            Güngör Demir und sein Team arbeiten immer mit der neuesten Software für Schlüssel- und Fahrzeugdiagnose. Wo eine Standard-Werkstatt aufhört, machen wir weiter. Wir sind spezialisiert auf komplexe Fahrzeugelektronik, das Auslesen von EEPROM, CAN-Bus-Sicherheit und das Programmieren von Transponderchips auf Werksniveau.
           </p>
           <h3>Keine Vermittler oder teure Callcenter</h3>
           <p>
