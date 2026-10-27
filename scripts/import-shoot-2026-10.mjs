@@ -35,10 +35,9 @@ const PICKS = [
   ['8W7A2625.jpg', 'werkstatt/funkschluessel-platine-reparatur-loeten', 1400],
   ['8W7A2632.jpg', 'werkstatt/autoschluessel-elektronik-pruefen-pinzette', 1400],
 
-  // Zündschloss / Schloss
-  ['8W7A2614.jpg', 'werkstatt/zuendschloss-ausbohren-defektes-schloss', 1400],
-  ['8W7A2617.jpg', 'werkstatt/zuendschloss-wechseln-vor-ort-stuttgart', 1400],
-  ['8W7A2616.jpg', 'werkstatt/schlosszylinder-bohren-detailaufnahme', 1400],
+  // NOTE: 8W7A2613-2617 from this shoot show a euro profile cylinder being
+  // drilled in a steel building door — building locksmithing, not car work.
+  // They are deliberately not imported: this site's services are all automotive.
 ];
 
 for (const dir of new Set(PICKS.map(([, d]) => d.split('/')[0])))

@@ -182,7 +182,7 @@ export default function AutoSlotenmakerPage() {
                   className={heroStyles.photo}
                   priority
                 />
-                <p className={heroStyles.caption}>{heroPhoto.label} — eigene Aufnahme aus unserer Werkstatt</p>
+                <p className={heroStyles.caption}>{heroPhoto.label} — eigene Aufnahme aus unserem Arbeitsalltag</p>
               </div>
             </div>
           </div>

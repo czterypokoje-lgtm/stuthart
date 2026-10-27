@@ -11,6 +11,7 @@
 export type ServicePhoto = { src: string; alt: string; label: string };
 
 const W = '/images/werkstatt';
+const S = '/images/seo';
 
 // ── Reusable shots, grouped by the job they show ──
 const FRAESEN: ServicePhoto[] = [
@@ -40,10 +41,14 @@ const ELEKTRONIK: ServicePhoto[] = [
   { src: `${W}/autoschluessel-elektronik-pruefen-pinzette.webp`, alt: 'Elektronik eines Autoschlüssels wird mit der Pinzette geprüft und instandgesetzt', label: 'Bauteilprüfung' },
 ];
 
+// Car ignition locks and ELV modules — NOT the building-cylinder drilling shots
+// from the same shoot, which show a euro profile cylinder in a steel door and
+// have nothing to do with a Zündschloss.
 const ZUENDSCHLOSS: ServicePhoto[] = [
-  { src: `${W}/zuendschloss-wechseln-vor-ort-stuttgart.webp`, alt: 'Defektes Zündschloss wird vor Ort ausgebaut und ersetzt', label: 'Zündschloss wechseln' },
-  { src: `${W}/zuendschloss-ausbohren-defektes-schloss.webp`, alt: 'Blockiertes Schloss wird fachgerecht ausgebohrt, um das Fahrzeug wieder zu öffnen', label: 'Schloss ausbohren' },
-  { src: `${W}/schlosszylinder-bohren-detailaufnahme.webp`, alt: 'Detailaufnahme: Schließzylinder wird präzise aufgebohrt', label: 'Zylinder öffnen' },
+  { src: `${S}/zuendschloss_reparatur_home.jpg`, alt: 'Defektes Zündschloss im Lenkradschloss eines Fahrzeugs', label: 'Zündschloss am Fahrzeug' },
+  { src: `${S}/zuendschloss-auto-wechseln-werkstatt-stuttgart.webp`, alt: 'Ausgebautes Zündschloss mit elektronischer Lenkradverriegelung (ELV) und Ringspule', label: 'ELV & Zündschloss' },
+  { src: `${S}/zuendschloss_reparatur_wechseln_stuttgart_schluesseldienst.webp`, alt: 'Zündschlossmodul wird an der Lenksäule ausgebaut und ersetzt', label: 'Ausbau vor Ort' },
+  { src: `${S}/zuendschloss-auto-wechseln-mobil-sindelfingen.webp`, alt: 'Zündschlossmodul wird für die Reparatur geöffnet', label: 'Modul-Reparatur' },
 ];
 
 /** Shown when a service has no explicit set — a general mix of the workshop. */
@@ -52,8 +57,8 @@ export const DEFAULT_SERVICE_PHOTOS: ServicePhoto[] = [FRAESEN[0], CODIEREN[0], 
 const BY_SLUG: Record<string, ServicePhoto[]> = {
   'auto-ohne-schluessel-oeffnen': NOTOEFFNUNG,
   // First entry doubles as the hero photo, so keep it distinct from auto-ohne-schluessel-oeffnen.
-  'auto-schluesseldienst': [NOTOEFFNUNG[1], NOTOEFFNUNG[2], ZUENDSCHLOSS[1], NOTOEFFNUNG[4]],
-  'schluessel-im-schloss-abgebrochen': [ZUENDSCHLOSS[1], ZUENDSCHLOSS[2], FRAESEN[0], NOTOEFFNUNG[0]],
+  'auto-schluesseldienst': [NOTOEFFNUNG[1], NOTOEFFNUNG[2], NOTOEFFNUNG[0], NOTOEFFNUNG[4]],
+  'schluessel-im-schloss-abgebrochen': [ZUENDSCHLOSS[0], FRAESEN[0], CODIEREN[2], NOTOEFFNUNG[0]],
   'zuendschloss-auto-wechseln': ZUENDSCHLOSS,
 
   'autoschluessel-nachmachen': [FRAESEN[0], FRAESEN[1], CODIEREN[0], CODIEREN[2]],

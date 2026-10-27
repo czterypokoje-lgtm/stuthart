@@ -194,7 +194,7 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
                   className={heroStyles.photo}
                   priority
                 />
-                <p className={heroStyles.caption}>{heroPhoto.label} — eigene Aufnahme aus unserer Werkstatt</p>
+                <p className={heroStyles.caption}>{heroPhoto.label} — eigene Aufnahme aus unserem Arbeitsalltag</p>
               </div>
             </div>
           </div>
