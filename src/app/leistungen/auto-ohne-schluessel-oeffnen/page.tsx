@@ -3,9 +3,11 @@ import Link from 'next/link';
 import Script from 'next/script';
 import Image from 'next/image';
 import { getRelatedBlogPosts } from '@/config/services';
+import { getServicePhotos } from '@/config/service-photos';
 import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
+import heroStyles from '../service-hero.module.css';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
 import GlobalFeatureCards from '@/components/FeatureCards/GlobalFeatureCards';
@@ -152,6 +154,7 @@ const trustItems = [
 ];
 
 export default function AutoOpenenZonderSleutelPage() {
+  const heroPhoto = getServicePhotos('auto-ohne-schluessel-oeffnen')[0];
   const faqPageSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -190,6 +193,8 @@ export default function AutoOpenenZonderSleutelPage() {
               <Link href="/leistungen">Leistungen</Link> <span>/</span>
               <span>Auto ohne Schlüssel öffnen</span>
             </nav>
+            <div className={heroStyles.grid}>
+              <div className={heroStyles.copy}>
             <HeroGoogleBadge />
             <h1>Auto ohne Schlüssel öffnen — 100% Schadensfrei &amp; 24/7 Mobiler Service</h1>
             <p className={styles.heroLead}>
@@ -200,6 +205,20 @@ export default function AutoOpenenZonderSleutelPage() {
             </p>
             <div style={{ marginTop: '2rem' }}>
               <LeadCaptureForm phone={SITE_CONFIG.phoneTel} />
+            </div>
+              </div>
+              <div className={heroStyles.media}>
+                <Image
+                  src={heroPhoto.src}
+                  alt={heroPhoto.alt}
+                  width={1400}
+                  height={1050}
+                  sizes="(min-width: 992px) 45vw, 0px"
+                  className={heroStyles.photo}
+                  priority
+                />
+                <p className={heroStyles.caption}>{heroPhoto.label} — eigene Aufnahme aus unserer Werkstatt</p>
+              </div>
             </div>
           </div>
         </section>

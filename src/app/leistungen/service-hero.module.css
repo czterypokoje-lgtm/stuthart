@@ -1,0 +1,50 @@
+/* Shared split hero for the service pages. Their own page.module.css files are
+   byte-identical duplicates of each other, so the image column lives here once
+   instead of being pasted into all five. */
+
+.grid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 3.5rem;
+  }
+}
+
+.copy {
+  min-width: 0;
+}
+
+/* Below the split the form has to stay near the top of the page, so the hero
+   photo is desktop-only — the in-page gallery carries the imagery on mobile. */
+.media {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .media {
+    display: block;
+    min-width: 0;
+  }
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.caption {
+  margin: 0.75rem 0 0;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+}

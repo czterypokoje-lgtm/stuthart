@@ -9,6 +9,7 @@ import { getRelatedBlogPosts } from '@/config/services';
 import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
+import heroStyles from '../service-hero.module.css';
 import HeroGoogleBadge from '@/components/HeroGoogleBadge/HeroGoogleBadge';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsLogoGrid from '@/components/BrandsLogoGrid/BrandsLogoGrid';
@@ -72,6 +73,8 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
   const { slug } = await params;
   const service = LEISTUNGEN.find(s => s.slug === slug);
   if (!service) notFound();
+
+  const heroPhoto = getServicePhotos(slug)[0];
 
   const p1Cities = CITIES.filter(c => c.priority === 'P1').slice(0, 8);
   const popularBrands = BRANDS.filter(b => b.priority === 'P1').slice(0, 8);
@@ -170,6 +173,8 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
               <Link href="/leistungen">Leistungen</Link> <span>/</span>
               <span>{service.title}</span>
             </nav>
+            <div className={heroStyles.grid}>
+              <div className={heroStyles.copy}>
             <HeroGoogleBadge />
             <h1>{service.h1}</h1>
 
@@ -177,6 +182,20 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
 
             <div style={{ marginTop: '0.5rem' }}>
               <LeadCaptureForm phone={SITE_CONFIG.phoneTel} />
+            </div>
+              </div>
+              <div className={heroStyles.media}>
+                <Image
+                  src={heroPhoto.src}
+                  alt={heroPhoto.alt}
+                  width={1400}
+                  height={1050}
+                  sizes="(min-width: 992px) 45vw, 0px"
+                  className={heroStyles.photo}
+                  priority
+                />
+                <p className={heroStyles.caption}>{heroPhoto.label} — eigene Aufnahme aus unserer Werkstatt</p>
+              </div>
             </div>
           </div>
         </section>

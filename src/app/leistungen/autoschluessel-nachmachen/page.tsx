@@ -1,13 +1,16 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Script from 'next/script';
 import { getRelatedBlogPosts } from '@/config/services';
+import { getServicePhotos } from '@/config/service-photos';
 import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import { CITIES } from '@/config/cities';
 import { BRANDS } from '@/config/brands';
 import BrandsLogoGrid from '@/components/BrandsLogoGrid/BrandsLogoGrid';
 import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
 import LeadCaptureForm from '@/components/LeadCaptureForm/LeadCaptureForm';
+import heroStyles from '../service-hero.module.css';
 import HowItWorks from '@/components/HowItWorks/HowItWorks';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
 import ServiceCoverageMap from '@/components/ServiceCoverageMap/ServiceCoverageMap';
@@ -36,6 +39,7 @@ export const metadata: Metadata = {
 };
 
 export default function SleutelBijmakenPage() {
+  const heroPhoto = getServicePhotos('autoschluessel-nachmachen')[0];
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -166,6 +170,8 @@ export default function SleutelBijmakenPage() {
             <nav className={styles.breadcrumb} aria-label="Breadcrumb">
               <Link href="/">Home</Link> <span>/</span> <Link href="/leistungen">Leistungen</Link> <span>/</span> <span>Autoschlüssel nachmachen</span>
             </nav>
+            <div className={heroStyles.grid}>
+              <div className={heroStyles.copy}>
             <HeroGoogleBadge />
             <h1>Autoschlüssel nachmachen — Ersatzschlüssel fürs Auto vor Ort anfertigen lassen</h1>
             <p className={styles.heroLead}>
@@ -173,6 +179,20 @@ export default function SleutelBijmakenPage() {
             </p>
             <div style={{ marginTop: '2rem' }}>
               <LeadCaptureForm phone={SITE_CONFIG.phoneTel} />
+            </div>
+              </div>
+              <div className={heroStyles.media}>
+                <Image
+                  src={heroPhoto.src}
+                  alt={heroPhoto.alt}
+                  width={1400}
+                  height={1050}
+                  sizes="(min-width: 992px) 45vw, 0px"
+                  className={heroStyles.photo}
+                  priority
+                />
+                <p className={heroStyles.caption}>{heroPhoto.label} — eigene Aufnahme aus unserer Werkstatt</p>
+              </div>
             </div>
           </div>
         </section>

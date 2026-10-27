@@ -51,7 +51,8 @@ export const DEFAULT_SERVICE_PHOTOS: ServicePhoto[] = [FRAESEN[0], CODIEREN[0], 
 
 const BY_SLUG: Record<string, ServicePhoto[]> = {
   'auto-ohne-schluessel-oeffnen': NOTOEFFNUNG,
-  'auto-schluesseldienst': [NOTOEFFNUNG[0], NOTOEFFNUNG[1], ZUENDSCHLOSS[1], NOTOEFFNUNG[4]],
+  // First entry doubles as the hero photo, so keep it distinct from auto-ohne-schluessel-oeffnen.
+  'auto-schluesseldienst': [NOTOEFFNUNG[1], NOTOEFFNUNG[2], ZUENDSCHLOSS[1], NOTOEFFNUNG[4]],
   'schluessel-im-schloss-abgebrochen': [ZUENDSCHLOSS[1], ZUENDSCHLOSS[2], FRAESEN[0], NOTOEFFNUNG[0]],
   'zuendschloss-auto-wechseln': ZUENDSCHLOSS,
 
