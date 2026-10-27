@@ -1,6 +1,6 @@
 .hero { background: linear-gradient(160deg, var(--navy-900), var(--navy-800)); padding: 4rem 2rem 3rem; }
 .heroInner { max-width: 800px; margin: 0 auto; }
-.label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--navy-700); margin-bottom: 0.75rem; }
+.label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--navy-300); margin-bottom: 0.75rem; }
 .hero h1 { color: #fff; font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 1rem; }
 .heroSub { color: rgba(255,255,255,0.72); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem; }
 .heroSub strong { color: #fff; }

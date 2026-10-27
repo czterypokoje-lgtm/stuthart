@@ -18,6 +18,27 @@ const PICKS = [
   ['8W7A2598.jpg', 'werkstatt/auto-oeffnen-ohne-schluessel-notoeffnung-vor-ort', 1400],
   ['8W7A2574.jpg', 'werkstatt/autoschluessel-rohling-anpassen-vor-ort', 1400],
   ['8W7A2510.jpg', 'werkstatt/autoschluessel-nachmachen-schluesselrohling-fraesen', 1400],
+
+  // Schlüssel fräsen / nachmachen
+  ['8W7A2506.jpg', 'werkstatt/autoschluessel-spezialist-an-der-fraesmaschine', 1400],
+  ['8W7A2529.jpg', 'werkstatt/schluesselfraesmaschine-schluesselbart-detail', 1400],
+  ['8W7A2544.jpg', 'werkstatt/transponder-schluessel-codieren-werkstatt', 1400],
+
+  // Notöffnung / Autotür öffnen
+  ['8W7A2595.jpg', 'werkstatt/auto-notoeffnung-fahrzeug-oeffnen-stuttgart', 1400],
+  ['8W7A2597.jpg', 'werkstatt/autotuer-oeffnen-spezialwerkzeug-vor-ort', 1400],
+  ['8W7A2606.jpg', 'werkstatt/autotuer-oeffnen-ohne-beschaedigung-werkzeug', 1400],
+  ['8W7A2589.jpg', 'werkstatt/autoschluessel-uebergabe-nach-notoeffnung', 1400],
+  ['8W7A2586.jpg', 'werkstatt/autoschluessel-rohling-pruefen-am-fahrzeug', 1400],
+
+  // Elektronik / Funkschlüssel-Reparatur
+  ['8W7A2625.jpg', 'werkstatt/funkschluessel-platine-reparatur-loeten', 1400],
+  ['8W7A2632.jpg', 'werkstatt/autoschluessel-elektronik-pruefen-pinzette', 1400],
+
+  // Zündschloss / Schloss
+  ['8W7A2614.jpg', 'werkstatt/zuendschloss-ausbohren-defektes-schloss', 1400],
+  ['8W7A2617.jpg', 'werkstatt/zuendschloss-wechseln-vor-ort-stuttgart', 1400],
+  ['8W7A2616.jpg', 'werkstatt/schlosszylinder-bohren-detailaufnahme', 1400],
 ];
 
 for (const dir of new Set(PICKS.map(([, d]) => d.split('/')[0])))

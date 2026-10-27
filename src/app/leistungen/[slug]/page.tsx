@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Script from 'next/script';
 import Image from 'next/image';
 import { LEISTUNGEN } from '@/config/leistungen';
+import { getServicePhotos } from '@/config/service-photos';
 import { getRelatedBlogPosts } from '@/config/services';
 import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import GoogleReviewCard from '@/components/GoogleReviewCard/GoogleReviewCard';
@@ -20,8 +21,6 @@ import { CITIES } from '@/config/cities';
 import { BRANDS } from '@/config/brands';
 import { getBaseLocalBusinessSchema } from '@/utils/schema';
 import styles from './page.module.css';
-import fs from 'fs';
-import path from 'path';
 
 // These two slugs have their own dedicated page directories, which win over this
 // dynamic segment at routing time. Generating them here just builds dead pages.
@@ -89,27 +88,7 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
     howItWorksVariant = 'ignition';
   }
 
-  // Load recent work images for this service
-  const imagesDirMerken = path.join(process.cwd(), 'public', 'images', 'merken');
-  const imagesDirLeistungen = path.join(process.cwd(), 'public', 'images', 'leistungen');
-  const serviceImages: string[] = [];
-  try {
-    if (fs.existsSync(imagesDirMerken)) {
-      const files = fs.readdirSync(imagesDirMerken);
-      const matched = files.filter(f => {
-        if (isOpening && f.includes('auto-ohne-schluessel-oeffnen')) return true;
-        if (isKey && f.includes('autoschluessel-nachmachen')) return true;
-        return false;
-      });
-      serviceImages.push(...matched.slice(0, 4).map(f => `/images/marken/${f}`));
-    }
-    
-    // Fallback/fill with general equipment if needed
-    if (fs.existsSync(imagesDirLeistungen) && serviceImages.length < 4) {
-      const equipFiles = fs.readdirSync(imagesDirLeistungen);
-      serviceImages.push(...equipFiles.slice(0, 4 - serviceImages.length).map(f => `/images/leistungen/${f}`));
-    }
-  } catch (e) {}
+  const serviceImages = getServicePhotos(slug);
 
   const trustItems = [
     '24/7 Mobiler Service',
@@ -313,48 +292,8 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
                 <div>
                   <h2>Professioneller mobiler Service — Direkt vor Ort</h2>
                   
-                  {slug === 'auto-ohne-schluessel-oeffnen' ? (
-                    <img 
-                      src="/images/seo/auto_tuer_oeffnen_schluesseldienst_stuttgart_schadensfrei.webp" 
-                      alt="Autotür schadensfrei vom Monteur öffnen lassen" 
-                      style={{ width: '100%', borderRadius: '12px', margin: '1.25rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', objectFit: 'cover', aspectRatio: '16/9' }}
-                    />
-                  ) : slug === 'autoschluessel-reparieren' ? (
-                    <RealGalleryShowcase 
-                      photos={[
-                        { src: "/images/seo/autoschluessel-reparieren-werkstatt-stuttgart.webp", alt: "SMD-Löten von Mikroschaltern und Tasten unter dem Mikroskop", label: "Schlüssel Reparatur" },
-                        { src: "/images/seo/autoschluessel-reparieren-inventar-sindelfingen.webp", alt: "Vorrat an OEM-Gehäusen und Ersatzschlüssel-Teilen", label: "Gehäuseersatz" },
-                        { src: "/images/seo/autoschluessel-reparieren-ersatzteile-boeblingen.webp", alt: "Ersatzschlüssel-Platinen, Transponder und Spulen", label: "Transponder & Spulen" },
-                        { src: "/images/seo/autoschluessel-reparieren-service-ludwigsburg.webp", alt: "Monteur repariert Schlüssel vor Ort", label: "Mobiler Service" }
-                      ]}
-                    />
-                  ) : slug === 'alle-schluessel-verloren-auto' ? (
-                    <img 
-                      src="/images/seo/alle-schluessel-verloren-auto-hero.jpg" 
-                      alt="Professionelle Programmierung eines Autoschlüssels vor Ort" 
-                      style={{ width: '100%', height: 'auto', borderRadius: '12px', margin: '1.25rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}
-                    />
-                  ) : slug === 'zuendschloss-auto-wechseln' ? (
-                    <RealGalleryShowcase 
-                      photos={[
-                        { src: "/images/seo/zuendschloss-auto-wechseln-werkstatt-stuttgart.webp", alt: "Demontage und Reparatur eines defekten mechanischen Zylinders", label: "Zylinder Reparatur" },
-                        { src: "/images/seo/zuendschloss-auto-wechseln-mobil-sindelfingen.webp", alt: "Blockiertes Zündschloss vor Ort repariert", label: "Zündschloss Service" }
-                      ]}
-                    />
-                  ) : serviceImages.length > 0 ? (
-                    <RealGalleryShowcase 
-                      photos={serviceImages.map((src) => ({
-                        src: src,
-                        alt: `${service.title} durch FC-KEY mobilen Service - Impression`
-                      }))}
-                    />
-                  ) : (
-                    <img 
-                      src="/fc-key-schluesselnachmachen-stuttgart.webp" 
-                      alt={`Professioneller mobiler Service für ${service.title.toLowerCase()} - direkt vor Ort und 100% schadensfrei`} 
-                      style={{ width: '100%', borderRadius: '12px', margin: '1.25rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', objectFit: 'cover', aspectRatio: '16/9' }}
-                    />
-                  )}
+                  <RealGalleryShowcase photos={serviceImages} />
+
                   <p>
                     Wenn Sie mit einem Problem bei der Autoverriegelung oder einem kaputten Schlüssel konfrontiert werden, ist eine schnelle und fachgerechte Lösung von entscheidender Bedeutung. Unsere mobilen Servicebusse fungieren als rollende Hightech-Werkstätten. Sie sind mit denselben fortschrittlichen Diagnosegeräten und Schlüsselfräsmaschinen ausgestattet wie die offiziellen Markenwerkstätten. Daher müssen Sie Ihr Fahrzeug nicht abschleppen lassen; wir führen den kompletten Service direkt auf Ihrer eigenen Einfahrt, an Ihrem Arbeitsplatz oder an der Autobahn aus.
                   </p>

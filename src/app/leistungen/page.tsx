@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { LEISTUNGEN } from '@/config/leistungen';
+import { getServicePhotos } from '@/config/service-photos';
 import { SITE_CONFIG, WHATSAPP_URL } from '@/config/site.config';
 import BrandsMarquee from '@/components/BrandsMarquee/BrandsMarquee';
 import HeroGoogleBadge from '@/components/HeroGoogleBadge/HeroGoogleBadge';
@@ -29,6 +31,41 @@ export default function LeistungenOverviewPage() {
       </section>
 
       <BrandsMarquee />
+
+      {/* Real work from our own workshop — one shot per service family */}
+      <section style={{ padding: '3rem 2rem 1rem', maxWidth: 1100, margin: '0 auto' }}>
+        <h2 style={{ textAlign: 'center', marginBottom: '0.5rem' }}>Unsere Arbeit — echte Aufnahmen</h2>
+        <p style={{ textAlign: 'center', color: 'var(--gray-600)', fontSize: '0.92rem', margin: '0 auto 2rem', maxWidth: 620 }}>
+          Keine Stockfotos: alle Bilder stammen aus unserer eigenen Werkstatt in Sindelfingen und von Einsätzen vor Ort.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 230px), 1fr))', gap: '1.25rem' }}>
+          {[
+            { slug: 'autoschluessel-nachmachen', caption: 'Autoschlüssel nachmachen' },
+            { slug: 'auto-ohne-schluessel-oeffnen', caption: 'Auto öffnen ohne Schlüssel' },
+            { slug: 'autoschluessel-reparieren', caption: 'Autoschlüssel reparieren' },
+            { slug: 'zuendschloss-auto-wechseln', caption: 'Zündschloss wechseln' },
+          ].map(({ slug, caption }) => {
+            const photo = getServicePhotos(slug)[0];
+            return (
+              <Link key={slug} href={`/leistungen/${slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <figure style={{ margin: 0 }}>
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={1400}
+                    height={933}
+                    sizes="(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw"
+                    style={{ width: '100%', height: '180px', objectFit: 'cover', borderRadius: '12px', display: 'block' }}
+                  />
+                  <figcaption style={{ marginTop: '0.6rem', fontSize: '0.88rem', fontWeight: 600, color: 'var(--navy-900)' }}>
+                    {caption} <span aria-hidden="true">→</span>
+                  </figcaption>
+                </figure>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
 
       <div className="container" style={{ padding: '3rem 2rem', maxWidth: 1000, margin: '0 auto' }}>
         <h2 className={styles.tableTitle}>Leistungen Übersicht</h2>

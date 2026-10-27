@@ -1,7 +1,10 @@
 /* One row at every width — the old two-column layout stacked into a tall
    card on phones and pushed the hero CTA below the fold. */
 .badge {
-  display: inline-flex;
+  /* flex + fit-content, not inline-flex: the badge follows inline breadcrumbs and
+     labels on several pages and must not share their line. */
+  display: flex;
+  width: fit-content;
   align-items: center;
   gap: 0.5rem;
   background: #fff;
