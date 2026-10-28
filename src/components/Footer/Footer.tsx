@@ -121,8 +121,8 @@ export default function Footer() {
                   ['Mittwoch', '09:30 - 19:00 Uhr'],
                   ['Donnerstag', '09:30 - 19:00 Uhr'],
                   ['Freitag', '09:30 - 19:00 Uhr'],
-                  ['Samstag', 'nur Notdienst'],
-                  ['Sonntag', 'nur Notdienst'],
+                  ['Samstag', '09:30 - 19:00 Uhr'],
+                  ['Sonntag', 'Geschlossen'],
                 ].map(([dag, tijd]) => (
                   <tr key={dag} style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
                     <td style={{ padding: '0.35rem 0', fontWeight: 500 }}>{dag}</td>
@@ -133,7 +133,19 @@ export default function Footer() {
             </table>
             <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.55)', marginTop: '0.75rem', lineHeight: 1.6 }}>
               Mobiler <strong style={{ color: 'var(--orange-300)' }}>Notdienst rund um die Uhr</strong> — auch
-              abends, am Wochenende und an Feiertagen telefonisch erreichbar.
+              abends, am Sonntag und an Feiertagen telefonisch erreichbar.
+            </p>
+
+            {/* Hermes parcel questions have their own line — see site.config */}
+            <h3 className={styles.colTitle} style={{ marginTop: '1.5rem' }}>Hermes PaketShop</h3>
+            <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6, margin: 0 }}>
+              Unser Ladengeschäft ist zugleich Hermes PaketShop.<br />
+              Annahme &amp; Abholung: <strong style={{ color: 'rgba(255,255,255,0.8)' }}>{SITE_CONFIG.hermes.hours}</strong>, sonntags geschlossen.<br />
+              Fragen zu Paketen bitte ausschliesslich unter{' '}
+              <a href={`tel:${SITE_CONFIG.hermes.phoneTel}`} style={{ color: 'var(--orange-300)', fontWeight: 700 }}>
+                {SITE_CONFIG.hermes.phone}
+              </a>{' '}
+              — nicht über die Notdienst-Nummer.
             </p>
           </div>
         </div>
