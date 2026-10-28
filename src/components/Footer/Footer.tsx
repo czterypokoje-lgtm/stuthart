@@ -112,28 +112,16 @@ export default function Footer() {
               <li><Link href="/ueber-uns">Über Uns</Link></li>
             </ul>
 
-            <h3 className={styles.colTitle}>Werkstatt & Abholservice</h3>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem', color: 'rgba(255,255,255,0.65)' }}>
-              <tbody>
-                {[
-                  ['Montag', '09:30 - 19:00 Uhr'],
-                  ['Dienstag', '09:30 - 19:00 Uhr'],
-                  ['Mittwoch', '09:30 - 19:00 Uhr'],
-                  ['Donnerstag', '09:30 - 19:00 Uhr'],
-                  ['Freitag', '09:30 - 19:00 Uhr'],
-                  ['Samstag', '09:30 - 19:00 Uhr'],
-                  ['Sonntag', 'Geschlossen'],
-                ].map(([dag, tijd]) => (
-                  <tr key={dag} style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-                    <td style={{ padding: '0.35rem 0', fontWeight: 500 }}>{dag}</td>
-                    <td style={{ padding: '0.35rem 0', textAlign: 'right', color: 'var(--orange-400)', fontWeight: 600 }}>{tijd}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.55)', marginTop: '0.75rem', lineHeight: 1.6 }}>
-              Mobiler <strong style={{ color: 'var(--orange-300)' }}>Notdienst rund um die Uhr</strong> — auch
-              abends, am Sonntag und an Feiertagen telefonisch erreichbar.
+            {/* The call-out service is genuinely 24/7, so a day-by-day table only
+                makes the business look shut. Hours stay where they really apply:
+                the shop counter and the Hermes PaketShop. */}
+            <h3 className={styles.colTitle}>Erreichbarkeit</h3>
+            <p style={{ fontSize: '0.86rem', color: 'rgba(255,255,255,0.75)', lineHeight: 1.6, margin: '0 0 0.75rem' }}>
+              <strong style={{ color: 'var(--orange-300)' }}>Notdienst rund um die Uhr — 7 Tage die Woche.</strong><br />
+              Auch nachts, am Sonntag und an Feiertagen. Durchschnittlich in {SITE_CONFIG.responseTime} bei Ihnen.
+            </p>
+            <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6, margin: 0 }}>
+              Ladengeschäft &amp; Abholung: <strong style={{ color: 'rgba(255,255,255,0.8)' }}>Mo – Sa 09:30 – 19:00 Uhr</strong>
             </p>
 
             {/* Hermes parcel questions have their own line — see site.config */}

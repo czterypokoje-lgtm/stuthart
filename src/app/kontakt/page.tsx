@@ -236,24 +236,20 @@ export default async function ContactPage(props: Props) {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '2.5rem' }}>
 
               <div>
-                <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '1rem', color: 'var(--navy-900)' }}>Öffnungszeiten Ladengeschäft</h2>
-                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-                  <tbody>
-                    {[
-                      ['Montag – Freitag', '09:30 – 19:00 Uhr'],
-                      ['Samstag', '09:30 – 19:00 Uhr'],
-                      ['Sonntag', 'Geschlossen'],
-                    ].map(([tag, zeit]) => (
-                      <tr key={tag} style={{ borderBottom: '1px solid var(--gray-200)' }}>
-                        <td style={{ padding: '0.6rem 0', color: 'var(--gray-700)' }}>{tag}</td>
-                        <td style={{ padding: '0.6rem 0', textAlign: 'right', fontWeight: 600, color: 'var(--navy-900)' }}>{zeit}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <p style={{ fontSize: '0.85rem', color: 'var(--gray-600)', marginTop: '1rem', lineHeight: 1.6 }}>
-                  Ausserhalb dieser Zeiten erreichen Sie unseren mobilen <strong>Notdienst rund um die Uhr</strong> unter{' '}
-                  <a href={`tel:${SITE_CONFIG.phoneTel}`} style={{ color: 'var(--orange-700)', fontWeight: 700 }}>{SITE_CONFIG.phone}</a>.
+                <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: '0.75rem', color: 'var(--navy-900)' }}>Wann wir erreichbar sind</h2>
+                <p style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--orange-700)', margin: '0 0 0.5rem' }}>
+                  Notdienst rund um die Uhr — 7 Tage die Woche
+                </p>
+                <p style={{ fontSize: '0.92rem', color: 'var(--gray-700)', lineHeight: 1.65, marginBottom: '1.25rem' }}>
+                  Autoschlüssel verloren, ausgesperrt oder Schloss defekt? Rufen Sie an, wann immer es passiert —
+                  auch nachts, am Sonntag und an Feiertagen. Durchschnittlich sind wir in {SITE_CONFIG.responseTime} bei Ihnen.
+                </p>
+                <a href={`tel:${SITE_CONFIG.phoneTel}`} className="btn btn-primary" style={{ marginBottom: '1.25rem' }}>
+                  📞 {SITE_CONFIG.phone}
+                </a>
+                <p style={{ fontSize: '0.88rem', color: 'var(--gray-600)', lineHeight: 1.6, marginTop: '1.25rem', marginBottom: 0 }}>
+                  Unser <strong>Ladengeschäft</strong> in der {SITE_CONFIG.address.street} ist für Abholungen und Termine
+                  vor Ort <strong>Montag bis Samstag von 09:30 bis 19:00 Uhr</strong> geöffnet.
                 </p>
               </div>
 
