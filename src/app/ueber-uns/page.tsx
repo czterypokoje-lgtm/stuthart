@@ -37,7 +37,7 @@ const personSchema = {
   '@id': `${SITE_CONFIG.domain}/#guengoer-demir`,
   name: 'Güngör Demir',
   jobTitle: 'Inhaber & Autoschlüssel-Spezialist',
-  image: `${SITE_CONFIG.domain}/images/team/guengoer-demir-inhaber-first-class-key-sindelfingen.webp`,
+  image: `${SITE_CONFIG.domain}/images/team/guengoer-demir-werkstatt-portrait-ueber-uns.webp`,
   description: 'Inhaber von First Class Key mit 15 Jahren Erfahrung in Fahrzeugsicherheit und Autoschlüsselcodierung. Spezialist für Transponderprogrammierung, Smart Key Systeme und Zündschlossreparatur für alle Automarken.',
   worksFor: {
     '@id': `${SITE_CONFIG.domain}/#localbusiness`,
@@ -120,10 +120,10 @@ export default function OverOnsPage() {
 
           <div>
             <Image
-              src="/images/team/guengoer-demir-inhaber-first-class-key-sindelfingen.webp"
-              alt="Güngör Demir, Inhaber von First Class Key, in der eigenen Schlüsselwerkstatt in Sindelfingen"
-              width={1100}
-              height={1650}
+              src="/images/team/guengoer-demir-werkstatt-portrait-ueber-uns.webp"
+              alt="Güngör Demir in der Werkstatt von First Class Key im Stern Center in Sindelfingen"
+              width={1400}
+              height={2100}
               sizes="(min-width: 768px) 340px, 100vw"
               style={{ width: '100%', maxWidth: '340px', height: 'auto', borderRadius: '8px', display: 'block', marginBottom: '0.75rem' }}
             />
@@ -147,12 +147,12 @@ export default function OverOnsPage() {
           </div>
           <div>
             <Image
-              src="/images/team/first-class-key-werkstatt-sindelfingen-stern-center.webp"
-              alt="Güngör Demir vor der First Class Key Werkstatt im Stern Center Sindelfingen"
-              width={1400}
-              height={2100}
+              src="/images/team/guengoer-demir-mobiler-einsatz-autotuer.webp"
+              alt="Güngör Demir öffnet vor Ort ein Fahrzeug an der Autotür"
+              width={1800}
+              height={1200}
               sizes="(min-width: 900px) 50vw, 100vw"
-              style={{ width: '100%', height: '400px', objectFit: 'cover', objectPosition: 'top', borderRadius: '12px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}
+              style={{ width: '100%', height: 'auto', borderRadius: '12px', display: 'block', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}
             />
           </div>
         </div>
