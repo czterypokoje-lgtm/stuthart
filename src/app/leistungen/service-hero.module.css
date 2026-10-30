@@ -11,8 +11,13 @@
 @media (min-width: 992px) {
   .grid {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    grid-template-rows: auto auto;
     gap: 3.5rem;
   }
+
+  .copy { grid-column: 1; grid-row: 1; }
+  .media { grid-column: 2; grid-row: 1 / span 2; }
+  .form { grid-column: 1; grid-row: 2; }
 }
 
 .copy {
@@ -21,6 +26,10 @@
 
 .media {
   display: block;
+  min-width: 0;
+}
+
+.form {
   min-width: 0;
 }
 

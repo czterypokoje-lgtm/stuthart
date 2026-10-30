@@ -179,10 +179,6 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
             <h1>{service.h1}</h1>
 
             <p className={styles.heroLead}>{service.intro}</p>
-
-            <div style={{ marginTop: '0.5rem' }}>
-              <LeadCaptureForm phone={SITE_CONFIG.phoneTel} />
-            </div>
               </div>
               <div className={heroStyles.media}>
                 <Image
@@ -195,6 +191,9 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
                   priority
                 />
                 <p className={heroStyles.caption}>{heroPhoto.label} — eigene Aufnahme aus unserem Arbeitsalltag</p>
+              </div>
+              <div className={heroStyles.form}>
+                <LeadCaptureForm phone={SITE_CONFIG.phoneTel} />
               </div>
             </div>
           </div>
