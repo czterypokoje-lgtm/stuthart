@@ -203,9 +203,6 @@ export default function AutoOpenenZonderSleutelPage() {
               ohne Abschleppwagen. Wir sind durchschnittlich in 30 Minuten bei Ihnen vor Ort in
               Stuttgart, Sindelfingen und 50km Umkreis.
             </p>
-            <div style={{ marginTop: '2rem' }}>
-              <LeadCaptureForm phone={SITE_CONFIG.phoneTel} />
-            </div>
               </div>
               <div className={heroStyles.media}>
                 <Image
@@ -213,11 +210,14 @@ export default function AutoOpenenZonderSleutelPage() {
                   alt={heroPhoto.alt}
                   width={1400}
                   height={1050}
-                  sizes="(min-width: 992px) 45vw, 0px"
+                  sizes="(min-width: 992px) 45vw, 100vw"
                   className={heroStyles.photo}
                   priority
                 />
                 <p className={heroStyles.caption}>{heroPhoto.label} — eigene Aufnahme aus unserem Arbeitsalltag</p>
+              </div>
+              <div className={heroStyles.form}>
+                <LeadCaptureForm phone={SITE_CONFIG.phoneTel} />
               </div>
             </div>
           </div>
