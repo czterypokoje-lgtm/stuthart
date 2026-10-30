@@ -188,6 +188,7 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
                   height={1050}
                   sizes="(min-width: 992px) 45vw, 100vw"
                   className={heroStyles.photo}
+                  quality={100}
                   priority
                 />
                 <p className={heroStyles.caption}>{heroPhoto.label} — eigene Aufnahme aus unserem Arbeitsalltag</p>

@@ -168,9 +168,6 @@ export default function AutoSlotenmakerPage() {
               Als zertifizierter Auto-Schlüsseldienst öffnen wir Ihr Auto 100% schadensfrei und programmieren direkt vor Ort neue Ersatzschlüssel. 
               Unsere mobilen Servicebusse fahren direkt in der Region Stuttgart, Sindelfingen und im Umkreis von 50km los.
             </p>
-            <div style={{ marginTop: '2rem' }}>
-              <LeadCaptureForm phone={SITE_CONFIG.phoneTel} />
-            </div>
               </div>
               <div className={heroStyles.media}>
                 <Image
@@ -178,11 +175,15 @@ export default function AutoSlotenmakerPage() {
                   alt={heroPhoto.alt}
                   width={1400}
                   height={1050}
-                  sizes="(min-width: 992px) 45vw, 0px"
+                  sizes="(min-width: 992px) 45vw, 100vw"
                   className={heroStyles.photo}
+                  quality={100}
                   priority
                 />
                 <p className={heroStyles.caption}>{heroPhoto.label} — eigene Aufnahme aus unserem Arbeitsalltag</p>
+              </div>
+              <div className={heroStyles.form}>
+                <LeadCaptureForm phone={SITE_CONFIG.phoneTel} />
               </div>
             </div>
           </div>

@@ -177,9 +177,6 @@ export default function SleutelBijmakenPage() {
             <p className={styles.heroLead}>
               Möchten Sie einen <strong>Autoschlüssel nachmachen</strong>, ohne zum teuren Händler zu müssen? FC-KEY kommt 24/7 zu Ihnen — nach Hause, zur Arbeit oder an die Straße — und programmiert Ihren neuen Autoschlüssel, Ersatzschlüssel oder Ihre Fernbedienung direkt vor Ort. Vom einfachen Transponderschlüssel bis zum modernen Autoschlüssel mit Keyless Entry: Wir fräsen und programmieren alles, während Sie warten, ohne Abschleppkosten oder lange Wartezeiten.
             </p>
-            <div style={{ marginTop: '2rem' }}>
-              <LeadCaptureForm phone={SITE_CONFIG.phoneTel} />
-            </div>
               </div>
               <div className={heroStyles.media}>
                 <Image
@@ -187,11 +184,15 @@ export default function SleutelBijmakenPage() {
                   alt={heroPhoto.alt}
                   width={1400}
                   height={1050}
-                  sizes="(min-width: 992px) 45vw, 0px"
+                  sizes="(min-width: 992px) 45vw, 100vw"
                   className={heroStyles.photo}
+                  quality={100}
                   priority
                 />
                 <p className={heroStyles.caption}>{heroPhoto.label} — eigene Aufnahme aus unserem Arbeitsalltag</p>
+              </div>
+              <div className={heroStyles.form}>
+                <LeadCaptureForm phone={SITE_CONFIG.phoneTel} />
               </div>
             </div>
           </div>

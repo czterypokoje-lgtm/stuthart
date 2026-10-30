@@ -16,6 +16,7 @@ const brandRedirects = brands.map(brand => ({
 
 const nextConfig: NextConfig = {
   images: {
+    qualities: [75, 100],
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
