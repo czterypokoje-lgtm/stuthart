@@ -190,7 +190,7 @@ export default async function DienstPage({ params }: { params: Promise<{ slug: s
                   alt={heroPhoto.alt}
                   width={1400}
                   height={1050}
-                  sizes="(min-width: 992px) 45vw, 0px"
+                  sizes="(min-width: 992px) 45vw, 100vw"
                   className={heroStyles.photo}
                   priority
                 />

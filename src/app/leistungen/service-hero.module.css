@@ -19,16 +19,14 @@
   min-width: 0;
 }
 
-/* Below the split the form has to stay near the top of the page, so the hero
-   photo is desktop-only — the in-page gallery carries the imagery on mobile. */
 .media {
-  display: none;
+  display: block;
+  min-width: 0;
 }
 
 @media (min-width: 992px) {
   .media {
     display: block;
-    min-width: 0;
   }
 }
 
