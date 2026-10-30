@@ -157,10 +157,10 @@ export default function HomePage() {
 
           <div className={styles.heroSplitImage}>
             <Image
-              src="/images/hero/autoschluessel-spezialist-guengoer-demir-servicefahrzeug-stuttgart.webp"
-              alt="Güngör Demir, Inhaber von First Class Key, am mobilen Servicefahrzeug für Autoschlüssel-Notdienst in Stuttgart und Sindelfingen"
+              src="/images/hero/guengoer-demir-schluesseldienst-werkstatt-stuttgart.webp"
+              alt="Güngör Demir bei der Arbeit an einer Autoschlüssel-Fräsmaschine in seiner Werkstatt"
               width={2000}
-              height={1333}
+              height={1334}
               sizes="(min-width: 992px) 50vw, 100vw"
               style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '16px' }}
               priority
@@ -171,9 +171,9 @@ export default function HomePage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "ImageObject",
-                "contentUrl": `${SITE_CONFIG.domain}/images/hero/autoschluessel-spezialist-guengoer-demir-servicefahrzeug-stuttgart.webp`,
-                "name": "Güngör Demir mit dem Servicefahrzeug von First Class Key",
-                "description": "Güngör Demir, Inhaber von First Class Key, am voll ausgestatteten mobilen Servicefahrzeug für Autoschlüssel nachmachen, Programmierung und Notöffnung in Stuttgart, Sindelfingen und 50km Umkreis.",
+                "contentUrl": `${SITE_CONFIG.domain}/images/hero/guengoer-demir-schluesseldienst-werkstatt-stuttgart.webp`,
+                "name": "Güngör Demir bei der Autoschlüsselanfertigung",
+                "description": "Güngör Demir von First Class Key arbeitet in seiner Werkstatt an einer Autoschlüssel-Fräsmaschine.",
                 "contentLocation": {
                   "@type": "Place",
                   "name": "Stuttgart, Sindelfingen",
