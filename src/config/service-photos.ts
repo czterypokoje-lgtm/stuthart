@@ -65,7 +65,10 @@ const BY_SLUG: Record<string, ServicePhoto[]> = {
   'ersatzschluessel-machen': [FRAESEN[2], FRAESEN[3], CODIEREN[2], CODIEREN[0]],
   'transponder-programmieren': [CODIEREN[0], FRAESEN[0], CODIEREN[1], ELEKTRONIK[0]],
   'smart-key-programmieren': [CODIEREN[1], CODIEREN[0], ELEKTRONIK[2], NOTOEFFNUNG[4]],
-  'alle-schluessel-verloren-auto': [NOTOEFFNUNG[1], FRAESEN[0], CODIEREN[0], CODIEREN[1]],
+  'alle-schluessel-verloren-auto': [
+    { src: '/images/team/guengoer-demir-mobiler-einsatz-autotuer.webp', alt: 'Güngör Demir öffnet vor Ort ein Fahrzeug an der Autotür', label: 'Notöffnung direkt am Fahrzeug' },
+    FRAESEN[0], CODIEREN[0], CODIEREN[1],
+  ],
 
   'fernbedienung-nachmachen': [ELEKTRONIK[1], ELEKTRONIK[0], CODIEREN[1], FRAESEN[1]],
   'autoschluessel-reparieren': ELEKTRONIK,
